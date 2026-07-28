@@ -32,6 +32,13 @@ export function MobileMenu({
             {link.label}
           </Link>
         ))}
+        <Link
+          href="/veteran-owned"
+          onClick={onClose}
+          className="rounded-[2px] px-3 py-3 text-sm font-semibold uppercase tracking-[0.14em] text-bright hover:bg-[rgba(7,135,255,0.08)] hover:text-white"
+        >
+          Veteran Owned
+        </Link>
         <a
           href={BRAND.phoneHref}
           className="rounded-[2px] px-3 py-3 text-sm font-semibold text-bright"

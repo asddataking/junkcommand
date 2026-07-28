@@ -1,0 +1,49 @@
+import Image from "next/image";
+import Link from "next/link";
+import {
+  formatStartingPrice,
+  type PricingItem,
+} from "@/data/pricing";
+
+type PricingCardProps = {
+  item: PricingItem;
+  priority?: boolean;
+};
+
+export function PricingCard({ item, priority = false }: PricingCardProps) {
+  return (
+    <Link
+      href="#quote"
+      className="group relative flex h-full min-h-[17.5rem] flex-col overflow-hidden rounded-[2px] border border-[rgba(0,135,255,0.4)] bg-[#080B0F] transition-[border-color,box-shadow,transform] duration-300 hover:-translate-y-0.5 hover:border-bright hover:shadow-[0_0_28px_rgba(7,135,255,0.35)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bright"
+      aria-label={`Get a quote for ${item.name} removal, starting at ${formatStartingPrice(item.startingPrice)}`}
+    >
+      <div className="relative aspect-[4/3] w-full overflow-hidden">
+        <Image
+          src={item.image}
+          alt={item.alt}
+          fill
+          priority={priority}
+          loading={priority ? "eager" : "lazy"}
+          sizes="(max-width: 640px) 85vw, (max-width: 1024px) 40vw, 22vw"
+          className="object-cover transition-transform duration-500 group-hover:scale-105"
+        />
+        <div
+          className="absolute inset-0 bg-gradient-to-t from-[#020305] via-[#020305]/55 to-transparent"
+          aria-hidden
+        />
+      </div>
+
+      <div className="relative z-10 flex flex-1 flex-col justify-end gap-1 px-4 pb-4 pt-2">
+        <h3 className="font-display text-xl tracking-[0.08em] text-white sm:text-2xl">
+          {item.name}
+        </h3>
+        <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-muted">
+          Starting at
+        </p>
+        <p className="font-display text-3xl tracking-[0.06em] text-bright drop-shadow-[0_0_12px_rgba(24,160,255,0.45)]">
+          {formatStartingPrice(item.startingPrice)}
+        </p>
+      </div>
+    </Link>
+  );
+}

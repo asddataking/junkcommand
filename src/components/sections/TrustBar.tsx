@@ -11,12 +11,12 @@ import {
 } from "lucide-react";
 
 const TRUST_ITEMS = [
-  { icon: Clock3, label: "Same-Day Options" },
-  { icon: BadgeCheck, label: "Upfront Pricing" },
-  { icon: ShieldCheck, label: "Licensed & Insured" },
-  { icon: MapPinned, label: "Locally Operated" },
-  { icon: Truck, label: "We Haul It All" },
   { icon: Star, label: "250+ Five-Star Reviews" },
+  { icon: BadgeCheck, label: "Veteran Owned" },
+  { icon: MapPinned, label: "Locally Operated" },
+  { icon: Clock3, label: "Same-Day Options" },
+  { icon: ShieldCheck, label: "Licensed & Insured" },
+  { icon: Truck, label: "Family Operated" },
 ] as const;
 
 export function TrustBar() {

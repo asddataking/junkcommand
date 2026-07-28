@@ -18,7 +18,8 @@ const icons = [Warehouse, Building2, Armchair, Refrigerator, Waves, Hammer];
 export function ServicesGrid() {
   return (
     <section
-      id="services"
+      id="full-service"
+      aria-labelledby="full-service-heading"
       className="scroll-mt-24 border-b border-[rgba(0,135,255,0.15)] bg-[#020305] py-16 sm:py-20"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -26,12 +27,15 @@ export function ServicesGrid() {
           <AnimatedShinyText className="text-xs font-semibold uppercase tracking-[0.28em] text-bright">
             We Handle the Heavy Stuff
           </AnimatedShinyText>
-          <h2 className="mt-3 font-display text-4xl tracking-[0.08em] text-white sm:text-5xl">
-            FULL SERVICE JUNK REMOVAL
+          <h2
+            id="full-service-heading"
+            className="mt-3 font-display text-4xl tracking-[0.08em] text-white sm:text-5xl"
+          >
+            FULL-SERVICE JUNK REMOVAL
           </h2>
           <p className="mx-auto mt-3 max-w-2xl text-muted">
-            From garage cleanouts to construction debris — see what we haul and
-            get it gone fast.
+            From garage cleanouts to construction debris — see what we haul for
+            junk removal in Port Huron and get it gone fast.
           </p>
         </BlurFade>
 

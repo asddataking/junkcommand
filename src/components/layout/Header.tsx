@@ -35,7 +35,18 @@ export function Header() {
       }`}
     >
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:h-[4.5rem] lg:px-8">
-        <Logo />
+        <div className="flex min-w-0 items-center gap-3 sm:gap-4">
+          <Logo />
+          <Link
+            href="/veteran-owned"
+            className="inline-flex items-center gap-1.5 rounded-[2px] border border-[rgba(0,135,255,0.4)] bg-[#080B0F] px-2 py-1.5 text-[9px] font-semibold uppercase tracking-[0.12em] text-bright shadow-[0_0_14px_rgba(7,135,255,0.18)] transition-colors hover:border-bright hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bright sm:px-2.5 sm:text-[10px] sm:tracking-[0.14em]"
+            aria-label="Veteran-owned junk removal company"
+          >
+            <span aria-hidden>★</span>
+            <span className="sm:hidden">Vet Owned</span>
+            <span className="hidden sm:inline">Veteran Owned</span>
+          </Link>
+        </div>
 
         <nav
           className="hidden items-center gap-8 lg:flex"
@@ -52,7 +63,7 @@ export function Header() {
           ))}
         </nav>
 
-        <div className="hidden items-center lg:flex">
+        <div className="hidden items-center gap-3 lg:flex">
           <ShimmerButton href="#quote">Get My Free Quote</ShimmerButton>
         </div>
 

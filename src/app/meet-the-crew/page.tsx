@@ -5,6 +5,8 @@ import { CtaBanner } from "@/components/shared/CtaBanner";
 import { CrewCards } from "@/components/pages/CrewCards";
 import { TrustBar } from "@/components/sections/TrustBar";
 import { Button } from "@/components/ui/Button";
+import { MediaImage } from "@/components/ui/MediaImage";
+import { BorderBeam } from "@/components/magicui/border-beam";
 import { BRAND } from "@/lib/constants";
 import { buildPageMetadata } from "@/lib/seo";
 import {
@@ -78,6 +80,44 @@ export default function MeetTheCrewPage() {
       </section>
 
       <TrustBar />
+
+      <section className="border-b border-[rgba(0,135,255,0.15)] py-12 sm:py-16">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="relative overflow-hidden rounded-[2px] border border-[rgba(0,135,255,0.45)] bg-[#080B0F]">
+            <div className="relative aspect-[16/9] w-full sm:aspect-[21/9]">
+              <MediaImage
+                src="/images/dan-gage-luna.webp"
+                alt="Dan and Gage with Luna the Blue Heeler standing with the Junk Command truck and trailer"
+                fill
+                priority
+                className="object-cover object-[center_40%]"
+                sizes="100vw"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#020305] via-[#020305]/25 to-transparent" />
+              <BorderBeam
+                size={140}
+                duration={9}
+                colorFrom="#18a0ff"
+                colorTo="#0787ff"
+                borderWidth={1.5}
+              />
+              <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-7">
+                <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-bright">
+                  Dan · Gage · Luna
+                </p>
+                <h2 className="mt-1 font-display text-3xl tracking-[0.08em] text-white sm:text-4xl">
+                  THE JUNK COMMAND CREW
+                </h2>
+                <p className="mt-2 max-w-xl text-sm text-muted sm:text-base">
+                  Owner/Operator Dan and Crew Lead Gage — with Luna, our Blue
+                  Heeler — ready to take command of your clutter across Port
+                  Huron and St. Clair County.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section className="py-16 sm:py-20 lg:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

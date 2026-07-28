@@ -33,14 +33,15 @@ export function WhyChooseUs() {
 
         <div>
           <p className="text-xs font-semibold uppercase tracking-[0.28em] text-bright">
-            Why Junk Command
+            Built Different
           </p>
           <h2 className="mt-3 font-display text-4xl tracking-[0.06em] text-white sm:text-5xl">
-            BUILT DIFFERENT
+            WHY CHOOSE JUNK COMMAND?
           </h2>
           <p className="mt-3 max-w-xl text-muted">
-            We run every job like a mission — clear communication, clean work,
-            and junk gone when we leave.
+            As a veteran-owned junk removal company, we run every job like a
+            mission — clear communication, clean work, and junk gone when we
+            leave.
           </p>
 
           <ul className="mt-8 grid gap-4 sm:grid-cols-2">

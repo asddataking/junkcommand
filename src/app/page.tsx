@@ -1,12 +1,14 @@
 import { SiteShell } from "@/components/layout/SiteShell";
 import { Hero } from "@/components/sections/Hero";
 import { TrustBar } from "@/components/sections/TrustBar";
-import { ServicesGrid } from "@/components/sections/ServicesGrid";
+import { PricingCarousel } from "@/components/sections/PricingCarousel";
+import { JunkRemovalServices } from "@/components/sections/JunkRemovalServices";
 import { HowItWorks } from "@/components/sections/HowItWorks";
 import { QuoteForm } from "@/components/forms/QuoteForm";
 import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
+import { ServiceAreaSection } from "@/components/sections/ServiceAreaSection";
+import { ServicesGrid } from "@/components/sections/ServicesGrid";
 import { ReviewsCarousel } from "@/components/sections/ReviewsCarousel";
-import { ServiceAreas } from "@/components/sections/ServiceAreas";
 import { FinalCTA } from "@/components/sections/FinalCTA";
 
 export default function Home() {
@@ -14,12 +16,14 @@ export default function Home() {
     <SiteShell>
       <Hero />
       <TrustBar />
-      <ServicesGrid />
+      <PricingCarousel />
+      <JunkRemovalServices />
       <HowItWorks />
       <QuoteForm />
       <WhyChooseUs />
+      <ServiceAreaSection />
+      <ServicesGrid />
       <ReviewsCarousel />
-      <ServiceAreas />
       <FinalCTA />
     </SiteShell>
   );

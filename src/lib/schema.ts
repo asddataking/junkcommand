@@ -1,6 +1,7 @@
 import { BRAND, SITE_URL } from "@/lib/constants";
 import { SERVICES } from "@/data/services";
 import { CITIES, CITY_NAMES } from "@/data/cities";
+import { SCHEMA_SERVICE_AREAS } from "@/data/homepage-service-areas";
 import { AGGREGATE, REVIEWS } from "@/data/reviews";
 
 type Crumb = { name: string; href: string };
@@ -37,19 +38,23 @@ export function getWebSiteSchema() {
 }
 
 export function getLocalBusinessSchema() {
+  const areaNames = Array.from(
+    new Set([...SCHEMA_SERVICE_AREAS, ...CITY_NAMES]),
+  );
+
   return {
     "@context": "https://schema.org",
-    "@type": ["LocalBusiness", "ProfessionalService"],
+    "@type": ["LocalBusiness", "HomeAndConstructionBusiness"],
     "@id": `${SITE_URL}/#business`,
     name: BRAND.name,
     description:
-      "Fast, professional junk removal in Port Huron, Marysville, Fort Gratiot, and throughout St. Clair and Macomb Counties.",
+      "Fast, professional junk removal in Port Huron, Marysville, Fort Gratiot, and throughout St. Clair County and the Blue Water Area.",
     url: SITE_URL,
     telephone: BRAND.phone,
     email: BRAND.email,
     image: `${SITE_URL}/images/junk-command-hero.webp`,
     priceRange: "$$",
-    areaServed: CITY_NAMES.map((name) => ({
+    areaServed: areaNames.map((name) => ({
       "@type": "Place",
       name,
     })),

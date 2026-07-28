@@ -112,10 +112,10 @@ export function Hero() {
           <div className="relative aspect-[4/5] overflow-hidden sm:aspect-[5/4] lg:aspect-[4/5]">
             <div className="absolute inset-0 overflow-hidden rounded-[2px] border border-[rgba(0,135,255,0.45)]">
               <MediaImage
-                src="/images/dan-gage-luna.png"
+                src="/images/dan-gage-luna.webp"
                 alt="Dan and Gage with Luna the Blue Heeler and the Junk Command truck and trailer"
                 fill
-                className="object-cover object-[center_20%]"
+                className="object-cover object-[center_35%]"
                 sizes="(max-width: 1024px) 100vw, 44vw"
                 priority
               />

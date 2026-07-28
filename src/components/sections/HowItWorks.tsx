@@ -28,8 +28,13 @@ export function HowItWorks() {
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <BlurFade className="text-center">
           <h2 className="font-display text-4xl tracking-[0.08em] text-white sm:text-5xl">
-            HOW IT WORKS
+            HOW JUNK COMMAND WORKS
           </h2>
+          <p className="mx-auto mt-3 max-w-xl text-muted">
+            Request a quote, get upfront pricing, and let our local crew handle
+            the heavy lifting — often with same-day junk removal when scheduling
+            allows.
+          </p>
         </BlurFade>
 
         <ol className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
