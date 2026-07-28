@@ -9,13 +9,13 @@ export function Logo({ compact = false }: { compact?: boolean }) {
       className="group flex items-center gap-2.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bright sm:gap-3"
       aria-label="Junk Command home"
     >
-      <span className="relative flex h-10 w-10 shrink-0 items-center justify-center sm:h-11 sm:w-11">
+      <span className="relative flex h-11 w-11 shrink-0 items-center justify-center sm:h-12 sm:w-12">
         <Image
           src={BRAND_LOGO}
           alt=""
-          width={88}
-          height={88}
-          className="size-full object-contain drop-shadow-[0_0_14px_rgba(24,160,255,0.45)] transition-transform duration-300 group-hover:scale-105"
+          width={96}
+          height={96}
+          className="size-full object-contain drop-shadow-[0_0_18px_rgba(24,160,255,0.55)] transition-transform duration-300 group-hover:scale-105"
           priority
         />
       </span>
