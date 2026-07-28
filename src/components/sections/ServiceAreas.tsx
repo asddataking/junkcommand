@@ -1,9 +1,12 @@
 "use client";
 
+import Link from "next/link";
 import { MapPin } from "lucide-react";
-import { SERVICE_AREAS } from "@/lib/constants";
+import { CITIES } from "@/data/cities";
 
 export function ServiceAreas() {
+  const areas = CITIES.filter((c) => !c.isCounty).slice(0, 11);
+
   return (
     <section
       id="service-areas"
@@ -19,24 +22,32 @@ export function ServiceAreas() {
           </h2>
           <p className="mt-3 text-muted">
             Junk Command proudly serves Port Huron and communities across St.
-            Clair County. Same-day options available when scheduling allows —
-            request a quote and we&apos;ll confirm availability fast.
+            Clair and Macomb Counties. Same-day options available when
+            scheduling allows — request a quote and we&apos;ll confirm
+            availability fast.
           </p>
         </div>
 
         <ul className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-          {SERVICE_AREAS.map((area) => (
-            <li
-              key={area}
-              className="flex items-center gap-3 rounded-[2px] border border-[rgba(0,135,255,0.3)] bg-card px-4 py-3 text-sm font-semibold text-white"
-            >
-              <MapPin className="size-4 shrink-0 text-bright" aria-hidden />
-              {area}
+          {areas.map((area) => (
+            <li key={area.slug}>
+              <Link
+                href={`/service-areas/${area.slug}`}
+                className="flex items-center gap-3 rounded-[2px] border border-[rgba(0,135,255,0.3)] bg-card px-4 py-3 text-sm font-semibold text-white transition-colors hover:border-bright hover:text-bright"
+              >
+                <MapPin className="size-4 shrink-0 text-bright" aria-hidden />
+                {area.name}
+              </Link>
             </li>
           ))}
-          <li className="flex items-center gap-3 rounded-[2px] border border-dashed border-[rgba(0,135,255,0.35)] bg-transparent px-4 py-3 text-sm font-semibold text-muted">
-            <MapPin className="size-4 shrink-0 text-bright/70" aria-hidden />
-            Surrounding Areas
+          <li>
+            <Link
+              href="/service-areas"
+              className="flex items-center gap-3 rounded-[2px] border border-dashed border-[rgba(0,135,255,0.35)] bg-transparent px-4 py-3 text-sm font-semibold text-muted transition-colors hover:border-bright hover:text-bright"
+            >
+              <MapPin className="size-4 shrink-0 text-bright/70" aria-hidden />
+              View All Areas
+            </Link>
           </li>
         </ul>
 
@@ -47,9 +58,9 @@ export function ServiceAreas() {
             that matter for residential and light commercial cleanouts.
           </p>
           <p>
-            From St. Clair and Clyde Township to the wider St. Clair County
-            area, Junk Command is built for fast response junk removal —
-            furniture, appliances, garages, estates, and more.
+            From St. Clair and Marine City to Chesterfield and New Baltimore,
+            Junk Command is built for fast response junk removal — furniture,
+            appliances, garages, estates, and more.
           </p>
         </div>
       </div>

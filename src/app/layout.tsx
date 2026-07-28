@@ -3,10 +3,12 @@ import { Bebas_Neue, Inter, Oswald } from "next/font/google";
 import {
   getFaqSchema,
   getLocalBusinessSchema,
+  getOrganizationSchema,
   getReviewSchema,
   getServiceSchema,
+  getWebSiteSchema,
 } from "@/lib/schema";
-import { FAQS } from "@/data/faqs";
+import { getHomepageFaqs } from "@/data/faqs";
 import { SITE_URL } from "@/lib/constants";
 import "./globals.css";
 
@@ -64,6 +66,7 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  manifest: "/manifest.webmanifest",
 };
 
 export default function RootLayout({
@@ -72,9 +75,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const schemas = [
+    getOrganizationSchema(),
+    getWebSiteSchema(),
     getLocalBusinessSchema(),
     getServiceSchema(),
-    getFaqSchema(FAQS),
+    getFaqSchema(getHomepageFaqs()),
     getReviewSchema(),
   ];
 

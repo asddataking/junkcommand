@@ -13,10 +13,10 @@ export function FinalCTA() {
     <section className="relative overflow-hidden border-t border-[rgba(0,135,255,0.2)] py-14 sm:py-16">
       <div className="absolute inset-0">
         <MediaImage
-          src="/images/dan-gage-luna.webp"
+          src="/images/crew-cta-bg.webp"
           alt=""
           fill
-          className="object-cover object-center opacity-25"
+          className="object-cover object-center opacity-30"
           sizes="100vw"
         />
         <div className="absolute inset-0 bg-[#020305]/85" />
