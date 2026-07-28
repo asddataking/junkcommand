@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Bebas_Neue, Inter, Oswald } from "next/font/google";
+import Script from "next/script";
 import {
   getFaqSchema,
   getLocalBusinessSchema,
@@ -11,6 +12,8 @@ import {
 import { getHomepageFaqs } from "@/data/faqs";
 import { SITE_URL } from "@/lib/constants";
 import "./globals.css";
+
+const GA_MEASUREMENT_ID = "G-9ZVZX7M7FJ";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -86,6 +89,18 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${bebas.variable} ${oswald.variable} h-full`}>
       <body className="min-h-full bg-background font-sans text-foreground antialiased">
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_MEASUREMENT_ID}');
+          `}
+        </Script>
         {schemas.map((schema, index) => (
           <script
             // eslint-disable-next-line react/no-danger
