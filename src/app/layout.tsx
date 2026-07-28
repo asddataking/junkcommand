@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Bebas_Neue, Inter } from "next/font/google";
+import { Bebas_Neue, Inter, Oswald } from "next/font/google";
 import {
   getFaqSchema,
   getLocalBusinessSchema,
@@ -19,6 +19,12 @@ const bebas = Bebas_Neue({
   weight: "400",
   subsets: ["latin"],
   variable: "--font-bebas",
+  display: "swap",
+});
+
+const oswald = Oswald({
+  subsets: ["latin"],
+  variable: "--font-oswald",
   display: "swap",
 });
 
@@ -72,7 +78,7 @@ export default function RootLayout({
   ];
 
   return (
-    <html lang="en" className={`${inter.variable} ${bebas.variable} h-full`}>
+    <html lang="en" className={`${inter.variable} ${bebas.variable} ${oswald.variable} h-full`}>
       <body className="min-h-full bg-background font-sans text-foreground antialiased">
         {schemas.map((schema, index) => (
           <script

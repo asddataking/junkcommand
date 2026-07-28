@@ -40,7 +40,7 @@ export function Footer() {
           </ul>
         </div>
 
-        <div id="service-areas">
+        <div>
           <h2 className="font-display text-xl tracking-[0.12em] text-white">
             Service Areas
           </h2>
@@ -101,10 +101,10 @@ export function Footer() {
         <div className="mx-auto flex max-w-7xl flex-col gap-3 px-4 py-5 text-xs text-muted sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
           <p>© 2026 Junk Command Junk Removal. All Rights Reserved.</p>
           <div className="flex gap-4">
-            <a href="/privacy" className="hover:text-white">
+            <a id="privacy" href="#privacy" className="hover:text-white">
               Privacy Policy
             </a>
-            <a href="/terms" className="hover:text-white">
+            <a id="terms" href="#terms" className="hover:text-white">
               Terms of Service
             </a>
           </div>

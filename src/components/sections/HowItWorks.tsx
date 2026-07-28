@@ -38,7 +38,7 @@ export function HowItWorks() {
                 className="relative flex gap-4 md:flex-col md:items-start"
               >
                 <div className="relative flex shrink-0 items-center">
-                  <div className="flex h-14 w-14 items-center justify-center rounded-full border border-[rgba(0,135,255,0.55)] bg-[#080B0F] text-bright">
+                  <div className="glow-border flex h-14 w-14 items-center justify-center rounded-[2px] border border-[rgba(0,135,255,0.55)] bg-[#080B0F] text-bright">
                     <Icon className="size-6" aria-hidden />
                   </div>
                   {index < HOW_IT_WORKS.length - 1 ? (

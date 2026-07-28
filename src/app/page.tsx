@@ -2,6 +2,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { MobileActionBar } from "@/components/layout/MobileActionBar";
 import { Hero } from "@/components/sections/Hero";
+import { TrustBar } from "@/components/sections/TrustBar";
 import { ServicesGrid } from "@/components/sections/ServicesGrid";
 import { HowItWorks } from "@/components/sections/HowItWorks";
 import { QuoteForm } from "@/components/forms/QuoteForm";
@@ -16,6 +17,7 @@ export default function Home() {
       <Header />
       <main className="flex-1 pb-20 md:pb-0">
         <Hero />
+        <TrustBar />
         <ServicesGrid />
         <HowItWorks />
         <QuoteForm />

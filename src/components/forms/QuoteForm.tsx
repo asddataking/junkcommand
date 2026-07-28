@@ -54,6 +54,7 @@ export function QuoteForm() {
       phone: "",
       email: "",
       serviceAddress: "",
+      junkType: undefined,
       details: "",
       ...readUtmParams(),
       submittedAt: "",

@@ -5,7 +5,10 @@ import { SERVICE_AREAS } from "@/lib/constants";
 
 export function ServiceAreas() {
   return (
-    <section className="border-t border-[rgba(0,135,255,0.15)] py-14 sm:py-16">
+    <section
+      id="service-areas"
+      className="scroll-mt-24 border-t border-[rgba(0,135,255,0.15)] py-14 sm:py-16"
+    >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl">
           <p className="text-xs font-semibold uppercase tracking-[0.28em] text-bright">
