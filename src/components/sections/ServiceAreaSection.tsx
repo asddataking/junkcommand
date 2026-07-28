@@ -3,16 +3,10 @@
 import Link from "next/link";
 import { Check, Shield } from "lucide-react";
 import { HOMEPAGE_SERVICE_AREAS } from "@/data/homepage-service-areas";
-import { REVIEWS } from "@/data/reviews";
 import { MichiganServiceMap } from "@/components/sections/MichiganServiceMap";
-import { StarRating } from "@/components/ui/StarRating";
 import { Button } from "@/components/ui/Button";
 import { BlurFade } from "@/components/magicui/blur-fade";
 import { ShineBorder } from "@/components/magicui/shine-border";
-
-const featuredReview =
-  REVIEWS.find((review) => review.id === "rev-dave-l-fort-gratiot") ??
-  REVIEWS[0];
 
 function scrollToQuoteAddress() {
   const quote = document.getElementById("quote");
@@ -44,7 +38,6 @@ export function ServiceAreaSection() {
             />
 
             <div className="relative z-10 grid gap-10 lg:grid-cols-[1.15fr_0.9fr_0.95fr] lg:items-center lg:gap-8">
-              {/* Left: copy + cities */}
               <div className="order-1">
                 <h2
                   id="service-areas-heading"
@@ -64,7 +57,10 @@ export function ServiceAreaSection() {
 
                 <ul className="mt-6 grid grid-cols-1 gap-x-6 gap-y-2.5 sm:grid-cols-2">
                   {HOMEPAGE_SERVICE_AREAS.map((area) => (
-                    <li key={area.name} className="flex items-center gap-2.5 text-sm text-white">
+                    <li
+                      key={area.name}
+                      className="flex items-center gap-2.5 text-sm text-white"
+                    >
                       <Check
                         className="size-4 shrink-0 text-bright"
                         aria-hidden
@@ -100,27 +96,24 @@ export function ServiceAreaSection() {
                 </Button>
               </div>
 
-              {/* Center: map */}
               <div className="order-2">
                 <MichiganServiceMap />
               </div>
 
-              {/* Right: testimonial */}
               <div className="order-3 space-y-4">
-                <figure className="rounded-[2px] border border-[rgba(0,135,255,0.35)] bg-[#020305]/80 p-5">
-                  <StarRating className="mb-3" />
-                  <blockquote className="text-base leading-relaxed text-white">
-                    “{featuredReview.quote}”
-                  </blockquote>
-                  <figcaption className="mt-4 text-sm">
-                    <span className="font-semibold text-bright">
-                      — {featuredReview.name}
-                    </span>
-                    <span className="mt-1 block text-muted">
-                      {featuredReview.city}
-                    </span>
-                  </figcaption>
-                </figure>
+                <div className="rounded-[2px] border border-[rgba(0,135,255,0.35)] bg-[#020305]/80 p-5">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-bright">
+                    Our Promise
+                  </p>
+                  <h3 className="mt-2 font-display text-2xl tracking-[0.08em] text-white">
+                    LOCAL CREW. CLEAR PRICING.
+                  </h3>
+                  <p className="mt-3 text-sm leading-relaxed text-muted">
+                    Fast, friendly, and hassle-free junk removal from a
+                    veteran-owned Port Huron team — upfront quotes before we
+                    load, and a broom-clean finish when we leave.
+                  </p>
+                </div>
 
                 <p className="flex flex-wrap items-center gap-x-2 gap-y-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-muted">
                   <Shield className="size-3.5 text-bright" aria-hidden />

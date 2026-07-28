@@ -8,7 +8,6 @@ import { QuoteForm } from "@/components/forms/QuoteForm";
 import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
 import { ServiceAreaSection } from "@/components/sections/ServiceAreaSection";
 import { ServicesGrid } from "@/components/sections/ServicesGrid";
-import { ReviewsCarousel } from "@/components/sections/ReviewsCarousel";
 import { FinalCTA } from "@/components/sections/FinalCTA";
 
 export default function Home() {
@@ -23,7 +22,6 @@ export default function Home() {
       <WhyChooseUs />
       <ServiceAreaSection />
       <ServicesGrid />
-      <ReviewsCarousel />
       <FinalCTA />
     </SiteShell>
   );

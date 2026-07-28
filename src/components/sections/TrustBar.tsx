@@ -6,14 +6,14 @@ import {
   Clock3,
   MapPinned,
   ShieldCheck,
-  Star,
+  Tag,
   Truck,
 } from "lucide-react";
 
 const TRUST_ITEMS = [
-  { icon: Star, label: "250+ Five-Star Reviews" },
   { icon: BadgeCheck, label: "Veteran Owned" },
   { icon: MapPinned, label: "Locally Operated" },
+  { icon: Tag, label: "Upfront Pricing" },
   { icon: Clock3, label: "Fast Scheduling" },
   { icon: ShieldCheck, label: "Licensed & Insured" },
   { icon: Truck, label: "Family Operated" },

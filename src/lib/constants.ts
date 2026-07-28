@@ -6,8 +6,6 @@ export const BRAND = {
   smsHref: "sms:8103365865",
   email: "info@junkcommand.com",
   emailHref: "mailto:info@junkcommand.com",
-  reviewCount: 250,
-  rating: 5,
 } as const;
 
 export const SITE_URL = "https://www.getjunkcommand.com";
@@ -36,7 +34,7 @@ export const BUSINESS_HOURS = [
 export const NAV_LINKS = [
   { label: "Services", href: "/#services" },
   { label: "How It Works", href: "/#how-it-works" },
-  { label: "Reviews", href: "/#reviews" },
+  { label: "Reviews", href: "/reviews" },
   { label: "Service Areas", href: "/#service-areas" },
 ] as const;
 
@@ -185,24 +183,5 @@ export const SERVICE_AREAS = [
   "Macomb County",
 ] as const;
 
-/** @deprecated Prefer REVIEWS from data/reviews */
-export const REVIEWS = [
-  {
-    quote:
-      "They showed up within 2 hours and had my garage cleaned out in no time!",
-    name: "Sarah T.",
-    city: "Port Huron, MI",
-  },
-  {
-    quote:
-      "Best price I found and a super professional crew. Highly recommend Junk Command!",
-    name: "Mike R.",
-    city: "Marysville, MI",
-  },
-  {
-    quote:
-      "I had an old hot tub and shed removed. Fast, friendly, and hassle-free!",
-    name: "Dave L.",
-    city: "Fort Gratiot, MI",
-  },
-] as const;
+/** @deprecated Prefer REVIEWS from data/reviews — empty until real reviews are collected */
+export const REVIEWS = [] as const;

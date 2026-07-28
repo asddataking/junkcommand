@@ -90,7 +90,7 @@ export default function RootLayout({
     getServiceSchema(),
     getFaqSchema(getHomepageFaqs()),
     getReviewSchema(),
-  ];
+  ].filter((schema): schema is Record<string, unknown> => Boolean(schema));
 
   return (
     <html lang="en" className={`${inter.variable} ${bebas.variable} ${oswald.variable} h-full`}>

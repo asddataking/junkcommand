@@ -4,10 +4,8 @@ import { CheckCircle2, Clock3, MapPin, ShieldCheck } from "lucide-react";
 import { BRAND } from "@/lib/constants";
 import { Button } from "@/components/ui/Button";
 import { MediaImage } from "@/components/ui/MediaImage";
-import { StarRating } from "@/components/ui/StarRating";
 import { BlurFade } from "@/components/magicui/blur-fade";
 import { ShimmerButton } from "@/components/magicui/shimmer-button";
-import { NumberTicker } from "@/components/magicui/number-ticker";
 import { DotPattern } from "@/components/magicui/dot-pattern";
 import { BorderBeam } from "@/components/magicui/border-beam";
 
@@ -87,22 +85,11 @@ export function Hero() {
           </BlurFade>
 
           <BlurFade delay={0.3} inView={false}>
-            <div className="flex flex-wrap items-center gap-3 pt-1">
-              <StarRating />
-              <p className="text-sm text-muted">
-                <NumberTicker
-                  value={BRAND.reviewCount}
-                  className="font-semibold text-white"
-                />
-                <span className="font-semibold text-white">+</span> Five-Star
-                Reviews
-              </p>
-            </div>
-            <div className="mt-3 flex flex-wrap items-center gap-2 text-sm text-muted">
+            <div className="flex flex-wrap items-center gap-2 text-sm text-muted">
               <MapPin className="size-4 text-bright" aria-hidden />
               <span>
-                Servicing Port Huron, Marysville, St. Clair County & Surrounding
-                Areas
+                Veteran-owned junk removal serving Port Huron, Marysville, St.
+                Clair County &amp; surrounding areas
               </span>
             </div>
           </BlurFade>

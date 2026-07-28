@@ -121,16 +121,18 @@ export function CityPageContent({ city }: { city: City }) {
               </div>
             </div>
 
-            <div>
-              <h2 className="font-display text-3xl tracking-[0.06em] text-white sm:text-4xl">
-                REVIEWS NEAR {city.name.toUpperCase()}
-              </h2>
-              <div className="mt-6 grid gap-4 sm:grid-cols-3">
-                {reviews.map((review) => (
-                  <ReviewCard key={review.id} review={review} />
-                ))}
+            {reviews.length > 0 ? (
+              <div>
+                <h2 className="font-display text-3xl tracking-[0.06em] text-white sm:text-4xl">
+                  REVIEWS NEAR {city.name.toUpperCase()}
+                </h2>
+                <div className="mt-6 grid gap-4 sm:grid-cols-3">
+                  {reviews.map((review) => (
+                    <ReviewCard key={review.id} review={review} />
+                  ))}
+                </div>
               </div>
-            </div>
+            ) : null}
 
             <div>
               <h2 className="font-display text-3xl tracking-[0.06em] text-white sm:text-4xl">

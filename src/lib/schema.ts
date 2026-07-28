@@ -2,7 +2,7 @@ import { BRAND, BRAND_LOGO, SITE_URL, SOCIAL_SHARE_IMAGE } from "@/lib/constants
 import { SERVICES } from "@/data/services";
 import { CITIES, CITY_NAMES } from "@/data/cities";
 import { SCHEMA_SERVICE_AREAS } from "@/data/homepage-service-areas";
-import { AGGREGATE, REVIEWS } from "@/data/reviews";
+import { hasReviews, AGGREGATE, REVIEWS } from "@/data/reviews";
 
 type Crumb = { name: string; href: string };
 
@@ -64,13 +64,17 @@ export function getLocalBusinessSchema() {
       addressRegion: "MI",
       addressCountry: "US",
     },
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: String(AGGREGATE.rating),
-      reviewCount: String(AGGREGATE.count),
-      bestRating: "5",
-      worstRating: "1",
-    },
+    ...(hasReviews()
+      ? {
+          aggregateRating: {
+            "@type": "AggregateRating",
+            ratingValue: String(AGGREGATE.rating),
+            reviewCount: String(AGGREGATE.count),
+            bestRating: "5",
+            worstRating: "1",
+          },
+        }
+      : {}),
   };
 }
 
@@ -190,6 +194,8 @@ export function getCityPageSchema(city: (typeof CITIES)[number]) {
 }
 
 export function getReviewSchema() {
+  if (!hasReviews()) return null;
+
   return {
     "@context": "https://schema.org",
     "@type": "Organization",
