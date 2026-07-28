@@ -12,7 +12,7 @@ import { DotPattern } from "@/components/magicui/dot-pattern";
 import { BorderBeam } from "@/components/magicui/border-beam";
 
 const trustItems = [
-  { icon: Clock3, label: "Same-Day Service" },
+  { icon: Clock3, label: "Fast Response" },
   { icon: CheckCircle2, label: "Upfront Pricing" },
   { icon: ShieldCheck, label: "Licensed & Insured" },
 ] as const;

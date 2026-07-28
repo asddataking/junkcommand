@@ -124,7 +124,7 @@ export default function ServiceAreasPage() {
 
       <CtaBanner
         title="NEED JUNK GONE IN YOUR TOWN?"
-        description="Same-day and next-day windows are often available near Port Huron. Get a free quote with photos."
+        description="Get a free quote with photos and we’ll confirm the soonest available window near Port Huron."
       />
     </SiteShell>
   );

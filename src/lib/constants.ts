@@ -12,6 +12,16 @@ export const BRAND = {
 
 export const SITE_URL = "https://www.getjunkcommand.com";
 
+/** Default Open Graph / Twitter / iMessage share image (1200×630) */
+export const SOCIAL_SHARE_IMAGE = "/images/og/junk-command-social.jpg";
+export const SOCIAL_SHARE_IMAGE_ALT =
+  "Junk Command — Take Command of Your Clutter. Veteran-owned junk removal in Port Huron, MI";
+export const SOCIAL_SHARE_IMAGE_WIDTH = 1200;
+export const SOCIAL_SHARE_IMAGE_HEIGHT = 630;
+
+/** Primary brand mark used in header, schema, and PWA icons */
+export const BRAND_LOGO = "/images/junk-command-logo.png";
+
 export const BUSINESS_HOURS = [
   { day: "Monday", hours: "7:00 AM – 7:00 PM" },
   { day: "Tuesday", hours: "7:00 AM – 7:00 PM" },
@@ -115,7 +125,7 @@ export const WHY_CHOOSE = [
   },
   {
     title: "Fast Response",
-    description: "Same-day options when you need junk gone now.",
+    description: "Quick scheduling and clear arrival windows when you need junk gone.",
   },
 ] as const;
 

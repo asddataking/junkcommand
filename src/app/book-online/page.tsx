@@ -50,7 +50,7 @@ export default function BookOnlinePage() {
           <p className="mt-4 max-w-2xl text-muted">
             Tell us what you need hauled, share your preferred date and time
             window, and upload photos for a faster quote. Junk Command confirms
-            pricing and locks your appointment — often same-day near Port Huron.
+            pricing and locks your appointment.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Button href="#quote" showArrow>
@@ -207,7 +207,7 @@ export default function BookOnlinePage() {
 
       <CtaBanner
         title="OR CALL TO BOOK NOW"
-        description={`Speak with Junk Command directly at ${BRAND.phone} for same-day options.`}
+        description={`Speak with Junk Command directly at ${BRAND.phone} to check availability.`}
         primaryHref={BRAND.phoneHref}
         primaryLabel={`Call ${BRAND.phone}`}
         secondaryHref="#quote"

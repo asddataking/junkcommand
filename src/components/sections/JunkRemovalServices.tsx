@@ -37,7 +37,7 @@ export function JunkRemovalServices() {
           <p className="mx-auto mt-3 max-w-2xl text-muted">
             From garage cleanouts to construction debris, our veteran-owned junk
             removal company handles furniture removal, appliance removal, and
-            same-day junk removal across St. Clair County.
+            full-service hauling across St. Clair County.
           </p>
         </BlurFade>
 

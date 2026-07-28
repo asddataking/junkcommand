@@ -108,7 +108,7 @@ export default async function BlogIndexPage({ searchParams }: Props) {
       </section>
 
       <CtaBanner
-        title="NEED JUNK GONE TODAY?"
+        title="NEED JUNK GONE SOON?"
         description="Text photos to 810-336-5865 for a fast Port Huron area quote."
       />
     </SiteShell>

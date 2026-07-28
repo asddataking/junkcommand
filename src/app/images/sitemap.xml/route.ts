@@ -2,7 +2,7 @@ import { SERVICES } from "@/data/services";
 import { CITIES } from "@/data/cities";
 import { BLOG_POSTS } from "@/data/blog";
 import { GALLERY_ITEMS } from "@/data/gallery";
-import { SITE_URL } from "@/lib/constants";
+import { SITE_URL, SOCIAL_SHARE_IMAGE, SOCIAL_SHARE_IMAGE_ALT } from "@/lib/constants";
 
 export const dynamic = "force-static";
 export const revalidate = 86400;
@@ -29,6 +29,12 @@ function absoluteImage(path: string) {
 
 export function GET() {
   const entries: ImageEntry[] = [
+    {
+      pageUrl: SITE_URL,
+      imageUrl: absoluteImage(SOCIAL_SHARE_IMAGE),
+      title: SOCIAL_SHARE_IMAGE_ALT,
+      caption: "Junk Command social share image — Port Huron junk removal",
+    },
     {
       pageUrl: SITE_URL,
       imageUrl: absoluteImage("/images/junk-command-hero.webp"),

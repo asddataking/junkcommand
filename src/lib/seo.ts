@@ -1,5 +1,12 @@
 import type { Metadata } from "next";
-import { BRAND, SITE_URL } from "@/lib/constants";
+import {
+  BRAND,
+  SITE_URL,
+  SOCIAL_SHARE_IMAGE,
+  SOCIAL_SHARE_IMAGE_ALT,
+  SOCIAL_SHARE_IMAGE_HEIGHT,
+  SOCIAL_SHARE_IMAGE_WIDTH,
+} from "@/lib/constants";
 
 type PageSeoInput = {
   title: string;
@@ -15,8 +22,8 @@ export function buildPageMetadata({
   title,
   description,
   path,
-  image = "/images/junk-command-hero.webp",
-  imageAlt = "Junk Command junk removal in Port Huron, Michigan",
+  image = SOCIAL_SHARE_IMAGE,
+  imageAlt = SOCIAL_SHARE_IMAGE_ALT,
   type = "website",
   noIndex = false,
 }: PageSeoInput): Metadata {
@@ -32,7 +39,14 @@ export function buildPageMetadata({
       title,
       description,
       siteName: BRAND.name,
-      images: [{ url: image, width: 1200, height: 630, alt: imageAlt }],
+      images: [
+        {
+          url: image,
+          width: SOCIAL_SHARE_IMAGE_WIDTH,
+          height: SOCIAL_SHARE_IMAGE_HEIGHT,
+          alt: imageAlt,
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",

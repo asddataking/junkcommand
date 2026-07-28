@@ -6,7 +6,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: BRAND.name,
     short_name: "Junk Command",
     description:
-      "Veteran-owned junk removal in Port Huron and St. Clair County. Same-day options, upfront pricing.",
+      "Veteran-owned junk removal in Port Huron and St. Clair County. Upfront pricing and free quotes.",
     start_url: "/",
     display: "standalone",
     background_color: "#020305",
@@ -18,10 +18,22 @@ export default function manifest(): MetadataRoute.Manifest {
         type: "image/x-icon",
       },
       {
-        src: "/images/junk-command-hero.webp",
-        sizes: "512x512",
-        type: "image/webp",
+        src: "/images/junk-command-logo-mark.png",
+        sizes: "128x128",
+        type: "image/png",
         purpose: "any",
+      },
+      {
+        src: "/images/junk-command-logo-512.png",
+        sizes: "512x512",
+        type: "image/png",
+        purpose: "any",
+      },
+      {
+        src: "/images/junk-command-logo-512.png",
+        sizes: "512x512",
+        type: "image/png",
+        purpose: "maskable",
       },
     ],
   };

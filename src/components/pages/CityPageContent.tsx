@@ -75,7 +75,7 @@ export function CityPageContent({ city }: { city: City }) {
 
             <CtaBanner
               title={`JUNK REMOVAL IN ${city.name.toUpperCase()}`}
-              description="Same-day options, upfront pricing, veteran-owned crew."
+              description="Fast scheduling, upfront pricing, veteran-owned crew."
               className="border-x border-[rgba(0,135,255,0.25)]"
             />
 

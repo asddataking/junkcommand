@@ -10,7 +10,13 @@ import {
   getWebSiteSchema,
 } from "@/lib/schema";
 import { getHomepageFaqs } from "@/data/faqs";
-import { SITE_URL } from "@/lib/constants";
+import {
+  SITE_URL,
+  SOCIAL_SHARE_IMAGE,
+  SOCIAL_SHARE_IMAGE_ALT,
+  SOCIAL_SHARE_IMAGE_HEIGHT,
+  SOCIAL_SHARE_IMAGE_WIDTH,
+} from "@/lib/constants";
 import "./globals.css";
 
 const GA_MEASUREMENT_ID = "G-9ZVZX7M7FJ";
@@ -38,7 +44,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: "Junk Removal Port Huron MI | Junk Command",
   description:
-    "Junk Command provides fast, professional junk removal in Port Huron, Marysville, Fort Gratiot, and St. Clair County. Same-day options, upfront pricing. Call 810-336-5865.",
+    "Junk Command provides fast, professional junk removal in Port Huron, Marysville, Fort Gratiot, and St. Clair County. Upfront pricing and free quotes. Call 810-336-5865.",
   alternates: {
     canonical: SITE_URL,
   },
@@ -51,10 +57,10 @@ export const metadata: Metadata = {
     siteName: "Junk Command",
     images: [
       {
-        url: "/images/junk-command-hero.webp",
-        width: 1200,
-        height: 630,
-        alt: "Junk Command junk removal crew in Port Huron, MI",
+        url: SOCIAL_SHARE_IMAGE,
+        width: SOCIAL_SHARE_IMAGE_WIDTH,
+        height: SOCIAL_SHARE_IMAGE_HEIGHT,
+        alt: SOCIAL_SHARE_IMAGE_ALT,
       },
     ],
   },
@@ -63,7 +69,7 @@ export const metadata: Metadata = {
     title: "Junk Removal Port Huron MI | Junk Command",
     description:
       "Fast junk removal in Port Huron & St. Clair County. Free quotes. Call 810-336-5865.",
-    images: ["/images/junk-command-hero.webp"],
+    images: [SOCIAL_SHARE_IMAGE],
   },
   robots: {
     index: true,

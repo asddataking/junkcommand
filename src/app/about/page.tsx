@@ -24,8 +24,6 @@ export const metadata = buildPageMetadata({
   description:
     "Junk Command is a veteran-owned, family-operated junk removal company in Port Huron, MI — Dan, Gage, and Blue Heeler Luna serving St. Clair County with pride.",
   path: "/about",
-  image: "/images/dan-gage-luna.webp",
-  imageAlt: "Dan, Gage, and Luna — the Junk Command crew in Port Huron",
 });
 
 export default function AboutPage() {
@@ -108,7 +106,7 @@ export default function AboutPage() {
             </p>
             <p className="mt-4 text-muted">
               Our headquarters is Port Huron — so when someone in Marysville,
-              Fort Gratiot, or Kimball needs same-day help, we are already close.
+              Fort Gratiot, or Kimball needs help fast, we are already close.
               That local density is how we keep response times sharp and service
               personal across St. Clair and Macomb Counties.
             </p>

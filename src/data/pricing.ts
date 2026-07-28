@@ -21,7 +21,7 @@ export const PRICING_ITEMS: PricingItem[] = [
     name: "Mattress",
     startingPrice: 99,
     image: "/images/pricing/mattress.webp",
-    alt: "Mattress ready for same-day junk removal pickup",
+    alt: "Mattress ready for junk removal pickup",
   },
   {
     id: "recliner",

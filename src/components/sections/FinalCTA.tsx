@@ -48,7 +48,7 @@ export function FinalCTA() {
               Get Started Now
             </ShimmerButton>
           </div>
-          <p className="sr-only">Call {BRAND.phone} for same-day options.</p>
+          <p className="sr-only">Call {BRAND.phone} for a fast quote.</p>
         </div>
       </BlurFade>
     </section>

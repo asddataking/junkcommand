@@ -51,8 +51,8 @@ export default function ServicesPage() {
           <p className="mt-4 max-w-2xl text-muted">
             From a single mattress to a full estate cleanout, Junk Command
             hauls it all across Port Huron, St. Clair County, and northern
-            Macomb County. Veteran-owned. Upfront pricing. Same-day options
-            when you need junk gone now.
+            Macomb County. Veteran-owned. Upfront pricing. Fast, reliable
+            scheduling when you need junk gone.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Button href="/book-online" showArrow>

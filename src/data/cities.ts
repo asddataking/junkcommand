@@ -25,13 +25,13 @@ export const CITIES: City[] = [
     county: "St. Clair County",
     metaTitle: "Junk Removal Port Huron MI | Junk Command",
     metaDescription:
-      "Same-day junk removal in Port Huron, MI. Veteran-owned crew for furniture, appliances, cleanouts & more. Free quotes. Call Junk Command at 810-336-5865.",
+      "Junk removal in Port Huron, MI. Veteran-owned crew for furniture, appliances, cleanouts & more. Free quotes. Call Junk Command at 810-336-5865.",
     h1: "Junk Removal in Port Huron, Michigan",
     eyebrow: "Blue Water Area Headquarters",
     intro:
       "Junk Command is based right here in Port Huron — so when you need junk hauled, we are already in your backyard. From Military Street bungalows to waterfront condos near the Blue Water Bridge, our veteran-owned crew clears clutter fast with upfront pricing and no surprises.",
     whyUs:
-      "Port Huron is home for Junk Command. We know the neighborhoods off Pine Grove, the tight alley access downtown, and how quickly lake-effect weather can change a haul day. As a local, veteran-owned team we show up on time, protect floors and doorways, and leave every job broom-clean. Whether you are emptying a garage near Lakeside or staging a rental on 10th Avenue, you get same-day options, honest volume-based pricing, and a crew that treats your property like it is our own. Call 810-336-5865 and talk to people who actually live and work in the Blue Water Area.",
+      "Port Huron is home for Junk Command. We know the neighborhoods off Pine Grove, the tight alley access downtown, and how quickly lake-effect weather can change a haul day. As a local, veteran-owned team we show up on time, protect floors and doorways, and leave every job broom-clean. Whether you are emptying a garage near Lakeside or staging a rental on 10th Avenue, you get honest volume-based pricing, and a crew that treats your property like it is our own. Call 810-336-5865 and talk to people who actually live and work in the Blue Water Area.",
     localReferences: [
       "Blue Water Bridge corridor",
       "Military Street downtown",
@@ -47,12 +47,12 @@ export const CITIES: City[] = [
       "St. Clair County Community College",
     ],
     servicesBlurb:
-      "In Port Huron we handle furniture, appliance, and mattress haul-away, garage and basement cleanouts, estate clearances, construction debris, and yard waste — often same-day from our local base.",
+      "In Port Huron we handle furniture, appliance, and mattress haul-away, garage and basement cleanouts, estate clearances, construction debris, and yard waste from our local Port Huron base.",
     faqs: [
       {
-        question: "Do you offer same-day junk removal in Port Huron?",
+        question: "How quickly can you schedule junk removal in Port Huron?",
         answer:
-          "Yes. Because we are based in Port Huron, same-day and next-day windows are often available. Call or text 810-336-5865 with photos for the fastest quote.",
+          "Because we are based in Port Huron, we can usually confirm a pickup window quickly. Timing depends on the schedule and is confirmed when you book. Call or text 810-336-5865 with photos for the fastest quote.",
       },
       {
         question: "What areas of Port Huron do you serve?",
@@ -114,7 +114,7 @@ export const CITIES: City[] = [
       {
         question: "How quickly can you get to Marysville?",
         answer:
-          "Marysville is a short drive from our Port Huron headquarters. Same-day service is frequently available — send photos to 810-336-5865 and we will confirm a window.",
+          "Marysville is a short drive from our Port Huron headquarters. Send photos to 810-336-5865 and we will confirm the soonest available window.",
       },
       {
         question: "Do you remove junk from Marysville apartments and condos?",
@@ -247,7 +247,7 @@ export const CITIES: City[] = [
       {
         question: "How far in advance should I schedule?",
         answer:
-          "Same-day is often possible, but larger barn or estate jobs benefit from a day or two of notice so we can dedicate the right truck space. Call 810-336-5865 to lock a window.",
+          "Larger barn or estate jobs benefit from a day or two of notice so we can dedicate the right truck space. Call 810-336-5865 to lock a window.",
       },
       {
         question: "Will you haul scrap metal from my property?",
@@ -361,7 +361,7 @@ export const CITIES: City[] = [
       {
         question: "How far is Marine City from your base?",
         answer:
-          "Marine City is a straightforward drive south of Port Huron along our regular route. We schedule efficiently and often offer same-week or same-day windows.",
+          "Marine City is a straightforward drive south of Port Huron along our regular route. We schedule efficiently and confirm the soonest available window for your address.",
       },
       {
         question: "Can you remove junk from older Marine City homes with narrow stairs?",
@@ -550,9 +550,9 @@ export const CITIES: City[] = [
           "Yes. Harbor-area and shoreline homes are part of our regular Macomb County route. Share parking and access notes when you book.",
       },
       {
-        question: "Can you remove a fridge or washer the same day?",
+        question: "How quickly can you remove a fridge or washer?",
         answer:
-          "Often yes, depending on route availability. Call 810-336-5865 early with photos and we will try to fit New Baltimore onto today’s schedule.",
+          "Timing depends on route availability. Call 810-336-5865 early with photos and we will confirm the soonest available window for New Baltimore.",
       },
       {
         question: "Do you take construction debris from basement remodels?",
@@ -857,7 +857,7 @@ export const CITIES: City[] = [
       {
         question: "How soon can you reach Yale from Port Huron?",
         answer:
-          "Yale is a planned stop on our northwestern routes. Same-week service is typical; same-day is sometimes available. Call 810-336-5865 with photos for timing.",
+          "Yale is a planned stop on our northwestern routes. Same-week service is typical. Call 810-336-5865 with photos for timing.",
       },
       {
         question: "Do you clean out entire farmsteads?",
@@ -932,9 +932,9 @@ export const CITIES: City[] = [
           "Outdoor furniture, stored seasonal items, and garage overflow are common Lexington requests. Photos help us quote accurately.",
       },
       {
-        question: "Is same-day service available in Lexington?",
+        question: "How quickly can you schedule junk removal in Lexington?",
         answer:
-          "Same-day depends on northern route timing. Call 810-336-5865 early — next-day and same-week options are frequently available even when same-day is not.",
+          "Timing depends on northern route scheduling. Call 810-336-5865 early — we will confirm the soonest available window for your address.",
       },
     ],
     nearbySlugs: ["croswell", "yale", "port-huron", "capac"],
@@ -1027,7 +1027,7 @@ export const CITIES: City[] = [
       "I-69 / I-94 regional connectors",
     ],
     servicesBlurb:
-      "Countywide we provide furniture and appliance removal, garage and basement cleanouts, estate and foreclosure clearing, construction and yard debris haul-away — with same-day options in many St. Clair County communities.",
+      "Countywide we provide furniture and appliance removal, garage and basement cleanouts, estate and foreclosure clearing, construction and yard debris haul-away — with fast local scheduling across St. Clair County communities.",
     faqs: [
       {
         question: "Which St. Clair County cities do you serve?",
@@ -1101,7 +1101,7 @@ export const CITIES: City[] = [
       {
         question: "Are you as fast in Macomb as in Port Huron?",
         answer:
-          "Macomb stops are built into our regular scheduling. Same-week service is standard; same-day is often available depending on route load. Call 810-336-5865 to check today’s openings.",
+          "Macomb stops are built into our regular scheduling. Same-week service is standard, and we confirm timing based on route load. Call 810-336-5865 to check openings.",
       },
       {
         question: "Do HOA communities in Chesterfield allow your trucks?",

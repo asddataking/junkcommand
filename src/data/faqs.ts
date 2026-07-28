@@ -116,7 +116,7 @@ export const FAQS: Faq[] = [
     id: "services-mattresses",
     question: "Will you pick up mattresses and box springs?",
     answer:
-      "Yes. Mattress removal is one of our most requested single-item jobs in Port Huron and nearby towns. We haul mattresses, box springs, and bed frames from bedrooms, basements, and garages. Same-day options are often available when the schedule allows.",
+      "Yes. Mattress removal is one of our most requested single-item jobs in Port Huron and nearby towns. We haul mattresses, box springs, and bed frames from bedrooms, basements, and garages. Send photos for a fast quote and the soonest available window.",
     category: "services",
   },
   {
@@ -162,10 +162,10 @@ export const FAQS: Faq[] = [
     category: "services",
   },
   {
-    id: "scheduling-same-day",
-    question: "Do you offer same-day junk removal?",
+    id: "scheduling-availability",
+    question: "How quickly can you schedule a junk removal pickup?",
     answer:
-      "Often yes. Junk Command offers same-day junk removal in Port Huron and nearby communities when our truck schedule allows. Early texts and photo quotes give you the best shot at a same-day window. Call or text 810-336-5865 and we will confirm what is open today.",
+      "We aim to get you the soonest available window that fits our route, but timing is never guaranteed until we confirm it. Call or text 810-336-5865 with photos and your address — we will tell you what openings we have and lock in a clear arrival window.",
     category: "scheduling",
   },
   {
@@ -291,14 +291,14 @@ export const FAQS: Faq[] = [
     id: "areas-macomb",
     question: "Do you serve Macomb County?",
     answer:
-      "Yes. Junk Command provides junk removal in northern and nearby Macomb County communities such as Richmond, New Baltimore, Chesterfield, and surrounding areas. Travel and timing depend on the day’s route, so same-day availability can vary. Reach out with your address for a firm yes.",
+      "Yes. Junk Command provides junk removal in northern and nearby Macomb County communities such as Richmond, New Baltimore, Chesterfield, and surrounding areas. Travel and timing depend on the day’s route. Reach out with your address and we will confirm coverage and availability.",
     category: "areas",
   },
   {
     id: "areas-marysville",
     question: "Do you remove junk in Marysville and Fort Gratiot?",
     answer:
-      "Absolutely. Marysville and Fort Gratiot are core Junk Command service areas just minutes from Port Huron. Garage cleanouts, appliance haul-away, and furniture removal are especially common there. Same-day options are often available.",
+      "Absolutely. Marysville and Fort Gratiot are core Junk Command service areas just minutes from Port Huron. Garage cleanouts, appliance haul-away, and furniture removal are especially common there.",
     category: "areas",
   },
   {
@@ -326,7 +326,7 @@ export const FAQS: Faq[] = [
     id: "general-why-choose",
     question: "Why choose Junk Command over a dumpster rental?",
     answer:
-      "A dumpster sits on your driveway for days and still leaves you to do the heavy lifting. Junk Command arrives, loads everything, and leaves with the mess — often the same day. Upfront volume pricing and donation/recycling options make it a cleaner, easier alternative for many Port Huron homes.",
+      "A dumpster sits on your driveway for days and still leaves you to do the heavy lifting. Junk Command arrives, loads everything, and leaves with the mess in one visit. Upfront volume pricing and donation/recycling options make it a cleaner, easier alternative for many Port Huron homes.",
     category: "general",
   },
   {
@@ -380,7 +380,7 @@ export function getFaqsByCategory(category: Faq["category"]): Faq[] {
 export function getHomepageFaqs(): Faq[] {
   const homepageIds = [
     "cost-how-much",
-    "scheduling-same-day",
+    "scheduling-availability",
     "process-photos",
     "process-home",
     "services-not-taken",

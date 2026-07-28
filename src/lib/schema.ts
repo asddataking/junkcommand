@@ -1,4 +1,4 @@
-import { BRAND, SITE_URL } from "@/lib/constants";
+import { BRAND, BRAND_LOGO, SITE_URL, SOCIAL_SHARE_IMAGE } from "@/lib/constants";
 import { SERVICES } from "@/data/services";
 import { CITIES, CITY_NAMES } from "@/data/cities";
 import { SCHEMA_SERVICE_AREAS } from "@/data/homepage-service-areas";
@@ -15,8 +15,8 @@ export function getOrganizationSchema() {
     url: SITE_URL,
     telephone: BRAND.phone,
     email: BRAND.email,
-    logo: `${SITE_URL}/images/junk-command-hero.webp`,
-    image: `${SITE_URL}/images/junk-command-hero.webp`,
+    logo: `${SITE_URL}${BRAND_LOGO}`,
+    image: `${SITE_URL}${SOCIAL_SHARE_IMAGE}`,
     sameAs: [],
   };
 }
@@ -52,7 +52,7 @@ export function getLocalBusinessSchema() {
     url: SITE_URL,
     telephone: BRAND.phone,
     email: BRAND.email,
-    image: `${SITE_URL}/images/junk-command-hero.webp`,
+    image: `${SITE_URL}${SOCIAL_SHARE_IMAGE}`,
     priceRange: "$$",
     areaServed: areaNames.map((name) => ({
       "@type": "Place",
@@ -243,7 +243,7 @@ export function getArticleSchema(input: {
       name: BRAND.name,
       logo: {
         "@type": "ImageObject",
-        url: `${SITE_URL}/images/junk-command-hero.webp`,
+        url: `${SITE_URL}${BRAND_LOGO}`,
       },
     },
     mainEntityOfPage: `${SITE_URL}${input.path}`,

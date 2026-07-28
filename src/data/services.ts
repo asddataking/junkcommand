@@ -25,7 +25,7 @@ export const SERVICES: Service[] = [
     shortTitle: "Furniture",
     metaTitle: "Furniture Removal Port Huron MI | Junk Command",
     metaDescription:
-      "Professional furniture removal in Port Huron & St. Clair County. Sofas, beds, desks, and more hauled away same-day. Free quotes. Call 810-336-5865.",
+      "Professional furniture removal in Port Huron & St. Clair County. Sofas, beds, desks, and more hauled away fast. Free quotes. Call 810-336-5865.",
     h1: "Furniture Removal in Southeast Michigan",
     eyebrow: "Heavy Lifting Done Right",
     intro:
@@ -39,7 +39,7 @@ export const SERVICES: Service[] = [
       "We do all the heavy lifting — stairs and tight hallways included",
       "Upfront pricing before we load a single piece",
       "Donation and recycling when items are in usable condition",
-      "Same-day and next-day options across St. Clair County",
+      "Fast scheduling across St. Clair County",
     ],
     process: [
       {
@@ -50,7 +50,7 @@ export const SERVICES: Service[] = [
       {
         title: "Lock in your time window",
         description:
-          "We confirm pricing and schedule a pickup that fits your day — often same-day.",
+          "We confirm pricing and schedule a pickup that fits your day.",
       },
       {
         title: "We clear it out",
@@ -187,7 +187,7 @@ export const SERVICES: Service[] = [
       {
         title: "Schedule pickup",
         description:
-          "Same-day mattress removal is often available in Port Huron and nearby towns.",
+          "Mattress removal is available throughout Port Huron and nearby towns — send photos for timing.",
       },
       {
         title: "We haul it away",
@@ -722,7 +722,7 @@ export const SERVICES: Service[] = [
       "In-ground surround and deck-access experience",
       "Breakdown and haul in one visit",
       "Electrical disconnect guidance before arrival",
-      "Often completed the same day you book",
+      "Efficient single-visit cleanouts",
     ],
     process: [
       {
@@ -1197,7 +1197,7 @@ export const SERVICES: Service[] = [
     benefits: [
       "Flat screens and CRT televisions",
       "Wall-mount removal assistance when accessible",
-      "Same-day options often available",
+      "Flexible scheduling when openings are available",
       "Add stands, soundbars, and electronics in one trip",
     ],
     process: [

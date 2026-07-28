@@ -22,9 +22,8 @@ export function ServiceAreas() {
           </h2>
           <p className="mt-3 text-muted">
             Junk Command proudly serves Port Huron and communities across St.
-            Clair and Macomb Counties. Same-day options available when
-            scheduling allows — request a quote and we&apos;ll confirm
-            availability fast.
+            Clair and Macomb Counties. Request a quote and we&apos;ll confirm
+            coverage and the soonest available window fast.
           </p>
         </div>
 

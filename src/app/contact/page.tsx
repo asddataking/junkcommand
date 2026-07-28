@@ -148,8 +148,8 @@ export default function ContactPage() {
       <QuoteForm />
 
       <CtaBanner
-        title="NEED IT GONE TODAY?"
-        description="Same-day windows are often available near Port Huron. Call or book online now."
+        title="NEED JUNK GONE SOON?"
+        description="Call or book online for a fast quote and the soonest available window near Port Huron."
       />
     </SiteShell>
   );

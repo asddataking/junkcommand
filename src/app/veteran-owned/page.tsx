@@ -106,7 +106,7 @@ export default function VeteranOwnedPage() {
           </p>
           <p className="leading-relaxed text-muted">
             We are proud to serve St. Clair County and nearby communities with
-            same-day options when the schedule allows, volume-based pricing you
+            fast scheduling when openings are available, volume-based pricing you
             see before we load, and a crew that treats your driveway and doorways
             with respect. That is what veteran-owned junk removal should feel
             like in the Blue Water Area.

@@ -25,8 +25,6 @@ export const metadata = buildPageMetadata({
   description:
     "Meet Dan (Owner/Operator), Gage (Crew Lead), and Luna the Blue Heeler — the Junk Command team hauling junk across Port Huron & Southeast Michigan.",
   path: "/meet-the-crew",
-  image: "/images/dan-gage-luna.webp",
-  imageAlt: "Junk Command crew — Dan, Gage, and Luna",
 });
 
 export default function MeetTheCrewPage() {

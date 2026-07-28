@@ -2,8 +2,8 @@
 <browserconfig>
   <msapplication>
     <tile>
-      <square150x150logo src="/images/junk-command-hero.webp"/>
-      <TileColor>#0787ff</TileColor>
+      <square150x150logo src="/images/junk-command-logo-512.png"/>
+      <TileColor>#020305</TileColor>
     </tile>
   </msapplication>
 </browserconfig>

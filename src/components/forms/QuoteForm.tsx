@@ -17,7 +17,7 @@ import { DotPattern } from "@/components/magicui/dot-pattern";
 const benefits = [
   "No Obligation",
   "Upfront Pricing",
-  "Same-Day Service",
+  "Fast Scheduling",
   "Satisfaction Guaranteed",
 ] as const;
 

@@ -14,7 +14,7 @@ const LOAD_OPTIONS = [
 const ADDONS = [
   { id: "stairs", label: "Stairs / difficult access", amount: 25 },
   { id: "hot-tub", label: "Hot tub / shed breakdown", amount: 75 },
-  { id: "same-day", label: "Same-day preferred", amount: 0 },
+  { id: "soonest", label: "Soonest available preferred", amount: 0 },
 ] as const;
 
 const BASE = 99;
