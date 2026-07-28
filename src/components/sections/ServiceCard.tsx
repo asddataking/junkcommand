@@ -1,9 +1,11 @@
+import Link from "next/link";
 import type { LucideIcon } from "lucide-react";
 
 type ServiceCardProps = {
   title: string;
   description: string;
   image: string;
+  slug: string;
   icon: LucideIcon;
 };
 
@@ -11,10 +13,14 @@ export function ServiceCard({
   title,
   description,
   image,
+  slug,
   icon: Icon,
 }: ServiceCardProps) {
   return (
-    <article className="group relative flex min-h-56 flex-col justify-end overflow-hidden rounded-[2px] border border-[rgba(0,135,255,0.4)] bg-card transition-transform duration-300 hover:-translate-y-1 hover:border-bright glow-border sm:min-h-64">
+    <Link
+      href={`/${slug}`}
+      className="group relative flex min-h-56 flex-col justify-end overflow-hidden rounded-[2px] border border-[rgba(0,135,255,0.4)] bg-card transition-transform duration-300 hover:-translate-y-1 hover:border-bright glow-border sm:min-h-64"
+    >
       <div
         className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
         style={{
@@ -34,6 +40,6 @@ export function ServiceCard({
           {description}
         </p>
       </div>
-    </article>
+    </Link>
   );
 }

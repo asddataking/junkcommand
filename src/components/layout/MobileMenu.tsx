@@ -1,7 +1,8 @@
 "use client";
 
+import Link from "next/link";
 import { BRAND, NAV_LINKS } from "@/lib/constants";
-import { Button } from "@/components/ui/Button";
+import { ShimmerButton } from "@/components/magicui/shimmer-button";
 
 export function MobileMenu({
   open,
@@ -17,16 +18,19 @@ export function MobileMenu({
       id="mobile-menu"
       className="border-t border-[rgba(0,135,255,0.25)] bg-[#080B0F] lg:hidden"
     >
-      <nav className="mx-auto flex max-w-7xl flex-col gap-1 px-4 py-4" aria-label="Mobile">
+      <nav
+        className="mx-auto flex max-w-7xl flex-col gap-1 px-4 py-4"
+        aria-label="Mobile"
+      >
         {NAV_LINKS.map((link) => (
-          <a
+          <Link
             key={link.href}
             href={link.href}
             onClick={onClose}
             className="rounded-[2px] px-3 py-3 text-sm font-semibold uppercase tracking-[0.14em] text-muted hover:bg-[rgba(7,135,255,0.08)] hover:text-white"
           >
             {link.label}
-          </a>
+          </Link>
         ))}
         <a
           href={BRAND.phoneHref}
@@ -36,9 +40,9 @@ export function MobileMenu({
           Call {BRAND.phone}
         </a>
         <div className="pt-2">
-          <Button href="#quote" showArrow className="w-full" onClick={onClose}>
+          <ShimmerButton href="#quote" className="w-full" onClick={onClose}>
             Get My Free Quote
-          </Button>
+          </ShimmerButton>
         </div>
       </nav>
     </div>

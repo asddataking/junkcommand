@@ -1,11 +1,12 @@
 "use client";
 
+import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
-import { BRAND, NAV_LINKS } from "@/lib/constants";
-import { Button } from "@/components/ui/Button";
+import { NAV_LINKS } from "@/lib/constants";
 import { Logo } from "@/components/ui/Logo";
 import { MobileMenu } from "@/components/layout/MobileMenu";
+import { ShimmerButton } from "@/components/magicui/shimmer-button";
 
 export function Header() {
   const [open, setOpen] = useState(false);
@@ -41,26 +42,18 @@ export function Header() {
           aria-label="Primary"
         >
           {NAV_LINKS.map((link) => (
-            <a
+            <Link
               key={link.href}
               href={link.href}
               className="text-sm font-semibold uppercase tracking-[0.14em] text-muted transition-colors hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-bright"
             >
               {link.label}
-            </a>
+            </Link>
           ))}
         </nav>
 
-        <div className="hidden items-center gap-3 lg:flex">
-          <a
-            href={BRAND.phoneHref}
-            className="text-sm font-semibold text-bright hover:text-white"
-          >
-            {BRAND.phone}
-          </a>
-          <Button href="#quote" showArrow>
-            Get My Free Quote
-          </Button>
+        <div className="hidden items-center lg:flex">
+          <ShimmerButton href="#quote">Get My Free Quote</ShimmerButton>
         </div>
 
         <button

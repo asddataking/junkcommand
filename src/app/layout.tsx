@@ -6,6 +6,7 @@ import {
   getReviewSchema,
   getServiceSchema,
 } from "@/lib/schema";
+import { FAQS } from "@/data/faqs";
 import { SITE_URL } from "@/lib/constants";
 import "./globals.css";
 
@@ -73,7 +74,7 @@ export default function RootLayout({
   const schemas = [
     getLocalBusinessSchema(),
     getServiceSchema(),
-    getFaqSchema(),
+    getFaqSchema(FAQS),
     getReviewSchema(),
   ];
 

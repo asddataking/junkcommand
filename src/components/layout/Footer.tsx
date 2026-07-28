@@ -1,7 +1,11 @@
+import Link from "next/link";
 import { Facebook, Instagram, MapPin } from "lucide-react";
-import { BRAND, SERVICE_AREAS } from "@/lib/constants";
+import { BRAND, FOOTER_LINKS } from "@/lib/constants";
+import { CITIES } from "@/data/cities";
 import { Logo } from "@/components/ui/Logo";
 import { MascotBadge } from "@/components/ui/MascotBadge";
+
+const FOOTER_CITIES = CITIES.filter((c) => !c.isCounty).slice(0, 10);
 
 export function Footer() {
   return (
@@ -15,21 +19,10 @@ export function Footer() {
             caption="Luna · K-9 Cleanup Unit"
             className="items-start"
           />
-        </div>
-
-        <div>
-          <h2 className="font-display text-xl tracking-[0.12em] text-white">
-            Contact Us
-          </h2>
-          <ul className="mt-4 space-y-2 text-sm text-muted">
+          <ul className="space-y-2 text-sm text-muted">
             <li>
               <a href={BRAND.phoneHref} className="hover:text-bright">
                 {BRAND.phone}
-              </a>
-            </li>
-            <li>
-              <a href={BRAND.smsHref} className="hover:text-bright">
-                Text Us
               </a>
             </li>
             <li>
@@ -42,21 +35,72 @@ export function Footer() {
 
         <div>
           <h2 className="font-display text-xl tracking-[0.12em] text-white">
-            Service Areas
+            Company
           </h2>
           <ul className="mt-4 space-y-2 text-sm text-muted">
-            {SERVICE_AREAS.map((area) => (
-              <li key={area} className="flex items-center gap-2">
-                <MapPin className="size-3.5 text-bright" aria-hidden />
-                {area}
+            {FOOTER_LINKS.company.map((link) => (
+              <li key={link.href}>
+                <Link href={link.href} className="hover:text-bright">
+                  {link.label}
+                </Link>
               </li>
             ))}
-            <li className="text-muted/80">Surrounding Areas</li>
+          </ul>
+          <h2 className="mt-8 font-display text-xl tracking-[0.12em] text-white">
+            Services
+          </h2>
+          <ul className="mt-4 space-y-2 text-sm text-muted">
+            {FOOTER_LINKS.services.map((link) => (
+              <li key={link.href}>
+                <Link href={link.href} className="hover:text-bright">
+                  {link.label}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
 
         <div>
           <h2 className="font-display text-xl tracking-[0.12em] text-white">
+            Resources
+          </h2>
+          <ul className="mt-4 space-y-2 text-sm text-muted">
+            {FOOTER_LINKS.resources.map((link) => (
+              <li key={link.href}>
+                <Link href={link.href} className="hover:text-bright">
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div id="service-areas" className="scroll-mt-24">
+          <h2 className="font-display text-xl tracking-[0.12em] text-white">
+            Service Areas
+          </h2>
+          <ul className="mt-4 space-y-2 text-sm text-muted">
+            {FOOTER_CITIES.map((city) => (
+              <li key={city.slug}>
+                <Link
+                  href={`/service-areas/${city.slug}`}
+                  className="inline-flex items-center gap-2 hover:text-bright"
+                >
+                  <MapPin className="size-3.5 text-bright" aria-hidden />
+                  {city.name}
+                </Link>
+              </li>
+            ))}
+            <li>
+              <Link
+                href="/service-areas"
+                className="font-semibold text-bright hover:text-white"
+              >
+                View all service areas →
+              </Link>
+            </li>
+          </ul>
+          <h2 className="mt-8 font-display text-xl tracking-[0.12em] text-white">
             Follow Us
           </h2>
           <ul className="mt-4 space-y-3 text-sm text-muted">
@@ -82,17 +126,6 @@ export function Footer() {
                 Instagram
               </a>
             </li>
-            <li>
-              <a
-                href="https://google.com/maps"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 hover:text-bright"
-              >
-                <MapPin className="size-4" aria-hidden />
-                Google Business Profile
-              </a>
-            </li>
           </ul>
         </div>
       </div>
@@ -101,12 +134,12 @@ export function Footer() {
         <div className="mx-auto flex max-w-7xl flex-col gap-3 px-4 py-5 text-xs text-muted sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
           <p>© 2026 Junk Command Junk Removal. All Rights Reserved.</p>
           <div className="flex gap-4">
-            <a id="privacy" href="#privacy" className="hover:text-white">
+            <Link href="/privacy" className="hover:text-white">
               Privacy Policy
-            </a>
-            <a id="terms" href="#terms" className="hover:text-white">
+            </Link>
+            <Link href="/terms" className="hover:text-white">
               Terms of Service
-            </a>
+            </Link>
           </div>
         </div>
       </div>

@@ -15,7 +15,7 @@ const actions = [
     icon: MessageSquare,
   },
   {
-    href: "#quote",
+    href: "/book-online",
     label: "Get Instant Quote",
     icon: FileText,
   },

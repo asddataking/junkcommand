@@ -1,65 +1,63 @@
 "use client";
 
-import { motion, useReducedMotion } from "framer-motion";
 import {
-  ArrowRight,
   ClipboardList,
   MessageCircle,
   Sparkles,
   Truck,
 } from "lucide-react";
 import { HOW_IT_WORKS } from "@/lib/constants";
+import { BlurFade } from "@/components/magicui/blur-fade";
+import { DotPattern } from "@/components/magicui/dot-pattern";
 
 const icons = [ClipboardList, MessageCircle, Truck, Sparkles];
 
 export function HowItWorks() {
-  const reduceMotion = useReducedMotion();
-
   return (
     <section
       id="how-it-works"
-      className="scroll-mt-24 border-y border-[rgba(0,135,255,0.15)] bg-[#0B1016] py-16 sm:py-20"
+      className="relative scroll-mt-24 overflow-hidden border-b border-[rgba(0,135,255,0.15)] bg-[#020305] py-16 sm:py-20"
     >
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <h2 className="font-display text-4xl tracking-[0.08em] text-white sm:text-5xl">
-          How It Works
-        </h2>
+      <DotPattern
+        width={22}
+        height={22}
+        cr={0.9}
+        className="opacity-20 [mask-image:linear-gradient(to_bottom,white,transparent)]"
+      />
 
-        <ol className="mt-10 grid gap-6 md:grid-cols-4 md:gap-4">
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <BlurFade className="text-center">
+          <h2 className="font-display text-4xl tracking-[0.08em] text-white sm:text-5xl">
+            HOW IT WORKS
+          </h2>
+        </BlurFade>
+
+        <ol className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
           {HOW_IT_WORKS.map((item, index) => {
             const Icon = icons[index];
             return (
-              <motion.li
+              <li
                 key={item.step}
-                initial={reduceMotion ? false : { opacity: 0, y: 14 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.35, delay: index * 0.06 }}
-                className="relative flex gap-4 md:flex-col md:items-start"
+                className="relative flex flex-col items-center text-center"
               >
-                <div className="relative flex shrink-0 items-center">
-                  <div className="glow-border flex h-14 w-14 items-center justify-center rounded-[2px] border border-[rgba(0,135,255,0.55)] bg-[#080B0F] text-bright">
-                    <Icon className="size-6" aria-hidden />
-                  </div>
+                <BlurFade delay={index * 0.08} className="flex w-full flex-col items-center">
                   {index < HOW_IT_WORKS.length - 1 ? (
-                    <ArrowRight
-                      className="absolute -right-8 hidden size-5 text-primary/60 md:block xl:-right-10"
+                    <div
+                      className="pointer-events-none absolute left-[calc(50%+2.25rem)] top-7 hidden h-px w-[calc(100%-1.5rem)] bg-gradient-to-r from-bright/70 to-bright/10 lg:block"
                       aria-hidden
                     />
                   ) : null}
-                </div>
-                <div>
-                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-bright">
-                    Step {item.step}
-                  </p>
-                  <h3 className="mt-1 font-display text-2xl tracking-[0.08em] text-white">
-                    {item.title}
+                  <div className="glow-border relative z-10 flex h-14 w-14 items-center justify-center rounded-full border border-[rgba(0,135,255,0.65)] bg-[#080B0F] text-bright shadow-[0_0_24px_rgba(7,135,255,0.25)]">
+                    <Icon className="size-6" aria-hidden />
+                  </div>
+                  <h3 className="mt-5 font-display text-xl tracking-[0.1em] text-white">
+                    {item.title.toUpperCase()}
                   </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-muted">
+                  <p className="mt-2 max-w-[16rem] text-sm leading-relaxed text-muted">
                     {item.description}
                   </p>
-                </div>
-              </motion.li>
+                </BlurFade>
+              </li>
             );
           })}
         </ol>

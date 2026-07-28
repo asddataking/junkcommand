@@ -3,11 +3,23 @@
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { CheckCircle2, Loader2 } from "lucide-react";
+import { ArrowRight, CheckCircle2, Loader2 } from "lucide-react";
 import { BRAND, JUNK_TYPES } from "@/lib/constants";
 import { quoteSchema, type QuoteFormValues } from "@/lib/validation";
 import { Button } from "@/components/ui/Button";
 import { PhotoUploader } from "@/components/forms/PhotoUploader";
+import { BlurFade } from "@/components/magicui/blur-fade";
+import { ShimmerButton } from "@/components/magicui/shimmer-button";
+import { ShineBorder } from "@/components/magicui/shine-border";
+import { BorderBeam } from "@/components/magicui/border-beam";
+import { DotPattern } from "@/components/magicui/dot-pattern";
+
+const benefits = [
+  "No Obligation",
+  "Upfront Pricing",
+  "Same-Day Service",
+  "Satisfaction Guaranteed",
+] as const;
 
 type Status = "idle" | "loading" | "success" | "error";
 
@@ -141,37 +153,65 @@ export function QuoteForm() {
   }
 
   return (
-    <section id="quote" className="scroll-mt-24 py-16 sm:py-20 lg:py-24">
-      <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-          <p className="text-xs font-semibold uppercase tracking-[0.28em] text-bright">
-            Free Quote
-          </p>
-          <h2 className="mt-3 font-display text-4xl tracking-[0.06em] text-white sm:text-5xl">
-            GET MY FREE QUOTE
+    <section
+      id="quote"
+      className="relative scroll-mt-24 overflow-hidden border-y border-[rgba(0,135,255,0.15)] bg-[#080B0F] py-16 sm:py-20"
+    >
+      <DotPattern
+        width={20}
+        height={20}
+        cr={0.8}
+        className="opacity-20 [mask-image:linear-gradient(to_right,white,transparent)]"
+      />
+      <div className="relative mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:gap-14 lg:px-8">
+        <BlurFade>
+          <h2 className="font-display text-4xl tracking-[0.06em] text-white sm:text-5xl">
+            NEED JUNK GONE?
+            <br />
+            <span className="text-bright">GET YOUR FREE QUOTE</span>
           </h2>
-          <p className="mx-auto mt-3 max-w-xl text-muted">
-            Tell us what you need hauled. Upload photos for a faster, more
-            accurate estimate.
-          </p>
-        </div>
+          <ul className="mt-8 space-y-3">
+            {benefits.map((item) => (
+              <li
+                key={item}
+                className="flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.08em] text-white"
+              >
+                <CheckCircle2 className="size-5 shrink-0 text-bright" aria-hidden />
+                {item}
+              </li>
+            ))}
+          </ul>
+          <ArrowRight
+            className="mt-8 hidden size-16 text-bright/80 lg:block"
+            aria-hidden
+          />
+        </BlurFade>
 
+        <BlurFade delay={0.1}>
         <form
           onSubmit={onSubmit}
-          className="glow-border mt-10 space-y-5 rounded-[2px] bg-card p-6 sm:p-8"
+          className="relative space-y-4 overflow-hidden rounded-[2px] border border-[rgba(0,135,255,0.4)] bg-[#020305] p-5 sm:p-7"
           noValidate
         >
-          <div className="grid gap-5 sm:grid-cols-2">
+          <ShineBorder
+            shineColor={["#0787ff", "#18a0ff", "#0787ff"]}
+            duration={12}
+            borderWidth={1}
+            className="opacity-60"
+          />
+          <BorderBeam size={100} duration={8} colorFrom="#18a0ff" colorTo="#0787ff" />
+          <div className="relative z-10 grid gap-4 sm:grid-cols-2">
             <div>
               <label
                 htmlFor="fullName"
                 className="mb-2 block text-xs font-semibold uppercase tracking-[0.12em] text-muted"
               >
-                Full Name *
+                Full Name
               </label>
               <input
                 id="fullName"
                 autoComplete="name"
+                placeholder="Full Name"
                 className={fieldClass}
                 {...register("fullName")}
               />
@@ -186,12 +226,13 @@ export function QuoteForm() {
                 htmlFor="phone"
                 className="mb-2 block text-xs font-semibold uppercase tracking-[0.12em] text-muted"
               >
-                Phone *
+                Phone Number
               </label>
               <input
                 id="phone"
                 type="tel"
                 autoComplete="tel"
+                placeholder="Phone Number"
                 className={fieldClass}
                 {...register("phone")}
               />
@@ -201,18 +242,19 @@ export function QuoteForm() {
             </div>
           </div>
 
-          <div className="grid gap-5 sm:grid-cols-2">
+          <div className="relative z-10 grid gap-4 sm:grid-cols-2">
             <div>
               <label
                 htmlFor="email"
                 className="mb-2 block text-xs font-semibold uppercase tracking-[0.12em] text-muted"
               >
-                Email *
+                Email Address
               </label>
               <input
                 id="email"
                 type="email"
                 autoComplete="email"
+                placeholder="Email Address"
                 className={fieldClass}
                 {...register("email")}
               />
@@ -222,55 +264,63 @@ export function QuoteForm() {
             </div>
             <div>
               <label
-                htmlFor="junkType"
+                htmlFor="serviceAddress"
                 className="mb-2 block text-xs font-semibold uppercase tracking-[0.12em] text-muted"
               >
-                Type of Junk *
+                Address
               </label>
-              <select
-                id="junkType"
+              <input
+                id="serviceAddress"
+                autoComplete="street-address"
+                placeholder="Address"
                 className={fieldClass}
-                defaultValue=""
-                {...register("junkType")}
-              >
-                <option value="" disabled>
-                  Select junk type
-                </option>
-                {JUNK_TYPES.map((type) => (
-                  <option key={type} value={type}>
-                    {type}
-                  </option>
-                ))}
-              </select>
-              {errors.junkType ? (
+                {...register("serviceAddress")}
+              />
+              {errors.serviceAddress ? (
                 <p className="mt-1 text-xs text-red-400">
-                  {errors.junkType.message}
+                  {errors.serviceAddress.message}
                 </p>
               ) : null}
             </div>
           </div>
 
-          <div>
+          <div className="relative z-10">
+            <p className="mb-2 text-xs font-semibold uppercase tracking-[0.12em] text-muted">
+              Upload Photos (Optional)
+            </p>
+            <PhotoUploader files={photos} onChange={setPhotos} />
+          </div>
+
+          <div className="relative z-10">
             <label
-              htmlFor="serviceAddress"
+              htmlFor="junkType"
               className="mb-2 block text-xs font-semibold uppercase tracking-[0.12em] text-muted"
             >
-              Service Address *
+              What type of junk needs removed?
             </label>
-            <input
-              id="serviceAddress"
-              autoComplete="street-address"
+            <select
+              id="junkType"
               className={fieldClass}
-              {...register("serviceAddress")}
-            />
-            {errors.serviceAddress ? (
+              defaultValue=""
+              {...register("junkType")}
+            >
+              <option value="" disabled>
+                Select junk type
+              </option>
+              {JUNK_TYPES.map((type) => (
+                <option key={type} value={type}>
+                  {type}
+                </option>
+              ))}
+            </select>
+            {errors.junkType ? (
               <p className="mt-1 text-xs text-red-400">
-                {errors.serviceAddress.message}
+                {errors.junkType.message}
               </p>
             ) : null}
           </div>
 
-          <div>
+          <div className="relative z-10">
             <label
               htmlFor="details"
               className="mb-2 block text-xs font-semibold uppercase tracking-[0.12em] text-muted"
@@ -279,18 +329,11 @@ export function QuoteForm() {
             </label>
             <textarea
               id="details"
-              rows={4}
+              rows={3}
               className={`${fieldClass} resize-y`}
-              placeholder="Describe the junk, access notes, preferred timing..."
+              placeholder="Access notes, preferred timing..."
               {...register("details")}
             />
-          </div>
-
-          <div>
-            <p className="mb-2 text-xs font-semibold uppercase tracking-[0.12em] text-muted">
-              Photos (optional)
-            </p>
-            <PhotoUploader files={photos} onChange={setPhotos} />
           </div>
 
           <input type="hidden" {...register("utm_source")} />
@@ -304,16 +347,15 @@ export function QuoteForm() {
           {status === "error" ? (
             <div
               role="alert"
-              className="rounded-[2px] border border-red-500/50 bg-red-500/10 px-4 py-3 text-sm text-red-200"
+              className="relative z-10 rounded-[2px] border border-red-500/50 bg-red-500/10 px-4 py-3 text-sm text-red-200"
             >
               {errorMessage}
             </div>
           ) : null}
 
-          <Button
+          <ShimmerButton
             type="submit"
-            showArrow
-            className="w-full"
+            className="relative z-10 w-full"
             disabled={status === "loading"}
           >
             {status === "loading" ? (
@@ -322,10 +364,17 @@ export function QuoteForm() {
                 Sending...
               </>
             ) : (
-              "Get My Free Quote"
+              <>
+                Get My Free Quote
+                <ArrowRight className="size-4" aria-hidden />
+              </>
             )}
-          </Button>
+          </ShimmerButton>
+          <p className="relative z-10 text-center text-xs text-muted">
+            Your information is 100% secure and never shared.
+          </p>
         </form>
+        </BlurFade>
       </div>
     </section>
   );

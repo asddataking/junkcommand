@@ -6,63 +6,63 @@ export const BRAND = {
   smsHref: "sms:8103365865",
   email: "info@junkcommand.com",
   emailHref: "mailto:info@junkcommand.com",
+  reviewCount: 250,
+  rating: 5,
 } as const;
 
+export const SITE_URL = "https://www.getjunkcommand.com";
+
+export const BUSINESS_HOURS = [
+  { day: "Monday", hours: "7:00 AM – 7:00 PM" },
+  { day: "Tuesday", hours: "7:00 AM – 7:00 PM" },
+  { day: "Wednesday", hours: "7:00 AM – 7:00 PM" },
+  { day: "Thursday", hours: "7:00 AM – 7:00 PM" },
+  { day: "Friday", hours: "7:00 AM – 7:00 PM" },
+  { day: "Saturday", hours: "8:00 AM – 5:00 PM" },
+  { day: "Sunday", hours: "By Appointment" },
+] as const;
+
+/** Primary header nav — matches homepage mockup anchors */
 export const NAV_LINKS = [
-  { label: "Services", href: "#services" },
-  { label: "How It Works", href: "#how-it-works" },
-  { label: "Get a Quote", href: "#quote" },
-  { label: "Reviews", href: "#reviews" },
-  { label: "Service Areas", href: "#service-areas" },
+  { label: "Services", href: "/#services" },
+  { label: "How It Works", href: "/#how-it-works" },
+  { label: "Reviews", href: "/#reviews" },
+  { label: "Service Areas", href: "/#service-areas" },
 ] as const;
 
-export const SERVICE_AREAS = [
-  "Port Huron",
-  "Marysville",
-  "Fort Gratiot",
-  "Kimball Township",
-  "St. Clair",
-  "Clyde Township",
-  "St. Clair County",
-] as const;
+export const FOOTER_LINKS = {
+  company: [
+    { label: "About Us", href: "/about" },
+    { label: "Meet the Crew", href: "/meet-the-crew" },
+    { label: "Veteran Owned", href: "/veteran-owned" },
+    { label: "Careers", href: "/careers" },
+    { label: "Before & After", href: "/gallery" },
+  ],
+  services: [
+    { label: "All Services", href: "/services" },
+    { label: "Garage Cleanouts", href: "/garage-cleanout" },
+    { label: "Estate Cleanouts", href: "/estate-cleanout" },
+    { label: "Furniture Removal", href: "/furniture-removal" },
+    { label: "Hot Tub Removal", href: "/hot-tub-removal" },
+  ],
+  resources: [
+    { label: "Pricing", href: "/pricing" },
+    { label: "FAQs", href: "/faqs" },
+    { label: "Reviews", href: "/reviews" },
+    { label: "Blog", href: "/blog" },
+    { label: "Book Online", href: "/book-online" },
+    { label: "Contact", href: "/contact" },
+  ],
+} as const;
 
-export const SERVICES = [
-  {
-    title: "Garage Cleanouts",
-    slug: "garage-cleanout",
-    image: "/images/services/garage-cleanout.webp",
-    description: "Full garage clearouts — from clutter to clean in one visit.",
-  },
-  {
-    title: "Estate Cleanouts",
-    slug: "estate-cleanout",
-    image: "/images/services/estate-cleanout.webp",
-    description: "Respectful, thorough estate and property cleanouts.",
-  },
-  {
-    title: "Furniture Removal",
-    slug: "furniture-removal",
-    image: "/images/services/furniture-removal.webp",
-    description: "Sofas, mattresses, desks — we haul the heavy stuff.",
-  },
-  {
-    title: "Appliance Removal",
-    slug: "appliance-removal",
-    image: "/images/services/appliance-removal.webp",
-    description: "Fridges, washers, dryers, and more — removed fast.",
-  },
-  {
-    title: "Hot Tub Removal",
-    slug: "hot-tub-removal",
-    image: "/images/services/hot-tub-removal.webp",
-    description: "Broken or unwanted hot tubs hauled away the right way.",
-  },
-  {
-    title: "Construction Debris",
-    slug: "construction-debris",
-    image: "/images/services/construction-debris.webp",
-    description: "Post-renovation debris and job-site cleanup.",
-  },
+/** Featured services shown on the homepage grid */
+export const HOMEPAGE_SERVICE_SLUGS = [
+  "garage-cleanout",
+  "estate-cleanout",
+  "furniture-removal",
+  "appliance-removal",
+  "hot-tub-removal",
+  "construction-debris-removal",
 ] as const;
 
 export const HOW_IT_WORKS = [
@@ -100,6 +100,82 @@ export const JUNK_TYPES = [
   "Other",
 ] as const;
 
+export const WHY_CHOOSE = [
+  {
+    title: "Veteran Owned",
+    description: "Mission-focused service from a crew that shows up ready.",
+  },
+  {
+    title: "Locally Operated",
+    description: "Port Huron based. We know St. Clair County.",
+  },
+  {
+    title: "Upfront Pricing",
+    description: "Clear quotes before we load a single item.",
+  },
+  {
+    title: "Fast Response",
+    description: "Same-day options when you need junk gone now.",
+  },
+] as const;
+
+/** @deprecated Use getFeaturedServices() from services data — kept for homepage compatibility during migration */
+export const SERVICES = [
+  {
+    title: "Garage Cleanouts",
+    slug: "garage-cleanout",
+    image: "/images/services/garage-cleanout.webp",
+    description: "Full garage clearouts — from clutter to clean in one visit.",
+  },
+  {
+    title: "Estate Cleanouts",
+    slug: "estate-cleanout",
+    image: "/images/services/estate-cleanout.webp",
+    description: "Respectful, thorough estate and property cleanouts.",
+  },
+  {
+    title: "Furniture Removal",
+    slug: "furniture-removal",
+    image: "/images/services/furniture-removal.webp",
+    description: "Sofas, mattresses, desks — we haul the heavy stuff.",
+  },
+  {
+    title: "Appliance Removal",
+    slug: "appliance-removal",
+    image: "/images/services/appliance-removal.webp",
+    description: "Fridges, washers, dryers, and more — removed fast.",
+  },
+  {
+    title: "Hot Tub Removal",
+    slug: "hot-tub-removal",
+    image: "/images/services/hot-tub-removal.webp",
+    description: "Broken or unwanted hot tubs hauled away the right way.",
+  },
+  {
+    title: "Construction Debris",
+    slug: "construction-debris-removal",
+    image: "/images/services/construction-debris-removal.webp",
+    description: "Post-renovation debris and job-site cleanup.",
+  },
+] as const;
+
+/** @deprecated Prefer CITIES from data/cities — kept for schema migration */
+export const SERVICE_AREAS = [
+  "Port Huron",
+  "Marysville",
+  "Fort Gratiot",
+  "Kimball Township",
+  "St. Clair",
+  "Marine City",
+  "Algonac",
+  "Richmond",
+  "New Baltimore",
+  "Chesterfield",
+  "St. Clair County",
+  "Macomb County",
+] as const;
+
+/** @deprecated Prefer REVIEWS from data/reviews */
 export const REVIEWS = [
   {
     quote:
@@ -120,24 +196,3 @@ export const REVIEWS = [
     city: "Fort Gratiot, MI",
   },
 ] as const;
-
-export const WHY_CHOOSE = [
-  {
-    title: "Veteran Owned",
-    description: "Mission-focused service from a crew that shows up ready.",
-  },
-  {
-    title: "Locally Operated",
-    description: "Port Huron based. We know St. Clair County.",
-  },
-  {
-    title: "Upfront Pricing",
-    description: "Clear quotes before we load a single item.",
-  },
-  {
-    title: "Fast Response",
-    description: "Same-day options when you need junk gone now.",
-  },
-] as const;
-
-export const SITE_URL = "https://junkcommand.com";
