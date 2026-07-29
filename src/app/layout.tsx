@@ -83,14 +83,15 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const reviewSchema = getReviewSchema();
   const schemas = [
     getOrganizationSchema(),
     getWebSiteSchema(),
     getLocalBusinessSchema(),
     getServiceSchema(),
     getFaqSchema(getHomepageFaqs()),
-    getReviewSchema(),
-  ].filter((schema): schema is Record<string, unknown> => Boolean(schema));
+    ...(reviewSchema ? [reviewSchema] : []),
+  ];
 
   return (
     <html lang="en" className={`${inter.variable} ${bebas.variable} ${oswald.variable} h-full`}>

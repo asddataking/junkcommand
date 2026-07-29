@@ -27,11 +27,12 @@ export const metadata = buildPageMetadata({
 });
 
 export default function ReviewsPage() {
+  const reviewSchema = getReviewSchema();
   const schemas = [
     getLocalBusinessSchema(),
     getBreadcrumbSchema(crumbs),
-    getReviewSchema(),
-  ].filter((schema): schema is Record<string, unknown> => Boolean(schema));
+    ...(reviewSchema ? [reviewSchema] : []),
+  ];
 
   return (
     <SiteShell>
