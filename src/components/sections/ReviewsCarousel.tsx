@@ -1,13 +1,18 @@
 "use client";
 
-import { REVIEWS } from "@/lib/constants";
+import { hasReviews, REVIEWS } from "@/data/reviews";
 import { StarRating } from "@/components/ui/StarRating";
 import { BlurFade } from "@/components/magicui/blur-fade";
 import { AnimatedShinyText } from "@/components/magicui/animated-shiny-text";
 import { ShineBorder } from "@/components/magicui/shine-border";
 import { DotPattern } from "@/components/magicui/dot-pattern";
+import { Button } from "@/components/ui/Button";
 
 export function ReviewsCarousel() {
+  if (!hasReviews()) {
+    return null;
+  }
+
   return (
     <section
       id="reviews"
@@ -26,13 +31,13 @@ export function ReviewsCarousel() {
             Read What Your Neighbors Are Saying
           </AnimatedShinyText>
           <h2 className="mt-3 font-display text-4xl tracking-[0.08em] text-white sm:text-5xl">
-            FIVE-STAR SERVICE
+            CUSTOMER REVIEWS
           </h2>
         </BlurFade>
 
         <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {REVIEWS.map((review, index) => (
-            <BlurFade key={review.name} delay={index * 0.08}>
+            <BlurFade key={review.id} delay={index * 0.08}>
               <figure className="relative h-full overflow-hidden rounded-[2px] border border-[rgba(0,135,255,0.35)] bg-[#080B0F] p-6">
                 <ShineBorder
                   shineColor={["#0787ff", "#18a0ff", "#0787ff"]}
@@ -40,7 +45,7 @@ export function ReviewsCarousel() {
                   borderWidth={1}
                   className="opacity-45"
                 />
-                <StarRating className="relative z-10 mb-4" />
+                <StarRating className="relative z-10 mb-4" count={review.rating} />
                 <blockquote className="relative z-10 text-base leading-relaxed text-white">
                   “{review.quote}”
                 </blockquote>
@@ -52,6 +57,12 @@ export function ReviewsCarousel() {
               </figure>
             </BlurFade>
           ))}
+        </div>
+
+        <div className="mt-8 text-center">
+          <Button href="/reviews" variant="secondary">
+            Read More Reviews
+          </Button>
         </div>
       </div>
     </section>

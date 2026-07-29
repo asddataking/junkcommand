@@ -183,5 +183,5 @@ export const SERVICE_AREAS = [
   "Macomb County",
 ] as const;
 
-/** @deprecated Prefer REVIEWS from data/reviews — empty until real reviews are collected */
-export const REVIEWS = [] as const;
+/** @deprecated Prefer REVIEWS from data/reviews */
+export { REVIEWS } from "@/data/reviews";
