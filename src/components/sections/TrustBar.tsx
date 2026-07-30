@@ -15,7 +15,7 @@ const TRUST_ITEMS = [
   { icon: MapPinned, label: "Locally Operated" },
   { icon: Tag, label: "Upfront Pricing" },
   { icon: Clock3, label: "Fast Scheduling" },
-  { icon: ShieldCheck, label: "Licensed & Insured" },
+  { icon: ShieldCheck, label: "Bonded & Insured" },
   { icon: Truck, label: "Family Operated" },
 ] as const;
 

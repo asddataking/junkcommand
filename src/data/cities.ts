@@ -65,9 +65,9 @@ export const CITIES: City[] = [
           "Pricing is based on how much space your load takes in our truck, not by the hour. You get an upfront quote before we load anything. Most single-item pickups start near our $99 minimum.",
       },
       {
-        question: "Are you licensed and insured for Port Huron jobs?",
+        question: "Are you bonded and insured for Port Huron jobs?",
         answer:
-          "Yes. Junk Command is fully insured. Our veteran-owned crew is careful with driveways, floors, and door frames on every Port Huron property we clear.",
+          "Yes. Junk Command is bonded and fully insured. Our veteran-owned crew is careful with driveways, floors, and door frames on every Port Huron property we clear.",
       },
     ],
     nearbySlugs: [

@@ -14,10 +14,10 @@ export function WhyChooseUs() {
         <div className="relative aspect-[4/3] overflow-hidden rounded-[2px] border border-[rgba(0,135,255,0.4)] bg-card">
           <MediaImage
             src="/images/trailer.webp"
-            alt="Junk Command trailer ready for a Port Huron junk removal job"
+            alt="Dan and Gage with the Junk Command trailer, mission ready for Port Huron junk removal"
             fill
             loading="lazy"
-            className="object-cover"
+            className="object-cover object-[18%_42%] scale-[1.28]"
             sizes="(max-width: 1024px) 100vw, 50vw"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#020305] via-transparent to-transparent" />

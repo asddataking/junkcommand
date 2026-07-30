@@ -12,7 +12,7 @@ import { BorderBeam } from "@/components/magicui/border-beam";
 const trustItems = [
   { icon: Clock3, label: "Fast Response" },
   { icon: CheckCircle2, label: "Upfront Pricing" },
-  { icon: ShieldCheck, label: "Licensed & Insured" },
+  { icon: ShieldCheck, label: "Bonded & Insured" },
 ] as const;
 
 export function Hero() {
