@@ -10,6 +10,22 @@ export const BRAND = {
 
 export const SITE_URL = "https://www.getjunkcommand.com";
 
+/** Public social profiles (footer + schema sameAs) */
+export const SOCIAL_LINKS = [
+  {
+    label: "YouTube",
+    href: "https://www.youtube.com/@JunkCommand",
+  },
+  {
+    label: "Instagram",
+    href: "https://www.instagram.com/getjunkcommand/",
+  },
+  {
+    label: "TikTok",
+    href: "https://www.tiktok.com/@junkcommand",
+  },
+] as const;
+
 /** Default Open Graph / Twitter / iMessage share image (1200×630) */
 export const SOCIAL_SHARE_IMAGE = "/images/og/junk-command-social.jpg";
 export const SOCIAL_SHARE_IMAGE_ALT =

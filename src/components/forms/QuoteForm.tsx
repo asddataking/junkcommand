@@ -8,6 +8,7 @@ import { BRAND, JUNK_TYPES } from "@/lib/constants";
 import { quoteSchema, type QuoteFormValues } from "@/lib/validation";
 import { Button } from "@/components/ui/Button";
 import { PhotoUploader } from "@/components/forms/PhotoUploader";
+import { useLaunchSoonModal } from "@/components/ui/LaunchSoonModal";
 import { BlurFade } from "@/components/magicui/blur-fade";
 import { ShimmerButton } from "@/components/magicui/shimmer-button";
 import { ShineBorder } from "@/components/magicui/shine-border";
@@ -49,6 +50,7 @@ function readUtmParams() {
 }
 
 export function QuoteForm() {
+  const { openModal } = useLaunchSoonModal();
   const [status, setStatus] = useState<Status>("idle");
   const [errorMessage, setErrorMessage] = useState("");
   const [photos, setPhotos] = useState<File[]>([]);
@@ -157,13 +159,19 @@ export function QuoteForm() {
       id="quote"
       className="relative scroll-mt-24 overflow-hidden border-y border-[rgba(0,135,255,0.15)] bg-[#080B0F] py-16 sm:py-20"
     >
+      <button
+        type="button"
+        onClick={openModal}
+        className="absolute inset-0 z-30 cursor-pointer"
+        aria-label="Get your free quote — launching soon, stay tuned"
+      />
       <DotPattern
         width={20}
         height={20}
         cr={0.8}
-        className="opacity-20 [mask-image:linear-gradient(to_right,white,transparent)]"
+        className="pointer-events-none opacity-20 [mask-image:linear-gradient(to_right,white,transparent)]"
       />
-      <div className="relative mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:gap-14 lg:px-8">
+      <div className="pointer-events-none relative mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:gap-14 lg:px-8">
         <BlurFade>
           <h2 className="font-display text-4xl tracking-[0.06em] text-white sm:text-5xl">
             NEED JUNK GONE?
@@ -192,6 +200,8 @@ export function QuoteForm() {
           onSubmit={onSubmit}
           className="relative space-y-4 overflow-hidden rounded-[2px] border border-[rgba(0,135,255,0.4)] bg-[#020305] p-5 sm:p-7"
           noValidate
+          aria-hidden
+          tabIndex={-1}
         >
           <ShineBorder
             shineColor={["#0787ff", "#18a0ff", "#0787ff"]}

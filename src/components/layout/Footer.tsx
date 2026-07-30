@@ -1,11 +1,18 @@
 import Link from "next/link";
-import { Facebook, Instagram, MapPin } from "lucide-react";
-import { BRAND, FOOTER_LINKS } from "@/lib/constants";
+import { Instagram, MapPin, Youtube } from "lucide-react";
+import { BRAND, FOOTER_LINKS, SOCIAL_LINKS } from "@/lib/constants";
 import { CITIES } from "@/data/cities";
 import { Logo } from "@/components/ui/Logo";
 import { MascotBadge } from "@/components/ui/MascotBadge";
+import { TikTokIcon } from "@/components/ui/SocialIcons";
 
 const FOOTER_CITIES = CITIES.filter((c) => !c.isCounty).slice(0, 10);
+
+const SOCIAL_ICONS = {
+  YouTube: Youtube,
+  Instagram: Instagram,
+  TikTok: TikTokIcon,
+} as const;
 
 export function Footer() {
   return (
@@ -103,29 +110,24 @@ export function Footer() {
           <h2 className="mt-8 font-display text-xl tracking-[0.12em] text-white">
             Follow Us
           </h2>
-          <ul className="mt-4 space-y-3 text-sm text-muted">
-            <li>
-              <a
-                href="https://facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 hover:text-bright"
-              >
-                <Facebook className="size-4" aria-hidden />
-                Facebook
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 hover:text-bright"
-              >
-                <Instagram className="size-4" aria-hidden />
-                Instagram
-              </a>
-            </li>
+          <ul className="mt-4 flex flex-wrap gap-3 text-sm text-muted">
+            {SOCIAL_LINKS.map((link) => {
+              const Icon = SOCIAL_ICONS[link.label];
+              return (
+                <li key={link.href}>
+                  <a
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 rounded-[2px] border border-[rgba(0,135,255,0.35)] px-3 py-2 transition-colors hover:border-bright hover:text-bright"
+                    aria-label={`Junk Command on ${link.label}`}
+                  >
+                    <Icon className="size-4" aria-hidden />
+                    {link.label}
+                  </a>
+                </li>
+              );
+            })}
           </ul>
         </div>
       </div>

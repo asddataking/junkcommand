@@ -1,4 +1,10 @@
-import { BRAND, BRAND_LOGO, SITE_URL, SOCIAL_SHARE_IMAGE } from "@/lib/constants";
+import {
+  BRAND,
+  BRAND_LOGO,
+  SITE_URL,
+  SOCIAL_LINKS,
+  SOCIAL_SHARE_IMAGE,
+} from "@/lib/constants";
 import { SERVICES } from "@/data/services";
 import { CITIES, CITY_NAMES } from "@/data/cities";
 import { SCHEMA_SERVICE_AREAS } from "@/data/homepage-service-areas";
@@ -17,7 +23,7 @@ export function getOrganizationSchema() {
     email: BRAND.email,
     logo: `${SITE_URL}${BRAND_LOGO}`,
     image: `${SITE_URL}${SOCIAL_SHARE_IMAGE}`,
-    sameAs: [],
+    sameAs: SOCIAL_LINKS.map((link) => link.href),
   };
 }
 
