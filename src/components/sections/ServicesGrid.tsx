@@ -34,8 +34,9 @@ export function ServicesGrid() {
             FULL-SERVICE JUNK REMOVAL
           </h2>
           <p className="mx-auto mt-3 max-w-2xl text-muted">
-            From garage cleanouts to construction debris — see what we haul for
-            junk removal in Port Huron and get it gone fast.
+            Garage cleanouts, estate cleanouts, furniture removal, appliance
+            removal, and construction debris removal — see what we haul across
+            Port Huron and get it gone fast.
           </p>
         </BlurFade>
 

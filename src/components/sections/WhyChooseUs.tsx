@@ -39,9 +39,9 @@ export function WhyChooseUs() {
             WHY CHOOSE JUNK COMMAND?
           </h2>
           <p className="mt-3 max-w-xl text-muted">
-            As a veteran-owned junk removal company, we run every job like a
-            mission — clear communication, clean work, and junk gone when we
-            leave.
+            As a veteran-owned Port Huron junk removal company, we run every job
+            like a mission — clear communication, clean work, and debris
+            removal done right so your space is ready when we leave.
           </p>
 
           <ul className="mt-8 grid gap-4 sm:grid-cols-2">

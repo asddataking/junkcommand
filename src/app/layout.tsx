@@ -44,7 +44,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: "Junk Removal Port Huron MI | Junk Command",
   description:
-    "Junk Command provides fast, professional junk removal in Port Huron, Marysville, Fort Gratiot, and St. Clair County. Upfront pricing and free quotes. Call 810-336-5865.",
+    "Port Huron junk removal and Blue Water Area junk hauling from Junk Command. Furniture, appliances, estate cleanouts, and debris removal with upfront pricing. Call 810-336-5865.",
   alternates: {
     canonical: SITE_URL,
   },
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     url: SITE_URL,
     title: "Junk Removal Port Huron MI | Junk Command",
     description:
-      "Take command of your clutter. Professional junk removal across Port Huron and St. Clair County. Free quotes. Call 810-336-5865.",
+      "Take command of your clutter. Port Huron junk removal and Blue Water Area hauling with upfront pricing. Free quotes. Call 810-336-5865.",
     siteName: "Junk Command",
     images: [
       {

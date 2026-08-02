@@ -22,7 +22,7 @@ const counties = Array.from(new Set(CITIES.map((c) => c.county)));
 export const metadata = buildPageMetadata({
   title: "Junk Removal Service Areas | Port Huron & SE Michigan",
   description:
-    "Junk Command serves Port Huron, Marysville, Fort Gratiot, Chesterfield, New Baltimore, and communities across St. Clair, Macomb & Sanilac Counties. Call 810-336-5865.",
+    "Junk Command serves Port Huron, Marysville, Fort Gratiot, Memphis, Chesterfield, New Baltimore, and Blue Water Area communities across St. Clair, Macomb & Sanilac Counties. Call 810-336-5865.",
   path: "/service-areas",
 });
 

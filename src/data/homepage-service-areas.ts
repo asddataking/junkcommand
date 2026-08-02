@@ -13,15 +13,45 @@ export const HOMEPAGE_SERVICE_AREAS = [
   { name: "Surrounding areas", slug: null },
 ] as const;
 
+/** Linked cities for the homepage "Serving the Blue Water Area" section */
+export const BLUE_WATER_AREAS = [
+  { name: "Port Huron", slug: "port-huron" },
+  { name: "Fort Gratiot", slug: "fort-gratiot" },
+  { name: "Kimball Township", slug: "kimball-township" },
+  { name: "Marysville", slug: "marysville" },
+  { name: "St Clair", slug: "st-clair" },
+  { name: "Marine City", slug: "marine-city" },
+  { name: "Algonac", slug: "algonac" },
+  { name: "Yale", slug: "yale" },
+  { name: "Capac", slug: "capac" },
+  { name: "Croswell", slug: "croswell" },
+  { name: "Lexington", slug: "lexington" },
+  { name: "Richmond", slug: "richmond" },
+  { name: "Chesterfield", slug: "chesterfield" },
+  { name: "New Baltimore", slug: "new-baltimore" },
+  { name: "Memphis", slug: "memphis" },
+] as const;
+
 /** Schema-oriented service area names for LocalBusiness markup */
 export const SCHEMA_SERVICE_AREAS = [
   "Port Huron",
+  "Fort Gratiot",
+  "Fort Gratiot Township",
   "Kimball Township",
   "Marysville",
-  "Fort Gratiot Township",
   "St. Clair",
   "Marine City",
+  "Algonac",
+  "Yale",
+  "Capac",
+  "Croswell",
+  "Lexington",
   "Richmond",
+  "Chesterfield",
+  "New Baltimore",
+  "Memphis",
   "St. Clair County",
+  "Macomb County",
+  "Sanilac County",
   "Blue Water Area",
 ] as const;

@@ -60,40 +60,44 @@ function buildCity(seed: CitySeed): City {
     eyebrow: seed.eyebrow,
     intro: seed.intro,
     introduction: [
-      `${name} is not a generic stop for Junk Command; it is part of the Blue Water and northeastern Macomb service map we work every week. When customers search for Junk Removal ${name} MI, they usually need a crew that understands the property style, road pattern, and timing pressures in town. ${seed.profile}`,
-      `${name} Junk Hauling often starts when one practical project grows into a larger cleanup. A garage reset uncovers old furniture, a move exposes basement boxes, a remodel creates debris, or a rental turnover leaves more than the weekly cart can handle. ${seed.routeDetails} Our crew arrives ready to lift, load, haul, and leave the space usable again without you renting a dumpster or borrowing a trailer.`,
-      `Trash Removal ${name} service is built for mixed loads: bagged clutter, broken shelving, mattresses, outdoor items, office pieces, light construction debris, and the awkward leftovers that do not fit normal pickup. ${seed.cleanupExamples} We confirm the price before loading, separate items that need special handling, and keep the job site controlled so the cleanup feels orderly from start to finish.`,
-      `Furniture Removal ${name} and Appliance Removal ${name} are two of the most requested calls because bulky items can damage walls, stairs, flooring, and backs when handled casually. We remove sofas, sectionals, recliners, tables, dressers, mattresses, refrigerators, freezers, washers, dryers, ranges, dishwashers, and water heaters from the room, garage, basement, porch, or storage area where they sit. ${seed.accessNotes}`,
-      `${seed.localPromise} Junk Command is veteran-owned, bonded, insured, and locally accountable. Call or text 810-336-5865 with photos, a few access notes, and your timeline. We will give a practical estimate, confirm the final quote on site, and handle the heavy lifting with the kind of care people expect from a premium local company.`,
+      `Looking for junk removal in ${name}? Junk Command is a veteran-owned Blue Water Area crew that treats every property like a real neighborhood stop — not a pin on a national franchise map. ${seed.profile}`,
+      `Most ${name} junk hauling jobs start small and grow from there. A garage reset uncovers old furniture, a move exposes basement boxes, a remodel creates debris, or a rental turnover leaves more than the weekly cart can handle. ${seed.routeDetails} Our crew arrives ready to lift, load, and haul so you do not need a dumpster sitting in the driveway for a week.`,
+      `Trash removal in ${name} works best when the load is mixed and awkward — bagged clutter, broken shelving, mattresses, outdoor items, office leftovers, and light construction debris that municipal pickup will not take. ${seed.cleanupExamples} We confirm pricing before we load, flag anything that needs special handling, and keep the work area controlled from start to finish.`,
+      `Furniture removal and appliance removal are two of the most common ${name} requests because bulky pieces are hard to move without scuffing walls, stairs, or flooring. We take sofas, sectionals, recliners, tables, dressers, mattresses, refrigerators, freezers, washers, dryers, ranges, dishwashers, and similar items from the room, garage, basement, porch, or storage area where they sit. ${seed.accessNotes}`,
+      `${seed.localPromise} On service day we walk the pile with you, protect doorways and floors, load what we agreed to remove, and leave the space broom-clean whenever practical. Call or text 810-336-5865 with photos, access notes, and your timeline for a practical estimate.`,
+      `Whether you need a same-week pickup or are planning ahead for a closing, remodel, or estate transition, junk removal in ${name} should feel straightforward. Junk Command keeps communication clear, quotes transparent, and the crew accountable — the way a local company should operate across ${seed.county}.`,
+      `Customers often meet us near familiar spots such as ${seed.nearbyLandmarks.join(", ")}. We also work regularly around ${seed.localReferences.slice(0, 4).join("; ")}, so driveway access, alley parking, and long carries rarely catch our crew off guard.`,
     ],
     whyUs: [
-      `${seed.whyLocal} That local awareness matters during junk removal because the hard part is rarely just weight. Parking, stairs, long carries, association rules, rural drives, weather, and disposal choices all affect the job. We ask about those details before arrival so the crew, truck space, and time window match the work.`,
-      `${seed.whyCare} You get straightforward volume-based pricing, clear communication, and a crew that protects doorways, floors, trim, lawns, driveways, and common areas. When usable items can reasonably be donated or recycled, we make that effort; when disposal is required, we route it responsibly and leave the work area broom-clean whenever practical.`,
+      `${seed.whyLocal} That local awareness matters because the hard part of junk removal is rarely just weight. Parking, stairs, long carries, association rules, rural drives, weather, and disposal options all affect the job. We ask about those details before arrival so the crew, truck space, and time window match the work.`,
+      `${seed.whyCare} You get volume-based pricing, clear communication, and a team that protects trim, lawns, driveways, and common areas. When usable items can reasonably be donated or recycled, we make that effort; when disposal is required, we route it responsibly.`,
+      `Homeowners, landlords, realtors, and small businesses in ${name} choose Junk Command when they want premium service without corporate runaround. Text photos to 810-336-5865 and we will tell you what the job looks like before we roll.`,
     ],
     localReferences: seed.localReferences,
     nearbyLandmarks: seed.nearbyLandmarks,
-    servicesBlurb: `Junk Command provides ${name} Junk Hauling for household junk, furniture, appliances, mattresses, garage clutter, basement items, estate contents, rental debris, yard clutter, small business cleanouts, and light renovation material.`,
+    servicesBlurb: `From ${name} junk hauling for household clutter to furniture removal, appliance removal, garage cleanouts, estate cleanouts, and light construction debris removal, Junk Command covers the jobs that fill a truck and free up your property.`,
     commonJobs: [
       {
-        title: `Furniture Removal ${name}`,
-        description: `We remove sofas, sectionals, recliners, mattresses, dressers, tables, cabinets, desks, patio furniture, and other bulky pieces from homes, rentals, condos, offices, garages, and storage spaces in ${name}.`,
+        title: "Furniture haul-away",
+        description: `Sofas, sectionals, recliners, mattresses, dressers, tables, cabinets, desks, and patio sets removed from homes, rentals, condos, offices, and garages throughout ${name}.`,
       },
       {
-        title: `Appliance Removal ${name}`,
-        description: `Our crew hauls refrigerators, freezers, washers, dryers, stoves, dishwashers, microwaves, water heaters, and similar appliances after replacements, moves, remodels, or full cleanouts.`,
+        title: "Appliance pickup",
+        description: `Refrigerators, freezers, washers, dryers, stoves, dishwashers, microwaves, and water heaters hauled after replacements, moves, remodels, or full cleanouts in ${name}.`,
       },
       {
-        title: `Garage, Basement, and Estate Cleanouts`,
-        description: `We clear boxes, shelving, tools, toys, bagged clutter, old furniture, stored appliances, inherited contents, and non-hazardous debris so the property can be sold, rented, remodeled, or used again.`,
+        title: "Garage, basement, and estate cleanouts",
+        description: `Boxes, shelving, tools, toys, bagged clutter, inherited contents, and non-hazardous debris cleared so the property can be sold, rented, remodeled, or used again.`,
       },
       {
-        title: `Trash Removal ${name} for Rentals and Businesses`,
-        description: `Landlords, realtors, property managers, offices, shops, and light commercial spaces call us for move-out debris, fixtures, storage-room overflow, old office furniture, and quick cleanup before deadlines.`,
+        title: "Rental and light commercial trash removal",
+        description: `Landlords, realtors, property managers, shops, and offices in ${name} book us for move-out debris, fixtures, storage-room overflow, and deadline cleanups.`,
       },
     ],
     pricingOverview: [
       `Pricing for junk removal in ${name} is based mainly on how much space your items take in the truck, with access, weight, and special handling considered before work begins. Single-item pickups, partial loads, and larger cleanouts are quoted clearly, and the crew confirms the final number on site before loading anything.`,
-      `Photos make estimates faster and more accurate. Text 810-336-5865 with pictures of the pile, large furniture, appliances, stairs, parking, outbuildings, or tight access. For ${name} Junk Hauling, a few good photos help us send the right crew and avoid surprises on the day of service.`,
+      `Photos make estimates faster and more accurate. Text 810-336-5865 with pictures of the pile, large furniture, appliances, stairs, parking, outbuildings, or tight access. A few good photos help us send the right crew for ${name} junk hauling and avoid surprises on the day of service.`,
+      `Most minimum pickups start near $99, while garage cleanouts and multi-room jobs scale with volume. Visit our pricing page for common item ranges, or ask about bundling furniture and appliances into one efficient trip.`,
     ],
     faqs: [
       {
@@ -105,12 +109,12 @@ function buildCity(seed: CitySeed): City {
         answer: `No. Full-service removal is the reason customers hire Junk Command. If items are safely accessible, our crew can remove them from rooms, basements, garages, sheds, porches, offices, or storage areas.`,
       },
       {
-        question: `What items are common for ${name} Junk Hauling?`,
+        question: `What items are common for junk hauling in ${name}?`,
         answer: `Common loads include sofas, mattresses, appliances, boxes, shelving, bagged clutter, outdoor furniture, tenant debris, garage contents, estate items, and light non-hazardous remodel debris.`,
       },
       {
-        question: `Can you combine Furniture Removal ${name} and Appliance Removal ${name}?`,
-        answer: `Yes. Combining bulky furniture, appliances, and general trash in one visit is common and usually more efficient than booking separate pickups. We price the combined load before loading begins.`,
+        question: `Can you combine furniture and appliance removal in one visit?`,
+        answer: `Yes. Combining bulky furniture, appliances, and general trash in one ${name} visit is common and usually more efficient than booking separate pickups. We price the combined load before loading begins.`,
       },
       {
         question: `Are you insured for ${name} junk removal jobs?`,
@@ -135,19 +139,19 @@ export const CITIES: City[] = [
     intro:
       "Junk Command is based in Port Huron, so our crew already knows the alleys, bridges, basements, rentals, and lakefront streets that make cleanup here different. Call 810-336-5865 for veteran-owned hauling with clear pricing and careful service.",
     profile:
-      "Port Huron jobs may involve tight downtown parking near Military Street, older stairways off Pine Grove, lake-season clutter near Lakeside, student rentals, office spaces near McMorran, or waterfront homes close to the Black River and Blue Water Bridge.",
+      "Port Huron jobs may involve tight downtown parking near Military Street, older stairways off Pine Grove, lake-season clutter near Lakeside, student rentals around SC4, office spaces near McMorran, or waterfront homes close to the Black River and Blue Water Bridge. Winter weather, bridge traffic, and older housing stock all shape how we stage a truck and protect floors on a typical day.",
     routeDetails:
-      "Because our headquarters are local, we can plan pickups around Port Huron neighborhoods instead of treating the city like an out-of-town appointment.",
+      "Because our headquarters are local, we can plan pickups around Port Huron neighborhoods instead of treating the city like an out-of-town appointment. Same-day and next-day windows open more often here when photos come in early and the load fits the route already running through town.",
     cleanupExamples:
-      "A south side landlord may need a tenant cleanout, a family near Holland Avenue may need basement junk removed before remodeling, or a downtown business may need fixtures hauled before reopening.",
+      "A south side landlord may need a tenant cleanout before the next lease, a family near Holland Avenue may need basement junk removed before remodeling, a downtown business may need fixtures hauled before reopening, or a Lakeside household may need patio furniture and storm debris cleared after a rough stretch of weather.",
     accessNotes:
-      "In Port Huron, that often means watching older trim, narrow basement stairs, winter sidewalks, alley parking, and neighbors close by.",
+      "In Port Huron, that often means watching older trim, narrow basement stairs, winter sidewalks, alley parking, and neighbors close by. We bring floor protection, move carefully through tight halls, and confirm what stays versus what goes before the first item hits the truck.",
     localPromise:
-      "From the Blue Water Bridge corridor to Edison, Lakeside, and the canal area, we help Port Huron properties feel clear, safe, and ready for what comes next.",
+      "From the Blue Water Bridge corridor to Edison, Lakeside, and the canal area, we help Port Huron properties feel clear, safe, and ready for what comes next — whether that is a listing photo day, a family visit, or simply a garage you can finally park in again.",
     whyLocal:
-      "Port Huron is home base, so our team knows Pine Grove, 10th Avenue, Griswold, Military Street, Electric Avenue, the Black River canal area, and the neighborhoods that sit between the lake and the interstate.",
+      "Port Huron is home base, so our team knows Pine Grove, 10th Avenue, Griswold, Military Street, Electric Avenue, the Black River canal area, and the neighborhoods that sit between the lake and the interstate. That map knowledge shortens travel time and helps us show up with the right crew size.",
     whyCare:
-      "Port Huron customers hire us because we bring a polished process to very real local jobs: estate cleanouts, appliance failures, garage overflow, commercial resets, and rental turnovers.",
+      "Port Huron customers hire us because we bring a polished process to very real local jobs: estate cleanouts, appliance failures, garage overflow, commercial resets, and rental turnovers. You get veteran-owned accountability, not a revolving door of subcontractors.",
     localReferences: [
       "Blue Water Bridge corridor",
       "Military Street and downtown Port Huron",
@@ -182,19 +186,19 @@ export const CITIES: City[] = [
     intro:
       "Fort Gratiot homeowners and businesses call Junk Command for careful haul-away along the Lake Huron shoreline, 24th Avenue retail corridor, and quiet township streets. We bring veteran-owned service, upfront pricing, and the truck capacity to finish cleanouts without hassle.",
     profile:
-      "Fort Gratiot combines lake cottages, year-round homes, retail properties, storage-heavy garages, and township roads where storm debris and seasonal clutter can build quickly after a windy stretch off Lake Huron.",
+      "Fort Gratiot combines lake cottages, year-round homes, retail properties, storage-heavy garages, and township roads where storm debris and seasonal clutter can build quickly after a windy stretch off Lake Huron. Weekend openings and seasonal closings create predictable spikes in furniture and appliance haul-away requests.",
     routeDetails:
-      "We regularly work around 24th Avenue, Keewahdin Road, Lakeshore Road, Krafft Road, State Road, and the Birchwood Mall area, so route planning is familiar.",
+      "We regularly work around 24th Avenue, Keewahdin Road, Lakeshore Road, Krafft Road, State Road, and the Birchwood Mall area, so route planning is familiar. That proximity to Port Huron means Fort Gratiot junk hauling can often fit same-week openings when photos arrive early.",
     cleanupExamples:
-      "One call may be an old freezer in a garage, the next may be furniture from a lakeshore cottage, retail shelving near the commercial corridor, or brush and patio items after lake-effect weather.",
+      "One call may be an old freezer in a garage, the next may be furniture from a lakeshore cottage, retail shelving near the commercial corridor, or brush and patio items after lake-effect weather. Estate cleanouts and rental turnovers are common when families consolidate or prepare a property for listing.",
     accessNotes:
-      "Fort Gratiot properties often have tight garage storage, split-level stairs, older cottages, and soft yard areas near the lake, so we plan the removal path before lifting.",
+      "Fort Gratiot properties often have tight garage storage, split-level stairs, older cottages, and soft yard areas near the lake, so we plan the removal path before lifting. Tell us about HOA rules, gravel shoulders, or items upstairs so we can protect floors and finish cleanly.",
     localPromise:
-      "Whether you are opening a cottage, closing a sale, refreshing a store, or reclaiming a garage, we keep Fort Gratiot cleanup direct and professional.",
+      "Whether you are opening a cottage, closing a sale, refreshing a store, or reclaiming a garage, we keep Fort Gratiot cleanup direct and professional — with upfront pricing and a broom-clean finish when we leave.",
     whyLocal:
-      "Fort Gratiot sits minutes from our Port Huron base and is one of our most common township service areas, from Birchwood Mall traffic to quieter roads toward the shoreline.",
+      "Fort Gratiot sits minutes from our Port Huron base and is one of our most common township service areas, from Birchwood Mall traffic to quieter roads toward the shoreline. Local knowledge shortens travel time and helps us show up prepared.",
     whyCare:
-      "Fort Gratiot customers count on us for a clean finish around finished driveways, lake homes, association neighborhoods, and retail entrances where sloppy hauling stands out.",
+      "Fort Gratiot customers count on us for a clean finish around finished driveways, lake homes, association neighborhoods, and retail entrances where sloppy hauling stands out. Veteran-owned standards mean we treat every stop like it belongs to a neighbor.",
     localReferences: [
       "24th Avenue retail corridor",
       "Keewahdin Road subdivisions",
@@ -276,19 +280,19 @@ export const CITIES: City[] = [
     intro:
       "Marysville homes, riverfront properties, rentals, and businesses rely on Junk Command for clean, careful hauling minutes from our Port Huron base. We remove bulky items, clear packed spaces, and make scheduling simple with upfront pricing.",
     profile:
-      "Marysville has tidy ranch homes, established neighborhoods, riverfront streets, industrial edges, and business pockets where clutter can block garages, basements, storage rooms, and turnover schedules.",
+      "Marysville has tidy ranch homes, established neighborhoods, riverfront streets, industrial edges, and business pockets where clutter can block garages, basements, storage rooms, and turnover schedules. Families often call when a renovation, move, or appliance delivery leaves bulky items with nowhere practical to go.",
     routeDetails:
-      "We work Marysville as a true local stop between Port Huron and St. Clair, including Gratiot Boulevard, Busha Highway, Huron Boulevard, Wills Road, and Michigan Avenue.",
+      "We work Marysville as a true local stop between Port Huron and St. Clair, including Gratiot Boulevard, Busha Highway, Huron Boulevard, Wills Road, and Michigan Avenue. That corridor familiarity helps us offer practical windows for Marysville junk hauling without treating the city like a long-distance detour.",
     cleanupExamples:
-      "A Marysville pickup may involve a basement before remodeling, an old washer after delivery, furniture from a downsizing project, or office items from a business near the river corridor.",
+      "A Marysville pickup may involve a basement before remodeling, an old washer after delivery, furniture from a downsizing project, office items from a business near the river corridor, or a garage cleanout before winter parking becomes a weekly hassle.",
     accessNotes:
-      "Many Marysville homes have finished floors, attached garages, narrow utility rooms, and well-kept entries, so careful carrying matters as much as hauling speed.",
+      "Many Marysville homes have finished floors, attached garages, narrow utility rooms, and well-kept entries, so careful carrying matters as much as hauling speed. We protect doorways and confirm keepers before anything rolls to the truck.",
     localPromise:
-      "From riverfront homes to neighborhood garages, we help Marysville residents clear space before winter parking, summer guests, listings, or family transitions.",
+      "From riverfront homes to neighborhood garages, we help Marysville residents clear space before winter parking, summer guests, listings, or family transitions — with clear pricing and a respectful finish.",
     whyLocal:
-      "Marysville is minutes from our Port Huron operation and falls directly on our regular southbound routes along the St. Clair River.",
+      "Marysville is minutes from our Port Huron operation and falls directly on our regular southbound routes along the St. Clair River. Local routing means less wait and a crew that already knows the streets.",
     whyCare:
-      "Marysville customers expect neat work, respectful crews, and a clean driveway when the truck leaves, especially in homes where clutter is tied to moving, downsizing, or a family estate.",
+      "Marysville customers expect neat work, respectful crews, and a clean driveway when the truck leaves, especially in homes where clutter is tied to moving, downsizing, or a family estate. That expectation matches how Junk Command runs every job.",
     localReferences: [
       "Gratiot Boulevard corridor",
       "Busha Highway riverfront streets",

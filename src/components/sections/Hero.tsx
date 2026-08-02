@@ -51,7 +51,8 @@ export function Hero() {
 
           <BlurFade delay={0.12} inView={false}>
             <p className="max-w-xl text-base text-muted sm:text-lg">
-              Fast. Reliable. Professional Junk Removal.
+              Fast, reliable Port Huron junk removal — furniture, appliances,
+              and full cleanouts handled by a local veteran-owned crew.
             </p>
           </BlurFade>
 

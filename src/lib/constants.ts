@@ -72,6 +72,7 @@ export const FOOTER_LINKS = {
   resources: [
     { label: "Pricing", href: "/pricing" },
     { label: "FAQs", href: "/faqs" },
+    { label: "Guides", href: "/guides" },
     { label: "Reviews", href: "/reviews" },
     { label: "Blog", href: "/blog" },
     { label: "Book Online", href: "/book-online" },
@@ -131,7 +132,7 @@ export const WHY_CHOOSE = [
   },
   {
     title: "Locally Operated",
-    description: "Port Huron based. We know St. Clair County.",
+    description: "Port Huron based. We know St. Clair County and the Blue Water Area.",
   },
   {
     title: "Upfront Pricing",

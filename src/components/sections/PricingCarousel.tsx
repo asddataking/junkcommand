@@ -60,8 +60,8 @@ export function PricingCarousel() {
           </h2>
           <p className="mx-auto mt-3 max-w-2xl text-muted">
             Most standard single-item pickups start at our $99 minimum. Need
-            junk removal near Port Huron? Send photos for a fast, accurate quote
-            before we load anything.
+            Port Huron junk hauling or trash hauling nearby? Send photos for a
+            fast, accurate quote before we load anything.
           </p>
         </BlurFade>
 

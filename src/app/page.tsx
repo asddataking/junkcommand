@@ -7,7 +7,9 @@ import { HowItWorks } from "@/components/sections/HowItWorks";
 import { QuoteForm } from "@/components/forms/QuoteForm";
 import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
 import { ServiceAreaSection } from "@/components/sections/ServiceAreaSection";
+import { BlueWaterAreaSection } from "@/components/sections/BlueWaterAreaSection";
 import { ServicesGrid } from "@/components/sections/ServicesGrid";
+import { HomepageFaq } from "@/components/sections/HomepageFaq";
 import { FinalCTA } from "@/components/sections/FinalCTA";
 
 export default function Home() {
@@ -21,7 +23,9 @@ export default function Home() {
       <QuoteForm />
       <WhyChooseUs />
       <ServiceAreaSection />
+      <BlueWaterAreaSection />
       <ServicesGrid />
+      <HomepageFaq />
       <FinalCTA />
     </SiteShell>
   );

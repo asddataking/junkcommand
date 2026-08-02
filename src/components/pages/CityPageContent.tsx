@@ -42,9 +42,24 @@ export function CityPageContent({ city }: { city: City }) {
           <div className="space-y-12">
             <div>
               <h2 className="font-display text-3xl tracking-[0.06em] text-white sm:text-4xl">
+                JUNK REMOVAL IN {city.name.toUpperCase()}
+              </h2>
+              <div className="mt-4 space-y-4 leading-relaxed text-muted">
+                {city.introduction.map((paragraph) => (
+                  <p key={paragraph.slice(0, 48)}>{paragraph}</p>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <h2 className="font-display text-3xl tracking-[0.06em] text-white sm:text-4xl">
                 WHY {city.name.toUpperCase()} CHOOSES US
               </h2>
-              <p className="mt-4 leading-relaxed text-muted">{city.whyUs}</p>
+              <div className="mt-4 space-y-4 leading-relaxed text-muted">
+                {city.whyUs.map((paragraph) => (
+                  <p key={paragraph.slice(0, 48)}>{paragraph}</p>
+                ))}
+              </div>
             </div>
 
             <div>
@@ -71,6 +86,27 @@ export function CityPageContent({ city }: { city: City }) {
               >
                 Browse all services →
               </Link>
+            </div>
+
+            <div>
+              <h2 className="font-display text-3xl tracking-[0.06em] text-white sm:text-4xl">
+                COMMON JOBS WE PERFORM
+              </h2>
+              <ul className="mt-6 grid gap-4 sm:grid-cols-2">
+                {city.commonJobs.map((job) => (
+                  <li
+                    key={job.title}
+                    className="rounded-[2px] border border-[rgba(0,135,255,0.25)] bg-card p-5"
+                  >
+                    <h3 className="font-display text-xl tracking-[0.08em] text-white">
+                      {job.title}
+                    </h3>
+                    <p className="mt-2 text-sm leading-relaxed text-muted">
+                      {job.description}
+                    </p>
+                  </li>
+                ))}
+              </ul>
             </div>
 
             <CtaBanner
@@ -114,6 +150,23 @@ export function CityPageContent({ city }: { city: City }) {
 
             <div>
               <h2 className="font-display text-3xl tracking-[0.06em] text-white sm:text-4xl">
+                PRICING OVERVIEW IN {city.name.toUpperCase()}
+              </h2>
+              <div className="mt-4 space-y-4 leading-relaxed text-muted">
+                {city.pricingOverview.map((paragraph) => (
+                  <p key={paragraph.slice(0, 48)}>{paragraph}</p>
+                ))}
+              </div>
+              <Link
+                href="/pricing"
+                className="mt-4 inline-block text-sm font-semibold text-bright hover:text-white"
+              >
+                See full pricing details →
+              </Link>
+            </div>
+
+            <div>
+              <h2 className="font-display text-3xl tracking-[0.06em] text-white sm:text-4xl">
                 SERVICE AREA MAP
               </h2>
               <div className="mt-6">
@@ -141,6 +194,13 @@ export function CityPageContent({ city }: { city: City }) {
               <div className="mt-6">
                 <FaqAccordion items={city.faqs} idPrefix={city.slug} />
               </div>
+              <p className="mt-4 text-sm text-muted">
+                More answers in our{" "}
+                <Link href="/guides" className="text-bright hover:text-white">
+                  junk removal guides
+                </Link>
+                .
+              </p>
             </div>
           </div>
 
@@ -163,8 +223,17 @@ export function CityPageContent({ city }: { city: City }) {
                 ))}
               </ul>
               <div className="mt-4 space-y-2 border-t border-[rgba(0,135,255,0.15)] pt-4">
+                <Link href="/" className="block text-sm text-bright hover:text-white">
+                  Homepage →
+                </Link>
+                <Link href="/services" className="block text-sm text-bright hover:text-white">
+                  All services →
+                </Link>
                 <Link href="/pricing" className="block text-sm text-bright hover:text-white">
                   Pricing →
+                </Link>
+                <Link href="/guides" className="block text-sm text-bright hover:text-white">
+                  Guides →
                 </Link>
                 <Link href="/about" className="block text-sm text-bright hover:text-white">
                   About Junk Command →

@@ -32,7 +32,8 @@ export function HowItWorks() {
           </h2>
           <p className="mx-auto mt-3 max-w-xl text-muted">
             Request a quote, get upfront pricing, and let our local crew handle
-            the heavy lifting on a schedule that works for you.
+            the heavy lifting — trash hauling and cleanouts on a schedule that
+            works for you.
           </p>
         </BlurFade>
 

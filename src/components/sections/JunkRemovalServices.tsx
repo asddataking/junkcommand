@@ -35,9 +35,9 @@ export function JunkRemovalServices() {
             <span className="text-bright">REMOVAL SERVICES</span>
           </h2>
           <p className="mx-auto mt-3 max-w-2xl text-muted">
-            From garage cleanouts to construction debris, our veteran-owned junk
-            removal company handles furniture removal, appliance removal, and
-            full-service hauling across St. Clair County.
+            From garage cleanouts and estate cleanouts to construction debris
+            removal, our veteran-owned crew handles furniture removal, appliance
+            removal, and full-service St. Clair County junk removal.
           </p>
         </BlurFade>
 

@@ -40,7 +40,8 @@ export function FinalCTA() {
                   READY TO TAKE COMMAND?
                 </h2>
                 <p className="mt-2 max-w-xl text-sm text-muted sm:text-base">
-                  Let Junk Command handle your junk, so you don&apos;t have to.
+                  Book Port Huron junk hauling today and let Junk Command clear
+                  the clutter so you don&apos;t have to.
                 </p>
               </div>
             </div>

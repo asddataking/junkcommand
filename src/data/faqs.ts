@@ -377,17 +377,59 @@ export function getFaqsByCategory(category: Faq["category"]): Faq[] {
   return FAQS.filter((faq) => faq.category === category);
 }
 
-export function getHomepageFaqs(): Faq[] {
-  const homepageIds = [
-    "cost-how-much",
-    "scheduling-availability",
-    "process-photos",
-    "process-home",
-    "services-not-taken",
-    "general-veteran",
-  ] as const;
+/** Homepage-visible FAQ set — keep in sync with FAQPage schema in layout.tsx */
+export const HOMEPAGE_FAQS: Faq[] = [
+  {
+    id: "home-same-day",
+    question: "Do you offer same day junk removal?",
+    answer:
+      "Same-day Port Huron junk removal is often available when our route has an opening. Call or text 810-336-5865 with photos and your address — we will tell you the soonest confirmed window. Timing is never guaranteed until we lock it in, but local Blue Water Area jobs usually move fastest.",
+    category: "scheduling",
+  },
+  {
+    id: "home-types-of-junk",
+    question: "What types of junk do you remove?",
+    answer:
+      "We handle furniture removal, appliance removal, mattresses, garage cleanouts, estate cleanouts, construction debris removal, yard waste, hot tubs, sheds, and general household clutter. Trash hauling and debris removal for residential and light commercial jobs are our everyday work across St. Clair County.",
+    category: "services",
+  },
+  {
+    id: "home-furniture",
+    question: "Do you remove furniture?",
+    answer:
+      "Yes. Sofas, sectionals, dressers, tables, desks, recliners, and broken furniture are among our most common pickups. Stairs and tight hallways are part of a normal job. Usable pieces may be donated when condition allows.",
+    category: "services",
+  },
+  {
+    id: "home-cost",
+    question: "How much does junk removal cost?",
+    answer:
+      "Junk Command prices by volume of space your items take in our truck, not by the hour. Most jobs start at our $99 minimum pickup, and larger loads are quoted upfront before we load anything. Send photos to 810-336-5865 or visit our pricing page for a clear estimate.",
+    category: "pricing",
+  },
+  {
+    id: "home-areas",
+    question: "What areas do you serve?",
+    answer:
+      "We provide Port Huron junk hauling plus service throughout the Blue Water Area — including Fort Gratiot, Kimball Township, Marysville, St. Clair, Marine City, Algonac, Yale, Capac, Croswell, Lexington, Richmond, Chesterfield, New Baltimore, Memphis, and surrounding St. Clair County communities.",
+    category: "areas",
+  },
+  {
+    id: "home-heavy-appliances",
+    question: "Can you remove heavy appliances?",
+    answer:
+      "Absolutely. Refrigerators, washers, dryers, stoves, dishwashers, and similar heavy appliances are a core Junk Command service. We protect doorways, handle the lifting, and recycle whenever possible. Bundle multiple appliances for better volume pricing.",
+    category: "services",
+  },
+  {
+    id: "home-licensed-insured",
+    question: "Are you licensed and insured?",
+    answer:
+      "Yes. Junk Command is a licensed, bonded, and insured junk removal company based in Port Huron. Our veteran-owned crew is trained to protect floors, walls, and driveways. Proof of insurance is available on request for property managers and HOAs.",
+    category: "general",
+  },
+];
 
-  return homepageIds
-    .map((id) => FAQS.find((faq) => faq.id === id))
-    .filter((faq): faq is Faq => faq !== undefined);
+export function getHomepageFaqs(): Faq[] {
+  return HOMEPAGE_FAQS;
 }
