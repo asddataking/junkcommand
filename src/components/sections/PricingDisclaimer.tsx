@@ -17,11 +17,11 @@ export function PricingDisclaimer() {
             </div>
             <div>
               <h3 className="font-display text-2xl tracking-[0.06em] text-white sm:text-3xl">
-                Our minimum pickup charge is $99.
+                Curbside Command starts at $99.
               </h3>
               <p className="mt-2 max-w-xl text-sm leading-relaxed text-muted sm:text-base">
-                This typically covers one standard item placed in an accessible
-                location. Exact pricing for{" "}
+                Place qualifying items outside, send photos, and get a confirmed
+                price before pickup. Exact pricing for{" "}
                 <span className="text-white">furniture removal</span> and{" "}
                 <span className="text-white">appliance removal</span> depends on
                 size, weight, access, and disposal needs.
@@ -31,14 +31,14 @@ export function PricingDisclaimer() {
 
           <div className="rounded-[2px] border border-[rgba(0,135,255,0.28)] bg-[#020305]/70 p-4 sm:p-5">
             <h3 className="font-display text-xl tracking-[0.08em] text-white sm:text-2xl">
-              Have multiple items?
+              Ready for Curbside Command?
             </h3>
             <p className="mt-2 text-sm text-muted">
-              Bundle pricing is usually more affordable for cleanouts and
-              multi-item pickups.
+              Send a few photos for a confirmed curbside price — no waiting at
+              home required for most pickups.
             </p>
             <Button href="#quote" className="mt-4 w-full sm:w-auto" showArrow>
-              Upload Photos &amp; Get an Exact Quote
+              Get My Curbside Price
             </Button>
           </div>
         </div>

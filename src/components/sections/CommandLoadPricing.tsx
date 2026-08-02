@@ -3,7 +3,7 @@
 import { useMemo, useState } from "react";
 import { useReducedMotion } from "framer-motion";
 import { LOAD_TIERS } from "@/data/curbside-pricing";
-import { useHomepageBooking } from "@/components/home/HomepageBookingContext";
+import { useHomepageBookingOptional } from "@/components/home/HomepageBookingContext";
 import { BlurFade } from "@/components/magicui/blur-fade";
 import { ShimmerButton } from "@/components/magicui/shimmer-button";
 
@@ -11,7 +11,7 @@ const FILL_STEPS = [25, 50, 75, 100] as const;
 
 export function CommandLoadPricing() {
   const reduceMotion = useReducedMotion();
-  const { applyPrefill } = useHomepageBooking();
+  const booking = useHomepageBookingOptional();
   const [fill, setFill] = useState<(typeof FILL_STEPS)[number]>(25);
 
   const tier = useMemo(
@@ -27,8 +27,8 @@ export function CommandLoadPricing() {
   };
 
   const getLoadPrice = () => {
-    applyPrefill({
-      serviceType: "Command Load Pricing",
+    const prefill = {
+      serviceType: "Command Load Pricing" as const,
       itemDescription: `${tier.name} — ${tier.fillPercent}% trailer load`,
       details: [
         `Selected load tier: ${tier.name} (${tier.fillPercent}%)`,
@@ -39,6 +39,16 @@ export function CommandLoadPricing() {
       ].join("\n"),
       estimateRange: `$${tier.price}`,
       recommendedService: `${tier.name} (Command Load)`,
+    };
+
+    if (booking) {
+      booking.applyPrefill(prefill);
+      return;
+    }
+
+    document.getElementById("quote")?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
     });
   };
 

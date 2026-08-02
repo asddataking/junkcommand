@@ -24,8 +24,8 @@ export function HomepageFaq() {
             JUNK REMOVAL FAQS
           </h2>
           <p className="mx-auto mt-3 max-w-2xl text-muted">
-            Straight answers about Curbside Command, Full-Service Command, load
-            pricing, and Port Huron junk hauling.
+            Straight answers about Port Huron junk hauling, pricing, and what we
+            take — from a local crew that shows up ready.
           </p>
         </BlurFade>
 

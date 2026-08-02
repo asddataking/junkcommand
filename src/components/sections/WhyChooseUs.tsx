@@ -39,32 +39,28 @@ export function WhyChooseUs() {
             WHY CHOOSE JUNK COMMAND?
           </h2>
           <p className="mt-3 max-w-xl text-muted">
-            As a veteran-owned Port Huron junk removal company, we make Curbside
-            Command the easy default and Full-Service Command the premium
-            hands-off option — clear communication, transparent pricing, and
-            debris removal done right.
+            As a veteran-owned Port Huron junk removal company, we run every job
+            like a mission — clear communication, clean work, and debris
+            removal done right so your space is ready when we leave.
           </p>
 
-          <ul className="mt-8 space-y-5">
+          <ul className="mt-8 grid gap-4 sm:grid-cols-2">
             {WHY_CHOOSE.map((item, index) => (
               <motion.li
                 key={item.title}
-                initial={reduceMotion ? false : { opacity: 0, x: -8 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={reduceMotion ? false : { opacity: 0, y: 12 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{
-                  duration: 0.3,
-                  delay: reduceMotion ? 0 : index * 0.05,
-                }}
-                className="flex items-start gap-3"
+                transition={{ duration: 0.35, delay: reduceMotion ? 0 : index * 0.05 }}
+                className="rounded-[2px] border border-[rgba(0,135,255,0.3)] bg-card p-5"
               >
-                <span className="mt-0.5 inline-flex shrink-0 items-center gap-1.5 rounded-full border border-bright/40 bg-bright/10 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-bright">
-                  <Check className="size-3" aria-hidden />
+                <div className="mb-3 flex size-8 items-center justify-center rounded-[2px] border border-[rgba(0,135,255,0.45)] bg-secondary text-bright">
+                  <Check className="size-4" aria-hidden />
+                </div>
+                <h3 className="font-display text-xl tracking-[0.08em] text-white">
                   {item.title}
-                </span>
-                <p className="pt-0.5 text-sm leading-relaxed text-muted">
-                  {item.description}
-                </p>
+                </h3>
+                <p className="mt-2 text-sm text-muted">{item.description}</p>
               </motion.li>
             ))}
           </ul>

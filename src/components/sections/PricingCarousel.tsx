@@ -59,9 +59,10 @@ export function PricingCarousel() {
             <span className="text-bright">UPFRONT PRICING</span>
           </h2>
           <p className="mx-auto mt-3 max-w-2xl text-muted">
-            Most standard single-item pickups start at our $99 minimum. Need
-            Port Huron junk hauling or trash hauling nearby? Send photos for a
-            fast, accurate quote before we load anything.
+            Clear starting prices for common items — and Curbside Command from
+            $99 when your junk is already outside. Need Port Huron junk hauling
+            nearby? Send photos for a fast, accurate quote before we load
+            anything.
           </p>
         </BlurFade>
 

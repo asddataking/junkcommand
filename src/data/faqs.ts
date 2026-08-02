@@ -380,60 +380,53 @@ export function getFaqsByCategory(category: Faq["category"]): Faq[] {
 /** Homepage-visible FAQ set — keep in sync with FAQPage schema in layout.tsx */
 export const HOMEPAGE_FAQS: Faq[] = [
   {
-    id: "home-curbside-99",
-    question: "What qualifies for the $99 curbside price?",
+    id: "home-same-day",
+    question: "Do you offer same day junk removal?",
     answer:
-      "The item must be a qualifying size and weight, already outside, easily accessible, accurately shown in photos, and ready to load. Curbside Command is our lowest-priced option for typical household items on a route-based pickup.",
-    category: "pricing",
+      "Same-day Port Huron junk removal is often available when our route has an opening. Call or text 810-336-5865 with photos and your address — we will tell you the soonest confirmed window. Timing is never guaranteed until we lock it in, but local Blue Water Area jobs usually move fastest.",
+    category: "scheduling",
   },
   {
-    id: "home-need-home",
-    question: "Do I need to be home?",
+    id: "home-types-of-junk",
+    question: "What types of junk do you remove?",
     answer:
-      "Not for most curbside pickups, as long as access and payment arrangements are confirmed. Full-Service Command usually needs someone 18 or older available to confirm what goes and approve the final price before we load.",
-    category: "process",
-  },
-  {
-    id: "home-estimator-guarantee",
-    question: "Is the online estimator a guaranteed price?",
-    answer:
-      "No. It provides a preliminary estimate. Junk Command confirms the final price after reviewing photos. Size, weight, access, location, and specialty disposal can change the number.",
-    category: "pricing",
-  },
-  {
-    id: "home-full-service-includes",
-    question: "What does full-service removal include?",
-    answer:
-      "We enter the property, carry the items out, load them, haul them away, and perform light cleanup. Full-Service Command starts at $129 and is ideal when you do not want to move items to the curb yourself.",
+      "We handle furniture removal, appliance removal, mattresses, garage cleanouts, estate cleanouts, construction debris removal, yard waste, hot tubs, sheds, and general household clutter. Trash hauling and debris removal for residential and light commercial jobs are our everyday work across St. Clair County.",
     category: "services",
   },
   {
-    id: "home-load-pricing",
-    question: "What is included in Command Load Pricing?",
+    id: "home-furniture",
+    question: "Do you remove furniture?",
     answer:
-      "Labor, loading, transportation, and standard disposal for ordinary household junk are included unless otherwise stated. Quick Clear starts at $179, with larger trailer fills priced up to a Full Command Load.",
-    category: "pricing",
-  },
-  {
-    id: "home-heavy-materials",
-    question: "Are heavy materials included?",
-    answer:
-      "No. Concrete, dirt, shingles, tile, bricks, wet debris, and similar materials require separate weight-based pricing. Send photos for specialty pricing before pickup.",
+      "Yes. Sofas, sectionals, dressers, tables, desks, recliners, and broken furniture are among our most common pickups. Stairs and tight hallways are part of a normal job. Usable pieces may be donated when condition allows.",
     category: "services",
   },
   {
-    id: "home-add-more-items",
-    question: "Can I add more items?",
+    id: "home-cost",
+    question: "How much does junk removal cost?",
     answer:
-      "Yes. Send updated photos before pickup so the price can be adjusted and confirmed. We will not load extra items without an updated confirmed price.",
-    category: "process",
+      "Junk Command prices by volume of space your items take in our truck, not by the hour. Most jobs start at our $99 minimum pickup, and larger loads are quoted upfront before we load anything. Send photos to 810-336-5865 or visit our pricing page for a clear estimate.",
+    category: "pricing",
   },
   {
     id: "home-areas",
-    question: "Which areas do you serve?",
+    question: "What areas do you serve?",
     answer:
-      "Port Huron, Fort Gratiot, Kimball Township, Marysville, St. Clair, and surrounding Blue Water Area communities — including Marine City, Algonac, Richmond, Capac, Yale, Croswell, Lexington, New Baltimore, Chesterfield, Memphis, and St. Clair County.",
+      "We provide Port Huron junk hauling plus service throughout the Blue Water Area — including Fort Gratiot, Kimball Township, Marysville, St. Clair, Marine City, Algonac, Yale, Capac, Croswell, Lexington, Richmond, Chesterfield, New Baltimore, Memphis, and surrounding St. Clair County communities.",
     category: "areas",
+  },
+  {
+    id: "home-heavy-appliances",
+    question: "Can you remove heavy appliances?",
+    answer:
+      "Absolutely. Refrigerators, washers, dryers, stoves, dishwashers, and similar heavy appliances are a core Junk Command service. We protect doorways, handle the lifting, and recycle whenever possible. Bundle multiple appliances for better volume pricing.",
+    category: "services",
+  },
+  {
+    id: "home-licensed-insured",
+    question: "Are you licensed and insured?",
+    answer:
+      "Yes. Junk Command is a licensed, bonded, and insured junk removal company based in Port Huron. Our veteran-owned crew is trained to protect floors, walls, and driveways. Proof of insurance is available on request for property managers and HOAs.",
+    category: "general",
   },
 ];
 

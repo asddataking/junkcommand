@@ -8,12 +8,10 @@ import {
   Waves,
   Warehouse,
 } from "lucide-react";
-import { FULL_SERVICE_START } from "@/data/curbside-pricing";
 import { SERVICES } from "@/lib/constants";
 import { ServiceCard } from "@/components/sections/ServiceCard";
 import { BlurFade } from "@/components/magicui/blur-fade";
 import { AnimatedShinyText } from "@/components/magicui/animated-shiny-text";
-import { ShimmerButton } from "@/components/magicui/shimmer-button";
 
 const icons = [Warehouse, Building2, Armchair, Refrigerator, Waves, Hammer];
 
@@ -27,24 +25,19 @@ export function ServicesGrid() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <BlurFade className="text-center">
           <AnimatedShinyText className="text-xs font-semibold uppercase tracking-[0.28em] text-bright">
-            Premium Hands-Off Option
+            We Handle the Heavy Stuff
           </AnimatedShinyText>
           <h2
             id="full-service-heading"
             className="mt-3 font-display text-4xl tracking-[0.08em] text-white sm:text-5xl"
           >
-            WANT US TO HANDLE EVERYTHING?
+            FULL-SERVICE JUNK REMOVAL
           </h2>
           <p className="mx-auto mt-3 max-w-2xl text-muted">
-            Full-Service Command starts at ${FULL_SERVICE_START}. We remove items
-            from inside your home, garage, basement, apartment, or business so
-            you do not have to lift a thing — furniture removal, mattress
-            removal, garage cleanouts, house cleanouts, and more across Port
-            Huron.
+            Garage cleanouts, estate cleanouts, furniture removal, appliance
+            removal, and construction debris removal — see what we haul across
+            Port Huron and get it gone fast.
           </p>
-          <div className="mt-6">
-            <ShimmerButton href="#quote">Request Full-Service Removal</ShimmerButton>
-          </div>
         </BlurFade>
 
         <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
