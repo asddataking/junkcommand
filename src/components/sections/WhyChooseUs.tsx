@@ -13,11 +13,11 @@ export function WhyChooseUs() {
       <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 sm:px-6 lg:grid-cols-2 lg:gap-14 lg:px-8">
         <div className="relative aspect-[4/3] overflow-hidden rounded-[2px] border border-[rgba(0,135,255,0.4)] bg-card">
           <MediaImage
-            src="/images/trailer.webp"
-            alt="Dan and Gage with the Junk Command trailer, mission ready for Port Huron junk removal"
+            src="/images/dan-gage-luna.webp"
+            alt="Dan and Gage with Luna beside the Junk Command truck and trailer, mission ready for Port Huron junk removal"
             fill
             loading="lazy"
-            className="object-cover object-[18%_42%] scale-[1.28]"
+            className="object-cover object-[32%_38%]"
             sizes="(max-width: 1024px) 100vw, 50vw"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#020305] via-transparent to-transparent" />
