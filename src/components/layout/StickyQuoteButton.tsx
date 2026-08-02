@@ -19,11 +19,11 @@ export function StickyQuoteButton() {
 
   return (
     <Link
-      href="/book-online"
-      className="fixed bottom-6 right-6 z-40 hidden items-center gap-2 rounded-[2px] bg-primary px-4 py-3 text-sm font-semibold uppercase tracking-[0.08em] text-white shadow-[0_0_28px_rgba(7,135,255,0.45)] transition-colors hover:bg-bright md:inline-flex"
+      href="/#quote"
+      className="fixed bottom-6 right-6 z-40 hidden items-center gap-2 rounded-[6px] bg-primary px-4 py-3 text-sm font-semibold uppercase tracking-[0.08em] text-white shadow-[0_0_28px_rgba(7,135,255,0.45)] transition-colors hover:bg-bright md:inline-flex"
     >
       <FileText className="size-4" aria-hidden />
-      Free Quote
+      Get Curbside Price
     </Link>
   );
 }

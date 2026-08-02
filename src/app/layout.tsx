@@ -42,18 +42,18 @@ const oswald = Oswald({
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Junk Removal Port Huron MI | Junk Command",
+  title: "Junk Removal Port Huron, MI | Curbside Pickup From $99 | Junk Command",
   description:
-    "Port Huron junk removal and Blue Water Area junk hauling from Junk Command. Furniture, appliances, estate cleanouts, and debris removal with upfront pricing. Call 810-336-5865.",
+    "Affordable junk removal in Port Huron and the Blue Water Area. Curbside pickup starts at $99 and full-service removal starts at $129. Send photos for a confirmed price.",
   alternates: {
     canonical: SITE_URL,
   },
   openGraph: {
     type: "website",
     url: SITE_URL,
-    title: "Junk Removal Port Huron MI | Junk Command",
+    title: "Junk Removal Port Huron, MI | Curbside Pickup From $99 | Junk Command",
     description:
-      "Take command of your clutter. Port Huron junk removal and Blue Water Area hauling with upfront pricing. Free quotes. Call 810-336-5865.",
+      "Affordable junk removal in Port Huron and the Blue Water Area. Curbside pickup starts at $99 and full-service removal starts at $129. Send photos for a confirmed price.",
     siteName: "Junk Command",
     images: [
       {
@@ -66,9 +66,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Junk Removal Port Huron MI | Junk Command",
+    title: "Junk Removal Port Huron, MI | Curbside Pickup From $99 | Junk Command",
     description:
-      "Fast junk removal in Port Huron & St. Clair County. Free quotes. Call 810-336-5865.",
+      "Curbside junk pickup from $99 and full-service from $129 in Port Huron & the Blue Water Area.",
     images: [SOCIAL_SHARE_IMAGE],
   },
   robots: {

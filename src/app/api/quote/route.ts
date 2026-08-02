@@ -9,29 +9,27 @@ export const runtime = "nodejs";
  *
  * Accepts multipart form data (quote fields + optional photos).
  * Validates with Zod, then forwards to GoHighLevel via GHL_WEBHOOK_URL.
- *
- * GHL webhook setup:
- * 1. In GoHighLevel, create a Workflow with an inbound webhook trigger
- * 2. Copy the webhook URL
- * 3. Set GHL_WEBHOOK_URL in .env.local (local) and Vercel env vars (prod)
- * 4. Map payload fields to GHL contact custom fields as needed
- *
- * Photo handling (recommended production flow):
- * - Upload photos to S3 / Cloudflare R2 / Uploadthing
- * - Attach resulting URLs to the GHL contact note or custom fields
- * - This route currently forwards photo metadata (names/count) only
+ * Photos currently forward as metadata only.
  */
 export async function POST(request: Request) {
   try {
     const formData = await request.formData();
 
+    const serviceType = String(formData.get("serviceType") ?? "");
     const raw = {
       fullName: String(formData.get("fullName") ?? ""),
       phone: String(formData.get("phone") ?? ""),
       email: String(formData.get("email") ?? ""),
       serviceAddress: String(formData.get("serviceAddress") ?? ""),
-      junkType: String(formData.get("junkType") ?? ""),
+      serviceType,
+      itemDescription: String(formData.get("itemDescription") ?? ""),
+      preferredDay: String(formData.get("preferredDay") ?? ""),
+      accessNotes: String(formData.get("accessNotes") ?? ""),
       details: String(formData.get("details") ?? "") || undefined,
+      estimateRange: String(formData.get("estimateRange") ?? "") || undefined,
+      recommendedService:
+        String(formData.get("recommendedService") ?? "") || undefined,
+      junkType: serviceType || String(formData.get("junkType") ?? "") || undefined,
       utm_source: String(formData.get("utm_source") ?? "") || undefined,
       utm_medium: String(formData.get("utm_medium") ?? "") || undefined,
       utm_campaign: String(formData.get("utm_campaign") ?? "") || undefined,
@@ -58,11 +56,28 @@ export async function POST(request: Request) {
       .getAll("photos")
       .filter((entry): entry is File => entry instanceof File && entry.size > 0);
 
-    // TODO: upload `photos` to object storage and include public URLs in GHL payload
     const ghlResult = await sendToGoHighLevel({
-      ...parsed.data,
+      fullName: parsed.data.fullName,
+      phone: parsed.data.phone,
+      email: parsed.data.email,
+      serviceAddress: parsed.data.serviceAddress,
+      serviceType: parsed.data.serviceType,
+      junkType: parsed.data.serviceType,
+      itemDescription: parsed.data.itemDescription,
+      preferredDay: parsed.data.preferredDay,
+      accessNotes: parsed.data.accessNotes,
+      details: parsed.data.details,
+      estimateRange: parsed.data.estimateRange,
+      recommendedService: parsed.data.recommendedService,
       photoCount: photos.length,
       photoNames: photos.map((file) => file.name),
+      utm_source: parsed.data.utm_source,
+      utm_medium: parsed.data.utm_medium,
+      utm_campaign: parsed.data.utm_campaign,
+      utm_term: parsed.data.utm_term,
+      utm_content: parsed.data.utm_content,
+      pageUrl: parsed.data.pageUrl,
+      submittedAt: parsed.data.submittedAt,
     });
 
     if (!ghlResult.ok) {

@@ -5,13 +5,6 @@
  * 1. Create a GHL inbound webhook / workflow trigger
  * 2. Set GHL_WEBHOOK_URL in your environment (.env.local / Vercel)
  * 3. POST quote payloads from /api/quote to that URL
- *
- * Typical GHL follow-ups after a successful webhook:
- * - Add / update contact in CRM
- * - Trigger SMS automation (quote acknowledgment)
- * - Trigger email notification to the crew
- * - Add contact to a pipeline stage (e.g. "New Quote Request")
- * - Upload photos to cloud storage, then attach URLs to the contact note
  */
 
 export type GhlQuotePayload = {
@@ -19,8 +12,15 @@ export type GhlQuotePayload = {
   phone: string;
   email: string;
   serviceAddress: string;
+  serviceType: string;
+  /** Alias of serviceType for existing GHL field maps */
   junkType: string;
+  itemDescription: string;
+  preferredDay: string;
+  accessNotes: string;
   details?: string;
+  estimateRange?: string;
+  recommendedService?: string;
   photoCount?: number;
   photoNames?: string[];
   utm_source?: string;
@@ -38,7 +38,6 @@ export async function sendToGoHighLevel(
   const webhookUrl = process.env.GHL_WEBHOOK_URL;
 
   if (!webhookUrl) {
-    // Placeholder: no webhook configured yet
     console.info(
       "[GHL] GHL_WEBHOOK_URL not set — skipping webhook. Payload:",
       payload,
@@ -65,7 +64,7 @@ export async function sendToGoHighLevel(
   } catch (error) {
     return {
       ok: false,
-      error: error instanceof Error ? error.message : "Unknown GHL error",
+      error: error instanceof Error ? error.message : "GHL webhook error",
     };
   }
 }

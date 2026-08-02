@@ -11,12 +11,12 @@ const actions = [
   },
   {
     href: BRAND.smsHref,
-    label: "Text",
+    label: "Text Us Photos",
     icon: MessageSquare,
   },
   {
-    href: "/book-online",
-    label: "Get Instant Quote",
+    href: "/#quote",
+    label: "Get Curbside Price",
     icon: FileText,
   },
 ] as const;

@@ -21,22 +21,26 @@ const crumbs = [
 ];
 
 const PRICE_ROWS = [
-  { item: "Mattress / Box Spring", price: "From $99" },
-  { item: "Couch / Sofa", price: "From $99–$149" },
-  { item: "Recliner", price: "From $99" },
-  { item: "Appliances (washer, dryer, fridge)", price: "From $99–$175" },
-  { item: "Hot Tub / Spa", price: "Custom quote" },
-  { item: "Garage Cleanout", price: "Volume-based" },
-  { item: "Estate Cleanout", price: "Custom quote" },
-  { item: "Storage Unit Cleanout", price: "Volume-based" },
+  { item: "Curbside Command", price: "From $99" },
+  { item: "Full-Service Command", price: "From $129" },
+  { item: "Mattress / Box Spring (curbside)", price: "From $99" },
+  { item: "Couch / Sofa (curbside)", price: "From $99–$119" },
+  { item: "Recliner (curbside)", price: "From $99" },
+  { item: "Washer or Dryer", price: "From $109" },
+  { item: "Refrigerator / Freezer", price: "From $139" },
+  { item: "Quick Clear (25% load)", price: "$179" },
+  { item: "Small Cleanup (50% load)", price: "$279" },
+  { item: "Large Cleanup (75% load)", price: "$369" },
+  { item: "Full Command Load (100%)", price: "$449" },
+  { item: "Hot Tub / Specialty Items", price: "Photo quote" },
 ] as const;
 
 const pricingFaqs = FAQS.filter((f) => f.category === "pricing");
 
 export const metadata = buildPageMetadata({
-  title: "Junk Removal Pricing Port Huron MI | $99 Minimum",
+  title: "Junk Removal Pricing Port Huron MI | Curbside From $99",
   description:
-    "Junk Command junk removal pricing starts at $99. See starting prices for mattresses, couches, appliances, hot tubs, garage & estate cleanouts. Free quotes.",
+    "Junk Command curbside junk pickup starts at $99 and full-service removal starts at $129. See load tiers and common item starting prices. Send photos for a confirmed quote.",
   path: "/pricing",
 });
 
@@ -62,14 +66,15 @@ export default function PricingPage() {
             JUNK REMOVAL PRICING
           </h1>
           <p className="mt-4 max-w-2xl text-muted">
-            Most Junk Command pickups start at our{" "}
-            <span className="font-semibold text-white">$99 minimum</span>.
-            Larger loads are priced by how much space they take in our truck —
-            you approve the quote before we load a single item.
+            <span className="font-semibold text-white">Curbside Command</span>{" "}
+            starts at $99 for qualifying items already outside.{" "}
+            <span className="font-semibold text-white">Full-Service Command</span>{" "}
+            starts at $129 when we carry items out. Larger piles use Command Load
+            Pricing — you approve the quote before we load a single item.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <Button href="/book-online" showArrow>
-              Get My Free Quote
+            <Button href="/#quote" showArrow>
+              Get My Curbside Price
             </Button>
             <Button href={BRAND.smsHref} variant="secondary">
               Text Photos to {BRAND.phone}
@@ -160,7 +165,7 @@ export default function PricingPage() {
 
       <CtaBanner
         title="GET AN EXACT PRICE TODAY"
-        description="Send photos for a fast, accurate quote — most small loads start at $99."
+        description="Send photos for a confirmed quote — Curbside Command starts at $99."
       />
     </SiteShell>
   );

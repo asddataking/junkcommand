@@ -54,7 +54,7 @@ export function getLocalBusinessSchema() {
     "@id": `${SITE_URL}/#business`,
     name: BRAND.name,
     description:
-      "Fast, professional junk removal in Port Huron, Marysville, Fort Gratiot, and throughout St. Clair County and the Blue Water Area.",
+      "Fast, professional junk removal in Port Huron, Marysville, Fort Gratiot, and throughout St. Clair County and the Blue Water Area. Curbside pickup from $99; full-service from $129.",
     url: SITE_URL,
     telephone: BRAND.phone,
     email: BRAND.email,

@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { JUNK_TYPES } from "./constants";
+import { SERVICE_TYPES } from "@/data/curbside-pricing";
 
 export const quoteSchema = z.object({
   fullName: z.string().min(2, "Please enter your full name"),
@@ -9,10 +9,19 @@ export const quoteSchema = z.object({
     .regex(/^[\d\s()+.-]+$/, "Enter a valid phone number"),
   email: z.string().email("Enter a valid email address"),
   serviceAddress: z.string().min(5, "Enter your service address"),
-  junkType: z.enum(JUNK_TYPES, {
-    error: "Select a type of junk",
+  serviceType: z.enum(SERVICE_TYPES, {
+    error: "Select a service type",
   }),
+  itemDescription: z
+    .string()
+    .min(3, "Describe the items you need removed"),
+  preferredDay: z.string().min(1, "Share a preferred pickup day"),
+  accessNotes: z.string().min(1, "Add access notes or write N/A"),
   details: z.string().optional(),
+  estimateRange: z.string().optional(),
+  recommendedService: z.string().optional(),
+  /** Backward-compatible alias for GHL mapping */
+  junkType: z.string().optional(),
   utm_source: z.string().optional(),
   utm_medium: z.string().optional(),
   utm_campaign: z.string().optional(),

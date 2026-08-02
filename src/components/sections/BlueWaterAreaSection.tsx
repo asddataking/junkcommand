@@ -25,8 +25,8 @@ export function BlueWaterAreaSection() {
             Junk Command proudly serves Port Huron junk removal customers and
             neighbors across the Blue Water Area — from river towns and lake
             communities to inland townships that need reliable trash hauling,
-            debris removal, and full-property cleanouts. Tap your city below to
-            see how we work locally.
+            debris removal, furniture removal, garage cleanouts, and house
+            cleanouts. Tap your city below for local service details.
           </p>
         </BlurFade>
 

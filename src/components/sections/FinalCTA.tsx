@@ -2,6 +2,7 @@
 
 import { BRAND } from "@/lib/constants";
 import { Logo } from "@/components/ui/Logo";
+import { Button } from "@/components/ui/Button";
 import { BlurFade } from "@/components/magicui/blur-fade";
 import { ShimmerButton } from "@/components/magicui/shimmer-button";
 import { BorderBeam } from "@/components/magicui/border-beam";
@@ -25,29 +26,39 @@ export function FinalCTA() {
       </div>
 
       <BlurFade className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="relative overflow-hidden rounded-[2px] border border-[rgba(0,135,255,0.45)] bg-[#080B0F]/80 px-6 py-8 backdrop-blur-sm sm:px-10 sm:py-10">
+        <div className="relative overflow-hidden rounded-[10px] border border-[rgba(0,135,255,0.45)] bg-[#080B0F]/80 px-6 py-8 backdrop-blur-sm sm:px-10 sm:py-10">
           <BorderBeam
             size={140}
             duration={9}
             colorFrom="#18a0ff"
             colorTo="#0787ff"
           />
-          <div className="relative z-10 flex flex-col items-center gap-6 text-center md:flex-row md:justify-between md:text-left">
-            <div className="flex flex-col items-center gap-4 md:flex-row md:gap-6">
-              <Logo compact />
-              <div>
-                <h2 className="font-display text-3xl tracking-[0.08em] text-white sm:text-4xl">
-                  READY TO TAKE COMMAND?
-                </h2>
-                <p className="mt-2 max-w-xl text-sm text-muted sm:text-base">
-                  Book Port Huron junk hauling today and let Junk Command clear
-                  the clutter so you don&apos;t have to.
-                </p>
-              </div>
+          <div className="relative z-10 flex flex-col items-center gap-6 text-center">
+            <Logo compact />
+            <div>
+              <h2 className="font-display text-3xl tracking-[0.08em] text-white sm:text-5xl">
+                READY TO CLEAR IT OUT?
+              </h2>
+              <p className="mx-auto mt-3 max-w-2xl text-sm text-muted sm:text-base">
+                Send us a few photos and get a confirmed price before pickup.
+              </p>
             </div>
-            <ShimmerButton href="#quote" className="w-full shrink-0 md:w-auto">
-              Get Started Now
-            </ShimmerButton>
+            <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
+              <ShimmerButton href="#quote" className="w-full sm:w-auto">
+                Get My Curbside Price
+              </ShimmerButton>
+              <Button
+                href="#full-service"
+                variant="secondary"
+                className="w-full sm:w-auto"
+              >
+                Request Full-Service Removal
+              </Button>
+            </div>
+            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-muted">
+              Local. Veteran-owned. Transparent pricing. No surprise charges
+              before loading.
+            </p>
           </div>
           <p className="sr-only">Call {BRAND.phone} for a fast quote.</p>
         </div>

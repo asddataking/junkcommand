@@ -1,13 +1,17 @@
 import { SiteShell } from "@/components/layout/SiteShell";
+import { HomepageBookingProvider } from "@/components/home/HomepageBookingContext";
 import { Hero } from "@/components/sections/Hero";
-import { TrustBar } from "@/components/sections/TrustBar";
-import { PricingCarousel } from "@/components/sections/PricingCarousel";
-import { JunkRemovalServices } from "@/components/sections/JunkRemovalServices";
-import { HowItWorks } from "@/components/sections/HowItWorks";
+import { HowCurbsideWorks } from "@/components/sections/HowCurbsideWorks";
+import { CommandPricing } from "@/components/sections/CommandPricing";
+import { PriceEstimator } from "@/components/sections/PriceEstimator";
+import { CommandLoadPricing } from "@/components/sections/CommandLoadPricing";
+import { CommonItemPricing } from "@/components/sections/CommonItemPricing";
+import { SpecialtyPricingNotice } from "@/components/sections/SpecialtyPricingNotice";
 import { QuoteForm } from "@/components/forms/QuoteForm";
-import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
 import { ServiceAreaSection } from "@/components/sections/ServiceAreaSection";
 import { BlueWaterAreaSection } from "@/components/sections/BlueWaterAreaSection";
+import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
+import { MeetTheCrewHome } from "@/components/sections/MeetTheCrewHome";
 import { ServicesGrid } from "@/components/sections/ServicesGrid";
 import { HomepageFaq } from "@/components/sections/HomepageFaq";
 import { FinalCTA } from "@/components/sections/FinalCTA";
@@ -15,18 +19,23 @@ import { FinalCTA } from "@/components/sections/FinalCTA";
 export default function Home() {
   return (
     <SiteShell>
-      <Hero />
-      <TrustBar />
-      <PricingCarousel />
-      <JunkRemovalServices />
-      <HowItWorks />
-      <QuoteForm />
-      <WhyChooseUs />
-      <ServiceAreaSection />
-      <BlueWaterAreaSection />
-      <ServicesGrid />
-      <HomepageFaq />
-      <FinalCTA />
+      <HomepageBookingProvider>
+        <Hero />
+        <HowCurbsideWorks />
+        <CommandPricing />
+        <PriceEstimator />
+        <CommandLoadPricing />
+        <CommonItemPricing />
+        <SpecialtyPricingNotice />
+        <QuoteForm />
+        <ServiceAreaSection />
+        <BlueWaterAreaSection />
+        <WhyChooseUs />
+        <MeetTheCrewHome />
+        <ServicesGrid />
+        <HomepageFaq />
+        <FinalCTA />
+      </HomepageBookingProvider>
     </SiteShell>
   );
 }

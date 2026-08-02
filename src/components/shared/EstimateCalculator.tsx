@@ -1,69 +1,76 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import {
+  CURBSIDE_START,
+  FULL_SERVICE_START,
+  LOAD_TIERS,
+} from "@/data/curbside-pricing";
 import { BRAND } from "@/lib/constants";
 import { Button } from "@/components/ui/Button";
 
-const LOAD_OPTIONS = [
-  { id: "single", label: "1–2 items", multiplier: 1, hint: "Mattress, recliner, or small pile" },
-  { id: "quarter", label: "1/4 truck", multiplier: 2.2, hint: "Few furniture pieces or appliances" },
-  { id: "half", label: "1/2 truck", multiplier: 3.8, hint: "Garage corner or small cleanout" },
-  { id: "full", label: "Full truck", multiplier: 6.5, hint: "Full garage or multi-room clear" },
+const SERVICE_OPTIONS = [
+  {
+    id: "curbside",
+    label: "Curbside Command",
+    hint: `Items already outside — from $${CURBSIDE_START}`,
+    price: CURBSIDE_START,
+  },
+  {
+    id: "full-service",
+    label: "Full-Service Command",
+    hint: `We carry items out — from $${FULL_SERVICE_START}`,
+    price: FULL_SERVICE_START,
+  },
+  ...LOAD_TIERS.map((tier) => ({
+    id: tier.id,
+    label: `${tier.name} (${tier.fillPercent}%)`,
+    hint: tier.examples[0],
+    price: tier.price,
+  })),
 ] as const;
-
-const ADDONS = [
-  { id: "stairs", label: "Stairs / difficult access", amount: 25 },
-  { id: "hot-tub", label: "Hot tub / shed breakdown", amount: 75 },
-  { id: "soonest", label: "Soonest available preferred", amount: 0 },
-] as const;
-
-const BASE = 99;
 
 export function EstimateCalculator() {
-  const [loadId, setLoadId] = useState<(typeof LOAD_OPTIONS)[number]["id"]>("quarter");
-  const [addons, setAddons] = useState<string[]>([]);
+  const [serviceId, setServiceId] = useState<(typeof SERVICE_OPTIONS)[number]["id"]>(
+    "curbside",
+  );
 
   const estimate = useMemo(() => {
-    const load = LOAD_OPTIONS.find((o) => o.id === loadId) ?? LOAD_OPTIONS[1];
-    const addonTotal = ADDONS.filter((a) => addons.includes(a.id)).reduce(
-      (sum, a) => sum + a.amount,
-      0,
-    );
-    const low = Math.round(BASE * load.multiplier + addonTotal);
-    const high = Math.round(low * 1.25);
-    return { low, high, load };
-  }, [loadId, addons]);
-
-  function toggleAddon(id: string) {
-    setAddons((prev) =>
-      prev.includes(id) ? prev.filter((x) => x !== id) : [...prev, id],
-    );
-  }
+    const selected =
+      SERVICE_OPTIONS.find((o) => o.id === serviceId) ?? SERVICE_OPTIONS[0];
+    const low = selected.price;
+    const high =
+      selected.id === "curbside" || selected.id === "full-service"
+        ? Math.round(selected.price * 1.2)
+        : selected.price;
+    return { low, high, selected };
+  }, [serviceId]);
 
   return (
-    <div className="rounded-[2px] border border-[rgba(0,135,255,0.4)] bg-card p-5 glow-border sm:p-8">
+    <div className="rounded-[8px] border border-[rgba(0,135,255,0.4)] bg-card p-5 glow-border sm:p-8">
       <p className="text-xs font-semibold uppercase tracking-[0.28em] text-bright">
-        Instant Estimator
+        Command Pricing Guide
       </p>
       <h2 className="mt-2 font-display text-3xl tracking-[0.06em] text-white sm:text-4xl">
         BALLPARK YOUR PRICE
       </h2>
       <p className="mt-2 max-w-2xl text-sm text-muted">
         This tool gives a planning range only. Final pricing is confirmed from
-        photos or an on-site look — always upfront before we load.
+        photos — always upfront before we load. For a detailed item estimator,
+        use the homepage Build Your Pickup Estimate tool.
       </p>
 
       <fieldset className="mt-8">
-        <legend className="text-sm font-semibold text-white">Load size</legend>
+        <legend className="text-sm font-semibold text-white">Service / load</legend>
         <div className="mt-3 grid gap-3 sm:grid-cols-2">
-          {LOAD_OPTIONS.map((option) => {
-            const selected = loadId === option.id;
+          {SERVICE_OPTIONS.map((option) => {
+            const selected = serviceId === option.id;
             return (
               <button
                 key={option.id}
                 type="button"
-                onClick={() => setLoadId(option.id)}
-                className={`rounded-[2px] border px-4 py-3 text-left transition-colors ${
+                onClick={() => setServiceId(option.id)}
+                className={`rounded-[6px] border px-4 py-3 text-left transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bright ${
                   selected
                     ? "border-bright bg-[rgba(7,135,255,0.12)]"
                     : "border-[rgba(0,135,255,0.3)] hover:border-bright/70"
@@ -73,34 +80,12 @@ export function EstimateCalculator() {
                   {option.label}
                 </span>
                 <span className="mt-1 block text-xs text-muted">{option.hint}</span>
+                <span className="mt-2 block text-sm text-bright">
+                  From ${option.price}
+                </span>
               </button>
             );
           })}
-        </div>
-      </fieldset>
-
-      <fieldset className="mt-6">
-        <legend className="text-sm font-semibold text-white">Add-ons</legend>
-        <div className="mt-3 space-y-2">
-          {ADDONS.map((addon) => (
-            <label
-              key={addon.id}
-              className="flex cursor-pointer items-center gap-3 rounded-[2px] border border-[rgba(0,135,255,0.25)] px-4 py-3 text-sm text-muted hover:border-bright/50"
-            >
-              <input
-                type="checkbox"
-                checked={addons.includes(addon.id)}
-                onChange={() => toggleAddon(addon.id)}
-                className="size-4 accent-[var(--primary)]"
-              />
-              <span className="flex-1 text-white">{addon.label}</span>
-              {addon.amount > 0 ? (
-                <span className="text-xs text-bright">+${addon.amount}</span>
-              ) : (
-                <span className="text-xs text-muted">Ask</span>
-              )}
-            </label>
-          ))}
         </div>
       </fieldset>
 
@@ -110,15 +95,17 @@ export function EstimateCalculator() {
             Estimated range
           </p>
           <p className="mt-1 font-display text-4xl tracking-[0.06em] text-white">
-            ${estimate.low} – ${estimate.high}
+            ${estimate.low}
+            {estimate.high !== estimate.low ? ` – $${estimate.high}` : null}
           </p>
           <p className="mt-1 text-xs text-muted">
-            Minimum pickup starts at ${BASE}. Not a final quote.
+            Curbside from ${CURBSIDE_START}. Full-service from $
+            {FULL_SERVICE_START}. Not a final quote.
           </p>
         </div>
         <div className="flex flex-col gap-2 sm:items-end">
-          <Button href="/book-online" showArrow>
-            Lock In My Free Quote
+          <Button href="/#quote" showArrow>
+            Confirm With Photos
           </Button>
           <a
             href={BRAND.smsHref}
