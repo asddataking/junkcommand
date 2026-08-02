@@ -1,13 +1,7 @@
 "use client";
 
-import {
-  Camera,
-  CheckCircle2,
-  Home,
-  MapPin,
-  ShieldCheck,
-} from "lucide-react";
-import { CURBSIDE_START } from "@/data/curbside-pricing";
+import { CheckCircle2, Clock3, MapPin, ShieldCheck } from "lucide-react";
+import { BRAND } from "@/lib/constants";
 import { Button } from "@/components/ui/Button";
 import { MediaImage } from "@/components/ui/MediaImage";
 import { BlurFade } from "@/components/magicui/blur-fade";
@@ -16,11 +10,9 @@ import { DotPattern } from "@/components/magicui/dot-pattern";
 import { BorderBeam } from "@/components/magicui/border-beam";
 
 const trustItems = [
-  { icon: ShieldCheck, label: "Veteran Owned" },
-  { icon: Home, label: "Local Family Business" },
-  { icon: CheckCircle2, label: "Transparent Pricing" },
-  { icon: Camera, label: "Fast Photo Estimates" },
-  { icon: MapPin, label: "Port Huron Area Service" },
+  { icon: Clock3, label: "Fast Response" },
+  { icon: CheckCircle2, label: "Upfront Pricing" },
+  { icon: ShieldCheck, label: "Bonded & Insured" },
 ] as const;
 
 export function Hero() {
@@ -50,36 +42,30 @@ export function Hero() {
       <div className="relative mx-auto grid max-w-7xl items-center gap-10 px-4 py-14 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:gap-8 lg:px-8 lg:py-20">
         <div className="space-y-7">
           <BlurFade delay={0.05} inView={false}>
-            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-bright">
-              Port Huron &amp; Blue Water Area Junk Removal
-            </p>
-            <h1 className="mt-3 font-display text-[clamp(2.75rem,8vw,4.75rem)] leading-[0.95] tracking-[0.04em] text-white">
-              EASY CURBSIDE JUNK PICKUP
+            <h1 className="font-display text-[clamp(3.25rem,10vw,5.75rem)] leading-[0.9] tracking-[0.04em] text-white">
+              TAKE COMMAND
               <br />
-              <span className="text-bright">STARTING AT ${CURBSIDE_START}</span>
+              <span className="text-bright">OF YOUR CLUTTER.</span>
             </h1>
           </BlurFade>
 
           <BlurFade delay={0.12} inView={false}>
             <p className="max-w-xl text-base text-muted sm:text-lg">
-              Place your unwanted item outside, send us a few photos, and receive
-              a confirmed price before pickup. No complicated estimate, no waiting
-              around, and no need to be home.
-            </p>
-            <p className="mt-3 max-w-xl text-sm text-muted/90">
-              Starting price applies to qualifying items already outside and ready
-              for pickup. Final pricing is confirmed from your photos.
+              Fast, reliable Port Huron junk removal — furniture, appliances,
+              and full cleanouts handled by a local veteran-owned crew.
             </p>
           </BlurFade>
 
           <BlurFade delay={0.18} inView={false}>
-            <ul className="flex flex-wrap gap-2.5">
+            <ul className="flex flex-wrap items-center gap-x-4 gap-y-2">
               {trustItems.map(({ icon: Icon, label }) => (
                 <li
                   key={label}
-                  className="inline-flex items-center gap-2 border border-[rgba(0,135,255,0.4)] bg-[#080B0F]/85 px-3 py-2 text-[11px] font-semibold uppercase tracking-[0.12em] text-white"
+                  className="inline-flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-[0.14em] text-white"
                 >
-                  <Icon className="size-3.5 text-bright" aria-hidden />
+                  <span className="inline-flex size-5 items-center justify-center rounded-full bg-bright/15 text-bright">
+                    <Icon className="size-3" aria-hidden />
+                  </span>
                   {label}
                 </li>
               ))}
@@ -89,15 +75,25 @@ export function Hero() {
           <BlurFade delay={0.24} inView={false}>
             <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
               <ShimmerButton href="#quote" className="w-full sm:w-auto">
-                Get My Curbside Price
+                Get My Free Quote
               </ShimmerButton>
               <Button
-                href="#full-service"
+                href={BRAND.phoneHref}
                 variant="secondary"
                 className="w-full sm:w-auto"
               >
-                I Need Full-Service Removal
+                Call Now {BRAND.phone}
               </Button>
+            </div>
+          </BlurFade>
+
+          <BlurFade delay={0.3} inView={false}>
+            <div className="flex flex-wrap items-center gap-2 text-sm text-muted">
+              <MapPin className="size-4 text-bright" aria-hidden />
+              <span>
+                Veteran-owned junk removal serving Port Huron, Marysville, St.
+                Clair County &amp; surrounding areas
+              </span>
             </div>
           </BlurFade>
         </div>
