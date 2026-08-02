@@ -215,10 +215,10 @@ export const CITIES: City[] = [
     ],
     nearbySlugs: [
       "port-huron",
+      "clyde-township",
       "kimball-township",
       "marysville",
       "lexington",
-      "st-clair-county",
     ],
     imageAlt:
       "Junk removal crew serving a Fort Gratiot Michigan township home near Lake Huron",
@@ -263,7 +263,7 @@ export const CITIES: City[] = [
     nearbySlugs: [
       "port-huron",
       "fort-gratiot",
-      "marysville",
+      "clyde-township",
       "emmett",
       "st-clair-county",
     ],
@@ -545,9 +545,9 @@ export const CITIES: City[] = [
     nearbySlugs: [
       "yale",
       "emmett",
+      "imlay-city",
       "memphis",
       "richmond",
-      "st-clair-county",
     ],
     imageAlt:
       "Junk Command crew hauling unwanted items from a Capac Michigan property",
@@ -685,10 +685,10 @@ export const CITIES: City[] = [
     ],
     nearbySlugs: [
       "memphis",
+      "armada",
+      "romeo",
+      "lenox-township",
       "chesterfield",
-      "new-baltimore",
-      "capac",
-      "macomb-county",
     ],
     imageAlt:
       "Junk Command hauling furniture and debris from a Richmond Michigan home",
@@ -826,10 +826,10 @@ export const CITIES: City[] = [
     ],
     nearbySlugs: [
       "richmond",
+      "armada",
+      "romeo",
       "capac",
       "emmett",
-      "yale",
-      "macomb-county",
     ],
     image: "/images/junk-command-hero.webp",
     imageAlt:
@@ -924,10 +924,245 @@ export const CITIES: City[] = [
       "yale",
       "memphis",
       "kimball-township",
-      "st-clair-county",
+      "imlay-city",
     ],
     imageAlt:
       "Junk Command clearing rural junk from an Emmett Michigan property",
+  }),
+  buildCity({
+    slug: "clyde-township",
+    name: "Clyde Township",
+    county: "St. Clair County",
+    eyebrow: "North Township and Lakeshore Corridor Hauling",
+    metaDescription:
+      "Junk Removal Clyde Township MI for homes, garages, barns and lake-area cleanouts. Veteran-owned. Call 810-336-5865.",
+    intro:
+      "Clyde Township residents call Junk Command for full-service hauling north of Port Huron and Fort Gratiot. We remove furniture, appliances, garage clutter, barn contents, and trash with clear pricing and careful local crews.",
+    profile:
+      "Clyde Township mixes rural roads, acreage homes, outbuildings, and properties that sit between Port Huron, Fort Gratiot, and the northern St. Clair County corridor toward Burtchville and Lakeshore.",
+    routeDetails:
+      "Our routes already cover Port Huron, Fort Gratiot, Kimball Township, and the northern township roads, so Clyde Township pickups fit naturally into Blue Water Area scheduling.",
+    cleanupExamples:
+      "Clyde Township jobs often include garage cleanouts, old appliances, basement boxes, barn storage, estate furniture, outdoor clutter, and mixed household junk that will not fit the weekly cart.",
+    accessNotes:
+      "Long drives, gravel shoulders, sheds, barns, and items stored away from the easiest loading point are common, so a few photos and access notes help us plan the truck and crew.",
+    localPromise:
+      "We help Clyde Township homeowners reclaim usable space without turning a cleanout into several weekends of lifting, sorting, and dump runs.",
+    whyLocal:
+      "Clyde Township sits minutes from our Port Huron base and connects directly to our Fort Gratiot and northern county routes.",
+    whyCare:
+      "Clyde Township customers want a respectful local crew that treats rural access as normal work and leaves the property clean when the truck pulls away.",
+    localReferences: [
+      "North River Road corridor",
+      "Vincent Road area",
+      "Wildcat Road properties",
+      "Township roads toward Burtchville",
+      "Routes near Fort Gratiot",
+      "Rural stretches north of Port Huron",
+    ],
+    nearbyLandmarks: [
+      "Lake Huron shoreline corridor",
+      "Fort Gratiot County Park region",
+      "Northern St. Clair County farmland",
+      "Port Huron northern access roads",
+    ],
+    nearbySlugs: [
+      "fort-gratiot",
+      "port-huron",
+      "kimball-township",
+      "lexington",
+      "st-clair-county",
+    ],
+    imageAlt:
+      "Junk Command hauling clutter from a Clyde Township Michigan property",
+  }),
+  buildCity({
+    slug: "lenox-township",
+    name: "Lenox Township",
+    county: "Macomb County",
+    eyebrow: "I-94 and County Line Cleanout Service",
+    metaDescription:
+      "Junk Removal Lenox Township MI for homes, farms, garages and estates. Veteran-owned Junk Command. Call 810-336-5865.",
+    intro:
+      "Lenox Township homeowners and property managers call Junk Command for clean haul-away near Richmond, New Haven, and the I-94 corridor. We remove furniture, appliances, garage clutter, estate contents, and trash with upfront pricing.",
+    profile:
+      "Lenox Township combines rural roads, farm properties, subdivision homes, and county-line neighborhoods that connect naturally to Richmond, Chesterfield, and northeastern Macomb County.",
+    routeDetails:
+      "We serve Lenox Township through Gratiot Avenue, 26 Mile Road, County Line Road, I-94 access points, and the routes that already connect Richmond, Chesterfield, and New Baltimore.",
+    cleanupExamples:
+      "Lenox Township pickups often include estate furniture, barn or garage overflow, old appliances, rental debris, basement boxes, and mixed junk before a sale or remodel.",
+    accessNotes:
+      "Rural drives, outbuildings, older basements, and items stored across multiple buildings are common, so we confirm access and staging before arrival.",
+    localPromise:
+      "We help Lenox Township customers clear space for closings, family transitions, tenant turnovers, and long-delayed garage projects without surprise pricing.",
+    whyLocal:
+      "Lenox Township sits on the same northeastern Macomb and county-line routes we already run for Richmond, Chesterfield, and Memphis.",
+    whyCare:
+      "Lenox Township customers choose Junk Command because border-area properties can mix suburban, rural, and farm access in one job, and our crew is ready for that variety.",
+    localReferences: [
+      "Gratiot Avenue corridor",
+      "26 Mile Road area",
+      "County Line Road neighborhoods",
+      "New Haven vicinity",
+      "I-94 Lenox Township access",
+      "Rural roads toward Richmond",
+    ],
+    nearbyLandmarks: [
+      "I-94 corridor",
+      "New Haven area",
+      "Gratiot Avenue corridor",
+      "Macomb-St. Clair county line",
+    ],
+    nearbySlugs: [
+      "richmond",
+      "chesterfield",
+      "new-baltimore",
+      "romeo",
+      "macomb-county",
+    ],
+    imageAlt:
+      "Junk Command removing furniture from a Lenox Township Michigan home",
+  }),
+  buildCity({
+    slug: "imlay-city",
+    name: "Imlay City",
+    county: "Lapeer County",
+    eyebrow: "M-53 Corridor and Western Route Hauling",
+    metaDescription:
+      "Junk Removal Imlay City MI for homes, businesses, garages and estates. Veteran-owned Junk Command. Call 810-336-5865.",
+    intro:
+      "Imlay City residents and businesses call Junk Command for dependable hauling along the M-53 corridor. We remove furniture, appliances, garage clutter, estate contents, and trash with clear pricing from a veteran-owned Blue Water Area crew.",
+    profile:
+      "Imlay City mixes Main Street businesses, neighborhood homes, farm properties, and western-route access that connects naturally toward Capac, Emmett, and the I-69 corridor.",
+    routeDetails:
+      "Our western routes already connect Capac, Emmett, Yale, and Memphis, so Imlay City is a practical extension for customers who want the same local-feeling service.",
+    cleanupExamples:
+      "Imlay City jobs often include storefront fixtures, garage cleanouts, estate furniture, old appliances, basement clutter, barn storage, and rental turnovers.",
+    accessNotes:
+      "Downtown parking, older stairs, rural drives, sheds, and heavy items stored away from the truck all shape how we plan the pickup.",
+    localPromise:
+      "We help Imlay City homeowners, landlords, and small businesses clear space before closings, remodels, tenant changes, and family transitions.",
+    whyLocal:
+      "Imlay City sits on a natural western extension of our Capac and Emmett coverage, giving Lapeer County customers a crew that already works nearby every week.",
+    whyCare:
+      "Imlay City customers value clear communication, careful loading, and a finished result that respects Main Street businesses and residential neighborhoods alike.",
+    localReferences: [
+      "Main Street Imlay City",
+      "M-53 corridor businesses",
+      "Neighborhoods near Capac Road",
+      "I-69 western access",
+      "Village residential streets",
+      "Rural roads toward Capac and Attica",
+    ],
+    nearbyLandmarks: [
+      "Downtown Imlay City",
+      "M-53 corridor",
+      "I-69 interchange area",
+      "Eastern Lapeer County farmland",
+    ],
+    nearbySlugs: [
+      "capac",
+      "emmett",
+      "memphis",
+      "richmond",
+      "yale",
+    ],
+    imageAlt:
+      "Junk Command hauling unwanted items from an Imlay City Michigan property",
+  }),
+  buildCity({
+    slug: "romeo",
+    name: "Romeo",
+    county: "Macomb County",
+    eyebrow: "Village and North Macomb Cleanouts",
+    metaDescription:
+      "Junk Removal Romeo MI for village homes, estates, garages and businesses. Veteran-owned Junk Command. Call 810-336-5865.",
+    intro:
+      "Romeo homeowners and businesses call Junk Command for clean, professional junk hauling in and around the historic village. We remove furniture, appliances, garage clutter, estate contents, and trash with upfront pricing.",
+    profile:
+      "Romeo blends historic village streets, nearby subdivisions, orchard-country roads, and north Macomb properties that connect naturally to Armada, Washington Township, and Richmond.",
+    routeDetails:
+      "We serve Romeo around Van Dyke Road, 32 Mile Road, Main Street, and the routes that already connect Armada, Richmond, Memphis, and northeastern Macomb County.",
+    cleanupExamples:
+      "Romeo pickups often include estate furniture, basement boxes, garage overflow, old appliances, patio sets, rental debris, and business fixtures after a remodel or move.",
+    accessNotes:
+      "Village parking, older homes, basement stairs, outbuildings, and driveway staging all matter on Romeo jobs, so photos help us quote accurately.",
+    localPromise:
+      "We help Romeo residents and shop owners clear space before showings, family visits, seasonal resets, and long-delayed cleanouts.",
+    whyLocal:
+      "Romeo sits on our expanding northeastern Macomb route with Armada, Richmond, and Lenox Township, making scheduling practical and familiar.",
+    whyCare:
+      "Romeo customers expect careful crews who respect historic homes, village businesses, and finished properties while still handling heavy furniture and appliances.",
+    localReferences: [
+      "Main Street Romeo",
+      "Van Dyke Road corridor",
+      "32 Mile Road access",
+      "Village neighborhoods near downtown",
+      "Roads toward Armada",
+      "North Macomb residential pockets",
+    ],
+    nearbyLandmarks: [
+      "Downtown Romeo",
+      "Romeo Historic District",
+      "Van Dyke Road corridor",
+      "North Macomb orchard country",
+    ],
+    nearbySlugs: [
+      "armada",
+      "richmond",
+      "lenox-township",
+      "memphis",
+      "macomb-county",
+    ],
+    imageAlt:
+      "Junk Command removing furniture from a Romeo Michigan village home",
+  }),
+  buildCity({
+    slug: "armada",
+    name: "Armada",
+    county: "Macomb County",
+    eyebrow: "Village and Rural North Macomb Hauling",
+    metaDescription:
+      "Junk Removal Armada MI for village homes, farms, garages and estates. Veteran-owned Junk Command. Call 810-336-5865.",
+    intro:
+      "Armada residents call Junk Command for dependable junk removal around the village and surrounding rural roads. We haul furniture, appliances, garage clutter, barn contents, and estate debris with clear pricing.",
+    profile:
+      "Armada mixes quiet village streets, fairgrounds traffic, farm properties, and north Macomb roads that connect toward Romeo, Richmond, and Memphis.",
+    routeDetails:
+      "Our crew serves Armada through Main Street, Armada Ridge Road, 32 Mile Road, and the routes that already cover Romeo, Richmond, Memphis, and the Macomb-St. Clair border.",
+    cleanupExamples:
+      "Armada jobs often include estate cleanouts, barn storage, garage clutter, old appliances, outdoor junk, basement boxes, and mixed household loads before a sale or remodel.",
+    accessNotes:
+      "Village parking, gravel drives, sheds, barns, and long carries are common, so we ask about access before the truck rolls.",
+    localPromise:
+      "We help Armada homeowners and rural property owners clear space without turning a cleanout into a week of heavy lifting and dump runs.",
+    whyLocal:
+      "Armada sits naturally between Romeo, Richmond, and Memphis on routes Junk Command already runs through northeastern Macomb County.",
+    whyCare:
+      "Armada customers appreciate a local-feeling crew that treats village homes and rural outbuildings with the same care and clear pricing.",
+    localReferences: [
+      "Main Street Armada",
+      "Armada Ridge Road area",
+      "32 Mile Road corridor",
+      "Village neighborhoods near downtown",
+      "Rural roads toward Romeo",
+      "Routes toward Richmond and Memphis",
+    ],
+    nearbyLandmarks: [
+      "Downtown Armada",
+      "Armada Fairgrounds area",
+      "Armada Ridge corridor",
+      "North Macomb farmland",
+    ],
+    nearbySlugs: [
+      "romeo",
+      "richmond",
+      "memphis",
+      "lenox-township",
+      "macomb-county",
+    ],
+    imageAlt:
+      "Junk Command hauling junk from an Armada Michigan home and property",
   }),
   buildCity({
     slug: "st-clair-county",
@@ -941,9 +1176,9 @@ export const CITIES: City[] = [
     profile:
       "St. Clair County is our home map, covering dense city neighborhoods, Lake Huron homes, river towns, rural townships, western villages, farms, cottages, rentals, and commercial corridors.",
     routeDetails:
-      "Our county routes connect Port Huron, Fort Gratiot, Kimball Township, Marysville, St. Clair, Marine City, Algonac, Anchorville, Emmett, Capac, and Yale.",
+      "Our county routes connect Port Huron, Fort Gratiot, Clyde Township, Kimball Township, Marysville, St. Clair, Marine City, Algonac, Anchorville, Emmett, Capac, and Yale.",
     cleanupExamples:
-      "Countywide calls range from one appliance in Port Huron to a Kimball barn, a St. Clair estate, a Fort Gratiot garage, an Algonac cottage, or a Yale farm cleanup.",
+      "Countywide calls range from one appliance in Port Huron to a Kimball barn, a Clyde Township garage, a St. Clair estate, a Fort Gratiot garage, an Algonac cottage, or a Yale farm cleanup.",
     accessNotes:
       "Every part of the county has different access: city alleys, lake cottages, riverfront drives, outbuildings, rural lanes, business entries, and older basement stairs.",
     localPromise:
@@ -985,13 +1220,13 @@ export const CITIES: City[] = [
     metaDescription:
       "Junk Removal Macomb County MI for Chesterfield, New Baltimore, Richmond and border towns. Call Junk Command 810-336-5865.",
     intro:
-      "Junk Command serves northeastern Macomb County communities that connect naturally to our Blue Water routes, including Chesterfield, New Baltimore, Richmond, Anchorville, and Memphis. We haul furniture, appliances, trash, and cleanout debris.",
+      "Junk Command serves northeastern Macomb County communities that connect naturally to our Blue Water routes, including Chesterfield, New Baltimore, Richmond, Romeo, Armada, Lenox Township, Anchorville, and Memphis. We haul furniture, appliances, trash, and cleanout debris.",
     profile:
-      "Macomb County is broad, so Junk Command focuses on northeastern communities where our routes provide practical, local-feeling service: Chesterfield, New Baltimore, Richmond, Anchorville, Memphis, and nearby Anchor Bay areas.",
+      "Macomb County is broad, so Junk Command focuses on northeastern communities where our routes provide practical, local-feeling service: Chesterfield, New Baltimore, Richmond, Romeo, Armada, Lenox Township, Anchorville, Memphis, and nearby Anchor Bay areas.",
     routeDetails:
-      "We plan Macomb County stops around 23 Mile Road, Gratiot Avenue, Jefferson Avenue, I-94, County Line Road, Anchor Bay, and the Richmond-Memphis border area.",
+      "We plan Macomb County stops around 23 Mile Road, 32 Mile Road, Gratiot Avenue, Van Dyke Road, Jefferson Avenue, I-94, County Line Road, Anchor Bay, and the Richmond-Romeo-Armada corridor.",
     cleanupExamples:
-      "Macomb County calls in our service zone include Chesterfield condo cleanouts, New Baltimore lake-home furniture, Richmond estate work, Anchorville seasonal clutter, and Memphis rural loads.",
+      "Macomb County calls in our service zone include Chesterfield condo cleanouts, New Baltimore lake-home furniture, Richmond estate work, Romeo village pickups, Armada rural loads, Lenox Township garages, Anchorville seasonal clutter, and Memphis border-town cleanouts.",
     accessNotes:
       "HOA neighborhoods, condos, lake homes, downtown businesses, rural border roads, and finished interiors all require tidy staging and careful handling.",
     localPromise:
@@ -1004,9 +1239,9 @@ export const CITIES: City[] = [
       "Chesterfield Township subdivisions",
       "New Baltimore harbor and downtown",
       "Richmond Main Street and Gratiot corridor",
-      "23 Mile and County Line connectors",
+      "Romeo and Armada village areas",
+      "Lenox Township and County Line connectors",
       "Anchor Bay shoreline communities",
-      "Northeastern Macomb residential pockets",
     ],
     nearbyLandmarks: [
       "Anchor Bay",
@@ -1016,10 +1251,10 @@ export const CITIES: City[] = [
     ],
     nearbySlugs: [
       "chesterfield",
-      "new-baltimore",
       "richmond",
-      "memphis",
-      "anchorville",
+      "romeo",
+      "armada",
+      "lenox-township",
     ],
     imageAlt:
       "Junk Command junk removal truck serving Macomb County Michigan communities",

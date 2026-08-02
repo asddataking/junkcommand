@@ -291,7 +291,7 @@ export const FAQS: Faq[] = [
     id: "areas-macomb",
     question: "Do you serve Macomb County?",
     answer:
-      "Yes. Junk Command provides junk removal in northern and nearby Macomb County communities such as Richmond, New Baltimore, Chesterfield, and surrounding areas. Travel and timing depend on the day’s route. Reach out with your address and we will confirm coverage and availability.",
+      "Yes. Junk Command provides junk removal in northern and nearby Macomb County communities such as Richmond, Romeo, Armada, Lenox Township, New Baltimore, Chesterfield, Memphis, and surrounding areas. Travel and timing depend on the day’s route. Reach out with your address and we will confirm coverage and availability.",
     category: "areas",
   },
   {
@@ -411,7 +411,7 @@ export const HOMEPAGE_FAQS: Faq[] = [
     id: "home-areas",
     question: "What areas do you serve?",
     answer:
-      "We provide Port Huron junk hauling plus service throughout the Blue Water Area — including Fort Gratiot, Kimball Township, Marysville, St. Clair, Marine City, Algonac, Yale, Capac, Croswell, Lexington, Richmond, Chesterfield, New Baltimore, Memphis, and surrounding St. Clair County communities.",
+      "We provide Port Huron junk hauling plus service throughout the Blue Water Area — including Fort Gratiot, Kimball Township, Clyde Township, Marysville, St. Clair, Marine City, Algonac, Yale, Capac, Croswell, Lexington, Richmond, Lenox Township, Romeo, Armada, Imlay City, Chesterfield, New Baltimore, Memphis, and surrounding St. Clair and Macomb County communities.",
     category: "areas",
   },
   {
