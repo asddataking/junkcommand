@@ -17,7 +17,7 @@ export function WhyChooseUs() {
             alt="Dan and Gage with Luna beside the Junk Command truck and trailer, mission ready for Port Huron junk removal"
             fill
             loading="lazy"
-            className="object-cover object-[32%_38%]"
+            className="object-cover object-[38%_36%]"
             sizes="(max-width: 1024px) 100vw, 50vw"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#020305] via-transparent to-transparent" />
