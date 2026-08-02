@@ -8,6 +8,7 @@ import { PRICING_ITEMS } from "@/data/pricing";
 import { PricingCard } from "@/components/sections/PricingCard";
 import { PricingDisclaimer } from "@/components/sections/PricingDisclaimer";
 import { BlurFade } from "@/components/magicui/blur-fade";
+import { AnimatedShinyText } from "@/components/magicui/animated-shiny-text";
 
 export function PricingCarousel() {
   const reduceMotion = useReducedMotion();
@@ -51,9 +52,12 @@ export function PricingCarousel() {
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <BlurFade className="text-center">
+          <AnimatedShinyText className="text-xs font-semibold uppercase tracking-[0.28em] text-bright">
+            No Guesswork. No Hidden Fees.
+          </AnimatedShinyText>
           <h2
             id="pricing-heading"
-            className="font-display text-4xl tracking-[0.08em] text-white sm:text-5xl"
+            className="mt-3 font-display text-4xl tracking-[0.08em] text-white sm:text-5xl"
           >
             SIMPLE,{" "}
             <span className="text-bright">UPFRONT PRICING</span>

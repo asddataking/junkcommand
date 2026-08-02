@@ -8,6 +8,7 @@ import { BlurFade } from "@/components/magicui/blur-fade";
 import { ShimmerButton } from "@/components/magicui/shimmer-button";
 import { DotPattern } from "@/components/magicui/dot-pattern";
 import { BorderBeam } from "@/components/magicui/border-beam";
+import { AnimatedShinyText } from "@/components/magicui/animated-shiny-text";
 
 const trustItems = [
   { icon: Clock3, label: "Fast Response" },
@@ -41,6 +42,12 @@ export function Hero() {
 
       <div className="relative mx-auto grid max-w-7xl items-center gap-10 px-4 py-14 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:gap-8 lg:px-8 lg:py-20">
         <div className="space-y-7">
+          <BlurFade delay={0.02} inView={false}>
+            <AnimatedShinyText className="text-xs font-semibold uppercase tracking-[0.28em] text-bright">
+              Junk Command · Port Huron
+            </AnimatedShinyText>
+          </BlurFade>
+
           <BlurFade delay={0.05} inView={false}>
             <h1 className="font-display text-[clamp(3.25rem,10vw,5.75rem)] leading-[0.9] tracking-[0.04em] text-white">
               TAKE COMMAND

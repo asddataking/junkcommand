@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { MessageSquare } from "lucide-react";
 import {
@@ -5,6 +7,8 @@ import {
   type PricingItem,
 } from "@/data/pricing";
 import { MediaImage } from "@/components/ui/MediaImage";
+import { NumberTicker } from "@/components/magicui/number-ticker";
+import { ShineBorder } from "@/components/magicui/shine-border";
 
 type PricingCardProps = {
   item: PricingItem;
@@ -19,7 +23,13 @@ export function PricingCard({ item, priority = false }: PricingCardProps) {
         className="group relative flex h-full min-h-[17.5rem] flex-col justify-between overflow-hidden rounded-[2px] border border-bright/50 bg-[rgba(7,135,255,0.12)] p-5 transition-[border-color,box-shadow,transform] duration-300 hover:-translate-y-0.5 hover:border-bright hover:shadow-[0_0_28px_rgba(7,135,255,0.35)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bright"
         aria-label="Get a free upfront quote for something else"
       >
-        <div>
+        <ShineBorder
+          shineColor={["#0787ff", "#18a0ff", "#0787ff"]}
+          duration={14}
+          borderWidth={1}
+          className="opacity-50"
+        />
+        <div className="relative z-10">
           <span className="inline-flex size-11 items-center justify-center rounded-[2px] border border-[rgba(0,135,255,0.45)] bg-[#020305] text-bright">
             <MessageSquare className="size-5" aria-hidden />
           </span>
@@ -30,7 +40,7 @@ export function PricingCard({ item, priority = false }: PricingCardProps) {
             {item.ctaDescription}
           </p>
         </div>
-        <p className="mt-6 text-sm font-semibold uppercase tracking-[0.12em] text-bright">
+        <p className="relative z-10 mt-6 text-sm font-semibold uppercase tracking-[0.12em] text-bright">
           Get My Free Quote →
         </p>
       </Link>
@@ -67,7 +77,11 @@ export function PricingCard({ item, priority = false }: PricingCardProps) {
           Starting at
         </p>
         <p className="font-display text-3xl tracking-[0.06em] text-bright drop-shadow-[0_0_12px_rgba(24,160,255,0.45)]">
-          {formatStartingPrice(item.startingPrice)}
+          $
+          <NumberTicker
+            value={item.startingPrice}
+            className="font-display text-3xl tracking-[0.06em] text-bright"
+          />
         </p>
       </div>
     </Link>

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Bebas_Neue, Inter, Oswald } from "next/font/google";
+import { Antonio, IBM_Plex_Sans } from "next/font/google";
 import Script from "next/script";
 import {
   getFaqSchema,
@@ -21,22 +21,18 @@ import "./globals.css";
 
 const GA_MEASUREMENT_ID = "G-9ZVZX7M7FJ";
 
-const inter = Inter({
+/** Commanding condensed display — fleet / signage energy without stock “Impact” vibes */
+const antonio = Antonio({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-antonio",
   display: "swap",
 });
 
-const bebas = Bebas_Neue({
-  weight: "400",
+/** Technical, premium body type — replaces generic Inter */
+const ibmPlexSans = IBM_Plex_Sans({
   subsets: ["latin"],
-  variable: "--font-bebas",
-  display: "swap",
-});
-
-const oswald = Oswald({
-  subsets: ["latin"],
-  variable: "--font-oswald",
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-ibm-plex",
   display: "swap",
 });
 
@@ -94,7 +90,10 @@ export default function RootLayout({
   ];
 
   return (
-    <html lang="en" className={`${inter.variable} ${bebas.variable} ${oswald.variable} h-full`}>
+    <html
+      lang="en"
+      className={`${antonio.variable} ${ibmPlexSans.variable} h-full`}
+    >
       <body className="min-h-full bg-background font-sans text-foreground antialiased">
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}

@@ -6,6 +6,9 @@ import { LOAD_TIERS } from "@/data/curbside-pricing";
 import { useHomepageBookingOptional } from "@/components/home/HomepageBookingContext";
 import { BlurFade } from "@/components/magicui/blur-fade";
 import { ShimmerButton } from "@/components/magicui/shimmer-button";
+import { NumberTicker } from "@/components/magicui/number-ticker";
+import { ShineBorder } from "@/components/magicui/shine-border";
+import { AnimatedShinyText } from "@/components/magicui/animated-shiny-text";
 
 const FILL_STEPS = [25, 50, 75, 100] as const;
 
@@ -60,9 +63,12 @@ export function CommandLoadPricing() {
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <BlurFade className="max-w-3xl">
+          <AnimatedShinyText className="text-xs font-semibold uppercase tracking-[0.28em] text-bright">
+            Trailer Fill Estimator
+          </AnimatedShinyText>
           <h2
             id="load-pricing-heading"
-            className="font-display text-4xl tracking-[0.08em] text-white sm:text-5xl"
+            className="mt-3 font-display text-4xl tracking-[0.08em] text-white sm:text-5xl"
           >
             COMMAND LOAD PRICING
           </h2>
@@ -122,7 +128,7 @@ export function CommandLoadPricing() {
                     textAnchor="middle"
                     fill="#ffffff"
                     fontSize="22"
-                    fontFamily="var(--font-bebas), sans-serif"
+                    fontFamily="var(--font-antonio), sans-serif"
                   >
                     {fill}%
                   </text>
@@ -178,28 +184,38 @@ export function CommandLoadPricing() {
           </BlurFade>
 
           <BlurFade delay={0.08}>
-            <div className="rounded-[12px] border border-[rgba(0,135,255,0.4)] bg-[rgba(8,11,15,0.9)] p-6 backdrop-blur-sm sm:p-8">
-              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-bright">
+            <div className="relative overflow-hidden rounded-[12px] border border-[rgba(0,135,255,0.4)] bg-[rgba(8,11,15,0.9)] p-6 backdrop-blur-sm sm:p-8">
+              <ShineBorder
+                shineColor={["#0787ff", "#18a0ff", "#0787ff"]}
+                duration={14}
+                borderWidth={1}
+                className="opacity-45"
+              />
+              <p className="relative z-10 text-xs font-semibold uppercase tracking-[0.18em] text-bright">
                 {tier.fillPercent}% Full
               </p>
-              <h3 className="mt-2 font-display text-4xl tracking-[0.08em] text-white">
+              <h3 className="relative z-10 mt-2 font-display text-4xl tracking-[0.08em] text-white">
                 {tier.name.toUpperCase()}
               </h3>
-              <p className="mt-3 font-display text-5xl tracking-[0.06em] text-bright">
-                ${tier.price}
+              <p className="relative z-10 mt-3 font-display text-5xl tracking-[0.06em] text-bright">
+                $
+                <NumberTicker
+                  value={tier.price}
+                  className="font-display text-5xl tracking-[0.06em] text-bright"
+                />
               </p>
-              <p className="mt-2 text-sm text-muted">
+              <p className="relative z-10 mt-2 text-sm text-muted">
                 About {tier.cubicYards} cubic yards of ordinary household junk.
               </p>
-              <p className="mt-5 text-xs font-semibold uppercase tracking-[0.14em] text-muted">
+              <p className="relative z-10 mt-5 text-xs font-semibold uppercase tracking-[0.14em] text-muted">
                 Good for
               </p>
-              <ul className="mt-3 space-y-2 text-sm text-white">
+              <ul className="relative z-10 mt-3 space-y-2 text-sm text-white">
                 {tier.examples.map((example) => (
                   <li key={example}>• {example}</li>
                 ))}
               </ul>
-              <div className="mt-8">
+              <div className="relative z-10 mt-8">
                 <ShimmerButton
                   type="button"
                   className="w-full sm:w-auto"
