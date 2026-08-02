@@ -6,1127 +6,1024 @@ export type City = {
   metaDescription: string;
   h1: string;
   eyebrow: string;
-  intro: string;
-  whyUs: string;
-  localReferences: string[];
-  nearbyLandmarks: string[];
+  intro: string; // short hero paragraph ~35-50 words
+  introduction: string[]; // 4-5 unique paragraphs for body (~1500 words TOTAL page copy including all fields)
+  whyUs: string[]; // 2-3 paragraphs
+  localReferences: string[]; // 6 neighborhood/street refs
+  nearbyLandmarks: string[]; // 4 landmarks
   servicesBlurb: string;
-  faqs: { question: string; answer: string }[];
+  commonJobs: { title: string; description: string }[]; // 4 jobs
+  pricingOverview: string[]; // 2 paragraphs
+  faqs: { question: string; answer: string }[]; // 4-5 FAQs
   nearbySlugs: string[];
-  image: string;
+  image: string; // `/images/cities/{slug}.webp` or for memphis use `/images/junk-command-hero.webp`
   imageAlt: string;
   isCounty?: boolean;
 };
 
+type CitySeed = {
+  slug: string;
+  name: string;
+  county: string;
+  eyebrow: string;
+  metaDescription: string;
+  intro: string;
+  profile: string;
+  routeDetails: string;
+  cleanupExamples: string;
+  accessNotes: string;
+  localPromise: string;
+  whyLocal: string;
+  whyCare: string;
+  localReferences: string[];
+  nearbyLandmarks: string[];
+  nearbySlugs: string[];
+  image?: string;
+  imageAlt: string;
+  isCounty?: boolean;
+};
+
+function cityImage(slug: string): string {
+  return `/images/cities/${slug}.webp`;
+}
+
+function buildCity(seed: CitySeed): City {
+  const { name } = seed;
+
+  return {
+    slug: seed.slug,
+    name,
+    county: seed.county,
+    metaTitle: `Junk Removal ${name} MI | Junk Command`,
+    metaDescription: seed.metaDescription,
+    h1: `Junk Removal in ${name}, Michigan`,
+    eyebrow: seed.eyebrow,
+    intro: seed.intro,
+    introduction: [
+      `${name} is not a generic stop for Junk Command; it is part of the Blue Water and northeastern Macomb service map we work every week. When customers search for Junk Removal ${name} MI, they usually need a crew that understands the property style, road pattern, and timing pressures in town. ${seed.profile}`,
+      `${name} Junk Hauling often starts when one practical project grows into a larger cleanup. A garage reset uncovers old furniture, a move exposes basement boxes, a remodel creates debris, or a rental turnover leaves more than the weekly cart can handle. ${seed.routeDetails} Our crew arrives ready to lift, load, haul, and leave the space usable again without you renting a dumpster or borrowing a trailer.`,
+      `Trash Removal ${name} service is built for mixed loads: bagged clutter, broken shelving, mattresses, outdoor items, office pieces, light construction debris, and the awkward leftovers that do not fit normal pickup. ${seed.cleanupExamples} We confirm the price before loading, separate items that need special handling, and keep the job site controlled so the cleanup feels orderly from start to finish.`,
+      `Furniture Removal ${name} and Appliance Removal ${name} are two of the most requested calls because bulky items can damage walls, stairs, flooring, and backs when handled casually. We remove sofas, sectionals, recliners, tables, dressers, mattresses, refrigerators, freezers, washers, dryers, ranges, dishwashers, and water heaters from the room, garage, basement, porch, or storage area where they sit. ${seed.accessNotes}`,
+      `${seed.localPromise} Junk Command is veteran-owned, bonded, insured, and locally accountable. Call or text 810-336-5865 with photos, a few access notes, and your timeline. We will give a practical estimate, confirm the final quote on site, and handle the heavy lifting with the kind of care people expect from a premium local company.`,
+    ],
+    whyUs: [
+      `${seed.whyLocal} That local awareness matters during junk removal because the hard part is rarely just weight. Parking, stairs, long carries, association rules, rural drives, weather, and disposal choices all affect the job. We ask about those details before arrival so the crew, truck space, and time window match the work.`,
+      `${seed.whyCare} You get straightforward volume-based pricing, clear communication, and a crew that protects doorways, floors, trim, lawns, driveways, and common areas. When usable items can reasonably be donated or recycled, we make that effort; when disposal is required, we route it responsibly and leave the work area broom-clean whenever practical.`,
+    ],
+    localReferences: seed.localReferences,
+    nearbyLandmarks: seed.nearbyLandmarks,
+    servicesBlurb: `Junk Command provides ${name} Junk Hauling for household junk, furniture, appliances, mattresses, garage clutter, basement items, estate contents, rental debris, yard clutter, small business cleanouts, and light renovation material.`,
+    commonJobs: [
+      {
+        title: `Furniture Removal ${name}`,
+        description: `We remove sofas, sectionals, recliners, mattresses, dressers, tables, cabinets, desks, patio furniture, and other bulky pieces from homes, rentals, condos, offices, garages, and storage spaces in ${name}.`,
+      },
+      {
+        title: `Appliance Removal ${name}`,
+        description: `Our crew hauls refrigerators, freezers, washers, dryers, stoves, dishwashers, microwaves, water heaters, and similar appliances after replacements, moves, remodels, or full cleanouts.`,
+      },
+      {
+        title: `Garage, Basement, and Estate Cleanouts`,
+        description: `We clear boxes, shelving, tools, toys, bagged clutter, old furniture, stored appliances, inherited contents, and non-hazardous debris so the property can be sold, rented, remodeled, or used again.`,
+      },
+      {
+        title: `Trash Removal ${name} for Rentals and Businesses`,
+        description: `Landlords, realtors, property managers, offices, shops, and light commercial spaces call us for move-out debris, fixtures, storage-room overflow, old office furniture, and quick cleanup before deadlines.`,
+      },
+    ],
+    pricingOverview: [
+      `Pricing for junk removal in ${name} is based mainly on how much space your items take in the truck, with access, weight, and special handling considered before work begins. Single-item pickups, partial loads, and larger cleanouts are quoted clearly, and the crew confirms the final number on site before loading anything.`,
+      `Photos make estimates faster and more accurate. Text 810-336-5865 with pictures of the pile, large furniture, appliances, stairs, parking, outbuildings, or tight access. For ${name} Junk Hauling, a few good photos help us send the right crew and avoid surprises on the day of service.`,
+    ],
+    faqs: [
+      {
+        question: `How quickly can you schedule junk removal in ${name}?`,
+        answer: `Scheduling depends on the route and the size of the job, but ${name} is part of our regular service area. Call or text 810-336-5865 with photos and your deadline so we can confirm the soonest practical pickup window.`,
+      },
+      {
+        question: `Do I need to move everything to the curb in ${name}?`,
+        answer: `No. Full-service removal is the reason customers hire Junk Command. If items are safely accessible, our crew can remove them from rooms, basements, garages, sheds, porches, offices, or storage areas.`,
+      },
+      {
+        question: `What items are common for ${name} Junk Hauling?`,
+        answer: `Common loads include sofas, mattresses, appliances, boxes, shelving, bagged clutter, outdoor furniture, tenant debris, garage contents, estate items, and light non-hazardous remodel debris.`,
+      },
+      {
+        question: `Can you combine Furniture Removal ${name} and Appliance Removal ${name}?`,
+        answer: `Yes. Combining bulky furniture, appliances, and general trash in one visit is common and usually more efficient than booking separate pickups. We price the combined load before loading begins.`,
+      },
+      {
+        question: `Are you insured for ${name} junk removal jobs?`,
+        answer: `Yes. Junk Command is bonded and insured. Our veteran-owned crew works carefully around floors, doorways, stairs, driveways, lawns, and business spaces on every scheduled pickup.`,
+      },
+    ],
+    nearbySlugs: seed.nearbySlugs,
+    image: seed.image ?? cityImage(seed.slug),
+    imageAlt: seed.imageAlt,
+    isCounty: seed.isCounty,
+  };
+}
+
 export const CITIES: City[] = [
-  {
+  buildCity({
     slug: "port-huron",
     name: "Port Huron",
     county: "St. Clair County",
-    metaTitle: "Junk Removal Port Huron MI | Junk Command",
-    metaDescription:
-      "Junk removal in Port Huron, MI. Veteran-owned crew for furniture, appliances, cleanouts & more. Free quotes. Call Junk Command at 810-336-5865.",
-    h1: "Junk Removal in Port Huron, Michigan",
     eyebrow: "Blue Water Area Headquarters",
+    metaDescription:
+      "Junk Removal Port Huron MI by veteran-owned Junk Command. Fast furniture, appliance and cleanout hauling. Call 810-336-5865 today.",
     intro:
-      "Junk Command is based right here in Port Huron — so when you need junk hauled, we are already in your backyard. From Military Street bungalows to waterfront condos near the Blue Water Bridge, our veteran-owned crew clears clutter fast with upfront pricing and no surprises.",
-    whyUs:
-      "Port Huron is home for Junk Command. We know the neighborhoods off Pine Grove, the tight alley access downtown, and how quickly lake-effect weather can change a haul day. As a local, veteran-owned team we show up on time, protect floors and doorways, and leave every job broom-clean. Whether you are emptying a garage near Lakeside or staging a rental on 10th Avenue, you get honest volume-based pricing, and a crew that treats your property like it is our own. Call 810-336-5865 and talk to people who actually live and work in the Blue Water Area.",
+      "Junk Command is based in Port Huron, so our crew already knows the alleys, bridges, basements, rentals, and lakefront streets that make cleanup here different. Call 810-336-5865 for veteran-owned hauling with clear pricing and careful service.",
+    profile:
+      "Port Huron jobs may involve tight downtown parking near Military Street, older stairways off Pine Grove, lake-season clutter near Lakeside, student rentals, office spaces near McMorran, or waterfront homes close to the Black River and Blue Water Bridge.",
+    routeDetails:
+      "Because our headquarters are local, we can plan pickups around Port Huron neighborhoods instead of treating the city like an out-of-town appointment.",
+    cleanupExamples:
+      "A south side landlord may need a tenant cleanout, a family near Holland Avenue may need basement junk removed before remodeling, or a downtown business may need fixtures hauled before reopening.",
+    accessNotes:
+      "In Port Huron, that often means watching older trim, narrow basement stairs, winter sidewalks, alley parking, and neighbors close by.",
+    localPromise:
+      "From the Blue Water Bridge corridor to Edison, Lakeside, and the canal area, we help Port Huron properties feel clear, safe, and ready for what comes next.",
+    whyLocal:
+      "Port Huron is home base, so our team knows Pine Grove, 10th Avenue, Griswold, Military Street, Electric Avenue, the Black River canal area, and the neighborhoods that sit between the lake and the interstate.",
+    whyCare:
+      "Port Huron customers hire us because we bring a polished process to very real local jobs: estate cleanouts, appliance failures, garage overflow, commercial resets, and rental turnovers.",
     localReferences: [
       "Blue Water Bridge corridor",
-      "Military Street downtown",
-      "Pine Grove Park waterfront",
-      "Lakeside & Edison neighborhoods",
-      "Holland Avenue corridor",
+      "Military Street and downtown Port Huron",
+      "Pine Grove Avenue neighborhoods",
+      "Lakeside and Gratiot Avenue homes",
       "Black River canal area",
-    ],
-    nearbyLandmarks: [
-      "Thomas Edison Depot Museum",
-      "Fort Gratiot Lighthouse",
-      "McMorran Place",
-      "St. Clair County Community College",
-    ],
-    servicesBlurb:
-      "In Port Huron we handle furniture, appliance, and mattress haul-away, garage and basement cleanouts, estate clearances, construction debris, and yard waste from our local Port Huron base.",
-    faqs: [
-      {
-        question: "How quickly can you schedule junk removal in Port Huron?",
-        answer:
-          "Because we are based in Port Huron, we can usually confirm a pickup window quickly. Timing depends on the schedule and is confirmed when you book. Call or text 810-336-5865 with photos for the fastest quote.",
-      },
-      {
-        question: "What areas of Port Huron do you serve?",
-        answer:
-          "We cover the entire city — downtown, south side, Lakeside, Edison, and properties near the Blue Water Bridge and Black River. If you are in Port Huron city limits, we haul for you.",
-      },
-      {
-        question: "How is junk removal priced in Port Huron?",
-        answer:
-          "Pricing is based on how much space your load takes in our truck, not by the hour. You get an upfront quote before we load anything. Most single-item pickups start near our $99 minimum.",
-      },
-      {
-        question: "Are you bonded and insured for Port Huron jobs?",
-        answer:
-          "Yes. Junk Command is bonded and fully insured. Our veteran-owned crew is careful with driveways, floors, and door frames on every Port Huron property we clear.",
-      },
-    ],
-    nearbySlugs: [
-      "marysville",
-      "fort-gratiot",
-      "kimball-township",
-      "st-clair",
-      "st-clair-county",
-    ],
-    image: "/images/cities/port-huron.webp",
-    imageAlt:
-      "Junk Command crew loading junk into a truck in Port Huron, Michigan",
-  },
-  {
-    slug: "marysville",
-    name: "Marysville",
-    county: "St. Clair County",
-    metaTitle: "Junk Removal Marysville MI | Junk Command",
-    metaDescription:
-      "Reliable junk removal in Marysville, MI. Furniture, appliances, garage cleanouts & estate haul-away. Veteran-owned. Call Junk Command 810-336-5865.",
-    h1: "Junk Removal in Marysville, Michigan",
-    eyebrow: "St. Clair River Neighbors",
-    intro:
-      "Marysville homeowners and businesses call Junk Command when clutter outgrows the garage, basement, or curb. Minutes from our Port Huron base, we roll into town with a full crew, clear pricing, and the muscle to finish the job in one visit.",
-    whyUs:
-      "Marysville sits right along our daily routes between Port Huron and St. Clair, so we treat your address like a local stop — not a long-haul add-on. We know the ranch homes off Gratiot, the riverfront streets near Busha Highway, and the storage challenges that come with Michigan winters. Our veteran-owned team quotes by volume, hauls furniture and appliances without you lifting a finger, and recycles or donates when items still have life. From a single dryer on Huron Boulevard to a full estate cleanout near Wills Road, Junk Command keeps Marysville properties clear and ready for what is next.",
-    localReferences: [
-      "Gratiot Boulevard corridor",
-      "Busha Highway & riverfront",
-      "Marysville Municipal Marina area",
-      "Huron Boulevard neighborhoods",
-      "Wills Road residential streets",
-      "Chrysler Drive industrial edge",
-    ],
-    nearbyLandmarks: [
-      "Marysville Golf Course",
-      "Marysville City Park",
-      "St. Clair River Walk access",
-      "Marysville Historical Museum",
-    ],
-    servicesBlurb:
-      "Marysville customers book us for sofa and appliance pickup, garage and basement cleanouts, shed clearing, yard debris, and post-renovation junk — with free photo quotes and flexible scheduling.",
-    faqs: [
-      {
-        question: "How quickly can you get to Marysville?",
-        answer:
-          "Marysville is a short drive from our Port Huron headquarters. Send photos to 810-336-5865 and we will confirm the soonest available window.",
-      },
-      {
-        question: "Do you remove junk from Marysville apartments and condos?",
-        answer:
-          "Yes. We coordinate elevator and loading-dock access when needed and remove furniture, mattresses, and boxed clutter from multi-unit buildings throughout Marysville.",
-      },
-      {
-        question: "Can you haul construction debris in Marysville?",
-        answer:
-          "Absolutely. Drywall scraps, cabinets, flooring, and remodel leftovers are a regular part of our Marysville work. Tell us the volume and we will size the truck accordingly.",
-      },
-      {
-        question: "Do I need to be home during the pickup?",
-        answer:
-          "Not always. If items are accessible outside or you leave clear instructions, we can often complete the haul while you are at work. We confirm access details when you book.",
-      },
-    ],
-    nearbySlugs: [
-      "port-huron",
-      "st-clair",
-      "kimball-township",
-      "fort-gratiot",
-      "marine-city",
-    ],
-    image: "/images/cities/marysville.webp",
-    imageAlt:
-      "Junk removal truck serving a Marysville, Michigan residential street",
-  },
-  {
-    slug: "fort-gratiot",
-    name: "Fort Gratiot",
-    county: "St. Clair County",
-    metaTitle: "Junk Removal Fort Gratiot MI | Junk Command",
-    metaDescription:
-      "Junk removal in Fort Gratiot Township, MI. Fast haul-away for homes near Birchwood Mall & lakeshore. Call Junk Command at 810-336-5865.",
-    h1: "Junk Removal in Fort Gratiot, Michigan",
-    eyebrow: "Lakeshore Township Service",
-    intro:
-      "Fort Gratiot residents trust Junk Command to clear outgrown furniture, storm debris, and packed garages without the dump-run hassle. We serve township homes from the lakeshore inland with the same premium, veteran-owned standard as Port Huron.",
-    whyUs:
-      "Fort Gratiot is one of our most frequent service zones — close enough for rapid response, busy enough that we know the layout. From Keewahdin Road subdivisions to properties near Birchwood Mall and the 24th Avenue corridor, we navigate township roads confidently and arrive ready to work. Lake effect wind and older lakeside homes often mean damp basements and seasonal clutter; we haul it all with care. You get transparent pricing, protected entryways, and a crew that recycles responsibly whenever possible. Junk Command is the Fort Gratiot neighbor who actually shows up with a truck and finishes the job.",
-    localReferences: [
-      "Keewahdin Road neighborhoods",
-      "24th Avenue corridor",
-      "Birchwood Mall retail area",
-      "Lakeshore Road homes",
-      "Krafft Road residential pockets",
-      "State Road township stretches",
-    ],
-    nearbyLandmarks: [
-      "Fort Gratiot Lighthouse",
-      "Birchwood Mall",
-      "Lake Huron shoreline parks",
-      "Fort Gratiot County Park",
-    ],
-    servicesBlurb:
-      "We clear Fort Gratiot homes of furniture, appliances, mattresses, electronics, garage clutter, basement junk, and yard brush — ideal after storms, moves, or seasonal cleanups along the lakeshore.",
-    faqs: [
-      {
-        question: "Do you serve all of Fort Gratiot Township?",
-        answer:
-          "Yes. We cover residential and light commercial addresses throughout Fort Gratiot Township, including lakeshore and inland neighborhoods.",
-      },
-      {
-        question: "Can you remove storm debris after high winds?",
-        answer:
-          "We regularly haul fallen limbs, brush piles, and damaged outdoor items after lake-effect storms. Call 810-336-5865 and we will schedule a Fort Gratiot pickup as soon as possible.",
-      },
-      {
-        question: "Is junk removal cheaper than renting a dumpster in Fort Gratiot?",
-        answer:
-          "For many homes, yes. You avoid permit headaches, driveway damage risk, and loading the dumpster yourself. We quote by volume so you only pay for what we haul.",
-      },
-      {
-        question: "Do you take old electronics and TVs?",
-        answer:
-          "Yes. TVs, computers, and small electronics are part of our Fort Gratiot service. We route e-waste through responsible recycling channels whenever available.",
-      },
-    ],
-    nearbySlugs: [
-      "port-huron",
-      "marysville",
-      "kimball-township",
-      "st-clair-county",
-    ],
-    image: "/images/cities/fort-gratiot.webp",
-    imageAlt:
-      "Junk Command removing household clutter from a Fort Gratiot, MI home",
-  },
-  {
-    slug: "kimball-township",
-    name: "Kimball Township",
-    county: "St. Clair County",
-    metaTitle: "Junk Removal Kimball Township MI | Junk Command",
-    metaDescription:
-      "Junk removal for Kimball Township, MI farms, homes & shops. Furniture, debris & cleanouts. Veteran-owned Junk Command — call 810-336-5865.",
-    h1: "Junk Removal in Kimball Township, Michigan",
-    eyebrow: "Rural & Subdivision Haul-Away",
-    intro:
-      "Kimball Township properties often mix acreage, outbuildings, and family homes — and junk piles up in all of them. Junk Command brings the crew and truck capacity to clear barns, garages, and basements across the township without you renting equipment.",
-    whyUs:
-      "Kimball sits west of Port Huron along the I-69 corridor, and we know the mix of country lots and newer subdivisions that define it. Long driveways, pole barns, and multi-building properties are normal for us — we plan crew size and truck load accordingly. Whether you are clearing inheritance clutter near Lapeer Road, emptying a shed off Allen Road, or resetting a rental near Smiths Creek, our veteran-owned team quotes honestly and works efficiently. You stay out of the landfill line and the heavy lifting. Junk Command keeps Kimball Township properties usable again.",
-    localReferences: [
-      "Lapeer Road corridor",
-      "Allen Road rural stretches",
-      "Smiths Creek area",
-      "I-69 / Wadhams interchange zone",
-      "Dove Road neighborhoods",
-      "Range Road township homes",
-    ],
-    nearbyLandmarks: [
-      "Smiths Creek landfill access routes",
-      "Wadhams commercial pocket",
-      "Kimball Township offices area",
-      "Local farm & orchard corridors",
-    ],
-    servicesBlurb:
-      "Kimball Township jobs often include shed and barn cleanouts, farm scrap, furniture and appliance removal, estate hauls, and construction leftovers from home additions — all with upfront volume pricing.",
-    faqs: [
-      {
-        question: "Can you access long rural driveways in Kimball?",
-        answer:
-          "Yes. We routinely serve acreage properties. Let us know about gate codes, soft ground, or low branches when you book so we arrive prepared.",
-      },
-      {
-        question: "Do you clean out barns and pole buildings?",
-        answer:
-          "We do. Old equipment parts, stored furniture, tires, and decades of accumulated junk are common Kimball Township requests — we sort and load what we can legally haul.",
-      },
-      {
-        question: "How far in advance should I schedule?",
-        answer:
-          "Larger barn or estate jobs benefit from a day or two of notice so we can dedicate the right truck space. Call 810-336-5865 to lock a window.",
-      },
-      {
-        question: "Will you haul scrap metal from my property?",
-        answer:
-          "Yes, when it is safe to handle and fits our load. Scrap metal is often recycled. Describe or photograph the material for an accurate Kimball Township quote.",
-      },
-    ],
-    nearbySlugs: [
-      "port-huron",
-      "marysville",
-      "fort-gratiot",
-      "emmett",
-      "capac",
-    ],
-    image: "/images/cities/kimball-township.webp",
-    imageAlt:
-      "Junk Command truck clearing debris at a Kimball Township, Michigan property",
-  },
-  {
-    slug: "st-clair",
-    name: "St. Clair",
-    county: "St. Clair County",
-    metaTitle: "Junk Removal St. Clair MI | Junk Command",
-    metaDescription:
-      "Junk removal in St. Clair, Michigan. Downtown, riverfront & neighborhood haul-away. Free quotes from Junk Command — 810-336-5865.",
-    h1: "Junk Removal in St. Clair, Michigan",
-    eyebrow: "River City Cleanouts",
-    intro:
-      "St. Clair’s charming streets and riverfront homes deserve clutter-free living. Junk Command hauls unwanted furniture, appliances, and renovation debris so you can enjoy the porch view — not the pile in the garage.",
-    whyUs:
-      "The City of St. Clair is a core stop on our southern St. Clair County route. We know downtown’s tighter streets near Clinton Avenue, the residential blocks off River Road, and the newer builds spreading toward Fred Moore Highway. Our veteran-owned crew works carefully around historic homes and landscaped lots, quoting by the load so you are never surprised at the curb. From a single hot tub behind a cottage to a full basement cleanout before listing, Junk Command delivers Port Huron–caliber service with local familiarity. Call 810-336-5865 and reclaim your space along the St. Clair River.",
-    localReferences: [
-      "Clinton Avenue downtown",
-      "River Road waterfront homes",
-      "Fred Moore Highway corridor",
-      "Brown Street neighborhoods",
-      "Third Street residential blocks",
-      "St. Clair Boat Harbor area",
-    ],
-    nearbyLandmarks: [
-      "St. Clair Inn & riverfront",
-      "Pine Shores Golf Course",
-      "St. Clair Historical Museum",
-      "Palmer Park",
-    ],
-    servicesBlurb:
-      "In St. Clair we remove couches, beds, fridges, remodel debris, yard waste, and estate contents — perfect for riverfront cottages, downtown homes, and properties preparing for sale.",
-    faqs: [
-      {
-        question: "Do you serve downtown St. Clair and riverfront homes?",
-        answer:
-          "Yes. We regularly work on downtown and waterfront properties. Narrow drives and shared alleys are fine — just mention access details when you request a quote.",
-      },
-      {
-        question: "Can you help with a pre-sale cleanout in St. Clair?",
-        answer:
-          "Absolutely. Estate and move-out cleanouts are common here. We clear rooms, garages, and sheds so showings look clean and listings go smoother.",
-      },
-      {
-        question: "What payment methods do you accept?",
-        answer:
-          "We accept major cards and other standard payment options confirmed at booking. You approve the price before we start loading in St. Clair.",
-      },
-      {
-        question: "Do you recycle or donate usable items?",
-        answer:
-          "When furniture or household goods are in good condition, we route them to donation partners whenever practical instead of sending everything to the landfill.",
-      },
-    ],
-    nearbySlugs: [
-      "marysville",
-      "marine-city",
-      "port-huron",
-      "kimball-township",
-      "algonac",
-    ],
-    image: "/images/cities/st-clair.webp",
-    imageAlt:
-      "Junk removal crew working at a home in St. Clair, Michigan",
-  },
-  {
-    slug: "marine-city",
-    name: "Marine City",
-    county: "St. Clair County",
-    metaTitle: "Junk Removal Marine City MI | Junk Command",
-    metaDescription:
-      "Junk removal in Marine City, MI. Waterfront homes, downtown & neighborhood cleanouts. Call veteran-owned Junk Command at 810-336-5865.",
-    h1: "Junk Removal in Marine City, Michigan",
-    eyebrow: "Downriver Blue Water Hauling",
-    intro:
-      "Marine City’s waterfront character comes with seasonal projects, older homes, and garages that fill up fast. Junk Command clears the excess — furniture, appliances, and remodel leftovers — so your property stays guest-ready.",
-    whyUs:
-      "Marine City is a regular destination on our southern county circuit between St. Clair and Algonac. We understand Broadway’s mixed downtown buildings, the cottage streets near Waterworks Park, and the practical reality of ferry-town storage constraints. Our veteran-owned team arrives with the right crew size, protects flooring in historic homes, and prices by volume so weekend warriors never overpay. Whether you inherited a packed attic off Chartier or just need a broken washer gone from King Road, Junk Command makes junk removal simple along the St. Clair River.",
-    localReferences: [
-      "Broadway Street downtown",
-      "Waterworks Park neighborhood",
-      "Chartier Road homes",
-      "King Road residential area",
-      "Degurse Avenue corridor",
-      "Marine City ferry landing vicinity",
-    ],
-    nearbyLandmarks: [
-      "Marine City Ferry Dock",
-      "Waterworks Park",
-      "Nautical Mile / Broadway shops",
-      "St. Clair River shoreline",
-    ],
-    servicesBlurb:
-      "Marine City clients book furniture and mattress pickup, appliance haul-away, garage cleanouts, construction debris removal, and yard brush clearing — often timed around seasonal openings and closings.",
-    faqs: [
-      {
-        question: "How far is Marine City from your base?",
-        answer:
-          "Marine City is a straightforward drive south of Port Huron along our regular route. We schedule efficiently and confirm the soonest available window for your address.",
-      },
-      {
-        question: "Can you remove junk from older Marine City homes with narrow stairs?",
-        answer:
-          "Yes. Stairs, tight landings, and period doorways are common here. Tell us about access when you send photos so we bring enough crew.",
-      },
-      {
-        question: "Do you haul away docks, boats parts, or outdoor gear?",
-        answer:
-          "We can remove many outdoor items, old furniture, and stored gear. Specialty marine equipment may need a photo review — call 810-336-5865 and we will confirm what we can take.",
-      },
-      {
-        question: "Is there a minimum charge in Marine City?",
-        answer:
-          "Most small pickups start near our $99 minimum. Larger loads are priced by truck volume. You always approve the quote before we load.",
-      },
-    ],
-    nearbySlugs: [
-      "st-clair",
-      "algonac",
-      "new-baltimore",
-      "richmond",
-      "marysville",
-    ],
-    image: "/images/cities/marine-city.webp",
-    imageAlt:
-      "Junk Command hauling household items in Marine City, Michigan",
-  },
-  {
-    slug: "algonac",
-    name: "Algonac",
-    county: "St. Clair County",
-    metaTitle: "Junk Removal Algonac MI | Junk Command",
-    metaDescription:
-      "Junk removal in Algonac, MI — canal homes, cottages & mainland properties. Fast haul-away. Call Junk Command 810-336-5865.",
-    h1: "Junk Removal in Algonac, Michigan",
-    eyebrow: "Gateway to the Delta",
-    intro:
-      "Algonac’s canal lifestyle means storage space is precious. Junk Command helps island-adjacent and mainland homeowners clear outgrown furniture, storm debris, and garage overflow without wrestling a rental truck over the bridge.",
-    whyUs:
-      "Algonac sits at the edge of the St. Clair River delta, and we plan routes accordingly for mainland and accessible canal-side addresses. From Pointe Tremble Road to neighborhoods near State Street and the Algonac State Park approach, our crew knows how to stage trucks efficiently and work around boat trailers and seasonal congestion. Veteran-owned means disciplined, respectful service — we quote clearly, haul heavy items, and leave driveways clean. When cottage turnovers or estate cleanouts stack up before summer, Junk Command is the Algonac-area partner that keeps projects on schedule.",
-    localReferences: [
-      "Pointe Tremble Road corridor",
-      "State Street downtown Algonac",
-      "Michigan Street neighborhoods",
-      "Summer Street residential blocks",
-      "Stone Road area homes",
-      "Algonac State Park approach",
-    ],
-    nearbyLandmarks: [
-      "Algonac State Park",
-      "Algonac City Park & waterfront",
-      "Russell Island ferry area",
-      "St. Clair River delta channels",
-    ],
-    servicesBlurb:
-      "We serve Algonac with furniture removal, appliance pickup, mattress disposal, garage and basement cleanouts, yard debris hauling, and estate clearances timed for seasonal cottage schedules.",
-    faqs: [
-      {
-        question: "Do you serve canal and waterfront homes in Algonac?",
-        answer:
-          "Yes, for addresses we can reach by road with our trucks. Mention dockside access, shared drives, or HOA rules when you book so we plan the stop correctly.",
-      },
-      {
-        question: "Can you help with cottage cleanouts before winter?",
-        answer:
-          "Seasonal cleanouts are a big part of our Algonac work. We haul furniture, appliances, and stored junk so properties close down tidy.",
-      },
-      {
-        question: "Do you remove brush and yard waste after storms?",
-        answer:
-          "We haul brush piles, limbs, and outdoor debris that fit our truck. Send photos to 810-336-5865 for a volume-based Algonac quote.",
-      },
-      {
-        question: "Are Saturday pickups available?",
-        answer:
-          "Weekend windows are often available depending on route density. Ask when you call — we will match you with the next open Algonac slot.",
-      },
-    ],
-    nearbySlugs: [
-      "marine-city",
-      "new-baltimore",
-      "anchorville",
-      "richmond",
-      "st-clair",
-    ],
-    image: "/images/cities/algonac.webp",
-    imageAlt:
-      "Junk removal service at a residential property in Algonac, Michigan",
-  },
-  {
-    slug: "richmond",
-    name: "Richmond",
-    county: "Macomb County",
-    metaTitle: "Junk Removal Richmond MI | Junk Command",
-    metaDescription:
-      "Junk removal in Richmond, MI on the Macomb–St. Clair border. Furniture, cleanouts & debris haul-away. Call Junk Command 810-336-5865.",
-    h1: "Junk Removal in Richmond, Michigan",
-    eyebrow: "Macomb–St. Clair Border Service",
-    intro:
-      "Richmond sits where Macomb and St. Clair meet — and Junk Command covers both sides. When garages, barns, and basements overflow, our Port Huron–based crew delivers fast, veteran-owned junk removal with clear pricing.",
-    whyUs:
-      "Richmond’s border location makes it a natural bridge between our St. Clair County core and Macomb County routes. We regularly serve homes near Main Street, properties along Division and Gratiot, and outlying lots toward Memphis and New Haven roads. You get the same disciplined, veteran-owned standard whether your address leans Macomb or St. Clair. Volume-based quotes, careful loading, and responsible disposal mean no dump-run stress and no guessing at the final bill. Junk Command is the premium local option for Richmond households ready to clear space and move on.",
-    localReferences: [
-      "Main Street downtown Richmond",
-      "Gratiot Avenue corridor",
-      "Division Road area",
-      "Memphis Road outskirts",
-      "New Haven Road approaches",
-      "31 Mile & Richmond Road zone",
-    ],
-    nearbyLandmarks: [
-      "Richmond Community Schools area",
-      "Beebe Street recreation spots",
-      "Downtown Richmond shopping district",
-      "Macomb–St. Clair county line corridors",
-    ],
-    servicesBlurb:
-      "Richmond customers use us for sofa and appliance removal, full garage cleanouts, estate hauls, farm outbuilding junk, and construction debris — bridging Macomb and St. Clair County service seamlessly.",
-    faqs: [
-      {
-        question: "Do you serve both Macomb and St. Clair sides of Richmond?",
-        answer:
-          "Yes. Richmond spans the county line, and we haul from addresses on either side without treating it as an out-of-area exception.",
-      },
-      {
-        question: "Can you clean out a barn or workshop near Richmond?",
-        answer:
-          "We frequently clear outbuildings of stored furniture, scrap, and decades of accumulated items. Photos help us estimate truck space and crew needs.",
-      },
-      {
-        question: "How do I get a quote?",
-        answer:
-          "Text or call 810-336-5865 with a description or photos of the junk. We reply with an upfront volume-based price before we arrive.",
-      },
-      {
-        question: "Do you remove hot tubs in Richmond?",
-        answer:
-          "Yes. Broken or unwanted hot tubs are a common request. We break down and haul them so you do not need specialty equipment.",
-      },
-    ],
-    nearbySlugs: [
-      "new-baltimore",
-      "chesterfield",
-      "marine-city",
-      "anchorville",
-      "capac",
-    ],
-    image: "/images/cities/richmond.webp",
-    imageAlt:
-      "Junk Command truck serving Richmond, Michigan on the Macomb County border",
-  },
-  {
-    slug: "new-baltimore",
-    name: "New Baltimore",
-    county: "Macomb County",
-    metaTitle: "Junk Removal New Baltimore MI | Junk Command",
-    metaDescription:
-      "Junk removal in New Baltimore, MI. Waterfront & neighborhood haul-away for furniture, appliances & cleanouts. Call Junk Command 810-336-5865.",
-    h1: "Junk Removal in New Baltimore, Michigan",
-    eyebrow: "Anchor Bay Cleanouts",
-    intro:
-      "New Baltimore’s Anchor Bay setting brings lakeside living — and the clutter that comes with boats, guests, and full basements. Junk Command clears it out so you can enjoy the waterfront, not the storage pile.",
-    whyUs:
-      "New Baltimore is a key Macomb County stop for Junk Command as we serve the Anchor Bay shoreline and inland neighborhoods. From Washington Street downtown to subdivisions off 23 Mile and properties near Walter and Maria, we schedule hauls that fit busy family calendars. Our veteran-owned crew quotes before we load, protects finished floors in newer builds, and handles heavy appliances without drama. Whether you are flipping a rental near the harbor or reclaiming a garage after years of accumulation, you get Southeast Michigan junk removal done to a premium standard — without Port Huron feeling far away.",
-    localReferences: [
-      "Washington Street downtown",
-      "23 Mile Road corridor",
-      "Walter and Maria neighborhood",
-      "County Line Road area",
-      "Base Street residential blocks",
-      "New Baltimore Harbor vicinity",
-    ],
-    nearbyLandmarks: [
-      "New Baltimore Harbor",
-      "Walter and Maria Park",
-      "Anchor Bay shoreline",
-      "Downtown New Baltimore shops",
-    ],
-    servicesBlurb:
-      "In New Baltimore we haul furniture, mattresses, appliances, garage clutter, renovation debris, and yard waste — popular with waterfront homes, downtown properties, and Anchor Bay subdivisions.",
-    faqs: [
-      {
-        question: "Do you serve New Baltimore waterfront properties?",
-        answer:
-          "Yes. Harbor-area and shoreline homes are part of our regular Macomb County route. Share parking and access notes when you book.",
-      },
-      {
-        question: "How quickly can you remove a fridge or washer?",
-        answer:
-          "Timing depends on route availability. Call 810-336-5865 early with photos and we will confirm the soonest available window for New Baltimore.",
-      },
-      {
-        question: "Do you take construction debris from basement remodels?",
-        answer:
-          "We haul drywall, cabinets, flooring scraps, and similar remodel leftovers. Hazardous materials are excluded — we will tell you what we cannot take.",
-      },
-      {
-        question: "Is Junk Command more affordable than a dumpster rental?",
-        answer:
-          "For many New Baltimore jobs, full-service haul-away costs less time and hassle than renting, loading, and waiting on a dumpster. You only pay for the volume we remove.",
-      },
-    ],
-    nearbySlugs: [
-      "chesterfield",
-      "richmond",
-      "algonac",
-      "anchorville",
-      "macomb-county",
-    ],
-    image: "/images/cities/new-baltimore.webp",
-    imageAlt:
-      "Junk removal crew clearing a garage in New Baltimore, Michigan",
-  },
-  {
-    slug: "chesterfield",
-    name: "Chesterfield",
-    county: "Macomb County",
-    metaTitle: "Junk Removal Chesterfield MI | Junk Command",
-    metaDescription:
-      "Junk removal in Chesterfield Township, MI. Fast furniture, appliance & cleanout service. Veteran-owned Junk Command — 810-336-5865.",
-    h1: "Junk Removal in Chesterfield, Michigan",
-    eyebrow: "Macomb Township Haul-Away",
-    intro:
-      "Chesterfield Township’s growing neighborhoods fill garages and basements quickly. Junk Command brings professional junk removal to your driveway — no dump runs, no borrowed trailers, no leftover mess.",
-    whyUs:
-      "Chesterfield is one of our strongest Macomb County markets: dense subdivisions, busy commercial strips along 23 Mile and Gratiot, and homeowners who value speed and respect. We know the layout around Sugarbush, Jefferson approaches toward the bay, and inland streets off Callens. Our veteran-owned team sizes every job by truck volume, arrives on time, and leaves the space broom-clean. From a single sectional on Brandenburg to a foreclosure-ready cleanout near Cotton, Junk Command delivers Port Huron reliability deeper into Macomb County without nickel-and-diming add-ons.",
-    localReferences: [
-      "23 Mile Road corridor",
-      "Gratiot Avenue Chesterfield stretch",
-      "Sugarbush Road neighborhoods",
-      "Callens Road residential area",
-      "Brandenburg & Cotton pockets",
-      "Jefferson Avenue bay approaches",
-    ],
-    nearbyLandmarks: [
-      "Chesterfield Township Civic Center area",
-      "Anchor Bay High School vicinity",
-      "Selfridge ANGB approach corridors",
-      "Lake St. Clair recreational access",
-    ],
-    servicesBlurb:
-      "Chesterfield residents book us for couch and mattress removal, appliance haul-away, garage and basement cleanouts, estate jobs, and post-reno debris — with photo quotes and flexible time windows.",
-    faqs: [
-      {
-        question: "Do you cover all of Chesterfield Township?",
-        answer:
-          "Yes. We serve residential and many light-commercial addresses throughout Chesterfield Township in Macomb County.",
-      },
-      {
-        question: "Can HOAs or condo associations book pickup?",
-        answer:
-          "Property managers and associations regularly schedule common-area or unit cleanouts with us. We can invoice as needed once the scope is confirmed.",
-      },
-      {
-        question: "What if my junk is in a second-story room?",
-        answer:
-          "Stairs are included in our normal service. Let us know about tight turns or long carries so we staff the Chesterfield job correctly.",
-      },
-      {
-        question: "Do you offer recurring junk pickup?",
-        answer:
-          "For landlords and businesses with ongoing needs, we can arrange repeat visits. Call 810-336-5865 to discuss a Chesterfield schedule.",
-      },
-    ],
-    nearbySlugs: [
-      "new-baltimore",
-      "richmond",
-      "anchorville",
-      "macomb-county",
-      "algonac",
-    ],
-    image: "/images/cities/chesterfield.webp",
-    imageAlt:
-      "Junk Command loading debris from a Chesterfield Township, MI home",
-  },
-  {
-    slug: "anchorville",
-    name: "Anchorville",
-    county: "St. Clair County",
-    metaTitle: "Junk Removal Anchorville MI | Junk Command",
-    metaDescription:
-      "Junk removal in Anchorville, MI near Anchor Bay. Furniture, cleanouts & debris haul-away. Call Junk Command at 810-336-5865.",
-    h1: "Junk Removal in Anchorville, Michigan",
-    eyebrow: "Anchor Bay Community Service",
-    intro:
-      "Anchorville may be small, but junk piles are not. Junk Command serves this Anchor Bay community with the same full-crew haul-away we bring to neighboring New Baltimore and Ira Township roads.",
-    whyUs:
-      "Anchorville sits in the quiet pocket between larger Anchor Bay towns, and residents often get overlooked by big franchise haulers. We do not overlook it. Our routes already pass through for New Baltimore, Chesterfield, and Algonac work, so Anchorville is a natural stop — not a surcharge zone. Expect veteran-owned professionalism, volume pricing, and careful handling around cottage-style lots and older homes near Dixie Highway. Whether you are clearing a relative’s house or finally emptying the pole barn, Junk Command makes junk removal feel local again along the bay.",
-    localReferences: [
-      "Dixie Highway corridor",
-      "Anchor Bay shoreline approaches",
-      "Short residential streets off M-29",
-      "Ira Township bordering roads",
-      "Church & school neighborhood pockets",
-      "Bay-view cottage lots",
-    ],
-    nearbyLandmarks: [
-      "Anchor Bay shoreline",
-      "Nearby Ira Township parks",
-      "M-29 lakeshore drive",
-      "New Baltimore Harbor (nearby)",
-    ],
-    servicesBlurb:
-      "Anchorville jobs typically include furniture and appliance removal, garage cleanouts, mattress disposal, brush piles, and small estate hauls — scheduled alongside our Anchor Bay route for efficiency.",
-    faqs: [
-      {
-        question: "Is Anchorville in your regular service area?",
-        answer:
-          "Yes. Anchorville is part of our Southeast Michigan coverage between St. Clair and Macomb County Anchor Bay communities.",
-      },
-      {
-        question: "Do you charge extra for small towns?",
-        answer:
-          "No special small-town penalty. Pricing is based on load volume, same as New Baltimore or Port Huron. Call 810-336-5865 for an Anchorville quote.",
-      },
-      {
-        question: "Can you haul junk from a cottage with limited parking?",
-        answer:
-          "We work with tight parking every week. Describe the street and access when you book and we will stage the truck accordingly.",
-      },
-      {
-        question: "What items can you not take?",
-        answer:
-          "We generally exclude hazardous waste like certain chemicals, wet paint in large volumes, and regulated materials. Ask when you send your item list and we will clarify.",
-      },
-    ],
-    nearbySlugs: [
-      "new-baltimore",
-      "richmond",
-      "algonac",
-      "chesterfield",
-      "marine-city",
-    ],
-    image: "/images/cities/anchorville.webp",
-    imageAlt:
-      "Junk Command serving a home in Anchorville, Michigan near Anchor Bay",
-  },
-  {
-    slug: "emmett",
-    name: "Emmett",
-    county: "St. Clair County",
-    metaTitle: "Junk Removal Emmett MI | Junk Command",
-    metaDescription:
-      "Junk removal in Emmett, MI. Rural properties, homes & outbuildings cleared fast. Veteran-owned Junk Command — call 810-336-5865.",
-    h1: "Junk Removal in Emmett, Michigan",
-    eyebrow: "Western St. Clair County Hauling",
-    intro:
-      "Emmett’s open land and quiet streets hide full barns, packed garages, and basements waiting for a clean slate. Junk Command drives west from Port Huron to haul it all — with upfront pricing and a crew that works hard.",
-    whyUs:
-      "Emmett Township and the village sit along our western St. Clair County corridor toward Capac and Yale. We understand gravel drives, acreage setbacks, and outbuildings that have not been opened in years. Our veteran-owned team plans load capacity before we arrive so one trip finishes the job whenever possible. From Main Street village homes to farms off Emmett Road and Imlay City Road approaches, you get respectful service and honest quotes — not a rundown from a distant call center. Junk Command brings Blue Water reliability inland where it is needed most.",
-    localReferences: [
-      "Main Street Emmett village",
-      "Emmett Road rural corridor",
-      "Imlay City Road approaches",
-      "Township farm roads & acreages",
-      "Village residential side streets",
-      "Outbuilding & pole barn properties",
-    ],
-    nearbyLandmarks: [
-      "Emmett Township hall area",
-      "Local churches & community grounds",
-      "Surrounding farmland corridors",
-      "Western St. Clair County backroads",
-    ],
-    servicesBlurb:
-      "In Emmett we specialize in barn and shed cleanouts, farm scrap and stored junk, furniture and appliance removal, estate clearances, and yard debris — sized for rural properties with real volume.",
-    faqs: [
-      {
-        question: "Do you serve Emmett Township outside the village?",
-        answer:
-          "Yes. Village and township addresses across Emmett are in our service area. Share gate or driveway details when you schedule.",
-      },
-      {
-        question: "Can you take old farm equipment parts and scrap?",
-        answer:
-          "Many scrap metal and equipment pieces are haulable if safe to load. Send photos to 810-336-5865 and we will confirm what belongs on the truck.",
-      },
-      {
-        question: "How long does a typical Emmett cleanout take?",
-        answer:
-          "Small pickups can finish in under an hour. Full barn or estate jobs may take longer — we estimate timing when we quote the volume.",
-      },
-      {
-        question: "Do I need to sort everything before you arrive?",
-        answer:
-          "Helpful but not required. Point us to what goes and what stays. We can work room-by-room or pile-by-pile based on your instructions.",
-      },
-    ],
-    nearbySlugs: [
-      "capac",
-      "yale",
-      "kimball-township",
-      "port-huron",
-      "richmond",
-    ],
-    image: "/images/cities/emmett.webp",
-    imageAlt:
-      "Junk Command clearing an outbuilding near Emmett, Michigan",
-  },
-  {
-    slug: "capac",
-    name: "Capac",
-    county: "St. Clair County",
-    metaTitle: "Junk Removal Capac MI | Junk Command",
-    metaDescription:
-      "Junk removal in Capac, MI. Homes, farms & Main Street properties cleared. Free quotes from Junk Command — 810-336-5865.",
-    h1: "Junk Removal in Capac, Michigan",
-    eyebrow: "Village & Farm Country Service",
-    intro:
-      "Capac sits at the crossroads of farm country and village life — and junk accumulates in both. Junk Command clears Capac homes, shops, and outbuildings so space works again without a DIY dump run.",
-    whyUs:
-      "Capac is part of our western St. Clair County loop with Emmett and Yale. We know Mill Street’s village core, the residential blocks nearby, and the larger lots spreading toward Capac Road and rural township lines. Franchise haulers often treat Capac as an afterthought; we treat it as a planned stop with full crew capability. Veteran-owned discipline shows in how we quote, how we protect driveways, and how thoroughly we leave the site. From a single mattress pickup to a multi-building estate, Junk Command gives Capac the same premium Southeast Michigan service as the lakeshore towns.",
-    localReferences: [
-      "Mill Street / downtown Capac",
-      "Capac Road corridor",
-      "Village residential side streets",
-      "North and south township farm roads",
-      "School neighborhood blocks",
-      "Outlying barn & workshop properties",
-    ],
-    nearbyLandmarks: [
-      "Capac Municipal Building area",
-      "Local school campus vicinity",
-      "Downtown Capac storefronts",
-      "Surrounding agricultural roads",
-    ],
-    servicesBlurb:
-      "Capac clients hire us for furniture and appliance haul-away, garage and basement cleanouts, shed clearing, construction debris, and full estate jobs across village and rural addresses.",
-    faqs: [
-      {
-        question: "Is Capac within Junk Command’s service area?",
-        answer:
-          "Yes. Capac and surrounding township roads are regularly served from our Port Huron base along our western county routes.",
-      },
-      {
-        question: "Can you help after a home renovation in Capac?",
-        answer:
-          "We haul cabinets, drywall scraps, flooring, and other remodel debris. Tell us approximate pile size for an accurate volume quote.",
-      },
-      {
-        question: "Do you remove old tires?",
-        answer:
-          "Limited tire quantities may be accepted depending on current disposal rules and fees. Ask when you call 810-336-5865 so we price Capac jobs correctly.",
-      },
-      {
-        question: "Will you donate usable household goods?",
-        answer:
-          "When items are clean and usable, we attempt donation partnerships instead of automatic landfill disposal — common on Capac estate cleanouts.",
-      },
-    ],
-    nearbySlugs: [
-      "emmett",
-      "yale",
-      "richmond",
-      "kimball-township",
-      "croswell",
-    ],
-    image: "/images/cities/capac.webp",
-    imageAlt:
-      "Junk removal truck working in Capac, Michigan",
-  },
-  {
-    slug: "yale",
-    name: "Yale",
-    county: "St. Clair County",
-    metaTitle: "Junk Removal Yale MI | Junk Command",
-    metaDescription:
-      "Junk removal in Yale, MI. Furniture, appliances, farm cleanouts & more. Veteran-owned Junk Command — call 810-336-5865.",
-    h1: "Junk Removal in Yale, Michigan",
-    eyebrow: "Northwestern St. Clair County",
-    intro:
-      "Yale homeowners and farm families call Junk Command when clutter outgrows the shed, loft, or garage. We haul heavy, price fair, and leave properties ready for the next season.",
-    whyUs:
-      "Yale anchors the northwestern corner of our St. Clair County coverage, linking inland farm towns with routes toward Croswell and Lexington. We know Main Street village life, Brockway Road approaches, and the long lanes that lead to working farms. Our veteran-owned crew does not rush the quote or cut corners on cleanup — you approve the price, we load the truck, and we sweep up. Whether clearing a rental near the Yale fairgrounds area or emptying a relative’s basement after a move, Junk Command brings disciplined Blue Water service to Yale without making you feel like an out-of-the-way exception.",
-    localReferences: [
-      "Main Street downtown Yale",
-      "Brockway Road corridor",
-      "Yale fairgrounds vicinity",
-      "Village residential neighborhoods",
-      "Township farm lanes & acreages",
-      "School and park area streets",
-    ],
-    nearbyLandmarks: [
-      "Yale Community Fairgrounds",
-      "Downtown Yale business district",
-      "Local parks & ball fields",
-      "Northwestern St. Clair farmland",
-    ],
-    servicesBlurb:
-      "Yale service covers furniture and mattress removal, appliance haul-away, barn and garage cleanouts, yard debris, and estate clearances — built for village lots and larger rural properties alike.",
-    faqs: [
-      {
-        question: "How soon can you reach Yale from Port Huron?",
-        answer:
-          "Yale is a planned stop on our northwestern routes. Same-week service is typical. Call 810-336-5865 with photos for timing.",
-      },
-      {
-        question: "Do you clean out entire farmsteads?",
-        answer:
-          "We can stage multi-building cleanouts and return if volume exceeds one truck. We map the plan with you before the first load leaves.",
-      },
-      {
-        question: "Are you insured for Yale residential work?",
-        answer:
-          "Yes. Junk Command carries insurance. We take care around lawns, gravel drives, and outbuilding thresholds on every Yale job.",
-      },
-      {
-        question: "Can you remove an old deck or shed contents only?",
-        answer:
-          "We remove shed contents routinely and can discuss deck or shed structure removal as a separate scope. Send details and we will outline what fits your quote.",
-      },
-    ],
-    nearbySlugs: [
-      "capac",
-      "emmett",
-      "croswell",
-      "lexington",
-      "kimball-township",
-    ],
-    image: "/images/cities/yale.webp",
-    imageAlt:
-      "Junk Command crew hauling items in Yale, Michigan",
-  },
-  {
-    slug: "lexington",
-    name: "Lexington",
-    county: "Sanilac County",
-    metaTitle: "Junk Removal Lexington MI | Junk Command",
-    metaDescription:
-      "Junk removal in Lexington, MI on Lake Huron. Cottage, home & seasonal cleanouts. Junk Command serves the Blue Water tourism corridor — 810-336-5865.",
-    h1: "Junk Removal in Lexington, Michigan",
-    eyebrow: "Lake Huron Tourism Corridor",
-    intro:
-      "Lexington’s lakeside charm means cottages, rentals, and year-round homes that need seasonal resets. Junk Command extends Blue Water junk removal north into Sanilac County so tourism-town clutter does not linger through peak season.",
-    whyUs:
-      "Lexington sits just beyond St. Clair County along the Lake Huron shore, and we proudly serve it as part of our expanded Blue Water footprint. Summer turnovers, porch furniture swaps, and packed garages after rental seasons create real demand — and distant haulers leave locals waiting. Our veteran-owned crew plans northern runs through Croswell and Yale corridors to reach Huron Avenue properties, lakeshore cottages, and inland homes efficiently. You still get upfront volume pricing, careful handling, and a broom-clean finish. Junk Command keeps Lexington properties guest-ready when the boardwalk fills and the weekend crowds arrive.",
-    localReferences: [
-      "Huron Avenue downtown Lexington",
-      "Lake Huron shoreline cottages",
-      "Main business district blocks",
-      "Inland residential streets off M-25",
-      "Harbor & marina vicinity homes",
-      "Seasonal rental properties",
-    ],
-    nearbyLandmarks: [
-      "Lexington Harbor & marina",
-      "Lexington Village Beach",
-      "Downtown Lexington shops",
-      "M-25 lakeshore drive",
-    ],
-    servicesBlurb:
-      "Lexington customers book furniture and appliance removal, cottage cleanouts, mattress disposal, garage clearing, and yard debris hauls — especially before and after the summer tourism rush.",
-    faqs: [
-      {
-        question: "Do you really serve Lexington if you are based in Port Huron?",
-        answer:
-          "Yes. Lexington is part of our Blue Water service area. We schedule Sanilac County stops deliberately so cottages and year-round homes get reliable haul-away.",
-      },
-      {
-        question: "Can you coordinate with short-term rental turnovers?",
-        answer:
-          "We often work around checkout and listing deadlines. Give us the date you need the space clear and we will aim for a Lexington window that fits.",
-      },
-      {
-        question: "Do you remove old patio sets and beach gear storage?",
-        answer:
-          "Outdoor furniture, stored seasonal items, and garage overflow are common Lexington requests. Photos help us quote accurately.",
-      },
-      {
-        question: "How quickly can you schedule junk removal in Lexington?",
-        answer:
-          "Timing depends on northern route scheduling. Call 810-336-5865 early — we will confirm the soonest available window for your address.",
-      },
-    ],
-    nearbySlugs: ["croswell", "yale", "port-huron", "capac"],
-    image: "/images/cities/lexington.webp",
-    imageAlt:
-      "Junk Command serving a cottage property in Lexington, Michigan on Lake Huron",
-  },
-  {
-    slug: "croswell",
-    name: "Croswell",
-    county: "Sanilac County",
-    metaTitle: "Junk Removal Croswell MI | Junk Command",
-    metaDescription:
-      "Junk removal in Croswell, MI. Homes, farms & village cleanouts on the Blue Water route. Call Junk Command at 810-336-5865.",
-    h1: "Junk Removal in Croswell, Michigan",
-    eyebrow: "Sanilac County Inland Service",
-    intro:
-      "Croswell connects inland Sanilac living with the Lake Huron tourism corridor. Junk Command clears Croswell homes, farms, and Main Street properties with the same premium haul-away Port Huron trusts.",
-    whyUs:
-      "Croswell is a strategic stop between our St. Clair County inland towns and Lexington’s lakeshore demand. We know the village grid, Harrington and Wells corridors, and the farm roads that branch toward surrounding townships. Big-box junk companies rarely prioritize Croswell; we build it into our northern schedule so you are not left waiting weeks. Veteran-owned means we communicate clearly, price by volume, and finish thoroughly — whether the job is a single dryer on a village lot or a packed barn outside town. Junk Command brings Blue Water work ethic to Sanilac County’s heartland.",
-    localReferences: [
-      "Downtown Croswell / Main Street",
-      "Harrington Road area",
-      "Wells Street neighborhoods",
-      "Village residential blocks",
-      "Outlying township farm roads",
-      "Black River corridor properties",
-    ],
-    nearbyLandmarks: [
-      "Croswell Swinging Bridge",
-      "Black River in Croswell",
-      "Local parks & fairgrounds area",
-      "Downtown Croswell district",
-    ],
-    servicesBlurb:
-      "In Croswell we haul furniture, appliances, mattresses, garage and barn contents, remodel debris, and estate junk — supporting village homes and rural Sanilac County properties on our Blue Water route.",
-    faqs: [
-      {
-        question: "Is Croswell part of Junk Command’s normal coverage?",
-        answer:
-          "Yes. We serve Croswell as part of our Sanilac County / Blue Water extended area alongside Lexington and nearby inland towns.",
-      },
-      {
-        question: "Can you remove junk after a flood or basement leak?",
-        answer:
-          "We haul water-damaged furniture and debris that is safe to handle. Active mold remediation is outside our scope — we will be clear about limits when you describe the job.",
-      },
-      {
-        question: "Do you work with local realtors on vacant homes?",
-        answer:
-          "Realtors and property managers in Croswell regularly book us for listing prep and estate clearances. We can coordinate lockbox access when authorized.",
-      },
-      {
-        question: "How is pricing set for larger rural loads?",
-        answer:
-          "Larger Croswell loads are priced by how much of the truck they fill. Multiple truckloads are quoted up front so there are no surprises. Call 810-336-5865.",
-      },
-    ],
-    nearbySlugs: ["lexington", "yale", "capac", "emmett"],
-    image: "/images/cities/croswell.webp",
-    imageAlt:
-      "Junk Command truck clearing debris in Croswell, Michigan",
-  },
-  {
-    slug: "st-clair-county",
-    name: "St. Clair County",
-    county: "St. Clair County",
-    metaTitle: "Junk Removal St. Clair County MI | Junk Command",
-    metaDescription:
-      "Countywide junk removal across St. Clair County, MI — Port Huron to Algonac & inland towns. Veteran-owned Junk Command. Call 810-336-5865.",
-    h1: "Junk Removal Across St. Clair County, Michigan",
-    eyebrow: "Full-County Coverage",
-    intro:
-      "Junk Command is St. Clair County’s hometown junk removal company — based in Port Huron and serving every corner of the county. From lakeshore townships to inland villages, one call gets a crew, a truck, and a clear price.",
-    whyUs:
-      "St. Clair County is not a side market for us — it is our home map. We run daily routes through Port Huron, Marysville, Fort Gratiot, Kimball, St. Clair, Marine City, Algonac, and west to Emmett, Capac, and Yale. That density means faster response, crews who already know local roads, and pricing that reflects neighborhood volume rather than long-distance penalties. As a veteran-owned business we bring discipline to scheduling and respect to every driveway in the county. Furniture, appliances, estates, construction debris, and yard waste all leave on our trucks. When you need junk gone anywhere in St. Clair County, call 810-336-5865 and work with the team that lives here.",
-    localReferences: [
-      "Port Huron metro & Blue Water Bridge area",
-      "Marysville–St. Clair river towns",
-      "Fort Gratiot & Kimball townships",
-      "Marine City & Algonac shoreline",
-      "Western villages: Emmett, Capac, Yale",
-      "County roads connecting inland farms",
+      "Holland Avenue and 10th Avenue blocks",
     ],
     nearbyLandmarks: [
       "Blue Water Bridge",
-      "St. Clair River corridor",
-      "Lake Huron shoreline parks",
-      "County parks & fairgrounds",
-      "I-69 / I-94 regional connectors",
+      "Thomas Edison Depot Museum",
+      "McMorran Place",
+      "Fort Gratiot Lighthouse",
     ],
-    servicesBlurb:
-      "Countywide we provide furniture and appliance removal, garage and basement cleanouts, estate and foreclosure clearing, construction and yard debris haul-away — with fast local scheduling across St. Clair County communities.",
-    faqs: [
-      {
-        question: "Which St. Clair County cities do you serve?",
-        answer:
-          "We serve Port Huron, Marysville, Fort Gratiot, Kimball Township, St. Clair, Marine City, Algonac, Emmett, Capac, Yale, and surrounding townships — plus border communities like Richmond and Anchorville.",
-      },
-      {
-        question: "Do rural township addresses cost more?",
-        answer:
-          "Pricing is driven by load volume. Most in-county rural stops use the same rate structure as city jobs. Extreme access issues are discussed before we start.",
-      },
-      {
-        question: "Can businesses in St. Clair County book commercial cleanouts?",
-        answer:
-          "Yes. Offices, retail spaces, and light industrial sites book us for furniture, fixtures, and debris removal. Ask about scheduling outside peak customer hours.",
-      },
-      {
-        question: "How do I book countywide junk removal?",
-        answer:
-          "Call or text 810-336-5865 with your city and photos. We confirm pricing and place you on the next efficient St. Clair County route.",
-      },
+    nearbySlugs: [
+      "fort-gratiot",
+      "marysville",
+      "kimball-township",
+      "st-clair",
+      "st-clair-county",
+    ],
+    imageAlt:
+      "Junk Command crew loading junk removal items at a Port Huron Michigan home",
+  }),
+  buildCity({
+    slug: "fort-gratiot",
+    name: "Fort Gratiot",
+    county: "St. Clair County",
+    eyebrow: "Lakeshore Township Hauling",
+    metaDescription:
+      "Junk Removal Fort Gratiot MI for lakeshore homes, stores and cleanouts. Veteran-owned Junk Command. Call 810-336-5865.",
+    intro:
+      "Fort Gratiot homeowners and businesses call Junk Command for careful haul-away along the Lake Huron shoreline, 24th Avenue retail corridor, and quiet township streets. We bring veteran-owned service, upfront pricing, and the truck capacity to finish cleanouts without hassle.",
+    profile:
+      "Fort Gratiot combines lake cottages, year-round homes, retail properties, storage-heavy garages, and township roads where storm debris and seasonal clutter can build quickly after a windy stretch off Lake Huron.",
+    routeDetails:
+      "We regularly work around 24th Avenue, Keewahdin Road, Lakeshore Road, Krafft Road, State Road, and the Birchwood Mall area, so route planning is familiar.",
+    cleanupExamples:
+      "One call may be an old freezer in a garage, the next may be furniture from a lakeshore cottage, retail shelving near the commercial corridor, or brush and patio items after lake-effect weather.",
+    accessNotes:
+      "Fort Gratiot properties often have tight garage storage, split-level stairs, older cottages, and soft yard areas near the lake, so we plan the removal path before lifting.",
+    localPromise:
+      "Whether you are opening a cottage, closing a sale, refreshing a store, or reclaiming a garage, we keep Fort Gratiot cleanup direct and professional.",
+    whyLocal:
+      "Fort Gratiot sits minutes from our Port Huron base and is one of our most common township service areas, from Birchwood Mall traffic to quieter roads toward the shoreline.",
+    whyCare:
+      "Fort Gratiot customers count on us for a clean finish around finished driveways, lake homes, association neighborhoods, and retail entrances where sloppy hauling stands out.",
+    localReferences: [
+      "24th Avenue retail corridor",
+      "Keewahdin Road subdivisions",
+      "Lakeshore Road homes",
+      "Krafft Road residential areas",
+      "State Road township stretches",
+      "Birchwood Mall and surrounding businesses",
+    ],
+    nearbyLandmarks: [
+      "Birchwood Mall",
+      "Fort Gratiot County Park",
+      "Lake Huron shoreline",
+      "Fort Gratiot Lighthouse",
     ],
     nearbySlugs: [
       "port-huron",
+      "kimball-township",
+      "marysville",
+      "lexington",
+      "st-clair-county",
+    ],
+    imageAlt:
+      "Junk removal crew serving a Fort Gratiot Michigan township home near Lake Huron",
+  }),
+  buildCity({
+    slug: "kimball-township",
+    name: "Kimball Township",
+    county: "St. Clair County",
+    eyebrow: "Acreage, Outbuilding, and Subdivision Cleanouts",
+    metaDescription:
+      "Junk Removal Kimball Township MI for homes, barns, garages and shops. Veteran-owned hauling. Call Junk Command 810-336-5865.",
+    intro:
+      "Kimball Township cleanouts often involve long driveways, pole barns, basements, sheds, and mixed rural loads. Junk Command brings a veteran-owned crew, clear pricing, and practical hauling experience for homes and properties along the I-69 corridor.",
+    profile:
+      "Kimball Township properties may include acreage, pole barns, workshops, detached garages, subdivision homes, rental houses, and inherited storage areas where unwanted items spread across several buildings instead of one room.",
+    routeDetails:
+      "Our crew already travels the I-69, Wadhams, Smiths Creek, Allen Road, Range Road, and Lapeer Road corridors, so rural and subdivision stops can be planned intelligently.",
+    cleanupExamples:
+      "Kimball loads often include barn shelving, old tools, damaged furniture, boxes, freezers, renovation scraps, tenant trash, and the kind of mixed household material that needs judgment before disposal.",
+    accessNotes:
+      "Long gravel drives, uneven barn floors, low basement ceilings, and items stored far from the truck are normal in Kimball Township, so we ask access questions before scheduling.",
+    localPromise:
+      "We help Kimball Township customers turn crowded barns, garages, basements, and rental properties back into usable space without forcing them into multiple dump runs.",
+    whyLocal:
+      "Kimball is directly west of Port Huron and part of our everyday Blue Water footprint, with routes that naturally connect Smiths Creek, Wadhams, Marysville, and Emmett.",
+    whyCare:
+      "Kimball customers appreciate that we treat rural access as normal work, not an inconvenience, while still protecting finished interiors, lawn edges, gravel drives, and outbuilding doors.",
+    localReferences: [
+      "Wadhams Road area",
+      "Smiths Creek neighborhoods",
+      "Lapeer Road corridor",
+      "I-69 and Range Road access",
+      "Allen Road township properties",
+      "Griswold Road and rural side roads",
+    ],
+    nearbyLandmarks: [
+      "Wadhams to Avoca Trail",
+      "Glacier Pointe Ice Complex",
+      "Smiths Creek village area",
+      "I-69 corridor",
+    ],
+    nearbySlugs: [
+      "port-huron",
+      "fort-gratiot",
+      "marysville",
+      "emmett",
+      "st-clair-county",
+    ],
+    imageAlt:
+      "Junk Command removing clutter from a Kimball Township Michigan outbuilding",
+  }),
+  buildCity({
+    slug: "marysville",
+    name: "Marysville",
+    county: "St. Clair County",
+    eyebrow: "St. Clair River Neighbor Service",
+    metaDescription:
+      "Junk Removal Marysville MI with veteran-owned hauling for furniture, appliances and cleanouts. Call Junk Command at 810-336-5865.",
+    intro:
+      "Marysville homes, riverfront properties, rentals, and businesses rely on Junk Command for clean, careful hauling minutes from our Port Huron base. We remove bulky items, clear packed spaces, and make scheduling simple with upfront pricing.",
+    profile:
+      "Marysville has tidy ranch homes, established neighborhoods, riverfront streets, industrial edges, and business pockets where clutter can block garages, basements, storage rooms, and turnover schedules.",
+    routeDetails:
+      "We work Marysville as a true local stop between Port Huron and St. Clair, including Gratiot Boulevard, Busha Highway, Huron Boulevard, Wills Road, and Michigan Avenue.",
+    cleanupExamples:
+      "A Marysville pickup may involve a basement before remodeling, an old washer after delivery, furniture from a downsizing project, or office items from a business near the river corridor.",
+    accessNotes:
+      "Many Marysville homes have finished floors, attached garages, narrow utility rooms, and well-kept entries, so careful carrying matters as much as hauling speed.",
+    localPromise:
+      "From riverfront homes to neighborhood garages, we help Marysville residents clear space before winter parking, summer guests, listings, or family transitions.",
+    whyLocal:
+      "Marysville is minutes from our Port Huron operation and falls directly on our regular southbound routes along the St. Clair River.",
+    whyCare:
+      "Marysville customers expect neat work, respectful crews, and a clean driveway when the truck leaves, especially in homes where clutter is tied to moving, downsizing, or a family estate.",
+    localReferences: [
+      "Gratiot Boulevard corridor",
+      "Busha Highway riverfront streets",
+      "Huron Boulevard neighborhoods",
+      "Wills Road residential area",
+      "Michigan Avenue business pockets",
+      "Chrysler Drive industrial edge",
+    ],
+    nearbyLandmarks: [
+      "Marysville City Park",
+      "Marysville Golf Course",
+      "Marysville Municipal Marina area",
+      "St. Clair River shoreline",
+    ],
+    nearbySlugs: [
+      "port-huron",
+      "st-clair",
+      "kimball-township",
+      "fort-gratiot",
+      "marine-city",
+    ],
+    imageAlt:
+      "Junk Command hauling furniture from a Marysville Michigan residential property",
+  }),
+  buildCity({
+    slug: "st-clair",
+    name: "St. Clair",
+    county: "St. Clair County",
+    eyebrow: "Riverfront City Cleanout Service",
+    metaDescription:
+      "Junk Removal St. Clair MI for riverfront homes, estates, appliances and furniture. Veteran-owned. Call Junk Command 810-336-5865.",
+    intro:
+      "From riverfront homes near the boardwalk to neighborhoods off Range Road, Junk Command provides St. Clair with professional junk removal, furniture hauling, appliance pickup, and cleanout support backed by veteran-owned discipline.",
+    profile:
+      "St. Clair has historic homes, waterfront properties, marinas, parks, well-kept neighborhoods, and a downtown that leaves little room for messy curb piles or careless loading.",
+    routeDetails:
+      "Our route knowledge includes Riverside Avenue, Clinton Avenue, M-29, Range Road, the Palmer Park area, and residential pockets west of the riverfront.",
+    cleanupExamples:
+      "St. Clair projects often involve estate contents, pre-listing garage cleanup, old appliances from riverfront homes, patio furniture after storms, or business clutter near downtown.",
+    accessNotes:
+      "Older homes, riverfront parking, finished entries, and tight downtown blocks require patience, clean staging, and a crew that thinks before moving heavy items.",
+    localPromise:
+      "We help St. Clair homeowners, businesses, realtors, and families keep properties clean, presentable, and ready for guests, buyers, tenants, or the next renovation phase.",
+    whyLocal:
+      "St. Clair is a natural part of our daily route south from Port Huron, and our team understands the M-29 river corridor and the neighborhoods that branch west from it.",
+    whyCare:
+      "St. Clair customers choose us because riverfront and historic properties deserve careful handling, not rushed hauling that scuffs trim or leaves debris behind.",
+    localReferences: [
+      "Riverside Avenue riverfront homes",
+      "Downtown St. Clair business district",
+      "Clinton Avenue neighborhoods",
+      "Range Road residential areas",
+      "M-29 / River Road corridor",
+      "Palmer Park and boardwalk vicinity",
+    ],
+    nearbyLandmarks: [
+      "St. Clair River",
+      "Palmer Park",
+      "The St. Clair Inn",
+      "Pine Shores Golf Course",
+    ],
+    nearbySlugs: [
+      "marysville",
+      "marine-city",
+      "port-huron",
+      "algonac",
+      "st-clair-county",
+    ],
+    imageAlt:
+      "Veteran owned Junk Command crew providing junk removal in St. Clair Michigan",
+  }),
+  buildCity({
+    slug: "marine-city",
+    name: "Marine City",
+    county: "St. Clair County",
+    eyebrow: "Historic River Town Hauling",
+    metaDescription:
+      "Junk Removal Marine City MI for homes, cottages, shops and riverfront cleanouts. Call veteran-owned Junk Command 810-336-5865.",
+    intro:
+      "Marine City properties deserve junk removal that respects older homes, riverfront streets, busy downtown blocks, and tight access. Junk Command hauls furniture, appliances, trash, and cleanout debris with clear pricing and veteran-owned care.",
+    profile:
+      "Marine City blends historic houses, arts venues, riverfront businesses, cottages, ferry-area traffic, and established neighborhoods where clutter needs to disappear without damaging older entries or blocking narrow streets.",
+    routeDetails:
+      "We plan Marine City stops around Broadway, Water Street, South Parker Street, the M-29 corridor, and residential streets that stretch west from the river.",
+    cleanupExamples:
+      "Common calls include cottage cleanouts, estate furniture, old appliances, storefront fixtures, basement junk, garage overflow, patio sets, and rental debris after a busy season.",
+    accessNotes:
+      "Older staircases, porch steps, alley-style access, and downtown parking make Marine City jobs a good fit for a crew that values planning before lifting.",
+    localPromise:
+      "From the theater district to quiet inland blocks, we help Marine City properties stay clean, useful, and ready for family, customers, guests, or buyers.",
+    whyLocal:
+      "Marine City sits on our lower river route with St. Clair and Algonac, so our crew understands the river-town layout and seasonal cleanup rhythm.",
+    whyCare:
+      "Marine City customers rely on us for careful hauling in older homes, small businesses, cottages, and rentals where a careless bump can create extra work.",
+    localReferences: [
+      "Broadway Street downtown area",
+      "Water Street riverfront properties",
+      "South Parker Street neighborhoods",
+      "M-29 / River Road corridor",
+      "Bridge to Bay Trail vicinity",
+      "Inland streets west of downtown",
+    ],
+    nearbyLandmarks: [
+      "Marine City Beach",
+      "Mariner Theater",
+      "St. Clair River waterfront",
+      "Bridge to Bay Trail",
+    ],
+    nearbySlugs: [
+      "st-clair",
+      "algonac",
+      "anchorville",
+      "marysville",
+      "st-clair-county",
+    ],
+    imageAlt:
+      "Junk Command hauling unwanted items from a Marine City Michigan river town property",
+  }),
+  buildCity({
+    slug: "algonac",
+    name: "Algonac",
+    county: "St. Clair County",
+    eyebrow: "Pickerel, Channels, and Riverfront Hauling",
+    metaDescription:
+      "Junk Removal Algonac MI for waterfront homes, cottages, furniture and appliances. Veteran-owned. Call 810-336-5865.",
+    intro:
+      "Algonac junk removal calls often involve water access, cottages, garages, boat-season clutter, and heavy items tucked away for years. Junk Command brings full-service hauling to homes and businesses throughout the lower St. Clair River area.",
+    profile:
+      "Algonac is shaped by the St. Clair River, canals, marinas, cottages, year-round homes, and seasonal boating storage, so cleanup often involves outdoor items as much as household clutter.",
+    routeDetails:
+      "We serve Algonac along M-29, Pointe Tremble Road, the downtown boardwalk area, canal neighborhoods, and routes leading toward the Flats and Ira Township.",
+    cleanupExamples:
+      "Algonac pickups often include broken patio furniture, grills, dock boxes, garage shelves, cottage mattresses, old appliances, rental leftovers, and items stored around boat-season gear.",
+    accessNotes:
+      "Waterfront parking, deck routes, soft ground, sheds, and detached garages can affect loading, so we ask about the path from the item to the truck before arrival.",
+    localPromise:
+      "We help Algonac residents and cottage owners get spaces ready for summer, winter storage, guests, listing photos, or a fresh start after years of accumulation.",
+    whyLocal:
+      "Algonac is part of our lower St. Clair River service pattern with Marine City, Anchorville, and the Anchor Bay communities.",
+    whyCare:
+      "Algonac customers appreciate a hauler who understands waterfront properties, seasonal deadlines, and the need to remove bulky items without tearing up lawns or decks.",
+    localReferences: [
+      "M-29 / Pointe Tremble Road corridor",
+      "Algonac riverfront neighborhoods",
+      "Canal and marina area homes",
+      "St. Clair Flats access routes",
+      "Algonac State Park vicinity",
+      "Downtown boardwalk area",
+    ],
+    nearbyLandmarks: [
+      "Algonac State Park",
+      "St. Clair River",
+      "Algonac Boardwalk",
+      "Russell Island Ferry area",
+    ],
+    nearbySlugs: [
+      "marine-city",
+      "anchorville",
+      "st-clair",
+      "chesterfield",
+      "st-clair-county",
+    ],
+    imageAlt:
+      "Junk Command removing junk from an Algonac Michigan waterfront property",
+  }),
+  buildCity({
+    slug: "yale",
+    name: "Yale",
+    county: "St. Clair County",
+    eyebrow: "Western St. Clair County Hauling",
+    metaDescription:
+      "Junk Removal Yale MI for village homes, farms, garages and estates. Veteran-owned Junk Command. Call 810-336-5865.",
+    intro:
+      "Yale cleanouts can mean a village basement, a farm garage, a rental house, or an estate with years of stored items. Junk Command brings reliable Port Huron-based hauling west with upfront pricing and respectful service.",
+    profile:
+      "Yale sits where village blocks meet western county farm roads, which means cleanouts may involve Main Street homes, outbuildings, older basements, workshops, and multi-generation storage.",
+    routeDetails:
+      "We plan Yale routes with Brockway Road, Avoca Road, Yale Road, Emmett, Capac, and the rural roads that connect those communities.",
+    cleanupExamples:
+      "Yale projects often include inherited contents, barn shelving, old appliances, garage clutter, damaged furniture, basement boxes, tenant debris, and pre-listing cleanouts.",
+    accessNotes:
+      "Village homes can have older stairs, while rural properties can have gravel drives, uneven barns, and items spread across multiple buildings.",
+    localPromise:
+      "We help Yale families, property owners, and realtors turn overwhelming cleanup projects into clear rooms, usable garages, and properties ready for the next step.",
+    whyLocal:
+      "Yale is a regular western St. Clair County service area for us, grouped naturally with Emmett, Capac, Croswell, and Kimball routes.",
+    whyCare:
+      "Yale customers value a crew that can move from a careful interior furniture pickup to a barn cleanout without losing communication or respect for the property.",
+    localReferences: [
+      "Main Street Yale village blocks",
+      "Brockway Road corridor",
+      "Avoca Road area",
+      "Yale Road rural properties",
+      "Village neighborhoods near schools",
+      "Farm roads outside the city",
+    ],
+    nearbyLandmarks: [
+      "Downtown Yale",
+      "Yale Bologna Festival area",
+      "Yale City Park",
+      "Wadhams to Avoca Trail region",
+    ],
+    nearbySlugs: [
+      "capac",
+      "emmett",
+      "croswell",
+      "kimball-township",
+      "st-clair-county",
+    ],
+    imageAlt:
+      "Junk Command hauling garage clutter from a Yale Michigan property",
+  }),
+  buildCity({
+    slug: "capac",
+    name: "Capac",
+    county: "St. Clair County",
+    eyebrow: "I-69 Corridor Cleanout Service",
+    metaDescription:
+      "Junk Removal Capac MI for homes, farms, estates and business cleanouts. Veteran-owned hauling. Call 810-336-5865.",
+    intro:
+      "Capac residents and businesses call Junk Command for reliable hauling along the I-69 corridor. We remove furniture, appliances, trash, garage clutter, estate contents, and light debris with clear quotes and veteran-owned professionalism.",
+    profile:
+      "Capac connects village homes, small businesses, I-69 access, nearby farms, and older properties with garages and storage rooms that can hold years of unwanted material.",
+    routeDetails:
+      "Our western routes regularly connect Capac Road, Main Street, the I-69 interchange, Emmett, Yale, Memphis, and surrounding township roads.",
+    cleanupExamples:
+      "Capac cleanouts may involve a rental house, a business storage room, a barn corner, an estate garage, a basement of boxes, or old appliances after a replacement.",
+    accessNotes:
+      "We plan for village parking, rural drives, outbuildings, stairs, and heavy items that may be stored far from the easiest loading spot.",
+    localPromise:
+      "We help Capac homeowners, landlords, business owners, and families get properties cleaned up without chasing multiple dump trips or managing a dumpster alone.",
+    whyLocal:
+      "Capac is part of our I-69 corridor coverage and fits naturally with Emmett, Yale, Memphis, Richmond, and western St. Clair County routes.",
+    whyCare:
+      "Capac customers often have mixed loads from several areas of a property, so they need a hauler who can organize the work, not just throw items in a truck.",
+    localReferences: [
+      "Main Street Capac village area",
+      "Capac Road corridor",
+      "I-69 interchange vicinity",
+      "Downtown Capac storefronts",
+      "Rural roads outside the village",
+      "Residential blocks near Capac schools",
+    ],
+    nearbyLandmarks: [
+      "Downtown Capac",
+      "I-69 corridor",
+      "Capac Community Schools area",
+      "Holly Meadows Golf Course region",
+    ],
+    nearbySlugs: [
+      "yale",
+      "emmett",
+      "memphis",
+      "richmond",
+      "st-clair-county",
+    ],
+    imageAlt:
+      "Junk Command crew hauling unwanted items from a Capac Michigan property",
+  }),
+  buildCity({
+    slug: "croswell",
+    name: "Croswell",
+    county: "Sanilac County",
+    eyebrow: "Sanilac County Blue Water Route",
+    metaDescription:
+      "Junk Removal Croswell MI for village homes, farms, cottages and cleanouts. Veteran-owned Junk Command. Call 810-336-5865.",
+    intro:
+      "Croswell homes, farms, and village properties use Junk Command for dependable hauling north of our Port Huron base. We clear furniture, appliances, garage clutter, estate contents, and mixed debris with careful full-service removal.",
+    profile:
+      "Croswell connects inland Sanilac County with the Lake Huron corridor, giving us village homes, farm shops, Black River properties, and seasonal cleanouts headed toward Lexington.",
+    routeDetails:
+      "We schedule Croswell with Lexington, Yale, and northern Blue Water runs, including Main Street, Wells Street, Harrington Road, and roads outside the village.",
+    cleanupExamples:
+      "Croswell calls often involve farm garage clutter, cottage turnover items, water-damaged basement furniture, old appliances, estate contents, and pre-sale property cleanup.",
+    accessNotes:
+      "Older village homes, outbuildings, rural drives, and mixed loads require a crew that can adapt without losing the careful handling expected inside a home.",
+    localPromise:
+      "We help Croswell customers clear the items that keep homes, barns, garages, and seasonal properties from being useful, marketable, or guest-ready.",
+    whyLocal:
+      "Croswell is part of our northern Blue Water service rhythm, especially when routes connect Lexington, Yale, and Sanilac County cleanout work.",
+    whyCare:
+      "Croswell customers choose Junk Command because we bring Port Huron-level professionalism to properties that larger haulers may treat as too far or too rural.",
+    localReferences: [
+      "Main Street Croswell",
+      "Wells Street neighborhoods",
+      "Harrington Road area",
+      "Black River corridor",
+      "Farm roads outside the village",
+      "Routes toward Lexington and Yale",
+    ],
+    nearbyLandmarks: [
+      "Croswell Swinging Bridge",
+      "Black River",
+      "Downtown Croswell",
+      "Sanilac County rural corridor",
+    ],
+    nearbySlugs: [
+      "lexington",
+      "yale",
+      "capac",
+      "emmett",
+      "st-clair-county",
+    ],
+    imageAlt:
+      "Junk Command providing junk hauling for a Croswell Michigan village property",
+  }),
+  buildCity({
+    slug: "lexington",
+    name: "Lexington",
+    county: "Sanilac County",
+    eyebrow: "Lake Huron Cottage and Village Service",
+    metaDescription:
+      "Junk Removal Lexington MI for cottages, rentals, lake homes and cleanouts. Veteran-owned hauling. Call Junk Command 810-336-5865.",
+    intro:
+      "Lexington cleanouts often happen on tight timelines before guests, listings, weekends, or seasonal turnover. Junk Command hauls furniture, appliances, mattresses, garage clutter, and cottage junk with organized scheduling and veteran-owned care.",
+    profile:
+      "Lexington is a Lake Huron destination with cottages, rentals, year-round homes, harbor traffic, downtown shops, and owners who often need cleanup finished before guests arrive.",
+    routeDetails:
+      "We plan Lexington service through the M-25 corridor, Huron Avenue, the harbor area, village streets, and inland roads that connect toward Croswell and Yale.",
+    cleanupExamples:
+      "Lexington loads often include cottage mattresses, sleeper sofas, patio sets, beach gear, grills, garage shelves, rental leftovers, and appliances replaced before summer.",
+    accessNotes:
+      "Cottages and older lake homes may have narrow doors, stairs, limited parking, or items stored in sheds, so access instructions are especially helpful.",
+    localPromise:
+      "We help Lexington owners keep lake homes, rentals, garages, and cottages guest-ready without spending valuable weekends on heavy hauling.",
+    whyLocal:
+      "Lexington is served intentionally as part of our northern Blue Water route, not as an afterthought, with Croswell and Yale often helping shape scheduling.",
+    whyCare:
+      "Lexington customers care about timing and presentation, especially when rental turnovers, family visits, listing photos, or seasonal openings are on the calendar.",
+    localReferences: [
+      "Huron Avenue downtown Lexington",
+      "Lexington Harbor area",
+      "Lake Huron shoreline cottages",
+      "Village residential streets",
+      "M-25 lakeshore corridor",
+      "Inland roads toward Croswell",
+    ],
+    nearbyLandmarks: [
+      "Lexington Harbor",
+      "Lexington Village Theatre",
+      "Lexington State Harbor",
+      "Lake Huron shoreline",
+    ],
+    nearbySlugs: [
+      "croswell",
+      "yale",
+      "fort-gratiot",
+      "port-huron",
+      "st-clair-county",
+    ],
+    imageAlt:
+      "Junk Command hauling cottage furniture from a Lexington Michigan Lake Huron property",
+  }),
+  buildCity({
+    slug: "richmond",
+    name: "Richmond",
+    county: "Macomb County",
+    eyebrow: "Macomb and St. Clair Border Hauling",
+    metaDescription:
+      "Junk Removal Richmond MI for homes, estates, farms and businesses. Veteran-owned Junk Command. Call 810-336-5865 today.",
+    intro:
+      "Richmond sits where Macomb County, St. Clair County, farms, subdivisions, and Main Street businesses meet. Junk Command provides full-service hauling for furniture, appliances, estate cleanouts, garages, and trash removal with upfront pricing.",
+    profile:
+      "Richmond mixes Main Street businesses, Gratiot Avenue traffic, family neighborhoods, county-line roads, and rural properties that can produce everything from one old refrigerator to a multi-area estate cleanout.",
+    routeDetails:
+      "Our routes connect Richmond with Memphis, Chesterfield, New Baltimore, Capac, and St. Clair County, so border-area scheduling is familiar territory.",
+    cleanupExamples:
+      "Richmond projects often include storefront fixtures, garage clutter, estate furniture, rental debris, barn storage, office pieces, and appliances that need careful removal from basements or utility rooms.",
+    accessNotes:
+      "We plan around downtown parking, older stairs, rural drives, outbuildings, and heavy items stored away from the easiest loading point.",
+    localPromise:
+      "We help Richmond homeowners, businesses, landlords, and realtors clear spaces before closings, remodels, tenant turnovers, and family transitions.",
+    whyLocal:
+      "Richmond is a key northeastern Macomb stop that connects naturally to our Blue Water and western St. Clair County coverage.",
+    whyCare:
+      "Richmond customers choose us because a border-town cleanout may include city, suburban, and rural challenges in the same job, and our crew is prepared for that variety.",
+    localReferences: [
+      "Main Street Richmond",
+      "Gratiot Avenue corridor",
+      "Division Road neighborhoods",
+      "County Line Road area",
+      "Downtown Richmond businesses",
+      "Rural roads toward Memphis and Armada",
+    ],
+    nearbyLandmarks: [
+      "Downtown Richmond",
+      "Richmond Community Theatre",
+      "Beebe Street Park area",
+      "Gratiot Avenue corridor",
+    ],
+    nearbySlugs: [
+      "memphis",
+      "chesterfield",
+      "new-baltimore",
+      "capac",
+      "macomb-county",
+    ],
+    imageAlt:
+      "Junk Command hauling furniture and debris from a Richmond Michigan home",
+  }),
+  buildCity({
+    slug: "chesterfield",
+    name: "Chesterfield",
+    county: "Macomb County",
+    eyebrow: "Anchor Bay and Subdivision Hauling",
+    metaDescription:
+      "Junk Removal Chesterfield MI for homes, condos, offices, furniture and appliances. Veteran-owned. Call 810-336-5865.",
+    intro:
+      "Chesterfield residents call Junk Command for clean, professional hauling from subdivisions, condos, lake-area homes, offices, and garages. We remove bulky furniture, appliances, trash, and cleanout debris with veteran-owned attention to detail.",
+    profile:
+      "Chesterfield has busy subdivisions, condos, commercial corridors, lake-area homes, HOA neighborhoods, and garages packed with seasonal storage, making clean and prompt hauling especially important.",
+    routeDetails:
+      "We serve Chesterfield through 23 Mile Road, Gratiot Avenue, Jefferson Avenue, I-94 access points, Cotton Road, Sugarbush Road, and Anchor Bay-area streets.",
+    cleanupExamples:
+      "Chesterfield calls often involve condo furniture, old appliances after delivery, garage clutter, estate contents, office furniture, patio sets, and light remodel debris that cannot sit curbside.",
+    accessNotes:
+      "HOA rules, shared drives, finished entries, basement stairs, and tight garage storage call for neat staging and careful movement.",
+    localPromise:
+      "We help Chesterfield homeowners, condo residents, businesses, and property managers remove bulky items without leaving a driveway eyesore or association problem.",
+    whyLocal:
+      "Chesterfield is a core northeastern Macomb County community on our route with New Baltimore, Anchorville, Richmond, and the Anchor Bay corridor.",
+    whyCare:
+      "Chesterfield customers expect professional communication, clean trucks, careful crews, and a finished result that respects neighbors, common areas, and property rules.",
+    localReferences: [
+      "23 Mile Road corridor",
+      "Gratiot Avenue businesses",
+      "Jefferson Avenue and Anchor Bay area",
+      "I-94 access neighborhoods",
+      "Cotton Road residential streets",
+      "Sugarbush Road subdivisions",
+    ],
+    nearbyLandmarks: [
+      "Anchor Bay",
+      "I-94 corridor",
+      "Chesterfield Township offices area",
+      "Lake St. Clair Metropark region",
+    ],
+    nearbySlugs: [
+      "new-baltimore",
+      "anchorville",
+      "richmond",
+      "algonac",
+      "macomb-county",
+    ],
+    imageAlt:
+      "Junk Command removing furniture from a Chesterfield Michigan subdivision home",
+  }),
+  buildCity({
+    slug: "new-baltimore",
+    name: "New Baltimore",
+    county: "Macomb County",
+    eyebrow: "Anchor Bay Waterfront Cleanout Service",
+    metaDescription:
+      "Junk Removal New Baltimore MI for lake homes, garages, furniture and appliances. Veteran-owned. Call Junk Command 810-336-5865.",
+    intro:
+      "New Baltimore homes and businesses count on Junk Command for clean haul-away near Anchor Bay, downtown, and surrounding neighborhoods. We remove bulky furniture, appliances, trash, and cleanout debris with upfront pricing and careful service.",
+    profile:
+      "New Baltimore blends Anchor Bay waterfront homes, historic downtown streets, subdivisions, marinas, restaurants, rentals, and seasonal activity where curb appeal and timing matter.",
+    routeDetails:
+      "Our crew serves New Baltimore around Washington Street, Green Street, Jefferson Avenue, County Line Road, 23 Mile Road, and lake-adjacent residential pockets.",
+    cleanupExamples:
+      "New Baltimore pickups often include lake-home furniture, old patio sets, grills, rental mattresses, business fixtures, garage overflow, appliances, and clutter before guests or listing photos.",
+    accessNotes:
+      "Waterfront parking, downtown traffic, porch steps, condo rules, and visible driveways make clean staging and prompt removal important.",
+    localPromise:
+      "We help New Baltimore properties stay ready for lake season, family gatherings, showings, business updates, and rental turnovers.",
+    whyLocal:
+      "New Baltimore fits our Anchor Bay and northeastern Macomb route with Chesterfield, Anchorville, Richmond, and Algonac nearby.",
+    whyCare:
+      "New Baltimore customers choose Junk Command because lake-area properties and downtown businesses need respectful crews who avoid messy piles and surprise pricing.",
+    localReferences: [
+      "Washington Street downtown",
+      "Green Street neighborhoods",
+      "Jefferson Avenue corridor",
+      "Anchor Bay waterfront homes",
+      "County Line Road area",
+      "23 Mile Road access",
+    ],
+    nearbyLandmarks: [
+      "Anchor Bay",
+      "Walter and Mary Burke Park",
+      "New Baltimore Historic District",
+      "Lake St. Clair shoreline",
+    ],
+    nearbySlugs: [
+      "chesterfield",
+      "anchorville",
+      "richmond",
+      "algonac",
+      "macomb-county",
+    ],
+    imageAlt:
+      "Junk Command hauling unwanted items from a New Baltimore Michigan lake area home",
+  }),
+  buildCity({
+    slug: "memphis",
+    name: "Memphis",
+    county: "Macomb / St. Clair County",
+    eyebrow: "Macomb and St. Clair Border Town Service",
+    metaDescription:
+      "Junk Removal Memphis MI for border-town homes, farms, garages and estates. Veteran-owned. Call Junk Command at 810-336-5865.",
+    intro:
+      "Memphis sits right on the Macomb and St. Clair County line, making it a natural Junk Command service area. We haul furniture, appliances, trash, estate contents, garage clutter, and rural debris with clear pricing.",
+    profile:
+      "Memphis is a true border town with village homes, rural roads, small businesses, farm garages, and county-line properties that may feel connected to Richmond, Capac, Emmett, and Yale all at once.",
+    routeDetails:
+      "Our routes already tie Memphis to Richmond, Capac, Emmett, Yale, and northeastern Macomb, so the county line does not complicate scheduling.",
+    cleanupExamples:
+      "Memphis jobs may include a Main Street basement, a rural barn, an inherited garage, a rental property, old appliances, office clutter, or mixed items spread across several buildings.",
+    accessNotes:
+      "Village parking, gravel drives, barns, sheds, older stairs, and long carries can all be part of a Memphis pickup, so access notes help us plan correctly.",
+    localPromise:
+      "We help Memphis residents get one dependable hauling solution instead of wondering whether to call a Macomb or St. Clair County company.",
+    whyLocal:
+      "Memphis sits directly between service areas we already cover every week, which makes it a practical and important stop for Junk Command.",
+    whyCare:
+      "Memphis customers value a crew that understands border-town properties, rural access, and small-town expectations for respectful work.",
+    localReferences: [
+      "Main Street Memphis",
+      "Boardman Road area",
+      "Memphis Ridge Road corridor",
+      "County Line Road vicinity",
+      "Village neighborhoods near schools",
+      "Rural roads toward Richmond and Capac",
+    ],
+    nearbyLandmarks: [
+      "Downtown Memphis",
+      "Memphis Community Schools area",
+      "Belle River region",
+      "Macomb-St. Clair county line",
+    ],
+    nearbySlugs: [
+      "richmond",
+      "capac",
+      "emmett",
+      "yale",
+      "macomb-county",
+    ],
+    image: "/images/junk-command-hero.webp",
+    imageAlt:
+      "Junk Command veteran owned junk removal truck serving Memphis Michigan",
+  }),
+  buildCity({
+    slug: "anchorville",
+    name: "Anchorville",
+    county: "St. Clair County",
+    eyebrow: "Anchor Bay Area Hauling",
+    metaDescription:
+      "Junk Removal Anchorville MI for lake-area homes, garages, furniture and appliances. Veteran-owned. Call 810-336-5865.",
+    intro:
+      "Anchorville residents call Junk Command for clean hauling near Anchor Bay, M-29, and Ira Township neighborhoods. We remove furniture, appliances, trash, garage clutter, and seasonal items with upfront pricing and careful service.",
+    profile:
+      "Anchorville sits between Algonac, New Baltimore, Chesterfield, and Ira Township, giving the area lake-season storage, waterfront influence, cottages, garages, and quiet residential roads.",
+    routeDetails:
+      "We serve Anchorville around M-29, Anchor Bay, Pointe Tremble Road, Bethuy Road, Ira Township neighborhoods, and routes toward New Baltimore and Algonac.",
+    cleanupExamples:
+      "Anchorville cleanups often include patio furniture, grills, dockside storage, garage boxes, old appliances, mattresses, shed clutter, and estate items from lake-area homes.",
+    accessNotes:
+      "Water-oriented properties can involve soft yards, deck steps, detached garages, and narrow parking, so careful staging matters.",
+    localPromise:
+      "We help Anchorville customers clear space before summer, winter storage, listing photos, guest visits, or long-delayed garage projects.",
+    whyLocal:
+      "Anchorville sits naturally on our lower river and Anchor Bay service route with Algonac, Marine City, Chesterfield, and New Baltimore.",
+    whyCare:
+      "Anchorville customers need a hauler who understands seasonal clutter and lake-area access while still treating the home like a permanent residence.",
+    localReferences: [
+      "M-29 corridor",
+      "Anchor Bay area homes",
+      "Ira Township neighborhoods",
+      "Pointe Tremble Road access",
+      "Bethuy Road vicinity",
+      "Roads toward New Baltimore and Algonac",
+    ],
+    nearbyLandmarks: [
+      "Anchor Bay",
+      "Ira Township waterfront area",
+      "St. Clair River delta region",
+      "M-29 shoreline route",
+    ],
+    nearbySlugs: [
+      "algonac",
+      "new-baltimore",
+      "chesterfield",
+      "marine-city",
+      "macomb-county",
+    ],
+    imageAlt:
+      "Junk Command hauling seasonal clutter from an Anchorville Michigan home",
+  }),
+  buildCity({
+    slug: "emmett",
+    name: "Emmett",
+    county: "St. Clair County",
+    eyebrow: "Rural Western County Cleanouts",
+    metaDescription:
+      "Junk Removal Emmett MI for rural homes, garages, barns and estates. Veteran-owned Junk Command. Call 810-336-5865.",
+    intro:
+      "Emmett cleanouts often involve country homes, barns, garages, sheds, and estate properties. Junk Command brings full-service hauling west with clear quotes, respectful crews, and the truck space to handle rural clutter.",
+    profile:
+      "Emmett is a rural western St. Clair County community where country homes, farm properties, outbuildings, and larger lots can collect years of items before a serious cleanout begins.",
+    routeDetails:
+      "We route Emmett with Bryce Road, Emmett Road, the I-69 western corridor, Capac, Yale, Memphis, and the farm roads that connect those communities.",
+    cleanupExamples:
+      "Emmett loads often include barn contents, spare refrigerators, old furniture, basement boxes, estate items, outdoor clutter, garage shelving, and non-hazardous debris.",
+    accessNotes:
+      "Long drives, gravel, sheds, barns, basements, and items stored in several buildings are common, so we plan truck placement and crew time before arrival.",
+    localPromise:
+      "We help Emmett residents clear rural properties without turning cleanup into several weekends of lifting, sorting, and hauling alone.",
+    whyLocal:
+      "Emmett is part of our western St. Clair County coverage and fits naturally with Capac, Yale, Memphis, and Kimball Township routes.",
+    whyCare:
+      "Emmett customers appreciate a crew that treats barns, garages, and rural homes with the same respect we bring to finished interiors and city properties.",
+    localReferences: [
+      "Emmett village area",
+      "Bryce Road corridor",
+      "Emmett Road rural properties",
+      "I-69 western route access",
+      "Roads toward Capac",
+      "Farm roads toward Yale",
+    ],
+    nearbyLandmarks: [
+      "Village of Emmett",
+      "Western St. Clair County farmland",
+      "I-69 corridor",
+      "Belle River region",
+    ],
+    nearbySlugs: [
+      "capac",
+      "yale",
+      "memphis",
+      "kimball-township",
+      "st-clair-county",
+    ],
+    imageAlt:
+      "Junk Command clearing rural junk from an Emmett Michigan property",
+  }),
+  buildCity({
+    slug: "st-clair-county",
+    name: "St. Clair County",
+    county: "St. Clair County",
+    eyebrow: "Countywide Blue Water Area Service",
+    metaDescription:
+      "Junk Removal St. Clair County MI from Port Huron to Algonac and Yale. Veteran-owned Junk Command. Call 810-336-5865.",
+    intro:
+      "Junk Command is based in Port Huron and serves St. Clair County from the Lake Huron shoreline to western villages and lower river towns. We haul furniture, appliances, trash, cleanouts, and bulky debris countywide.",
+    profile:
+      "St. Clair County is our home map, covering dense city neighborhoods, Lake Huron homes, river towns, rural townships, western villages, farms, cottages, rentals, and commercial corridors.",
+    routeDetails:
+      "Our county routes connect Port Huron, Fort Gratiot, Kimball Township, Marysville, St. Clair, Marine City, Algonac, Anchorville, Emmett, Capac, and Yale.",
+    cleanupExamples:
+      "Countywide calls range from one appliance in Port Huron to a Kimball barn, a St. Clair estate, a Fort Gratiot garage, an Algonac cottage, or a Yale farm cleanup.",
+    accessNotes:
+      "Every part of the county has different access: city alleys, lake cottages, riverfront drives, outbuildings, rural lanes, business entries, and older basement stairs.",
+    localPromise:
+      "We help St. Clair County residents find one dependable junk removal company instead of guessing who will serve each city, township, or village.",
+    whyLocal:
+      "St. Clair County is not an edge market for Junk Command; it is where we are based and where our crews work daily.",
+    whyCare:
+      "Countywide customers get the same veteran-owned standard whether the job is a single sofa, a rental cleanout, a multi-load estate, or a rural garage full of stored items.",
+    localReferences: [
+      "Port Huron and Blue Water Bridge area",
+      "Fort Gratiot and Lake Huron shoreline",
+      "Marysville and St. Clair river towns",
+      "Marine City, Algonac, and Anchorville",
+      "Kimball Township and Smiths Creek",
+      "Emmett, Capac, and Yale western routes",
+    ],
+    nearbyLandmarks: [
+      "Blue Water Bridge",
+      "St. Clair River",
+      "Lake Huron shoreline",
+      "I-69 and I-94 corridors",
+    ],
+    nearbySlugs: [
+      "port-huron",
+      "fort-gratiot",
       "marysville",
       "st-clair",
       "marine-city",
-      "fort-gratiot",
     ],
-    image: "/images/cities/st-clair-county.webp",
     imageAlt:
-      "Junk Command serving communities across St. Clair County, Michigan",
+      "Junk Command providing junk removal across St. Clair County Michigan",
     isCounty: true,
-  },
-  {
+  }),
+  buildCity({
     slug: "macomb-county",
     name: "Macomb County",
     county: "Macomb County",
-    metaTitle: "Junk Removal Macomb County MI | Junk Command",
+    eyebrow: "Northeastern Macomb County Service",
     metaDescription:
-      "Junk removal for Macomb County, MI — Chesterfield, New Baltimore, Richmond & more. Veteran-owned Junk Command. Call 810-336-5865.",
-    h1: "Junk Removal in Macomb County, Michigan",
-    eyebrow: "Anchor Bay & Border Communities",
+      "Junk Removal Macomb County MI for Chesterfield, New Baltimore, Richmond and border towns. Call Junk Command 810-336-5865.",
     intro:
-      "Junk Command extends premium junk removal into northeastern Macomb County — Chesterfield, New Baltimore, Richmond, and neighboring Anchor Bay communities that connect naturally to our St. Clair County home base.",
-    whyUs:
-      "Macomb County’s northeastern edge shares roads, shorelines, and housing stock with our St. Clair routes, so we serve it as a true extension of our Blue Water operation — not a reluctant add-on. Chesterfield subdivisions, New Baltimore waterfront streets, and Richmond’s border lots get the same veteran-owned crew, volume pricing, and careful loading we built our reputation on in Port Huron. You will not deal with a national call center that does not know 23 Mile from County Line. When Macomb County homes need furniture gone, garages emptied, or estates cleared, Junk Command delivers Southeast Michigan reliability with local accountability. Call 810-336-5865 to put your address on our Macomb route.",
+      "Junk Command serves northeastern Macomb County communities that connect naturally to our Blue Water routes, including Chesterfield, New Baltimore, Richmond, Anchorville, and Memphis. We haul furniture, appliances, trash, and cleanout debris.",
+    profile:
+      "Macomb County is broad, so Junk Command focuses on northeastern communities where our routes provide practical, local-feeling service: Chesterfield, New Baltimore, Richmond, Anchorville, Memphis, and nearby Anchor Bay areas.",
+    routeDetails:
+      "We plan Macomb County stops around 23 Mile Road, Gratiot Avenue, Jefferson Avenue, I-94, County Line Road, Anchor Bay, and the Richmond-Memphis border area.",
+    cleanupExamples:
+      "Macomb County calls in our service zone include Chesterfield condo cleanouts, New Baltimore lake-home furniture, Richmond estate work, Anchorville seasonal clutter, and Memphis rural loads.",
+    accessNotes:
+      "HOA neighborhoods, condos, lake homes, downtown businesses, rural border roads, and finished interiors all require tidy staging and careful handling.",
+    localPromise:
+      "We help northeastern Macomb County customers get premium hauling without dealing with a call center that does not know the local roads or property styles.",
+    whyLocal:
+      "Our Macomb County coverage is intentionally focused where our Blue Water routes are strongest, especially around Anchor Bay and the county-line communities.",
+    whyCare:
+      "Macomb County customers hire us for responsive communication, careful crews, and clean removal that works in subdivisions, condos, lake homes, businesses, and border-town properties.",
     localReferences: [
       "Chesterfield Township subdivisions",
-      "New Baltimore harbor & downtown",
-      "Richmond Main Street & Gratiot corridor",
-      "23 Mile & County Line connectors",
+      "New Baltimore harbor and downtown",
+      "Richmond Main Street and Gratiot corridor",
+      "23 Mile and County Line connectors",
       "Anchor Bay shoreline communities",
       "Northeastern Macomb residential pockets",
     ],
     nearbyLandmarks: [
-      "Lake St. Clair / Anchor Bay",
+      "Anchor Bay",
       "New Baltimore Harbor",
-      "Selfridge ANGB area corridors",
-      "Gratiot Avenue commercial stretches",
-      "Macomb–St. Clair border roads",
-    ],
-    servicesBlurb:
-      "Across our Macomb County service zone we haul furniture, appliances, mattresses, garage clutter, remodel debris, and estate contents — focused on Chesterfield, New Baltimore, Richmond, and nearby Anchor Bay addresses.",
-    faqs: [
-      {
-        question: "Which parts of Macomb County do you serve?",
-        answer:
-          "We focus on northeastern Macomb County communities including Chesterfield, New Baltimore, Richmond, and nearby Anchor Bay areas that connect to our St. Clair County routes.",
-      },
-      {
-        question: "Are you as fast in Macomb as in Port Huron?",
-        answer:
-          "Macomb stops are built into our regular scheduling. Same-week service is standard, and we confirm timing based on route load. Call 810-336-5865 to check openings.",
-      },
-      {
-        question: "Do HOA communities in Chesterfield allow your trucks?",
-        answer:
-          "We work in HOA neighborhoods frequently. Share any gate codes or parking rules when you book and we will comply with community guidelines.",
-      },
-      {
-        question: "Can you handle large estate cleanouts in Macomb County?",
-        answer:
-          "Yes. Multi-room and multi-day estate jobs are common. We quote by volume and can schedule return trips if the property exceeds one truckload.",
-      },
+      "Gratiot Avenue corridor",
+      "Macomb-St. Clair border roads",
     ],
     nearbySlugs: [
       "chesterfield",
       "new-baltimore",
       "richmond",
+      "memphis",
       "anchorville",
-      "st-clair-county",
     ],
-    image: "/images/cities/macomb-county.webp",
     imageAlt:
-      "Junk Command junk removal truck serving Macomb County, Michigan communities",
+      "Junk Command junk removal truck serving Macomb County Michigan communities",
     isCounty: true,
-  },
+  }),
 ];
+
+export const CITY_NAMES: string[] = CITIES.map((c) => c.name);
 
 export function getCityBySlug(slug: string): City | undefined {
   return CITIES.find((c) => c.slug === slug);
@@ -1142,4 +1039,6 @@ export function getNearbyCities(city: City): City[] {
     .filter((c): c is City => Boolean(c));
 }
 
-export const CITY_NAMES: string[] = CITIES.map((c) => c.name);
+export function getCitiesByCounty(county: string): City[] {
+  return CITIES.filter((c) => c.county === county);
+}
