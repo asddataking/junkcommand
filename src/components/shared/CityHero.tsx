@@ -29,6 +29,14 @@ export function CityHero({
   breadcrumbs,
   county,
 }: CityHeroProps) {
+  const isPortraitHero = image.includes("junk-command-hero");
+  const backdropClass = isPortraitHero
+    ? "object-cover object-[center_28%] opacity-40"
+    : "object-cover object-[42%_40%] opacity-40";
+  const frameClass = isPortraitHero
+    ? "object-cover object-[center_20%]"
+    : "object-cover object-[38%_36%]";
+
   return (
     <section className="relative overflow-hidden border-b border-[rgba(0,135,255,0.25)]">
       <div className="absolute inset-0">
@@ -38,7 +46,7 @@ export function CityHero({
           fill
           priority
           sizes="100vw"
-          className="object-cover object-[42%_40%] opacity-40"
+          className={backdropClass}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-[#020305] via-[#020305]/88 to-[#020305]/45" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#020305] via-transparent to-[#020305]/55" />
@@ -93,7 +101,7 @@ export function CityHero({
               fill
               priority
               sizes="40vw"
-              className="object-cover object-[38%_36%]"
+              className={frameClass}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#020305]/85 via-transparent to-transparent" />
             <div className="absolute bottom-4 left-4 right-4 rounded-[2px] border border-[rgba(0,135,255,0.4)] bg-black/65 px-4 py-3 backdrop-blur-sm">

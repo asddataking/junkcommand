@@ -91,11 +91,11 @@ export function CityPageContent({ city }: { city: City }) {
               <h2 className="mt-3 font-display text-3xl tracking-[0.06em] text-white sm:text-4xl">
                 JUNK REMOVAL IN {city.name.toUpperCase()}
               </h2>
-              <div className="mt-4 space-y-4 leading-relaxed text-muted">
-                {city.introduction.map((paragraph) => (
-                  <p key={paragraph.slice(0, 48)}>{paragraph}</p>
-                ))}
-              </div>
+              {city.introduction[0] ? (
+                <p className="mt-4 leading-relaxed text-muted">
+                  {city.introduction[0]}
+                </p>
+              ) : null}
             </BlurFade>
 
             <BlurFade>
@@ -138,6 +138,16 @@ export function CityPageContent({ city }: { city: City }) {
                 </div>
               </div>
             </BlurFade>
+
+            {city.introduction.length > 1 ? (
+              <BlurFade>
+                <div className="space-y-4 leading-relaxed text-muted">
+                  {city.introduction.slice(1).map((paragraph) => (
+                    <p key={paragraph.slice(0, 48)}>{paragraph}</p>
+                  ))}
+                </div>
+              </BlurFade>
+            ) : null}
 
             <BlurFade>
               <h2 className="font-display text-3xl tracking-[0.06em] text-white sm:text-4xl">
