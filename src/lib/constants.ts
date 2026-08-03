@@ -72,6 +72,7 @@ export const FOOTER_LINKS = {
   resources: [
     { label: "Pricing", href: "/pricing" },
     { label: "FAQs", href: "/faqs" },
+    { label: "What We Don't Take", href: "/what-we-dont-take" },
     { label: "Guides", href: "/guides" },
     { label: "Reviews", href: "/reviews" },
     { label: "Blog", href: "/blog" },

@@ -158,7 +158,7 @@ export const FAQS: Faq[] = [
     id: "services-not-taken",
     question: "What won’t Junk Command take?",
     answer:
-      "We cannot haul hazardous materials such as wet paint, solvents, oils, propane tanks, asbestos, medical waste, or certain chemicals. Explosives, biohazards, and regulated industrial waste are also off-limits. If an item looks questionable, text a photo and we will tell you the safest next step.",
+      "We cannot accept hazardous waste, liquid chemicals, paint, oil, gasoline, propane tanks, asbestos, medical waste, or other regulated materials. If you're unsure, just ask—we're happy to help you find the proper disposal option. Text a photo to 810-336-5865 and we will tell you the safest next step.",
     category: "services",
   },
   {
