@@ -43,8 +43,9 @@ type CitySeed = {
   isCounty?: boolean;
 };
 
-function cityImage(slug: string): string {
-  return `/images/cities/${slug}.webp`;
+function cityImage(_slug: string): string {
+  // Shared branded photography until verified city-specific images are added.
+  return "/images/dan-gage-luna.webp";
 }
 
 function buildCity(seed: CitySeed): City {
