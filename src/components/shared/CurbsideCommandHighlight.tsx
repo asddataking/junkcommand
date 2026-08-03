@@ -64,7 +64,7 @@ export function CurbsideCommandHighlight({
             </AnimatedShinyText>
 
             <p className="mt-4 inline-flex rounded-[2px] border border-bright/50 bg-bright/15 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-bright">
-              Highlight · From ${CURBSIDE_START}
+              Most Popular · From ${CURBSIDE_START}
             </p>
 
             <h2
