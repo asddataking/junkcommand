@@ -39,16 +39,18 @@ type CitySeed = {
   nearbyLandmarks: string[];
   nearbySlugs: string[];
   image?: string;
-  imageAlt: string;
+  imageAlt?: string;
   isCounty?: boolean;
 };
 
-function cityImage(slug: string): string {
-  return `/images/cities/${slug}.webp`;
+function cityImage(_slug: string): string {
+  // Shared branded photography until verified city-specific images are added.
+  return "/images/dan-gage-luna.webp";
 }
 
 function buildCity(seed: CitySeed): City {
   const { name } = seed;
+  const image = seed.image ?? cityImage(seed.slug);
 
   return {
     slug: seed.slug,
@@ -122,8 +124,11 @@ function buildCity(seed: CitySeed): City {
       },
     ],
     nearbySlugs: seed.nearbySlugs,
-    image: seed.image ?? cityImage(seed.slug),
-    imageAlt: seed.imageAlt,
+    image,
+    imageAlt:
+      seed.image && seed.imageAlt
+        ? seed.imageAlt
+        : `Dan and Gage with Luna and the Junk Command truck serving ${name}, Michigan`,
     isCounty: seed.isCounty,
   };
 }
