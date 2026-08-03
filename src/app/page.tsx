@@ -13,10 +13,27 @@ import { BlueWaterAreaSection } from "@/components/sections/BlueWaterAreaSection
 import { ServicesGrid } from "@/components/sections/ServicesGrid";
 import { HomepageFaq } from "@/components/sections/HomepageFaq";
 import { FinalCTA } from "@/components/sections/FinalCTA";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { getHomepageFaqs } from "@/data/faqs";
+import { SITE_URL } from "@/lib/constants";
+import {
+  getBreadcrumbSchema,
+  getFaqSchema,
+  getHowToSchema,
+  getServiceCatalogSchema,
+} from "@/lib/schema";
 
 export default function Home() {
   return (
     <SiteShell>
+      <JsonLd
+        data={[
+          getServiceCatalogSchema(),
+          getHowToSchema(),
+          getFaqSchema(getHomepageFaqs(), { id: `${SITE_URL}/#faq` }),
+          getBreadcrumbSchema([{ name: "Home", href: "/" }]),
+        ]}
+      />
       <HomepageBookingProvider>
         <Hero />
         <TrustBar />

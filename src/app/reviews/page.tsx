@@ -10,7 +10,6 @@ import { BRAND } from "@/lib/constants";
 import { buildPageMetadata } from "@/lib/seo";
 import {
   getBreadcrumbSchema,
-  getLocalBusinessSchema,
   getReviewSchema,
 } from "@/lib/schema";
 
@@ -29,7 +28,6 @@ export const metadata = buildPageMetadata({
 export default function ReviewsPage() {
   const reviewSchema = getReviewSchema();
   const schemas = [
-    getLocalBusinessSchema(),
     getBreadcrumbSchema(crumbs),
     ...(reviewSchema ? [reviewSchema] : []),
   ];

@@ -6,7 +6,6 @@ import {
   getBreadcrumbSchema,
   getCityPageSchema,
   getFaqSchema,
-  getLocalBusinessSchema,
 } from "@/lib/schema";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { SiteShell } from "@/components/layout/SiteShell";
@@ -48,9 +47,10 @@ export default async function CityPage({ params }: Props) {
     <SiteShell>
       <JsonLd
         data={[
-          getLocalBusinessSchema(),
           getCityPageSchema(city),
-          getFaqSchema(city.faqs),
+          getFaqSchema(city.faqs, {
+            id: `https://www.getjunkcommand.com/service-areas/${city.slug}#faq`,
+          }),
           getBreadcrumbSchema(crumbs),
         ]}
       />

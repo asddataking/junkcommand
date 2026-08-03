@@ -8,7 +8,6 @@ import { buildPageMetadata } from "@/lib/seo";
 import {
   getBreadcrumbSchema,
   getFaqSchema,
-  getLocalBusinessSchema,
   getServicePageSchema,
 } from "@/lib/schema";
 import { JsonLd } from "@/components/seo/JsonLd";
@@ -51,9 +50,10 @@ export default async function ServiceSlugPage({ params }: Props) {
     <SiteShell>
       <JsonLd
         data={[
-          getLocalBusinessSchema(),
           getServicePageSchema(service),
-          getFaqSchema(service.faqs),
+          getFaqSchema(service.faqs, {
+            id: `https://www.getjunkcommand.com/${service.slug}#faq`,
+          }),
           getBreadcrumbSchema(crumbs),
         ]}
       />

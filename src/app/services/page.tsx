@@ -11,7 +11,6 @@ import { BRAND } from "@/lib/constants";
 import { buildPageMetadata } from "@/lib/seo";
 import {
   getBreadcrumbSchema,
-  getLocalBusinessSchema,
   getServiceCatalogSchema,
 } from "@/lib/schema";
 
@@ -31,11 +30,7 @@ export default function ServicesPage() {
   return (
     <SiteShell>
       <JsonLd
-        data={[
-          getLocalBusinessSchema(),
-          getServiceCatalogSchema(),
-          getBreadcrumbSchema(crumbs),
-        ]}
+        data={[getServiceCatalogSchema(), getBreadcrumbSchema(crumbs)]}
       />
 
       <section className="relative overflow-hidden border-b border-[rgba(0,135,255,0.2)] py-16 sm:py-20 lg:py-24">

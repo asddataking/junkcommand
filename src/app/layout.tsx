@@ -2,14 +2,10 @@ import type { Metadata } from "next";
 import { Antonio, IBM_Plex_Sans } from "next/font/google";
 import Script from "next/script";
 import {
-  getFaqSchema,
   getLocalBusinessSchema,
   getOrganizationSchema,
-  getReviewSchema,
-  getServiceSchema,
   getWebSiteSchema,
 } from "@/lib/schema";
-import { getHomepageFaqs } from "@/data/faqs";
 import {
   SITE_URL,
   SOCIAL_SHARE_IMAGE,
@@ -79,14 +75,12 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const reviewSchema = getReviewSchema();
+  // Sitewide identity only. Page-specific FAQ/Service/Offer schemas belong on
+  // the pages that actually display that content.
   const schemas = [
     getOrganizationSchema(),
     getWebSiteSchema(),
     getLocalBusinessSchema(),
-    getServiceSchema(),
-    getFaqSchema(getHomepageFaqs()),
-    ...(reviewSchema ? [reviewSchema] : []),
   ];
 
   return (

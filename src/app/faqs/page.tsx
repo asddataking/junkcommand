@@ -11,7 +11,6 @@ import { buildPageMetadata } from "@/lib/seo";
 import {
   getBreadcrumbSchema,
   getFaqSchema,
-  getLocalBusinessSchema,
 } from "@/lib/schema";
 
 const crumbs = [
@@ -31,9 +30,10 @@ export default function FaqsPage() {
     <SiteShell>
       <JsonLd
         data={[
-          getLocalBusinessSchema(),
           getBreadcrumbSchema(crumbs),
-          getFaqSchema(FAQS),
+          getFaqSchema(FAQS, {
+            id: "https://www.getjunkcommand.com/faqs#faq",
+          }),
         ]}
       />
 
