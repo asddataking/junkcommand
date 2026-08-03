@@ -6,6 +6,7 @@ import { getReviewsByCity, getFeaturedReviews } from "@/data/reviews";
 import { CityHero } from "@/components/shared/CityHero";
 import { FaqAccordion } from "@/components/shared/FaqAccordion";
 import { CtaBanner } from "@/components/shared/CtaBanner";
+import { CurbsideCommandHighlight } from "@/components/shared/CurbsideCommandHighlight";
 import { SidebarCta } from "@/components/shared/SidebarCta";
 import { ReviewCard } from "@/components/shared/ReviewCard";
 import { ServiceLinkCard } from "@/components/shared/ServiceLinkCard";
@@ -17,6 +18,7 @@ import { BorderBeam } from "@/components/magicui/border-beam";
 import { ShineBorder } from "@/components/magicui/shine-border";
 import { DotPattern } from "@/components/magicui/dot-pattern";
 import { AnimatedShinyText } from "@/components/magicui/animated-shiny-text";
+import { CURBSIDE_START } from "@/data/curbside-pricing";
 import { MapPin, Check } from "lucide-react";
 
 const COMMON_JOB_IMAGES = [
@@ -80,6 +82,7 @@ export function CityPageContent({ city }: { city: City }) {
         ]}
       />
       <TrustBar />
+      <CurbsideCommandHighlight cityName={city.name} />
 
       <section className="py-16 sm:py-20 lg:py-24">
         <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[1fr_320px] lg:px-8">
@@ -377,6 +380,28 @@ export function CityPageContent({ city }: { city: City }) {
                 <div className="absolute inset-0 bg-gradient-to-t from-[#020305] via-transparent to-transparent" />
               </div>
               <SidebarCta title={`${city.name} Pickup`} />
+            </div>
+
+            <div className="relative overflow-hidden rounded-[2px] border border-bright/50 bg-[#080B0F] p-5 shadow-[0_0_28px_rgba(7,135,255,0.16)]">
+              <ShineBorder
+                shineColor={["#0787ff", "#18a0ff"]}
+                duration={12}
+                borderWidth={1}
+                className="opacity-50"
+              />
+              <p className="relative z-10 text-[11px] font-semibold uppercase tracking-[0.2em] text-bright">
+                Curbside Command
+              </p>
+              <p className="relative z-10 mt-2 font-display text-3xl tracking-[0.08em] text-white">
+                FROM ${CURBSIDE_START}
+              </p>
+              <p className="relative z-10 mt-2 text-sm text-muted">
+                Set it outside in {city.name} — send photos for a confirmed
+                curbside price.
+              </p>
+              <Button href="/book-online" className="relative z-10 mt-4 w-full" showArrow>
+                Get Curbside Price
+              </Button>
             </div>
 
             <div className="relative overflow-hidden rounded-[2px] border border-[rgba(0,135,255,0.3)] bg-card p-5">
