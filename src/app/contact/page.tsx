@@ -137,7 +137,7 @@ export default function ContactPage() {
               requests.
             </p>
             <div className="mt-4">
-              <Button href="/#quote" variant="secondary" className="w-full sm:w-auto">
+              <Button href="#quote" variant="secondary" className="w-full sm:w-auto">
                 Scroll to Form
               </Button>
             </div>
