@@ -19,7 +19,7 @@ const crumbs = [
 export const metadata = buildPageMetadata({
   title: "Contact Junk Command | Junk Removal Port Huron MI",
   description:
-    "Contact Junk Command for junk removal in Port Huron & SE Michigan. Call or text 810-336-5865, email info@junkcommand.com, or request a free quote online.",
+    "Contact Junk Command for junk removal in Port Huron & SE Michigan. Call or text 810-242-0429, email info@junkcommand.com, or request a free quote online.",
   path: "/contact",
 });
 

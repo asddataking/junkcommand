@@ -1,9 +1,9 @@
 export const BRAND = {
   name: "Junk Command",
   tagline: "Take Command of Your Clutter.",
-  phone: "810-336-5865",
-  phoneHref: "tel:8103365865",
-  smsHref: "sms:8103365865",
+  phone: "810-242-0429",
+  phoneHref: "tel:8102420429",
+  smsHref: "sms:8102420429",
   email: "info@junkcommand.com",
   emailHref: "mailto:info@junkcommand.com",
 } as const;

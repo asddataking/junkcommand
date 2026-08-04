@@ -25,7 +25,7 @@ export const SERVICES: Service[] = [
     shortTitle: "Furniture",
     metaTitle: "Furniture Removal Port Huron MI | Junk Command",
     metaDescription:
-      "Professional furniture removal in Port Huron & St. Clair County. Sofas, beds, desks, and more hauled away fast. Free quotes. Call 810-336-5865.",
+      "Professional furniture removal in Port Huron & St. Clair County. Sofas, beds, desks, and more hauled away fast. Free quotes. Call 810-242-0429.",
     h1: "Furniture Removal in Southeast Michigan",
     eyebrow: "Heavy Lifting Done Right",
     intro:
@@ -94,7 +94,7 @@ export const SERVICES: Service[] = [
     shortTitle: "Appliances",
     metaTitle: "Appliance Removal Port Huron MI | Junk Command",
     metaDescription:
-      "Fridge, washer, dryer, and stove removal in Port Huron & St. Clair County. Fast, insured appliance haul-away. Call Junk Command at 810-336-5865.",
+      "Fridge, washer, dryer, and stove removal in Port Huron & St. Clair County. Fast, insured appliance haul-away. Call Junk Command at 810-242-0429.",
     h1: "Appliance Removal Near You",
     eyebrow: "White Goods Gone",
     intro:
@@ -163,7 +163,7 @@ export const SERVICES: Service[] = [
     shortTitle: "Mattresses",
     metaTitle: "Mattress Removal Port Huron MI | Junk Command",
     metaDescription:
-      "Mattress and box spring removal in Port Huron, Marysville & St. Clair County. Fast pickup, clean haul-away. Call 810-336-5865 for a free quote.",
+      "Mattress and box spring removal in Port Huron, Marysville & St. Clair County. Fast pickup, clean haul-away. Call 810-242-0429 for a free quote.",
     h1: "Mattress Removal in Port Huron & Beyond",
     eyebrow: "Sleep Better Without the Old Mattress",
     intro:
@@ -231,7 +231,7 @@ export const SERVICES: Service[] = [
     shortTitle: "Couches",
     metaTitle: "Couch & Sofa Removal Port Huron MI | Junk Command",
     metaDescription:
-      "Couch, sofa, and sectional removal in Port Huron & St. Clair County. We haul the heavy stuff. Free quotes. Call Junk Command 810-336-5865.",
+      "Couch, sofa, and sectional removal in Port Huron & St. Clair County. We haul the heavy stuff. Free quotes. Call Junk Command 810-242-0429.",
     h1: "Couch & Sofa Removal",
     eyebrow: "Sectionals & Sofas Cleared Fast",
     intro:
@@ -299,7 +299,7 @@ export const SERVICES: Service[] = [
     shortTitle: "Garage",
     metaTitle: "Garage Cleanout Port Huron MI | Junk Command",
     metaDescription:
-      "Full garage cleanouts in Port Huron, Marysville & St. Clair County. Reclaim your space in one visit. Veteran-owned. Call 810-336-5865.",
+      "Full garage cleanouts in Port Huron, Marysville & St. Clair County. Reclaim your space in one visit. Veteran-owned. Call 810-242-0429.",
     h1: "Garage Cleanout Services",
     eyebrow: "Park in Your Garage Again",
     intro:
@@ -368,7 +368,7 @@ export const SERVICES: Service[] = [
     shortTitle: "Basement",
     metaTitle: "Basement Cleanout Port Huron MI | Junk Command",
     metaDescription:
-      "Basement cleanouts in Port Huron & St. Clair County. Stairs, water damage clutter, and years of storage — cleared by Junk Command. 810-336-5865.",
+      "Basement cleanouts in Port Huron & St. Clair County. Stairs, water damage clutter, and years of storage — cleared by Junk Command. 810-242-0429.",
     h1: "Basement Cleanout Experts",
     eyebrow: "Below-Grade Clutter Cleared",
     intro:
@@ -436,7 +436,7 @@ export const SERVICES: Service[] = [
     shortTitle: "Estate",
     metaTitle: "Estate Cleanout Port Huron MI | Junk Command",
     metaDescription:
-      "Respectful estate cleanouts in Port Huron & St. Clair County. Full-home clearing for families, executors, and realtors. Call 810-336-5865.",
+      "Respectful estate cleanouts in Port Huron & St. Clair County. Full-home clearing for families, executors, and realtors. Call 810-242-0429.",
     h1: "Estate Cleanout Services",
     eyebrow: "Respectful. Thorough. Local.",
     intro:
@@ -505,7 +505,7 @@ export const SERVICES: Service[] = [
     shortTitle: "Storage",
     metaTitle: "Storage Unit Cleanout Port Huron MI | Junk Command",
     metaDescription:
-      "Storage unit cleanouts near Port Huron & St. Clair County. End the rental, clear the unit, reclaim your budget. Call 810-336-5865.",
+      "Storage unit cleanouts near Port Huron & St. Clair County. End the rental, clear the unit, reclaim your budget. Call 810-242-0429.",
     h1: "Storage Unit Cleanout",
     eyebrow: "Stop Paying for Clutter",
     intro:
@@ -573,7 +573,7 @@ export const SERVICES: Service[] = [
     shortTitle: "Hoarder",
     metaTitle: "Hoarder Cleanout Port Huron MI | Junk Command",
     metaDescription:
-      "Discreet hoarder cleanout services in Port Huron & St. Clair County. Non-judgmental crews, thorough clearing. Call Junk Command 810-336-5865.",
+      "Discreet hoarder cleanout services in Port Huron & St. Clair County. Non-judgmental crews, thorough clearing. Call Junk Command 810-242-0429.",
     h1: "Hoarder House Cleanouts",
     eyebrow: "Judgment-Free. Mission-Focused.",
     intro:
@@ -641,7 +641,7 @@ export const SERVICES: Service[] = [
     shortTitle: "Foreclosure",
     metaTitle: "Foreclosure Cleanout Port Huron MI | Junk Command",
     metaDescription:
-      "Fast foreclosure and eviction cleanouts in St. Clair & Macomb County. Realtor-ready properties. Call Junk Command at 810-336-5865.",
+      "Fast foreclosure and eviction cleanouts in St. Clair & Macomb County. Realtor-ready properties. Call Junk Command at 810-242-0429.",
     h1: "Foreclosure & Eviction Cleanouts",
     eyebrow: "Property-Ready Fast",
     intro:
@@ -709,7 +709,7 @@ export const SERVICES: Service[] = [
     shortTitle: "Hot Tubs",
     metaTitle: "Hot Tub Removal Port Huron MI | Junk Command",
     metaDescription:
-      "Hot tub and spa removal in Port Huron & St. Clair County. We cut, haul, and dispose of broken or unwanted hot tubs. Call 810-336-5865.",
+      "Hot tub and spa removal in Port Huron & St. Clair County. We cut, haul, and dispose of broken or unwanted hot tubs. Call 810-242-0429.",
     h1: "Hot Tub & Spa Removal",
     eyebrow: "The Heavy Job Done Right",
     intro:
@@ -777,7 +777,7 @@ export const SERVICES: Service[] = [
     shortTitle: "Sheds",
     metaTitle: "Shed Removal Port Huron MI | Junk Command",
     metaDescription:
-      "Old shed removal in Port Huron & St. Clair County. We demolish and haul backyard sheds fast. Free quotes. Call 810-336-5865.",
+      "Old shed removal in Port Huron & St. Clair County. We demolish and haul backyard sheds fast. Free quotes. Call 810-242-0429.",
     h1: "Shed Demolition & Removal",
     eyebrow: "Backyard Structures Cleared",
     intro:
@@ -845,7 +845,7 @@ export const SERVICES: Service[] = [
     shortTitle: "Decks",
     metaTitle: "Deck Removal Port Huron MI | Junk Command",
     metaDescription:
-      "Deck demolition and removal in Port Huron & St. Clair County. Rotten decks hauled away. Call Junk Command 810-336-5865 for a free quote.",
+      "Deck demolition and removal in Port Huron & St. Clair County. Rotten decks hauled away. Call Junk Command 810-242-0429 for a free quote.",
     h1: "Deck Demolition & Removal",
     eyebrow: "Unsafe Decks Gone",
     intro:
@@ -913,7 +913,7 @@ export const SERVICES: Service[] = [
     shortTitle: "Construction",
     metaTitle: "Construction Debris Removal Port Huron MI | Junk Command",
     metaDescription:
-      "Construction and renovation debris removal in Port Huron & St. Clair County. Post-demo cleanup without the dumpster hassle. 810-336-5865.",
+      "Construction and renovation debris removal in Port Huron & St. Clair County. Post-demo cleanup without the dumpster hassle. 810-242-0429.",
     h1: "Construction Debris Removal",
     eyebrow: "Job-Site Cleanup",
     intro:
@@ -981,7 +981,7 @@ export const SERVICES: Service[] = [
     shortTitle: "Yard Debris",
     metaTitle: "Yard Debris Removal Port Huron MI | Junk Command",
     metaDescription:
-      "Yard debris and landscaping waste removal in Port Huron & St. Clair County. Storm piles, brush, and outdoor junk hauled away. 810-336-5865.",
+      "Yard debris and landscaping waste removal in Port Huron & St. Clair County. Storm piles, brush, and outdoor junk hauled away. 810-242-0429.",
     h1: "Yard Debris Removal",
     eyebrow: "Outdoor Clutter Cleared",
     intro:
@@ -1049,7 +1049,7 @@ export const SERVICES: Service[] = [
     shortTitle: "Brush",
     metaTitle: "Brush Removal Port Huron MI | Junk Command",
     metaDescription:
-      "Brush and branch pile removal in Port Huron & St. Clair County. Land clearing leftovers hauled fast. Call Junk Command 810-336-5865.",
+      "Brush and branch pile removal in Port Huron & St. Clair County. Land clearing leftovers hauled fast. Call Junk Command 810-242-0429.",
     h1: "Brush & Branch Pile Removal",
     eyebrow: "Clear the Lot",
     intro:
@@ -1117,7 +1117,7 @@ export const SERVICES: Service[] = [
     shortTitle: "Electronics",
     metaTitle: "Electronics Recycling & Removal Port Huron MI | Junk Command",
     metaDescription:
-      "Electronics removal and recycling in Port Huron & St. Clair County. TVs, computers, and e-waste hauled responsibly. Call 810-336-5865.",
+      "Electronics removal and recycling in Port Huron & St. Clair County. TVs, computers, and e-waste hauled responsibly. Call 810-242-0429.",
     h1: "Electronics Removal & Recycling",
     eyebrow: "E-Waste Done Right",
     intro:
@@ -1185,7 +1185,7 @@ export const SERVICES: Service[] = [
     shortTitle: "TVs",
     metaTitle: "TV Removal Port Huron MI | Junk Command",
     metaDescription:
-      "TV removal in Port Huron & St. Clair County. Big screens and old CRTs hauled away. Fast service from Junk Command. Call 810-336-5865.",
+      "TV removal in Port Huron & St. Clair County. Big screens and old CRTs hauled away. Fast service from Junk Command. Call 810-242-0429.",
     h1: "TV Removal Service",
     eyebrow: "Big Screens Out",
     intro:
@@ -1253,7 +1253,7 @@ export const SERVICES: Service[] = [
     shortTitle: "Refrigerators",
     metaTitle: "Refrigerator Removal Port Huron MI | Junk Command",
     metaDescription:
-      "Refrigerator and freezer removal in Port Huron & St. Clair County. Heavy appliance haul-away done right. Call Junk Command 810-336-5865.",
+      "Refrigerator and freezer removal in Port Huron & St. Clair County. Heavy appliance haul-away done right. Call Junk Command 810-242-0429.",
     h1: "Refrigerator & Freezer Removal",
     eyebrow: "The Heaviest Appliance",
     intro:

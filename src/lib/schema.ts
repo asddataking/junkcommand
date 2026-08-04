@@ -24,7 +24,7 @@ type Crumb = { name: string; href: string };
 const BUSINESS_ID = `${SITE_URL}/#business`;
 const ORGANIZATION_ID = `${SITE_URL}/#organization`;
 const WEBSITE_ID = `${SITE_URL}/#website`;
-const PHONE_E164 = "+18103365865";
+const PHONE_E164 = "+18102420429";
 
 function absoluteUrl(path: string) {
   if (path.startsWith("http")) return path;

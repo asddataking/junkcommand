@@ -13,7 +13,7 @@ import { BRAND } from "@/lib/constants";
 export const metadata: Metadata = buildPageMetadata({
   title: "Careers | Join the Junk Command Crew | Port Huron MI",
   description:
-    "Junk Command is hiring in Port Huron and St. Clair County. Join a veteran-owned junk removal crew. Hard work, honest pay, local pride. Call 810-336-5865.",
+    "Junk Command is hiring in Port Huron and St. Clair County. Join a veteran-owned junk removal crew. Hard work, honest pay, local pride. Call 810-242-0429.",
   path: "/careers",
 });
 

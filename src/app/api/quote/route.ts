@@ -86,7 +86,7 @@ export async function POST(request: Request) {
         {
           ok: false,
           error:
-            "We received your request but could not sync CRM. Please call 810-336-5865.",
+            "We received your request but could not sync CRM. Please call 810-242-0429.",
         },
         { status: 502 },
       );

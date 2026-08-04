@@ -64,14 +64,14 @@ function buildCity(seed: CitySeed): City {
       `Most ${name} junk hauling jobs start small and grow from there. A garage reset uncovers old furniture, a move exposes basement boxes, a remodel creates debris, or a rental turnover leaves more than the weekly cart can handle. ${seed.routeDetails} Our crew arrives ready to lift, load, and haul so you do not need a dumpster sitting in the driveway for a week.`,
       `Trash removal in ${name} works best when the load is mixed and awkward — bagged clutter, broken shelving, mattresses, outdoor items, office leftovers, and light construction debris that municipal pickup will not take. ${seed.cleanupExamples} We confirm pricing before we load, flag anything that needs special handling, and keep the work area controlled from start to finish.`,
       `Furniture removal and appliance removal are two of the most common ${name} requests because bulky pieces are hard to move without scuffing walls, stairs, or flooring. We take sofas, sectionals, recliners, tables, dressers, mattresses, refrigerators, freezers, washers, dryers, ranges, dishwashers, and similar items from the room, garage, basement, porch, or storage area where they sit. ${seed.accessNotes}`,
-      `${seed.localPromise} On service day we walk the pile with you, protect doorways and floors, load what we agreed to remove, and leave the space broom-clean whenever practical. Call or text 810-336-5865 with photos, access notes, and your timeline for a practical estimate.`,
+      `${seed.localPromise} On service day we walk the pile with you, protect doorways and floors, load what we agreed to remove, and leave the space broom-clean whenever practical. Call or text 810-242-0429 with photos, access notes, and your timeline for a practical estimate.`,
       `Whether you need a same-week pickup or are planning ahead for a closing, remodel, or estate transition, junk removal in ${name} should feel straightforward. Junk Command keeps communication clear, quotes transparent, and the crew accountable — the way a local company should operate across ${seed.county}.`,
       `Customers often meet us near familiar spots such as ${seed.nearbyLandmarks.join(", ")}. We also work regularly around ${seed.localReferences.slice(0, 4).join("; ")}, so driveway access, alley parking, and long carries rarely catch our crew off guard.`,
     ],
     whyUs: [
       `${seed.whyLocal} That local awareness matters because the hard part of junk removal is rarely just weight. Parking, stairs, long carries, association rules, rural drives, weather, and disposal options all affect the job. We ask about those details before arrival so the crew, truck space, and time window match the work.`,
       `${seed.whyCare} You get volume-based pricing, clear communication, and a team that protects trim, lawns, driveways, and common areas. When usable items can reasonably be donated or recycled, we make that effort; when disposal is required, we route it responsibly.`,
-      `Homeowners, landlords, realtors, and small businesses in ${name} choose Junk Command when they want premium service without corporate runaround. Text photos to 810-336-5865 and we will tell you what the job looks like before we roll.`,
+      `Homeowners, landlords, realtors, and small businesses in ${name} choose Junk Command when they want premium service without corporate runaround. Text photos to 810-242-0429 and we will tell you what the job looks like before we roll.`,
     ],
     localReferences: seed.localReferences,
     nearbyLandmarks: seed.nearbyLandmarks,
@@ -96,13 +96,13 @@ function buildCity(seed: CitySeed): City {
     ],
     pricingOverview: [
       `Pricing for junk removal in ${name} is based mainly on how much space your items take in the truck, with access, weight, and special handling considered before work begins. Single-item pickups, partial loads, and larger cleanouts are quoted clearly, and the crew confirms the final number on site before loading anything.`,
-      `Photos make estimates faster and more accurate. Text 810-336-5865 with pictures of the pile, large furniture, appliances, stairs, parking, outbuildings, or tight access. A few good photos help us send the right crew for ${name} junk hauling and avoid surprises on the day of service.`,
+      `Photos make estimates faster and more accurate. Text 810-242-0429 with pictures of the pile, large furniture, appliances, stairs, parking, outbuildings, or tight access. A few good photos help us send the right crew for ${name} junk hauling and avoid surprises on the day of service.`,
       `Most minimum pickups start near $99, while garage cleanouts and multi-room jobs scale with volume. Visit our pricing page for common item ranges, or ask about bundling furniture and appliances into one efficient trip.`,
     ],
     faqs: [
       {
         question: `How quickly can you schedule junk removal in ${name}?`,
-        answer: `Scheduling depends on the route and the size of the job, but ${name} is part of our regular service area. Call or text 810-336-5865 with photos and your deadline so we can confirm the soonest practical pickup window.`,
+        answer: `Scheduling depends on the route and the size of the job, but ${name} is part of our regular service area. Call or text 810-242-0429 with photos and your deadline so we can confirm the soonest practical pickup window.`,
       },
       {
         question: `Do I need to move everything to the curb in ${name}?`,
@@ -135,9 +135,9 @@ export const CITIES: City[] = [
     county: "St. Clair County",
     eyebrow: "Blue Water Area Headquarters",
     metaDescription:
-      "Junk Removal Port Huron MI by veteran-owned Junk Command. Fast furniture, appliance and cleanout hauling. Call 810-336-5865 today.",
+      "Junk Removal Port Huron MI by veteran-owned Junk Command. Fast furniture, appliance and cleanout hauling. Call 810-242-0429 today.",
     intro:
-      "Junk Command is based in Port Huron, so our crew already knows the alleys, bridges, basements, rentals, and lakefront streets that make cleanup here different. Call 810-336-5865 for veteran-owned hauling with clear pricing and careful service.",
+      "Junk Command is based in Port Huron, so our crew already knows the alleys, bridges, basements, rentals, and lakefront streets that make cleanup here different. Call 810-242-0429 for veteran-owned hauling with clear pricing and careful service.",
     profile:
       "Port Huron jobs may involve tight downtown parking near Military Street, older stairways off Pine Grove, lake-season clutter near Lakeside, student rentals around SC4, office spaces near McMorran, or waterfront homes close to the Black River and Blue Water Bridge. Winter weather, bridge traffic, and older housing stock all shape how we stage a truck and protect floors on a typical day.",
     routeDetails:
@@ -182,7 +182,7 @@ export const CITIES: City[] = [
     county: "St. Clair County",
     eyebrow: "Lakeshore Township Hauling",
     metaDescription:
-      "Junk Removal Fort Gratiot MI for lakeshore homes, stores and cleanouts. Veteran-owned Junk Command. Call 810-336-5865.",
+      "Junk Removal Fort Gratiot MI for lakeshore homes, stores and cleanouts. Veteran-owned Junk Command. Call 810-242-0429.",
     intro:
       "Fort Gratiot homeowners and businesses call Junk Command for careful haul-away along the Lake Huron shoreline, 24th Avenue retail corridor, and quiet township streets. We bring veteran-owned service, upfront pricing, and the truck capacity to finish cleanouts without hassle.",
     profile:
@@ -229,7 +229,7 @@ export const CITIES: City[] = [
     county: "St. Clair County",
     eyebrow: "Acreage, Outbuilding, and Subdivision Cleanouts",
     metaDescription:
-      "Junk Removal Kimball Township MI for homes, barns, garages and shops. Veteran-owned hauling. Call Junk Command 810-336-5865.",
+      "Junk Removal Kimball Township MI for homes, barns, garages and shops. Veteran-owned hauling. Call Junk Command 810-242-0429.",
     intro:
       "Kimball Township cleanouts often involve long driveways, pole barns, basements, sheds, and mixed rural loads. Junk Command brings a veteran-owned crew, clear pricing, and practical hauling experience for homes and properties along the I-69 corridor.",
     profile:
@@ -276,7 +276,7 @@ export const CITIES: City[] = [
     county: "St. Clair County",
     eyebrow: "St. Clair River Neighbor Service",
     metaDescription:
-      "Junk Removal Marysville MI with veteran-owned hauling for furniture, appliances and cleanouts. Call Junk Command at 810-336-5865.",
+      "Junk Removal Marysville MI with veteran-owned hauling for furniture, appliances and cleanouts. Call Junk Command at 810-242-0429.",
     intro:
       "Marysville homes, riverfront properties, rentals, and businesses rely on Junk Command for clean, careful hauling minutes from our Port Huron base. We remove bulky items, clear packed spaces, and make scheduling simple with upfront pricing.",
     profile:
@@ -323,7 +323,7 @@ export const CITIES: City[] = [
     county: "St. Clair County",
     eyebrow: "Riverfront City Cleanout Service",
     metaDescription:
-      "Junk Removal St. Clair MI for riverfront homes, estates, appliances and furniture. Veteran-owned. Call Junk Command 810-336-5865.",
+      "Junk Removal St. Clair MI for riverfront homes, estates, appliances and furniture. Veteran-owned. Call Junk Command 810-242-0429.",
     intro:
       "From riverfront homes near the boardwalk to neighborhoods off Range Road, Junk Command provides St. Clair with professional junk removal, furniture hauling, appliance pickup, and cleanout support backed by veteran-owned discipline.",
     profile:
@@ -370,7 +370,7 @@ export const CITIES: City[] = [
     county: "St. Clair County",
     eyebrow: "Historic River Town Hauling",
     metaDescription:
-      "Junk Removal Marine City MI for homes, cottages, shops and riverfront cleanouts. Call veteran-owned Junk Command 810-336-5865.",
+      "Junk Removal Marine City MI for homes, cottages, shops and riverfront cleanouts. Call veteran-owned Junk Command 810-242-0429.",
     intro:
       "Marine City properties deserve junk removal that respects older homes, riverfront streets, busy downtown blocks, and tight access. Junk Command hauls furniture, appliances, trash, and cleanout debris with clear pricing and veteran-owned care.",
     profile:
@@ -417,7 +417,7 @@ export const CITIES: City[] = [
     county: "St. Clair County",
     eyebrow: "Pickerel, Channels, and Riverfront Hauling",
     metaDescription:
-      "Junk Removal Algonac MI for waterfront homes, cottages, furniture and appliances. Veteran-owned. Call 810-336-5865.",
+      "Junk Removal Algonac MI for waterfront homes, cottages, furniture and appliances. Veteran-owned. Call 810-242-0429.",
     intro:
       "Algonac junk removal calls often involve water access, cottages, garages, boat-season clutter, and heavy items tucked away for years. Junk Command brings full-service hauling to homes and businesses throughout the lower St. Clair River area.",
     profile:
@@ -464,7 +464,7 @@ export const CITIES: City[] = [
     county: "St. Clair County",
     eyebrow: "Western St. Clair County Hauling",
     metaDescription:
-      "Junk Removal Yale MI for village homes, farms, garages and estates. Veteran-owned Junk Command. Call 810-336-5865.",
+      "Junk Removal Yale MI for village homes, farms, garages and estates. Veteran-owned Junk Command. Call 810-242-0429.",
     intro:
       "Yale cleanouts can mean a village basement, a farm garage, a rental house, or an estate with years of stored items. Junk Command brings reliable Port Huron-based hauling west with upfront pricing and respectful service.",
     profile:
@@ -511,7 +511,7 @@ export const CITIES: City[] = [
     county: "St. Clair County",
     eyebrow: "I-69 Corridor Cleanout Service",
     metaDescription:
-      "Junk Removal Capac MI for homes, farms, estates and business cleanouts. Veteran-owned hauling. Call 810-336-5865.",
+      "Junk Removal Capac MI for homes, farms, estates and business cleanouts. Veteran-owned hauling. Call 810-242-0429.",
     intro:
       "Capac residents and businesses call Junk Command for reliable hauling along the I-69 corridor. We remove furniture, appliances, trash, garage clutter, estate contents, and light debris with clear quotes and veteran-owned professionalism.",
     profile:
@@ -558,7 +558,7 @@ export const CITIES: City[] = [
     county: "Sanilac County",
     eyebrow: "Sanilac County Blue Water Route",
     metaDescription:
-      "Junk Removal Croswell MI for village homes, farms, cottages and cleanouts. Veteran-owned Junk Command. Call 810-336-5865.",
+      "Junk Removal Croswell MI for village homes, farms, cottages and cleanouts. Veteran-owned Junk Command. Call 810-242-0429.",
     intro:
       "Croswell homes, farms, and village properties use Junk Command for dependable hauling north of our Port Huron base. We clear furniture, appliances, garage clutter, estate contents, and mixed debris with careful full-service removal.",
     profile:
@@ -605,7 +605,7 @@ export const CITIES: City[] = [
     county: "Sanilac County",
     eyebrow: "Lake Huron Cottage and Village Service",
     metaDescription:
-      "Junk Removal Lexington MI for cottages, rentals, lake homes and cleanouts. Veteran-owned hauling. Call Junk Command 810-336-5865.",
+      "Junk Removal Lexington MI for cottages, rentals, lake homes and cleanouts. Veteran-owned hauling. Call Junk Command 810-242-0429.",
     intro:
       "Lexington cleanouts often happen on tight timelines before guests, listings, weekends, or seasonal turnover. Junk Command hauls furniture, appliances, mattresses, garage clutter, and cottage junk with organized scheduling and veteran-owned care.",
     profile:
@@ -652,7 +652,7 @@ export const CITIES: City[] = [
     county: "Macomb County",
     eyebrow: "Macomb and St. Clair Border Hauling",
     metaDescription:
-      "Junk Removal Richmond MI for homes, estates, farms and businesses. Veteran-owned Junk Command. Call 810-336-5865 today.",
+      "Junk Removal Richmond MI for homes, estates, farms and businesses. Veteran-owned Junk Command. Call 810-242-0429 today.",
     intro:
       "Richmond sits where Macomb County, St. Clair County, farms, subdivisions, and Main Street businesses meet. Junk Command provides full-service hauling for furniture, appliances, estate cleanouts, garages, and trash removal with upfront pricing.",
     profile:
@@ -699,7 +699,7 @@ export const CITIES: City[] = [
     county: "Macomb County",
     eyebrow: "Anchor Bay and Subdivision Hauling",
     metaDescription:
-      "Junk Removal Chesterfield MI for homes, condos, offices, furniture and appliances. Veteran-owned. Call 810-336-5865.",
+      "Junk Removal Chesterfield MI for homes, condos, offices, furniture and appliances. Veteran-owned. Call 810-242-0429.",
     intro:
       "Chesterfield residents call Junk Command for clean, professional hauling from subdivisions, condos, lake-area homes, offices, and garages. We remove bulky furniture, appliances, trash, and cleanout debris with veteran-owned attention to detail.",
     profile:
@@ -746,7 +746,7 @@ export const CITIES: City[] = [
     county: "Macomb County",
     eyebrow: "Anchor Bay Waterfront Cleanout Service",
     metaDescription:
-      "Junk Removal New Baltimore MI for lake homes, garages, furniture and appliances. Veteran-owned. Call Junk Command 810-336-5865.",
+      "Junk Removal New Baltimore MI for lake homes, garages, furniture and appliances. Veteran-owned. Call Junk Command 810-242-0429.",
     intro:
       "New Baltimore homes and businesses count on Junk Command for clean haul-away near Anchor Bay, downtown, and surrounding neighborhoods. We remove bulky furniture, appliances, trash, and cleanout debris with upfront pricing and careful service.",
     profile:
@@ -793,7 +793,7 @@ export const CITIES: City[] = [
     county: "Macomb / St. Clair County",
     eyebrow: "Macomb and St. Clair Border Town Service",
     metaDescription:
-      "Junk Removal Memphis MI for border-town homes, farms, garages and estates. Veteran-owned. Call Junk Command at 810-336-5865.",
+      "Junk Removal Memphis MI for border-town homes, farms, garages and estates. Veteran-owned. Call Junk Command at 810-242-0429.",
     intro:
       "Memphis sits right on the Macomb and St. Clair County line, making it a natural Junk Command service area. We haul furniture, appliances, trash, estate contents, garage clutter, and rural debris with clear pricing.",
     profile:
@@ -841,7 +841,7 @@ export const CITIES: City[] = [
     county: "St. Clair County",
     eyebrow: "Anchor Bay Area Hauling",
     metaDescription:
-      "Junk Removal Anchorville MI for lake-area homes, garages, furniture and appliances. Veteran-owned. Call 810-336-5865.",
+      "Junk Removal Anchorville MI for lake-area homes, garages, furniture and appliances. Veteran-owned. Call 810-242-0429.",
     intro:
       "Anchorville residents call Junk Command for clean hauling near Anchor Bay, M-29, and Ira Township neighborhoods. We remove furniture, appliances, trash, garage clutter, and seasonal items with upfront pricing and careful service.",
     profile:
@@ -888,7 +888,7 @@ export const CITIES: City[] = [
     county: "St. Clair County",
     eyebrow: "Rural Western County Cleanouts",
     metaDescription:
-      "Junk Removal Emmett MI for rural homes, garages, barns and estates. Veteran-owned Junk Command. Call 810-336-5865.",
+      "Junk Removal Emmett MI for rural homes, garages, barns and estates. Veteran-owned Junk Command. Call 810-242-0429.",
     intro:
       "Emmett cleanouts often involve country homes, barns, garages, sheds, and estate properties. Junk Command brings full-service hauling west with clear quotes, respectful crews, and the truck space to handle rural clutter.",
     profile:
@@ -935,7 +935,7 @@ export const CITIES: City[] = [
     county: "St. Clair County",
     eyebrow: "North Township and Lakeshore Corridor Hauling",
     metaDescription:
-      "Junk Removal Clyde Township MI for homes, garages, barns and lake-area cleanouts. Veteran-owned. Call 810-336-5865.",
+      "Junk Removal Clyde Township MI for homes, garages, barns and lake-area cleanouts. Veteran-owned. Call 810-242-0429.",
     intro:
       "Clyde Township residents call Junk Command for full-service hauling north of Port Huron and Fort Gratiot. We remove furniture, appliances, garage clutter, barn contents, and trash with clear pricing and careful local crews.",
     profile:
@@ -982,7 +982,7 @@ export const CITIES: City[] = [
     county: "Macomb County",
     eyebrow: "I-94 and County Line Cleanout Service",
     metaDescription:
-      "Junk Removal Lenox Township MI for homes, farms, garages and estates. Veteran-owned Junk Command. Call 810-336-5865.",
+      "Junk Removal Lenox Township MI for homes, farms, garages and estates. Veteran-owned Junk Command. Call 810-242-0429.",
     intro:
       "Lenox Township homeowners and property managers call Junk Command for clean haul-away near Richmond, New Haven, and the I-94 corridor. We remove furniture, appliances, garage clutter, estate contents, and trash with upfront pricing.",
     profile:
@@ -1029,7 +1029,7 @@ export const CITIES: City[] = [
     county: "Lapeer County",
     eyebrow: "M-53 Corridor and Western Route Hauling",
     metaDescription:
-      "Junk Removal Imlay City MI for homes, businesses, garages and estates. Veteran-owned Junk Command. Call 810-336-5865.",
+      "Junk Removal Imlay City MI for homes, businesses, garages and estates. Veteran-owned Junk Command. Call 810-242-0429.",
     intro:
       "Imlay City residents and businesses call Junk Command for dependable hauling along the M-53 corridor. We remove furniture, appliances, garage clutter, estate contents, and trash with clear pricing from a veteran-owned Blue Water Area crew.",
     profile:
@@ -1076,7 +1076,7 @@ export const CITIES: City[] = [
     county: "Macomb County",
     eyebrow: "Village and North Macomb Cleanouts",
     metaDescription:
-      "Junk Removal Romeo MI for village homes, estates, garages and businesses. Veteran-owned Junk Command. Call 810-336-5865.",
+      "Junk Removal Romeo MI for village homes, estates, garages and businesses. Veteran-owned Junk Command. Call 810-242-0429.",
     intro:
       "Romeo homeowners and businesses call Junk Command for clean, professional junk hauling in and around the historic village. We remove furniture, appliances, garage clutter, estate contents, and trash with upfront pricing.",
     profile:
@@ -1123,7 +1123,7 @@ export const CITIES: City[] = [
     county: "Macomb County",
     eyebrow: "Village and Rural North Macomb Hauling",
     metaDescription:
-      "Junk Removal Armada MI for village homes, farms, garages and estates. Veteran-owned Junk Command. Call 810-336-5865.",
+      "Junk Removal Armada MI for village homes, farms, garages and estates. Veteran-owned Junk Command. Call 810-242-0429.",
     intro:
       "Armada residents call Junk Command for dependable junk removal around the village and surrounding rural roads. We haul furniture, appliances, garage clutter, barn contents, and estate debris with clear pricing.",
     profile:
@@ -1170,7 +1170,7 @@ export const CITIES: City[] = [
     county: "St. Clair County",
     eyebrow: "Countywide Blue Water Area Service",
     metaDescription:
-      "Junk Removal St. Clair County MI from Port Huron to Algonac and Yale. Veteran-owned Junk Command. Call 810-336-5865.",
+      "Junk Removal St. Clair County MI from Port Huron to Algonac and Yale. Veteran-owned Junk Command. Call 810-242-0429.",
     intro:
       "Junk Command is based in Port Huron and serves St. Clair County from the Lake Huron shoreline to western villages and lower river towns. We haul furniture, appliances, trash, cleanouts, and bulky debris countywide.",
     profile:
@@ -1218,7 +1218,7 @@ export const CITIES: City[] = [
     county: "Macomb County",
     eyebrow: "Northeastern Macomb County Service",
     metaDescription:
-      "Junk Removal Macomb County MI for Chesterfield, New Baltimore, Richmond and border towns. Call Junk Command 810-336-5865.",
+      "Junk Removal Macomb County MI for Chesterfield, New Baltimore, Richmond and border towns. Call Junk Command 810-242-0429.",
     intro:
       "Junk Command serves northeastern Macomb County communities that connect naturally to our Blue Water routes, including Chesterfield, New Baltimore, Richmond, Romeo, Armada, Lenox Township, Anchorville, and Memphis. We haul furniture, appliances, trash, and cleanout debris.",
     profile:

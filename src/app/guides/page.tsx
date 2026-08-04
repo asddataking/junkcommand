@@ -85,7 +85,7 @@ export default function GuidesIndexPage() {
 
       <CtaBanner
         title="NEED A QUOTE INSTEAD?"
-        description="Text photos to 810-336-5865 or book online — Junk Command will handle the rest."
+        description="Text photos to 810-242-0429 or book online — Junk Command will handle the rest."
       />
     </SiteShell>
   );

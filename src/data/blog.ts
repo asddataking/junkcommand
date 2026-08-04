@@ -49,7 +49,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: "how-much-does-junk-removal-cost-in-michigan",
     title: "How Much Does Junk Removal Cost in Michigan?",
     metaTitle: "Junk Removal Cost in Michigan (2026 Guide) | Junk Command",
-    metaDescription: "Learn what junk removal costs in Michigan, how volume pricing works in Port Huron & St. Clair County, and how to get an accurate quote from Junk Command at 810-336-5865.",
+    metaDescription: "Learn what junk removal costs in Michigan, how volume pricing works in Port Huron & St. Clair County, and how to get an accurate quote from Junk Command at 810-242-0429.",
     category: "Junk Removal",
     excerpt: "A practical breakdown of Michigan junk removal pricing — from single-item pickups to full estate cleanouts — plus how Junk Command quotes jobs in Port Huron and St. Clair County.",
     image: "/images/blog/junk-removal-cost-michigan.webp",
@@ -66,7 +66,7 @@ export const BLOG_POSTS: BlogPost[] = [
       paragraphs: [
         "If you have searched for junk removal cost in Michigan, you have probably seen wide ranges and vague answers. That is because pricing is almost never a flat statewide rate. A single recliner on a Port Huron porch is a different job than a full garage cleanout in Marysville or an estate clear-out in Fort Gratiot. Still, homeowners deserve a clear framework before they book. This guide walks through how professional junk removal is typically priced across Southeast Michigan, what drives the number up or down, and how Junk Command approaches quotes for St. Clair County and nearby communities.",
         "Most reputable Michigan junk removal companies price by volume — how much space your items take in the truck — rather than by the hour. Hourly pricing can feel unpredictable when stairs, weather, or parking make a job take longer. Volume pricing ties your cost to the load size, which is easier to estimate from photos and easier to compare between companies. At Junk Command, our minimum pickup starts near $99 for small loads, and larger jobs are quoted as a share of truck space before we start loading. You always know the number first.",
-        "Local market factors matter too. Disposal fees at transfer stations, fuel costs, and labor rates in the Blue Water Area are not identical to Metro Detroit or Grand Rapids. Port Huron and St. Clair County jobs often benefit from shorter travel times when you hire a local crew. That is one reason a locally based company can deliver competitive pricing without cutting corners on insurance, recycling, or respectful service. When you call 810-336-5865, you are talking with a team that lives and works here — not a call center quoting a national franchise average.",
+        "Local market factors matter too. Disposal fees at transfer stations, fuel costs, and labor rates in the Blue Water Area are not identical to Metro Detroit or Grand Rapids. Port Huron and St. Clair County jobs often benefit from shorter travel times when you hire a local crew. That is one reason a locally based company can deliver competitive pricing without cutting corners on insurance, recycling, or respectful service. When you call 810-242-0429, you are talking with a team that lives and works here — not a call center quoting a national franchise average.",
         "Throughout this article we will break down common price ranges, explain what belongs in a fair quote, cover items that may cost extra or cannot be taken, and share practical ways to keep your bill under control. Whether you are clearing a basement before a move, removing a broken hot tub, or helping a family with an estate cleanout, the same principles apply: transparent volume pricing, honest communication, and a crew that leaves the property broom-clean.",
       ],
     },
@@ -75,7 +75,7 @@ export const BLOG_POSTS: BlogPost[] = [
       heading: "How Volume Pricing Works",
       paragraphs: [
         "Volume pricing means we estimate how much of the truck your pile will occupy — a quarter load, half load, three-quarter load, or full truck — and quote that amount before work begins. A few bags of yard debris and a small dresser might fit a minimum load. A packed two-car garage with old lumber, broken furniture, and appliances may fill most of the truck. The quote is about space and labor to load safely, not how long we stand around waiting.",
-        "Photos make volume estimates far more accurate. When Port Huron or Kimball Township customers text pictures to 810-336-5865, we can usually give a solid range quickly. If access is tight — third-floor walk-up, long driveway carry, or items buried behind cars — we ask about that up front so the quote reflects real conditions. Surprises on arrival should be rare when both sides communicate clearly.",
+        "Photos make volume estimates far more accurate. When Port Huron or Kimball Township customers text pictures to 810-242-0429, we can usually give a solid range quickly. If access is tight — third-floor walk-up, long driveway carry, or items buried behind cars — we ask about that up front so the quote reflects real conditions. Surprises on arrival should be rare when both sides communicate clearly.",
         "Some homeowners worry that volume pricing encourages companies to overestimate. The safeguard is simple: a reputable crew shows you the price before loading and sticks to it unless the scope changes. If you add a second pile from the shed after we arrive, the volume grows and the price can be adjusted with your approval. If the load is smaller than expected, you should only pay for what you use. Junk Command is built around that honesty — veteran-owned standards mean we would rather under-promise and over-deliver than pad a quote.",
         "Compare that to dumpster rental. A dumpster can be cost-effective for long DIY projects, but you still do all the lifting, you risk overweight fees, and the container sits on your driveway for days. Full-service junk removal includes labor, loading, haul-away, and responsible disposal. For many St. Clair County households — especially seniors, busy families, and people dealing with time-sensitive moves — the all-in service is worth more than the sticker difference.",
       ],
@@ -106,7 +106,7 @@ export const BLOG_POSTS: BlogPost[] = [
       paragraphs: [
         "Renting a truck and making dump runs yourself can look cheaper on paper until you add trailer rental, fuel, dump fees, time off work, and the risk of injury moving heavy furniture. Many Michigan transfer stations have specific hours, load-securement rules, and material restrictions. One overloaded trip can erase the savings. For a single couch, DIY might still win. For a packed garage, the math often flips.",
         "There is also the neighbor factor. A dumpster sitting for a week or a pickup truck stacked above the rails can draw complaints or HOA notes in some neighborhoods. Full-service removal typically finishes in a single visit window and leaves the property looking cared for. That matters when you are listing a house, preparing a rental turnover, or helping an elderly relative who does not want a week of chaos.",
-        "Junk Command's model is built for homeowners who want the problem gone without managing logistics. We arrive, load, sweep up debris from our work area, and haul to appropriate facilities. Donation and recycling happen when items are in usable condition. You are not responsible for finding a charity pickup window that aligns with your Saturday. Call 810-336-5865 if you want a straight comparison for your specific pile.",
+        "Junk Command's model is built for homeowners who want the problem gone without managing logistics. We arrive, load, sweep up debris from our work area, and haul to appropriate facilities. Donation and recycling happen when items are in usable condition. You are not responsible for finding a charity pickup window that aligns with your Saturday. Call 810-242-0429 if you want a straight comparison for your specific pile.",
         "Businesses and landlords in St. Clair County also choose professional removal for liability reasons. Employees should not be lifting abandoned sofas down stairwells. Tenants leave mattresses and broken appliances; property managers need them gone before the next showing. An insured crew with the right equipment is part of running the property professionally — not a luxury add-on.",
       ],
     },
@@ -117,7 +117,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "Junk Command is based in Port Huron, which keeps travel time down for Blue Water Area jobs. Shorter routing supports competitive pricing and more flexible scheduling compared with companies driving in from farther south. We regularly serve Marysville, Fort Gratiot, Kimball Township, St. Clair, Marine City, Algonac, and surrounding communities, plus parts of Macomb County such as Richmond, New Baltimore, and Chesterfield.",
         "Local knowledge also reduces surprises. We know which neighborhoods have tight alley access, where winter parking rules complicate curb staging, and how lake-effect weather can change a haul day. That experience shows up in scheduling honesty — we would rather give you a realistic arrival window than overpromise. When you work with a local, veteran-owned team, the quote conversation includes context, not just a spreadsheet average.",
         "If you are comparing multiple Michigan junk removal quotes, align the scope. Ask each company what is included: labor, stairs, disposal, mattress fees if any, and whether the price is locked before loading. Ask what happens if the pile is smaller than estimated. Ask about insurance. The lowest number is not always the best value if it excludes half the work or arrives with an inexperienced crew.",
-        "Ready for a real number on your job? Text photos to 810-336-5865 or book online. Include a note about stairs, gate codes, and anything you want left behind. We will reply with pricing and availability so you can take command of the clutter without guessing what the bill will be.",
+        "Ready for a real number on your job? Text photos to 810-242-0429 or book online. Include a note about stairs, gate codes, and anything you want left behind. We will reply with pricing and availability so you can take command of the clutter without guessing what the bill will be.",
       ],
     },
     {
@@ -147,7 +147,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "Once you approve a quote, we confirm a time window and any access instructions. On arrival, the crew walks the pile with you if you are home, confirms the agreed scope, and begins loading. If you will not be present, we can often work from photos and gate codes — common for rental turnovers and out-of-area estate executors.",
         "Protecting the property is part of the job. We watch door frames, floors, and landscaping. Heavy items are lifted with enough people, not dragged carelessly. After loading, we do a basic sweep of the work area so you are not left with screws, plastic shards, or insulation bits from the haul itself.",
         "Payment and paperwork are straightforward. You should receive confirmation of what was removed at the agreed price. If you need documentation for an estate, landlord file, or insurance claim, ask when you book so we can accommodate. Professional process is part of what you pay for — not just truck space.",
-        "If your Michigan junk removal project is bigger than a single visit, we will say so early. Multi-day estate cleanouts and large construction debris jobs are planned in phases. You will know the plan, the pricing approach, and who to call — 810-336-5865 — if anything changes. That is how Junk Command keeps cost conversations clear from first photo to final sweep.",
+        "If your Michigan junk removal project is bigger than a single visit, we will say so early. Multi-day estate cleanouts and large construction debris jobs are planned in phases. You will know the plan, the pricing approach, and who to call — 810-242-0429 — if anything changes. That is how Junk Command keeps cost conversations clear from first photo to final sweep.",
       ],
     },
     {
@@ -172,7 +172,7 @@ export const BLOG_POSTS: BlogPost[] = [
     },
     {
       question: "Does faster scheduling cost more?",
-      answer: "Pricing is based on your load, not a rush surcharge. Call or text 810-336-5865 with photos and we will tell you the price and the soonest available window.",
+      answer: "Pricing is based on your load, not a rush surcharge. Call or text 810-242-0429 with photos and we will tell you the price and the soonest available window.",
     },
     {
       question: "What affects the price of a junk removal job?",
@@ -189,7 +189,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: "how-to-clean-out-a-garage",
     title: "How to Clean Out a Garage: A Practical Step-by-Step Guide",
     metaTitle: "How to Clean Out a Garage (Michigan Guide) | Junk Command",
-    metaDescription: "Step-by-step garage cleanout tips for Port Huron & St. Clair County — sorting, safety, donations, heavy items, and when to call Junk Command at 810-336-5865.",
+    metaDescription: "Step-by-step garage cleanout tips for Port Huron & St. Clair County — sorting, safety, donations, heavy items, and when to call Junk Command at 810-242-0429.",
     category: "Decluttering",
     excerpt: "A realistic garage cleanout plan for Michigan homeowners — how to sort, stay safe, donate what still has life, and know when professional junk removal is the smarter move.",
     image: "/images/blog/how-to-clean-out-a-garage.webp",
@@ -208,7 +208,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "Garages in the Blue Water Area take a beating. Lake-effect humidity, freeze-thaw cycles, road salt tracked in all winter, and temperature swings warp cardboard, rust metal, and turn forgotten cardboard boxes into soft, moldy piles. The longer clutter sits, the heavier and nastier it becomes. What started as a someday project turns into wet drywall scraps, seized lawn equipment, and furniture nobody wants. Cleaning out sooner protects both the building and your options for donation or recycling before weather ruins salvageable pieces.",
         "There is also an emotional side. Garages often hold leftovers from kids who moved out, parents who passed away, or hobbies that faded. Families in Marysville, Fort Gratiot, and Kimball Township tell us the hardest part is not the lifting — it is deciding. A structured cleanout plan lowers that stress. You do not have to keep everything to honor a memory, and you do not have to toss everything in one frantic Saturday. Sort with a system, set a finish line, and bring in help when the pile outgrows your energy or your available helpers.",
         "Junk Command sees garage cleanouts every week across St. Clair County. Some customers want every shelf emptied before a move. Others need a path wide enough to park again. Others are preparing a rental turnover or helping an aging parent stay safe at home. Whatever your reason, the same principles apply: safety first, honest sorting, responsible disposal, and a clear plan for heavy or hazardous items. This guide walks you through that process step by step so your garage becomes useful again — not a permanent catch-all for the whole household.",
-        "If you already know the job is bigger than a weekend, you do not have to white-knuckle it alone. Text photos to 810-336-5865 and Junk Command can quote volume pricing for Port Huron-area garage haul-aways. Many homeowners do the sentimental sorting themselves, then hire us for the dead weight. That hybrid approach keeps costs predictable and the emotional work in your hands while the heavy lifting stays with an insured local crew that does this work daily.",
+        "If you already know the job is bigger than a weekend, you do not have to white-knuckle it alone. Text photos to 810-242-0429 and Junk Command can quote volume pricing for Port Huron-area garage haul-aways. Many homeowners do the sentimental sorting themselves, then hire us for the dead weight. That hybrid approach keeps costs predictable and the emotional work in your hands while the heavy lifting stays with an insured local crew that does this work daily.",
         "Think about what a functional garage unlocks in daily life. Parking inside during a Lake Huron ice storm protects your vehicle and your mornings. A clear floor reduces falls for kids and grandparents. Finding the right tool in minutes instead of an hour changes weekend projects from frustrating to doable. Those quality-of-life gains are why a garage cleanout ranks among the highest-satisfaction home projects we hear about from Junk Command customers after the truck leaves.",
       ],
     },
@@ -232,7 +232,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "Lift with your legs, keep loads close to your body, and get a second person for anything past a comfortable carry. Water heaters, cast-iron pieces, workbenches, and old riding mowers are not hero projects. Sliding heavy items onto a dolly beats dragging them across concrete. If something feels sketchy, it is. Port Huron homeowners regularly underestimate how much denser wet cardboard and frozen-in-place junk become after years in an unheated space where meltwater and road salt have done quiet damage.",
         "Watch for biological and chemical hazards. Mouse droppings, raccoon damage, moldy drywall, and forgotten pesticide jugs show up often in St. Clair County garages. Do not dry-sweep heavy droppings; dampen and dispose carefully using local guidance. Set chemical containers upright in a lined bin away from kids and pets. Never mix unknown liquids. If you find asbestos-like pipe wrap, old vermiculite, or mystery insulation, stop and get professional advice before disturbing it further.",
         "Electrical and fuel hazards deserve the same respect. Unplug tools before moving them. Drain or stabilize gasoline equipment outdoors with proper containers. Disconnect batteries from unused equipment when you can do so safely. Extension cords buried under piles can hide heat damage. A quick visual scan before you yank on a cord prevents shocks and short circuits. Safety is slower on hour one and much faster than recovering from an avoidable injury that sidelines the whole project.",
-        "If the garage contains more hazard than household clutter, pause the DIY plan. Junk Command cannot take every restricted material, but we can help you separate what is hauling-eligible from what needs a special drop-off. Call 810-336-5865, describe what you are seeing, and we will be honest about next steps. A clean garage is not worth a chemical exposure or a destroyed back, and local crews would rather give straight advice than rush an unsafe load.",
+        "If the garage contains more hazard than household clutter, pause the DIY plan. Junk Command cannot take every restricted material, but we can help you separate what is hauling-eligible from what needs a special drop-off. Call 810-242-0429, describe what you are seeing, and we will be honest about next steps. A clean garage is not worth a chemical exposure or a destroyed back, and local crews would rather give straight advice than rush an unsafe load.",
         "Keep kids and pets out of the active work zone. Sharp edges, falling boxes, and open chemicals make garages temporarily dangerous even when the end goal is a safer home. Assign a closed door or baby gate if needed. Take phone photos of serial numbers or manuals before discarding equipment you might later need to reference. Those small precautions keep the cleanout controlled instead of chaotic.",
       ],
     },
@@ -256,7 +256,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "Appliances may need special handling. Refrigerant-containing units must be processed correctly. Do not tip freon appliances casually or abandon them on the curb without a plan. If your Port Huron garage cleanout includes a fridge that died years ago, put it on the list when you request a junk removal quote. Junk Command regularly hauls appliances as part of garage and basement jobs and can explain what is included so you are not surprised by scope on arrival.",
         "Lawn and garden equipment adds weight and fluids. Riding mowers, snowblowers, and generators should be drained or prepared according to safe practice before transport when you are DIY hauling. If we are removing them, tell us about fuel and batteries up front. Rusted trailers, tire stacks, and bags of concrete that turned into sculptures also change the labor profile. Photos with a sense of scale — a door or broom in the frame — help us staff the right crew for St. Clair County jobs.",
         "Built-in storage can be deceptive. Pegboard walls, overhead racks, and loft storage often hold more volume than the floor pile. Budget time to clear high shelves safely with a stable ladder and a partner. Do not stand on plastic totes. Overhead items fall hard. In older St. Clair County garages, loft boards may not be structural flooring — test before you commit your full weight to a questionable platform above the work bay.",
-        "When heavy items outnumber light clutter, professional removal is usually the value play. Two people with the right straps and experience will empty a brutal garage faster than a homeowner wrestling a freezer alone. Call 810-336-5865, send a walkthrough video, and ask for a volume quote that includes the monsters in the corner. Knowing the number early prevents the classic mistake of cleaning around the heavy stuff and then stalling for months while it silently reclaims the space.",
+        "When heavy items outnumber light clutter, professional removal is usually the value play. Two people with the right straps and experience will empty a brutal garage faster than a homeowner wrestling a freezer alone. Call 810-242-0429, send a walkthrough video, and ask for a volume quote that includes the monsters in the corner. Knowing the number early prevents the classic mistake of cleaning around the heavy stuff and then stalling for months while it silently reclaims the space.",
         "Disassemble what you can if you are comfortable with basic tools. Remove table legs, take doors off hulking cabinets, and collapse shelving units. Flat stacks fill a truck more efficiently than awkward shapes, which can reduce the volume tier you pay for. Just bag fasteners so they are not scattered across the driveway as a new hazard for kids, pets, or tires.",
       ],
     },
@@ -280,7 +280,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "Professional junk removal is built for volume and labor. Junk Command loads, hauls, and disposes in one coordinated visit for most residential garage jobs. You pay for truck space and service, not for your Saturday disappearing into a transfer station line. For seniors, busy parents, landlords, and anyone with stairs or long carries from a detached garage, that trade is often worth it. Veteran-owned standards mean we care about leaving the property respectful and broom-clean in the work area after the load is gone.",
         "A hybrid approach is popular in Port Huron and nearby towns. You sort Keep and Donate over a few evenings. You move sentimental bins inside. Then you call us for the residual junk mountain. That keeps your hands on the decisions and our backs on the brute force. It also produces cleaner quotes because the scope is obvious when we arrive and you are not paying us to excavate treasures you meant to keep.",
         "Compare apples to apples if you are shopping dumpsters versus full-service removal. A dumpster can work for long remodel projects where debris accumulates daily. For a one-time garage purge, a dumpster still leaves all lifting to you and sits on the driveway. HOA rules, permit needs, and overweight fees can complicate things. Full-service removal is usually cleaner for pure cleanout jobs where the goal is empty space by evening.",
-        "Still unsure? Send photos to 810-336-5865 and ask for a number. Getting a quote does not obligate you. It gives you a baseline against DIY math. Most homeowners can tell within one conversation whether the garage is a self-haul project or a Junk Command project. Clarity beats guessing while staring at a wall of totes that has defeated three previous weekends of good intentions.",
+        "Still unsure? Send photos to 810-242-0429 and ask for a number. Getting a quote does not obligate you. It gives you a baseline against DIY math. Most homeowners can tell within one conversation whether the garage is a self-haul project or a Junk Command project. Clarity beats guessing while staring at a wall of totes that has defeated three previous weekends of good intentions.",
         "Insurance and liability are quiet factors. Dragging a freezer down a slope or balancing a workbench on a borrowed trailer creates risk. An insured crew with the right equipment absorbs that operational risk as part of the service. Property managers and landlords in St. Clair County especially prefer that clarity when the garage belongs to a rental rather than their own weekend project list.",
       ],
     },
@@ -303,7 +303,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "A clean garage stays clean only with boundaries. Assign zones: sports, tools, seasonal, household overflow. If a category does not have a zone, it does not move in. Vertical storage beats floor piles. Clear totes with labels beat mystery cardboard. In Michigan, prefer plastic over cardboard for anything that might see moisture. Elevate storage slightly off concrete where damp is chronic near exterior walls or older slabs that wick water in spring.",
         "Create an inbox rule for incoming clutter. A single landing shelf for deal-with-this-week items beats scattering bags wherever they fall after a store run. Schedule a monthly fifteen-minute sweep: flatten recycling, return tools, and exile anything that landed just for now. These micro-habits are easier than another full cleanout next year and they protect the investment of time or Junk Command service you already spent.",
         "Seasonal transitions are danger moments. After Christmas, after a move, after a remodel, after someone inherits a relative's belongings — that is when garages relapse. If an inheritance wave is coming, use estate cleanout guidance and stage items indoors or in a temporary storage plan rather than letting the garage become an unplanned archive. Port Huron families do this with good intentions and then lose parking for two years while decisions wait.",
-        "Maintenance also means knowing when to let go again. Tools you replaced, sports gear the kids outgrew, and paint for colors you no longer have on the walls should not get lifetime tenure. Keep a donation box active. When it fills, leave within seven days. If heavy junk accumulates — broken furniture, dead appliances — do not wait for spring. A quick call to Junk Command at 810-336-5865 can remove a small pile before it becomes a wall that requires a full-truck visit.",
+        "Maintenance also means knowing when to let go again. Tools you replaced, sports gear the kids outgrew, and paint for colors you no longer have on the walls should not get lifetime tenure. Keep a donation box active. When it fills, leave within seven days. If heavy junk accumulates — broken furniture, dead appliances — do not wait for spring. A quick call to Junk Command at 810-242-0429 can remove a small pile before it becomes a wall that requires a full-truck visit.",
         "Finally, match the garage to your real life. If you need workshop space, stop storing guest-room overflow there. If you need parking, stop treating it like a cheap storage unit. The cleanest garages in St. Clair County are not empty showrooms — they are intentional. Your cleanout bought you clarity. Protect it with purpose, and revisit the rules each season when boats, snowblowers, and holiday bins rotate through the same limited square footage.",
         "Consider a simple visual standard: if you cannot walk a clear path to the water heater, electrical panel, and both doors, the garage is drifting. That one rule catches problems early. Take a quarterly phone photo of the space. Comparing images makes gradual clutter obvious before it becomes another multi-day project requiring a full sort system and another haul.",
       ],
@@ -313,10 +313,10 @@ export const BLOG_POSTS: BlogPost[] = [
       heading: "When to Call Junk Command for Your Garage Cleanout",
       paragraphs: [
         "Call for help when the pile is bigger than your vehicle capacity, when heavy items dominate, when deadlines are tight, or when the physical work is not safe for the people available. There is no prize for doing it the hard way. Homeowners across Port Huron, Marysville, St. Clair, Marine City, and the surrounding townships use Junk Command specifically because garage cleanouts are one of our most common jobs. We know how to load dense garage debris efficiently and leave the work area tidy for the next chapter of the space.",
-        "The booking process is simple. Text photos or a short video to 810-336-5865, tell us about stairs or long carries, and note anything that must stay. We quote by volume before we load. On job day we confirm the scope, remove the junk, and haul it for responsible disposal, with donation and recycling when items qualify. You get your floor back without juggling dump hours, trailer lights, or guessing whether the load is secured for Michigan roads.",
+        "The booking process is simple. Text photos or a short video to 810-242-0429, tell us about stairs or long carries, and note anything that must stay. We quote by volume before we load. On job day we confirm the scope, remove the junk, and haul it for responsible disposal, with donation and recycling when items qualify. You get your floor back without juggling dump hours, trailer lights, or guessing whether the load is secured for Michigan roads.",
         "Garage cleanouts often pair with other needs: basement corners, shed tear-outs, or prep for a move. Mention the full picture when you request a quote so we can plan truck space. If you are also tackling items you should not casually throw away, pair this guide with our donation-focused article on things people regret discarding. Smart sorting plus professional hauling is the combination that finishes the job instead of leaving half-done piles in the driveway.",
         "If you are cleaning a garage as part of an estate or a foreclosure timeline, say that up front. Those projects benefit from clearer communication, sometimes key coordination, and sensitivity. Junk Command is a local, veteran-owned team — we treat homes like homes, not like anonymous debris stops. That matters when the garage holds a family's last unfinished chapters and relatives are making decisions under stress and time pressure.",
-        "Ready to take command of the clutter? Start the sort, protect your Keep pile, and call or text 810-336-5865 when the junk is ready to leave. Whether you need a minimum pickup or a packed two-car purge, we will give you a straight price and a clear arrival window. Your garage can be a garage again — and you do not have to destroy a weekend or risk injury to get there when a Port Huron crew can handle the heavy finish.",
+        "Ready to take command of the clutter? Start the sort, protect your Keep pile, and call or text 810-242-0429 when the junk is ready to leave. Whether you need a minimum pickup or a packed two-car purge, we will give you a straight price and a clear arrival window. Your garage can be a garage again — and you do not have to destroy a weekend or risk injury to get there when a Port Huron crew can handle the heavy finish.",
         "Customers often ask whether they should wait until everything is perfectly sorted. Perfect is the enemy of done. If Keep items are marked and hazardous materials are set aside, we can usually work. The rest is volume and labor. Reach out early, get the quote, and put a date on the calendar. That single scheduled commitment is what turns a garage cleanout from a vague goal into finished concrete you can finally park on again.",
       ],
     }
@@ -324,7 +324,7 @@ export const BLOG_POSTS: BlogPost[] = [
     faqs: [
     {
       question: "How long does a typical garage cleanout take?",
-      answer: "A lightly cluttered one-car garage can take a focused weekend. A packed two-car garage with years of storage often takes several days of DIY work — or a few hours with Junk Command. Call 810-336-5865 with photos for a realistic timeline.",
+      answer: "A lightly cluttered one-car garage can take a focused weekend. A packed two-car garage with years of storage often takes several days of DIY work — or a few hours with Junk Command. Call 810-242-0429 with photos for a realistic timeline.",
     },
     {
       question: "What should I do with hazardous materials in the garage?",
@@ -340,7 +340,7 @@ export const BLOG_POSTS: BlogPost[] = [
     },
     {
       question: "When should I schedule garage junk removal in Michigan?",
-      answer: "Spring and early fall are popular, but winter jobs are common too. Book before peak weekends if you can. Text photos to 810-336-5865 and we will confirm the soonest available window.",
+      answer: "Spring and early fall are popular, but winter jobs are common too. Book before peak weekends if you can. Text photos to 810-242-0429 and we will confirm the soonest available window.",
     }
     ],
     relatedSlugs: ["how-much-does-junk-removal-cost-in-michigan","10-things-you-should-never-throw-away","estate-cleanout-checklist"],
@@ -349,7 +349,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: "10-things-you-should-never-throw-away",
     title: "10 Things You Should Never Throw Away (Donate or Recycle Instead)",
     metaTitle: "10 Things You Should Never Throw Away | Junk Command",
-    metaDescription: "Before you trash it, pause. Ten categories Port Huron & St. Clair County residents often regret discarding — plus donation and recycling tips. Call Junk Command at 810-336-5865.",
+    metaDescription: "Before you trash it, pause. Ten categories Port Huron & St. Clair County residents often regret discarding — plus donation and recycling tips. Call Junk Command at 810-242-0429.",
     category: "Donation",
     excerpt: "A practical list of items Michigan households regret tossing — and better donation, recycling, and junk-removal paths that keep useful goods out of the landfill.",
     image: "/images/blog/10-things-never-throw-away.webp",
@@ -367,7 +367,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "Cleanouts create momentum, and momentum can become recklessness. Once the trash bags are open and the truck is theoretically coming, everything starts to look disposable. Families across Port Huron and St. Clair County tell Junk Command the same story afterward: they wish they had slowed down for a handful of categories. This guide is not about hoarding. It is about spotting the items that still have life, legal importance, financial value, or emotional weight before they disappear into a mixed junk load.",
         "Michigan winters encourage garage and basement storage that hides useful goods for years. When you finally dig out, fatigue makes bad decisions easy. A scratched dresser that could have been donated becomes trash because nobody wanted to make one more thrift-store call. Old tools that a neighbor would have used get buried under broken particleboard. Documents that should have been shredded securely or retained get tossed in a rush. A short pause list prevents those mistakes without stopping your progress.",
         "Donation and recycling are not abstract virtues here. They shrink landfill volume, often reduce what you pay in junk removal truck space, and keep usable goods circulating in the Blue Water Area. Junk Command builds those paths into full-service jobs when condition allows. You can also handle donation drop-offs yourself if you have time. Either way, knowing what deserves a second look is the skill that separates a thoughtful cleanout from a regret cleanout.",
-        "Use this article as a checklist beside your Keep, Donate, Recycle, and Junk zones. If an item fits one of the ten categories below, it earns an extra minute of evaluation. That minute is cheaper than replacing something important later or wondering where a family keepsake went. Call or text 810-336-5865 if you want help hauling the true junk after the good stuff is protected.",
+        "Use this article as a checklist beside your Keep, Donate, Recycle, and Junk zones. If an item fits one of the ten categories below, it earns an extra minute of evaluation. That minute is cheaper than replacing something important later or wondering where a family keepsake went. Call or text 810-242-0429 if you want help hauling the true junk after the good stuff is protected.",
         "Context matters. An item ruined by mold, bedbugs, or structural failure should not be forced into donation streams that will reject it. Honesty about condition protects charities and your schedule. The goal is smarter sorting — not guilt for discarding what is genuinely done. With that balance in mind, here are ten categories Port Huron-area households most often wish they had handled differently.",
         "If you are cleaning after a move, an estate, or a foreclosure timeline, emotions run hotter and deadlines run tighter. Build a labeled pause bin on day one. Anything uncertain goes there for a 48-hour review with another family member. That single process change saves relationships and heirlooms while still letting Junk Command clear the obvious debris on schedule.",
       ],
@@ -405,7 +405,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "Lawn equipment parts, spare snowblower belts, and cords for devices you still own belong in a labeled parts bin, not a mystery trash bag. Conversely, parts for machines you no longer have should leave. The regret pattern is discarding the one specialty bit you needed, not discarding orphan parts for a mower sold in 2012. Be specific.",
         "If you lack the skill to evaluate tools, ask a handy friend or neighbor for a thirty-minute consult before Junk Command loads the garage. Many Blue Water Area neighbors are happy to take usable tools. That community handoff keeps goods in use and shrinks your paid junk volume. Tell our crew what is spoken for so nothing reserved disappears into the truck.",
         "Broken tools with recoverable metal can still be recycled responsibly rather than mixed into general trash. Separating metal improves disposal quality. During professional removal, we route materials thoughtfully when loads allow. Your pre-sort makes that easier and sometimes more cost-effective because dense scrap is handled with clearer intent.",
-        "Safety note: dispose of damaged power tools with cut cords and compromised batteries carefully. Lithium batteries and damaged packs need proper handling. Do not throw loose lithium batteries into a mixed junk pile where crush risk exists. Set battery-containing items aside and ask us what we can take when you call 810-336-5865.",
+        "Safety note: dispose of damaged power tools with cut cords and compromised batteries carefully. Lithium batteries and damaged packs need proper handling. Do not throw loose lithium batteries into a mixed junk pile where crush risk exists. Set battery-containing items aside and ask us what we can take when you call 810-242-0429.",
       ],
     },
     {
@@ -428,7 +428,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "Electronics need a more careful path. Old monitors, computers, printers, and tangled entertainment systems often contain data and require e-waste channels. Do not assume curbside trash is appropriate. Remove storage drives when possible, wipe accounts from devices, and ask about local electronics recycling options around Port Huron and St. Clair County before a cleanout weekend begins.",
         "Large appliances with refrigerant require proper processing. A dead refrigerator in the garage should not be abandoned casually. Include it in your junk removal quote so handling is planned. If an appliance still works and you are replacing only for preference, selling or donating can offset costs and keep a functional unit in service for another household.",
         "Cables and chargers create drawer chaos. Keep current cables for devices you own; recycle or discard orphan cords after a quick match check. People regret tossing the one proprietary charger they still needed for a camera or tool battery. A ten-minute cable matching session prevents that specific frustration.",
-        "Junk Command can remove non-working electronics and appliances as part of a broader cleanout. Separating working donation candidates first keeps your conscience clear and may reduce volume. Text photos to 810-336-5865 including model details if you want guidance on what looks hauling-eligible versus donation-eligible from the driveway.",
+        "Junk Command can remove non-working electronics and appliances as part of a broader cleanout. Separating working donation candidates first keeps your conscience clear and may reduce volume. Text photos to 810-242-0429 including model details if you want guidance on what looks hauling-eligible versus donation-eligible from the driveway.",
         "Smart home devices and TVs may need account logouts. Factory reset where possible before donation or disposal. That digital hygiene step is as important as the physical sort. Treat old phones like documents: they hold private life. A cleanout should not become an accidental data leak in a thrift store electronics bin.",
       ],
     },
@@ -476,7 +476,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "Medical aids such as walkers, transport chairs, and unused durable equipment may be wanted by local reuse programs or families. Wipe them down and inquire before trashing. During estate cleanouts after an illness, these items can feel emotionally heavy; a donation path sometimes helps more than a landfill path. Confirm condition and completeness first.",
         "Medications are never a junk-drawer donation and rarely belong in household trash without guidance. Use recommended take-back options. Do not include pills in a Junk Command load. The same goes for sharps, which need proper containers and channels. Keep a hazardous/medical side table during every health-related cleanout.",
         "Cribs and toddler beds must meet current safety standards. Older drop-side cribs and damaged rails should not be passed along. When unsafe, dismantle and dispose so nobody reuses them. Safety overrides sentiment for child equipment even when the wood still looks fine.",
-        "If you are clearing a home after a hospital stay or hospice period, move slowly through personal care rooms. Mix practical donation decisions with compassion. Hire help for the heavy residual clutter so family energy goes to the meaningful items. Call 810-336-5865 when the Keep and Donate piles are defined and the rest needs to leave with dignity.",
+        "If you are clearing a home after a hospital stay or hospice period, move slowly through personal care rooms. Mix practical donation decisions with compassion. Hire help for the heavy residual clutter so family energy goes to the meaningful items. Call 810-242-0429 when the Keep and Donate piles are defined and the rest needs to leave with dignity.",
         "Accessibility ramps, grab bars, and installed equipment may be part of the house sale conversation. Do not rip everything out without checking with an agent or buyer. Some features add value; others can be removed later. Premature demolition creates debris you must then haul — sometimes unnecessarily.",
       ],
     },
@@ -489,7 +489,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "Knives and sharp tools should be wrapped for any donation or junk path. Safety for sorters and crews matters. Label boxes containing blades. During professional removal, tell the crew about sharp piles so loading stays controlled. Small courtesy prevents injuries.",
         "Wine glasses, specialty bakeware, and holiday serving dishes often have seasonal donation value. If your cabinets are overcrowded, keep what you use twice a year or less in a single labeled tote — or donate the overflow. The regret comes from trashing a family serving platter that another relative would have claimed, so communicate before you decide.",
         "If kitchen cleanouts are part of a move, pair this list with our Michigan moving checklist so decluttering happens before movers price your volume. Less stuff moved is less stuff paid for, and fewer regret decisions happen when you are not sorting under a closing-day clock. Junk Command can remove the post-declutter residue so the house shows clean.",
-        "When the ten categories have been reviewed, what remains is usually true junk: broken plastics, contaminated materials, and worn-out goods with no reuse path. That is the moment to call Junk Command at 810-336-5865. You will have already saved the items that matter, reduced volume where possible, and set up a removal that feels responsible rather than reckless.",
+        "When the ten categories have been reviewed, what remains is usually true junk: broken plastics, contaminated materials, and worn-out goods with no reuse path. That is the moment to call Junk Command at 810-242-0429. You will have already saved the items that matter, reduced volume where possible, and set up a removal that feels responsible rather than reckless.",
       ],
     },
     {
@@ -498,7 +498,7 @@ export const BLOG_POSTS: BlogPost[] = [
       paragraphs: [
         "A smart cleanout is a series of filters, not a single dramatic purge. Documents, photos, tools, furniture, appliances, textiles, materials, sporting goods, kids' and medical items, and kitchen or hobby supplies each get a deliberate pass. Everything else can leave with less emotion. That structure is how St. Clair County households finish projects without the Sunday-night stomach drop of wondering what went into the bag.",
         "Deadlines remain essential. Pause bins need end dates. Donation drop-offs need calendar slots. Junk removal needs a booked window. Without those anchors, sorted piles re-merge in the driveway. Port Huron weather will also vote; tarps and timing protect donation eligibility until goods reach their next home.",
-        "Junk Command's role is the heavy finish. After you protect what should not be thrown away, we take the rest — furniture beyond repair, general household junk, and the awkward volume that does not fit your car. We quote by truck space, route responsibly, and treat your property with respect. Text photos to 810-336-5865 and tell us what has already been set aside for donation.",
+        "Junk Command's role is the heavy finish. After you protect what should not be thrown away, we take the rest — furniture beyond repair, general household junk, and the awkward volume that does not fit your car. We quote by truck space, route responsibly, and treat your property with respect. Text photos to 810-242-0429 and tell us what has already been set aside for donation.",
         "If this cleanout is part of an estate, read our estate cleanout checklist next so legal and sentimental steps stay in order. If it started in the garage, pair this article with the garage cleanout guide. The articles are designed to work together: better decisions first, professional hauling second, clearer space at the end.",
         "Regret prevention is not perfectionism. You will still discard things you later think about once or twice. The goal is avoiding irreversible losses in the high-stakes categories above. That is achievable with a pause bin, a second pair of eyes, and a refusal to let exhaustion drive the final sort.",
         "When you are ready, take command of the clutter the right way: keep what matters, donate what still has life, recycle what should be recycled, and call Junk Command for what remains. The landfill should get leftovers — not your family's irreplaceable story, and not someone else's future treasure that only needed a second look on a driveway in St. Clair County.",
@@ -512,7 +512,7 @@ export const BLOG_POSTS: BlogPost[] = [
     },
     {
       question: "Can Junk Command donate items for me?",
-      answer: "When items are in usable condition and logistics allow, Junk Command routes donation-worthy pieces instead of sending everything to disposal. Tell us what you hope to donate when you text photos to 810-336-5865.",
+      answer: "When items are in usable condition and logistics allow, Junk Command routes donation-worthy pieces instead of sending everything to disposal. Tell us what you hope to donate when you text photos to 810-242-0429.",
     },
     {
       question: "What should never go in regular trash in Michigan?",
@@ -533,7 +533,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: "how-to-dispose-of-a-hot-tub",
     title: "How to Dispose of a Hot Tub: Drain, Disconnect, and Remove It Safely",
     metaTitle: "How to Dispose of a Hot Tub (MI Guide) | Junk Command",
-    metaDescription: "Learn how to drain, disconnect, and remove an old hot tub in Michigan — DIY risks, professional removal, costs, and deck issues. Call Junk Command at 810-336-5865.",
+    metaDescription: "Learn how to drain, disconnect, and remove an old hot tub in Michigan — DIY risks, professional removal, costs, and deck issues. Call Junk Command at 810-242-0429.",
     category: "Home Improvement",
     excerpt: "A practical Michigan guide to hot tub disposal — draining, disconnects, DIY pitfalls, professional removal, cost factors, and what to do with the pad or deck left behind.",
     image: "/images/blog/how-to-dispose-of-a-hot-tub.webp",
@@ -550,7 +550,7 @@ export const BLOG_POSTS: BlogPost[] = [
       paragraphs: [
         "An unused hot tub starts as a weekend luxury and ends as a backyard obstacle. In Port Huron and across St. Clair County, we see spas that died after a hard freeze, covers that collapsed under snow load, and units that simply outlived their gaskets and heaters. Disposal is not as simple as calling a scrap guy with a pickup. Hot tubs are heavy, awkward, sometimes electrically connected, and often installed on decks or pads that complicate the exit path.",
         "This guide walks through draining, disconnecting, DIY risk, professional removal with Junk Command, Michigan disposal realities, cost factors, and what to do with the footprint left behind. Whether you are upgrading, selling a home, clearing a rental, or handling a property under time pressure, the same physical challenges apply. Planning prevents broken railings, flooded yards, and injured backs.",
-        "Junk Command removes hot tubs as a specialized junk removal job. We evaluate access, shell size, and whether cutting or dismantling is required. You get a volume-and-labor-informed quote before the hard work starts. Call or text 810-336-5865 with clear photos of the spa, the path to the driveway, and any stairs or gates. Those details matter more than brand names.",
+        "Junk Command removes hot tubs as a specialized junk removal job. We evaluate access, shell size, and whether cutting or dismantling is required. You get a volume-and-labor-informed quote before the hard work starts. Call or text 810-242-0429 with clear photos of the spa, the path to the driveway, and any stairs or gates. Those details matter more than brand names.",
         "Michigan weather adds urgency. Water left in a spa can freeze and crack components, making a mess you will eventually clean anyway. Covers collect leaf loads and ice. Rodents nest in cabinet spaces. The longer a dead tub sits, the worse the yard looks for showings and the harder the shell can be to handle if interiors collapse inward.",
         "Homeowners sometimes hope a handyman can tip the tub onto a trailer in an hour. Occasionally that works for small portable units with wide gate access. More often, the shell wedges in a side yard, the trailer tongue weight scares everyone, and the project stalls. Professional removal exists for that gap between optimism and physics.",
         "If your hot tub removal is part of a larger cleanout — garage, estate, or foreclosure prep — mention the full scope when you request pricing. Combining trips can be efficient when routing allows. The spa alone is already a serious item; stacking surprises on arrival helps nobody.",
@@ -577,7 +577,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "Plumbing may include unions, PVC lines, and sometimes gas lines for heaters on certain units. Close valves, relieve pressure, and cap lines as appropriate. Water feature add-ons and connected cold plunges complicate the map. Walk the entire equipment pad before anyone starts cutting shell material so you know what is still connected.",
         "Indoor installs and sunroom spas need floor protection plans. Acrylic shards and metal frames scratch finishes. Lay down paths of plywood or heavy canvas along the exit route. Professional crews expect this; DIY teams often discover scratches after the fact. Prevention is cheaper than refinishing hardwood to a patio door.",
         "Document the equipment area with photos before demolition. If anything goes sideways with a utility line you did not expect, photos help contractors diagnose. Also photograph serial plates if you need them for HOA questions or replacement planning. Once the shell is cut, labels may be gone.",
-        "If the property is vacant or in foreclosure, confirm you have authority to disconnect utilities and remove the spa. Property managers and families should align before a crew arrives. Call 810-336-5865 to coordinate timing once permissions and power-down steps are clear.",
+        "If the property is vacant or in foreclosure, confirm you have authority to disconnect utilities and remove the spa. Property managers and families should align before a crew arrives. Call 810-242-0429 to coordinate timing once permissions and power-down steps are clear.",
       ],
     },
     {
@@ -601,7 +601,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "Donation is rarely realistic for dead spas, but metal components may be recyclable within responsible disposal streams. Shell materials often become bulky waste. We handle routing so you are not negotiating with facilities. That full-service approach is the point of hiring a Port Huron junk removal team instead of freelancing demolition.",
         "Some jobs require more than a standard carry-out. Extreme tight access or elevated decks can change methods. Honest assessment beats heroic promises. If a job needs a different approach or additional specialty help, we will say so rather than destroy your deck attempting the impossible with two people and optimism.",
         "Hot tub removal pairs with other backyard cleanups: old patio furniture, broken covers, rotting steps, and abandoned equipment pads' loose debris. Ask us to include adjacent junk in the quote if you want one visit to reset the yard. St. Clair County homeowners often clear the whole spa zone at once so landscaping can start immediately.",
-        "To schedule, text 810-336-5865. Include a wide shot and a path shot. Note dogs, locked gates, and HOA rules about work hours. Clear communication makes removal day boring in the best way — arrive, dismantle, load, leave, yard reclaimed.",
+        "To schedule, text 810-242-0429. Include a wide shot and a path shot. Note dogs, locked gates, and HOA rules about work hours. Clear communication makes removal day boring in the best way — arrive, dismantle, load, leave, yard reclaimed.",
       ],
     },
     {
@@ -625,7 +625,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "Disassembly requirements affect cost. Some tubs can be sectioned efficiently; others fight every cut. Built-in surrounds, custom skirting, and attached steps add debris volume. If you can remove loose accessories before we arrive — tables, ladders, planters — you may simplify the load. Do not start cutting the shell yourself unless you know what you are doing; bad cuts can make professional removal harder.",
         "Add-on scope changes the number: extra yard junk, multiple units, or requests to break apart a small wooden deck surround. Tell us everything you want gone. Change orders on site are possible with approval, but upfront clarity is smoother. St. Clair County customers who send thorough photo sets get faster, firmer quotes.",
         "Compared with dumpster rental, full-service removal bundles labor and haul-away. A dumpster may look cheaper until you factor in demolition labor, possible overweight fees, and days of a container sitting in the drive. For a single spa project, service removal is often the cleaner financial story — especially when time has value.",
-        "Ready for a number? Call or text 810-336-5865. You are not committing by asking. You are collecting the data to decide between DIY risk and professional certainty. Most homeowners know which path fits after one honest quote conversation.",
+        "Ready for a number? Call or text 810-242-0429. You are not committing by asking. You are collecting the data to decide between DIY risk and professional certainty. Most homeowners know which path fits after one honest quote conversation.",
       ],
     },
     {
@@ -660,7 +660,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "The sequence is simple: photos, quote, schedule, prep, removal, sweep, done. If you also need garage junk or estate debris hauled, we can often plan a broader visit. Ask. Combining work can reduce the number of days your property feels like a job site.",
         "You do not need to know every technical detail before reaching out. You need photos and honesty about access. We will ask the right follow-ups. That conversation is free compared with a failed DIY weekend and a damaged fence.",
         "For pricing context beyond spas, see our Michigan junk removal cost guide. For cleanouts that include spas among many items, the estate and foreclosure articles may also help you sequence decisions. Hot tubs are often one line item in a larger transition.",
-        "Take command of the backyard obstacle. Text 810-336-5865, send the photos, and pick a window. An empty pad is not just missing weight — it is a new option for how your outdoor space serves your life in Michigan's short, valuable warm season.",
+        "Take command of the backyard obstacle. Text 810-242-0429, send the photos, and pick a window. An empty pad is not just missing weight — it is a new option for how your outdoor space serves your life in Michigan's short, valuable warm season.",
         "Whether you are a homeowner, landlord, or family member helping from out of town, professional spa removal turns a looming project into a completed checkbox. Junk Command is ready when you are — local, straightforward, and focused on leaving the property better than we found it.",
       ],
     }
@@ -668,7 +668,7 @@ export const BLOG_POSTS: BlogPost[] = [
     faqs: [
     {
       question: "How much does hot tub removal cost in Michigan?",
-      answer: "Pricing depends on size, access, disassembly needs, and whether a crane or extra labor is required. Junk Command quotes before loading — text photos to 810-336-5865 for a Port Huron or St. Clair County estimate.",
+      answer: "Pricing depends on size, access, disassembly needs, and whether a crane or extra labor is required. Junk Command quotes before loading — text photos to 810-242-0429 for a Port Huron or St. Clair County estimate.",
     },
     {
       question: "Do I need to drain the hot tub before you arrive?",
@@ -693,7 +693,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: "estate-cleanout-checklist",
     title: "Estate Cleanout Checklist for St. Clair County Families",
     metaTitle: "Estate Cleanout Checklist (MI) | Junk Command",
-    metaDescription: "A compassionate estate cleanout checklist for Port Huron & St. Clair County families — documents, sorting, donations, hazardous items, timelines, and hiring help at 810-336-5865.",
+    metaDescription: "A compassionate estate cleanout checklist for Port Huron & St. Clair County families — documents, sorting, donations, hazardous items, timelines, and hiring help at 810-242-0429.",
     category: "Estate Cleanouts",
     excerpt: "A thorough, respectful checklist for families clearing a loved one's home in Michigan — from paperwork and sorting to donations, hazardous items, timelines, and junk removal help.",
     image: "/images/blog/estate-cleanout-checklist.webp",
@@ -713,7 +713,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "If relatives disagree, slow the sentimental rooms and speed the obvious junk zones. A moldy basement sofa does not need a family meeting. A jewelry drawer does. Separating decision difficulty by room prevents the entire house from moving at the speed of the hardest emotion. That one tactic saves weeks.",
         "Out-of-town executors face extra friction: keys, utilities, contractors, and trust. Use video walkthroughs, shared photo albums, and written room plans. Local help matters. A Port Huron crew that has done estate work understands locked gates, neighbor curiosity, and the need for clear communication when you cannot stand in the driveway yourself.",
         "This guide covers legal and document priorities, sorting systems, donations, hazardous materials, timelines, hiring help, and day-of removal. Use it as a living checklist. Print it, share it in a sibling group chat, and assign owners to tasks. Shared ownership beats silent resentment.",
-        "When you are ready for haul-away, call 810-336-5865. You do not need the whole house perfected first. You need clear Keep zones and permission to remove the rest. We will meet you at that practical middle ground.",
+        "When you are ready for haul-away, call 810-242-0429. You do not need the whole house perfected first. You need clear Keep zones and permission to remove the rest. We will meet you at that practical middle ground.",
         "You may also be balancing work schedules, childcare, and relatives who can only help on weekends. That is normal. Design the checklist around real availability rather than an imaginary open calendar. A slower plan that finishes is kinder than an aggressive plan that collapses and leaves the house half-torn apart for another month of utilities and heartache in Port Huron weather.",
       ],
     },
@@ -774,7 +774,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "Refrigerators, freezers, and AC units need proper refrigerant handling pathways. Include them in the removal plan. Dead basement freezers full of expired food are common; defrost and contain mess before haul day when possible. Alert the crew to bio-mess so they arrive prepared.",
         "Ammunition and firearms require legal, safe handling outside normal junk removal. Remove them from scope entirely until properly addressed by authorized persons. Same for certain compressed gas cylinders. When in doubt, isolate and ask before any truck arrives.",
         "Pet materials, litter, and neglected cages need bagging and odor control. Estate homes sometimes include animal remnants that are emotionally hard and physically unpleasant. Handle with gloves and compassion. Professional cleaners may be needed before showings; junk removal alone is not specialty bio cleaning.",
-        "If you discover hoarding-level conditions, adjust expectations. These cleanouts take staged labor, more PPE, and sometimes multiple visits. There is no shame in that reality. Call 810-336-5865 early so we can plan crew size and timeline with respect for everyone entering the home.",
+        "If you discover hoarding-level conditions, adjust expectations. These cleanouts take staged labor, more PPE, and sometimes multiple visits. There is no shame in that reality. Call 810-242-0429 early so we can plan crew size and timeline with respect for everyone entering the home.",
       ],
     },
     {
@@ -798,7 +798,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "Provide access instructions: lockboxes, neighbor parking limits, alley use, and which rooms are closed. Send photos or video. The better the pre-job information, the smoother the day. St. Clair County homes vary widely in layout; we would rather ask questions than guess.",
         "Confirm whether you will be present. Remote executors can authorize work with clear written scope. We can text progress photos if that helps decision-makers far away. Remote does not have to mean opaque.",
         "Compare dumpster rental versus full-service removal. Dumpsters require your labor and sit on site. Full-service removal clears volume faster with less family lifting. Estates often choose full-service because relatives are already maxed out emotionally. Choose based on capacity, not only sticker comparisons.",
-        "When you are ready, call or text 810-336-5865. Say it is an estate cleanout. That context helps us staff and communicate appropriately. We will help you take command of the remaining clutter so the home can move to its next chapter.",
+        "When you are ready, call or text 810-242-0429. Say it is an estate cleanout. That context helps us staff and communicate appropriately. We will help you take command of the remaining clutter so the home can move to its next chapter.",
       ],
     },
     {
@@ -822,7 +822,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "Thank helpers specifically. Estate labor is invisible until nobody shows up. Acknowledge siblings, neighbors, and hired crews. If Junk Command helped, we appreciate feedback — and we are here again if a final shed or attic pass remains.",
         "Give yourself a psychological ending ritual: a final photo, a letter, a lunch after the last sweep. Brains need closure signals. Without them, the cleanout continues as ambient stress for months. Mark done as done.",
         "If selling, shift into listing mode with repairs and staging. If keeping the property as a rental, shift into turnover mode. The cleanout was a bridge. Cross it fully so the next project can begin without the old one leaking into every weekend.",
-        "For related planning, use our donation guidance and Michigan moving checklist when heirs are relocating goods. And remember: call 810-336-5865 whenever residual junk resurfaces. Estate aftershocks are normal; quick removal keeps them from becoming another full crisis in Port Huron or anywhere in St. Clair County.",
+        "For related planning, use our donation guidance and Michigan moving checklist when heirs are relocating goods. And remember: call 810-242-0429 whenever residual junk resurfaces. Estate aftershocks are normal; quick removal keeps them from becoming another full crisis in Port Huron or anywhere in St. Clair County.",
       ],
     }
     ],
@@ -833,7 +833,7 @@ export const BLOG_POSTS: BlogPost[] = [
     },
     {
       question: "Can Junk Command work if family members live out of state?",
-      answer: "Yes. Many estates are coordinated remotely with photos, video walkthroughs, and clear Keep/Donate/Toss instructions. Call 810-336-5865 to discuss access, keys, and approval processes.",
+      answer: "Yes. Many estates are coordinated remotely with photos, video walkthroughs, and clear Keep/Donate/Toss instructions. Call 810-242-0429 to discuss access, keys, and approval processes.",
     },
     {
       question: "What should we remove before junk removal arrives?",
@@ -854,7 +854,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: "moving-checklist-michigan",
     title: "Moving Checklist for Michigan: Blue Water Area Tips That Actually Help",
     metaTitle: "Michigan Moving Checklist | Junk Command",
-    metaDescription: "A Michigan-specific moving checklist for Port Huron & St. Clair County — weather, utilities, decluttering, junk removal timing, and Blue Water Area tips. Call 810-336-5865.",
+    metaDescription: "A Michigan-specific moving checklist for Port Huron & St. Clair County — weather, utilities, decluttering, junk removal timing, and Blue Water Area tips. Call 810-242-0429.",
     category: "Moving",
     excerpt: "A practical Michigan moving checklist covering weather timing, utilities, decluttering before movers, junk removal, and local Blue Water Area tips from Junk Command.",
     image: "/images/blog/moving-checklist-michigan.webp",
@@ -874,7 +874,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "Use this guide as a timeline: eight weeks out through move week and the first week after. Adapt it to apartment turnovers, home sales, and downsizing into Michigan ranch homes. The principles stay stable: utilities, admin, declutter, donations, junk removal, packing, and weather contingency.",
         "Families coordinating estate contents into a move should also skim our estate cleanout checklist. Mixing grief sorting with move deadlines without a plan creates conflict. Separate the workflows even if they share a calendar.",
         "Landlord and tenant moves need condition photos and dumpster-or-haul decisions written into the timeline. Security deposits vanish over leftover mattresses and broken blinds. A scheduled Junk Command visit before keys return is cheaper than arguing about debris later.",
-        "Ready to build your plan? Keep 810-336-5865 in your move notes for the junk phase. The rest of this article sequences everything around a cleaner, lighter Michigan move.",
+        "Ready to build your plan? Keep 810-242-0429 in your move notes for the junk phase. The rest of this article sequences everything around a cleaner, lighter Michigan move.",
         "Think of junk removal as part of the move crew, not an optional errand you will somehow squeeze in later. The families who finish with the least regret in Marysville, Fort Gratiot, and Port Huron are usually the ones who put a haul date on the calendar beside the mover date. Two dates beat one heroic Saturday every time, especially when basements and garages are involved.",
       ],
     },
@@ -887,7 +887,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "Request moving estimates after you have a rough sense of volume post-declutter. Honest volume beats optimistic volume. If you know the garage is a problem, schedule a cleanout plan now. Our garage guide pairs with this phase.",
         "Start using up pantry stock, freezer contents, and cleaning supplies you cannot transport. Moving expired food is a classic Michigan basement move mistake. A cleaner kitchen also makes final scrubbing faster.",
         "Create a shared digital folder for contracts, inventory photos, and receipts. If multiple adults are moving, shared truth reduces duplicated store runs and missed cancelations. Include pet records and school papers if relevant.",
-        "Contact Junk Command early if you already see multiple truckloads of discard. Text photos to 810-336-5865. Early visibility helps you choose between one big haul and staged mini-hauls around packing weekends.",
+        "Contact Junk Command early if you already see multiple truckloads of discard. Text photos to 810-242-0429. Early visibility helps you choose between one big haul and staged mini-hauls around packing weekends.",
       ],
     },
     {
@@ -911,7 +911,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "Kids' items and hobby gear need honest fits for the next home. If the new place lacks a workshop, the table saw decision is now, not after you carry it up a Michigan ranch home's tight basement stairs. Measure storage at the destination if you can visit early.",
         "Digitize papers you can, shred what you should, and file what you must keep. Moving file cabinets full of outdated manuals is optional suffering. Our donation-and-regret guide helps you avoid trashing the wrong documents while still releasing dead paper weight.",
         "Sell with deadlines. Online listings that run forever delay packing. Free curbside giveaways can work in some neighborhoods; check local norms and never block sidewalks. What remains after the deadline becomes junk removal inventory without guilt.",
-        "When the discard pile is real, book the haul. Text 810-336-5865 with photos and stairs notes. Aim to finish junk removal before final packing week so you are not stepping over debris while labeling boxes.",
+        "When the discard pile is real, book the haul. Text 810-242-0429 with photos and stairs notes. Aim to finish junk removal before final packing week so you are not stepping over debris while labeling boxes.",
       ],
     },
     {
@@ -935,7 +935,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "Pack room by room and label short sides of boxes with room and contents. Keep an essentials kit: chargers, meds, mop, paper towels, snacks, pet supplies, and a first-night bag. Michigan moves that arrive late in cold weather feel better when you are not hunting pajamas in unlabeled boxes.",
         "Take photos of electronics wiring and meter readings. Photograph empty closets if you need proof of condition for landlords. Documentation is cheap insurance.",
         "Schedule cleaning help if you are not doing it yourselves. Empty homes clean faster. Align cleaning after junk removal and after movers, or do a two-pass plan. Dirt hides under piles; remove piles first.",
-        "Send Junk Command any last-minute photo updates if the discard pile grew. Scope changes are fine with notice. Surprises on arrival are harder. Call 810-336-5865 rather than hoping the crew can absorb a second garage without a conversation.",
+        "Send Junk Command any last-minute photo updates if the discard pile grew. Scope changes are fine with notice. Surprises on arrival are harder. Call 810-242-0429 rather than hoping the crew can absorb a second garage without a conversation.",
       ],
     },
     {
@@ -958,7 +958,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "If selling, junk removal before listing photos can improve offers. If renting, removal before walkthrough protects deposits. If downsizing, removal before the moving quote locks in lower volume. Match timing to the transaction type.",
         "Combine junk removal with donation staging: usable goods leave first, junk second, movers third. That order keeps categories clean. Mixing donate and junk in one driveway under rain is how donations get ruined and tempers flare.",
         "Volume pricing means your pre-sort has financial impact. Consolidate piles, disassemble what you can, and avoid scattered room leftovers that look like more labor. See our cost guide for broader Michigan pricing context, then get a specific quote for your pile.",
-        "Do not bet a closing on last-minute miracles. Book your window early. Text photos to 810-336-5865 so we can confirm timing with certainty.",
+        "Do not bet a closing on last-minute miracles. Book your window early. Text photos to 810-242-0429 so we can confirm timing with certainty.",
         "If movers refuse certain items — paint, half-empty chemicals, broken glass — do not secretly shove them into trash bags in the alley. Ask Junk Command what is acceptable and stage the rest for proper disposal channels. Responsible moves end cleaner for the whole neighborhood.",
       ],
     },
@@ -980,7 +980,7 @@ export const BLOG_POSTS: BlogPost[] = [
       heading: "First Week After: Settle, Purge Again, and Close Admin",
       paragraphs: [
         "Walk the new home and note immediate safety needs: smoke detectors, night lights, slippery entry rugs, pet escape points. Unpack sleeping and kitchen zones fully before perfectionism hits the den. Function first.",
-        "Do a post-move junk reality check. Broken items that failed in transit, packing paper mountains, and \"why did we bring this\" discoveries deserve a mini removal plan within two weeks. Call 810-336-5865 before the new garage becomes the old garage reincarnated.",
+        "Do a post-move junk reality check. Broken items that failed in transit, packing paper mountains, and \"why did we bring this\" discoveries deserve a mini removal plan within two weeks. Call 810-242-0429 before the new garage becomes the old garage reincarnated.",
         "Confirm utilities are billing the right address. Check mail forwarding. Update remaining accounts you missed. Admin leftovers create late fees that sour an otherwise successful move.",
         "Meet neighbors if that fits your style. Ask about trash schedules, snow norms, and parking customs. Local knowledge prevents early friction in St. Clair County neighborhoods where customs are unspoken until you violate them.",
         "Celebrate completion with something small and non-box-related. Moves erase weekends; reclaim one evening intentionally. Then schedule the leftover tasks rather than living in permanent temporary mode.",
@@ -991,7 +991,7 @@ export const BLOG_POSTS: BlogPost[] = [
     faqs: [
     {
       question: "When should I schedule junk removal during a move?",
-      answer: "Ideally one to two weeks before movers arrive, after you know what is not coming with you. That prevents paying movers to transport junk. Text Junk Command at 810-336-5865 with photos to lock a window.",
+      answer: "Ideally one to two weeks before movers arrive, after you know what is not coming with you. That prevents paying movers to transport junk. Text Junk Command at 810-242-0429 with photos to lock a window.",
     },
     {
       question: "What makes moving in Michigan different?",
@@ -1016,7 +1016,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: "preparing-for-a-foreclosure-cleanout",
     title: "Preparing for a Foreclosure Cleanout in Michigan",
     metaTitle: "Foreclosure Cleanout Guide (MI) | Junk Command",
-    metaDescription: "A respectful, practical foreclosure cleanout guide for Michigan homeowners, families, and property managers — timelines, personal items, and junk removal with Junk Command at 810-336-5865.",
+    metaDescription: "A respectful, practical foreclosure cleanout guide for Michigan homeowners, families, and property managers — timelines, personal items, and junk removal with Junk Command at 810-242-0429.",
     category: "Michigan Tips",
     excerpt: "A practical, respectful guide to foreclosure cleanouts in Michigan — what to remove, how to prioritize personal items, timelines, and working with junk removal in St. Clair County.",
     image: "/images/blog/foreclosure-cleanout.webp",
@@ -1036,7 +1036,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "The physical problem looks familiar: rooms of belongings, garages of delayed decisions, possible damage, and a clock. The emotional problem is different from a voluntary move. People may disengage, relatives may arrive late, or communication may fragment. A written plan with priorities keeps the work moving when feelings stall.",
         "Property managers reading this need documentation, predictable vendors, and minimal drama with neighbors. Homeowners need a path to reclaim personal life from a house they may not keep. Both can use the same sorting spine: people first, papers first, valuables first, then volume. Junk Command handles volume when you say go.",
         "If the situation overlaps with an estate — a death followed by financial collapse, or vice versa — use our estate checklist alongside this article. Dual-context homes need extra care around documents and family claims. Do not let speed erase irreversible losses.",
-        "When you need haul-away, call 810-336-5865. Say it is foreclosure-related so we can plan communication and access sensitively. You will get straightforward pricing and a crew that understands these visits are not ordinary garage cleanouts.",
+        "When you need haul-away, call 810-242-0429. Say it is foreclosure-related so we can plan communication and access sensitively. You will get straightforward pricing and a crew that understands these visits are not ordinary garage cleanouts.",
         "Shame thrives in silence. If you are the homeowner, know that crews like Junk Command have walked into hard houses before and will again. You do not need to narrate the financial story to get a respectful clear-out. You need access, a defined scope, and a yes to remove what remains after personal priorities are boxed. That is enough to start reclaiming forward motion in St. Clair County.",
       ],
     },
@@ -1097,7 +1097,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "On haul day, have off-limit Keep items marked or removed to a closed room. Ambiguity is the enemy. If the owner cannot be present, appoint someone with authority to answer a five-minute call. We can also work from a locked plan with photo confirmation when that is the agreed method.",
         "Expect honesty about what cannot be taken. Hazardous waste restrictions still apply in foreclosure. We will not pretend chemicals are regular junk. Planning special disposal prevents last-minute pile leftovers that keep a property from being truly clear.",
         "Multiple truckloads may be required. That is normal for long-occupied homes. Ask for a staged estimate approach so budgets are visible. Property managers often need cost predictability for clients; families need the same for their own strained finances. Transparency is part of respectful service.",
-        "Call or text 810-336-5865 to start. Say what deadline you are working toward. We will help you match crew capacity to the calendar so the cleanout finishes as a plan, not a panic.",
+        "Call or text 810-242-0429 to start. Say what deadline you are working toward. We will help you match crew capacity to the calendar so the cleanout finishes as a plan, not a panic.",
       ],
     },
     {
@@ -1121,7 +1121,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "Watch scams offering miracle foreclosure rescue tied to cleanout pressure. Verify any advisor independently. Operational cleanout vendors should not demand strange financial deals to haul a sofa. Junk Command's job is junk removal — clear, priced, done.",
         "If shame keeps you from letting anyone inside, start with a closed-door personal-item pass yourself, then allow helpers into non-private zones. Gradual exposure beats never starting. Empty rooms feel different than you fear; they often feel like relief mixed with grief, which is survivable.",
         "Plan the first nights after exit: where you will sleep, cook, and store documents. A cleanout that \"succeeds\" but leaves you without basics is not success. Pack the next life before the last load leaves. That sequence preserves dignity more than spotless baseboards.",
-        "When you are ready for the heavy clear, invite Junk Command as a neutral professional presence. We have seen hard days. We will not narrate your story in the driveway. We will load what you authorize and leave the property clearer than we found it. Text 810-336-5865 when that day should be scheduled.",
+        "When you are ready for the heavy clear, invite Junk Command as a neutral professional presence. We have seen hard days. We will not narrate your story in the driveway. We will load what you authorize and leave the property clearer than we found it. Text 810-242-0429 when that day should be scheduled.",
       ],
     },
     {
@@ -1145,7 +1145,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "Hand keys and codes back per instructions. Cancel or transfer remaining services. Store your document tote somewhere safe and redundant if possible. The administrative end matters as much as the empty living room.",
         "If the property heads to sale or auction prep, share clear photos with the team. If it returns to inventory for a manager, report remaining repair needs separately from junk. Clean scope boundaries keep budgets honest.",
         "For families, schedule a decompression day that is not another chore. Then handle next housing and financial steps with clearer heads. The cleanout was one chapter, not the whole book.",
-        "Junk Command is here when Michigan foreclosure cleanouts need local muscle and steady process. Call or text 810-336-5865 for a quote. We will help you take command of the clutter — respectfully, quickly, and without adding needless noise to an already hard season in St. Clair County.",
+        "Junk Command is here when Michigan foreclosure cleanouts need local muscle and steady process. Call or text 810-242-0429 for a quote. We will help you take command of the clutter — respectfully, quickly, and without adding needless noise to an already hard season in St. Clair County.",
       ],
     }
     ],
@@ -1156,7 +1156,7 @@ export const BLOG_POSTS: BlogPost[] = [
     },
     {
       question: "How quickly can Junk Command clear a foreclosure property?",
-      answer: "Speed depends on volume, access, and hazards. Many Port Huron and St. Clair County homes can be cleared in staged visits once scope is clear. Call 810-336-5865 with photos for a realistic plan.",
+      answer: "Speed depends on volume, access, and hazards. Many Port Huron and St. Clair County homes can be cleared in staged visits once scope is clear. Call 810-242-0429 with photos for a realistic plan.",
     },
     {
       question: "What should we take first in a foreclosure cleanout?",

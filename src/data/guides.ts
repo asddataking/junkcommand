@@ -35,10 +35,10 @@ export const GUIDES: Guide[] = [
       "Same-day junk removal is often possible in Port Huron when the schedule, load size, weather, and disposal timing line up. Here is how to plan a fast pickup.",
     intro: [
       "When junk is in the way, it rarely feels like a next-week problem. Maybe the closing date moved up, the new furniture arrives tomorrow, a landlord walkthrough is scheduled for tonight, or a garage project suddenly created a pile that blocks the car. In Port Huron and the surrounding Blue Water Area, Junk Command gets a lot of calls that start with the same question: can you come today?",
-      "The honest answer is that same-day junk removal is often possible, but it depends on the day, the size of the load, access to the items, and where the crew already is. Junk Command is a veteran-owned local hauler, not a call center routing work from another state, so scheduling is practical and direct. If you are in or near Port Huron, start with a call or text to 810-336-5865, share a few photos, and we will tell you what is realistic before you plan your day around it.",
+      "The honest answer is that same-day junk removal is often possible, but it depends on the day, the size of the load, access to the items, and where the crew already is. Junk Command is a veteran-owned local hauler, not a call center routing work from another state, so scheduling is practical and direct. If you are in or near Port Huron, start with a call or text to 810-242-0429, share a few photos, and we will tell you what is realistic before you plan your day around it.",
     ],
     quickAnswer:
-      "Yes, Junk Command often offers same-day junk removal in Port Huron, Fort Gratiot, Marysville, and nearby Blue Water Area communities when crews have an opening and the load can be safely handled before disposal facilities close. The fastest way to check availability is to call or text 810-336-5865 with your address, photos of the junk, and any deadline. For planned cleanouts, booking through /book-online gives more control over the arrival window.",
+      "Yes, Junk Command often offers same-day junk removal in Port Huron, Fort Gratiot, Marysville, and nearby Blue Water Area communities when crews have an opening and the load can be safely handled before disposal facilities close. The fastest way to check availability is to call or text 810-242-0429 with your address, photos of the junk, and any deadline. For planned cleanouts, booking through /book-online gives more control over the arrival window.",
     image: "/images/services/garage-cleanout.webp",
     imageAlt:
       "Junk Command truck ready for same-day junk removal in Port Huron Michigan",
@@ -90,7 +90,7 @@ export const GUIDES: Guide[] = [
       {
         question: "What is the fastest way to request same-day junk removal?",
         answer:
-          "Call or text 810-336-5865 with your address, photos, and deadline. Photos help us confirm truck space and quote the job faster than a long description alone.",
+          "Call or text 810-242-0429 with your address, photos, and deadline. Photos help us confirm truck space and quote the job faster than a long description alone.",
       },
       {
         question: "Can you remove junk while I am not home?",
@@ -124,7 +124,7 @@ export const GUIDES: Guide[] = [
       "From furniture and appliances to garage clutter, estate items, and light construction debris, here is what Junk Command can haul away.",
     intro: [
       "Junk removal is a broad phrase, and every household seems to define junk a little differently. For one customer it is a broken sectional and two mattresses. For another it is a garage full of old tools, totes, tires, shelving, and boxes that have not been opened since the last move. Junk Command handles the everyday clutter, the awkward bulky items, and the larger cleanouts that are too much for a normal trash day.",
-      "Our crew serves Port Huron, St. Clair County, and the wider Blue Water Area with practical hauling help for homes, rentals, businesses, estates, and renovation projects. If you are not sure whether we take something, call 810-336-5865 and ask. We would rather answer the question directly than have you guess, drag something outside, and find out later that it needed a different plan.",
+      "Our crew serves Port Huron, St. Clair County, and the wider Blue Water Area with practical hauling help for homes, rentals, businesses, estates, and renovation projects. If you are not sure whether we take something, call 810-242-0429 and ask. We would rather answer the question directly than have you guess, drag something outside, and find out later that it needed a different plan.",
     ],
     quickAnswer:
       "Junk Command removes most non-hazardous household, garage, yard, office, and light construction items, including furniture, appliances, mattresses, boxes, bagged clutter, scrap metal, shelving, exercise equipment, and cleanout debris. We do not haul hazardous materials such as wet paint, chemicals, fuel, asbestos, or medical waste. For common services, see /furniture-removal, /appliance-removal, /garage-cleanout, and /estate-cleanout.",
@@ -216,7 +216,7 @@ export const GUIDES: Guide[] = [
       "As a veteran-owned local company, we approach furniture removal with a steady plan: confirm what is going, protect the path, lift safely, and dispose of the items responsibly when possible. Whether you are replacing a sectional, clearing a rental, making room for a nursery, or helping family downsize, a clear process keeps the job efficient and keeps you out of the heavy lifting.",
     ],
     quickAnswer:
-      "Junk Command removes sofas, sectionals, recliners, mattresses, dressers, tables, desks, bookcases, patio furniture, office furniture, and most other bulky pieces throughout the Blue Water Area. We can remove items from inside the home, upstairs rooms, basements, garages, storage units, and curbside piles. For service details, see /furniture-removal or call 810-336-5865 for a photo-based quote.",
+      "Junk Command removes sofas, sectionals, recliners, mattresses, dressers, tables, desks, bookcases, patio furniture, office furniture, and most other bulky pieces throughout the Blue Water Area. We can remove items from inside the home, upstairs rooms, basements, garages, storage units, and curbside piles. For service details, see /furniture-removal or call 810-242-0429 for a photo-based quote.",
     image: "/images/services/furniture-removal.webp",
     imageAlt:
       "Furniture removal crew carrying bulky furniture from a Blue Water Area home",
@@ -284,7 +284,7 @@ export const GUIDES: Guide[] = [
       {
         question: "Can furniture removal be scheduled online?",
         answer:
-          "Yes. You can start through /book-online, or call 810-336-5865 if you need help deciding what service fits your load.",
+          "Yes. You can start through /book-online, or call 810-242-0429 if you need help deciding what service fits your load.",
       },
     ],
     relatedSlugs: [
@@ -306,7 +306,7 @@ export const GUIDES: Guide[] = [
       "There is no single price for every job because a single recliner is not the same as a full garage, and a pile of cardboard is not the same as a pile of tile. But there is a consistent logic behind the quote. Once you understand volume, weight, access, and disposal, you can send better photos, compare options honestly, and avoid surprises when the crew arrives.",
     ],
     quickAnswer:
-      "Junk removal usually costs more as the load takes up more truck space, requires more labor, includes heavy or specialty items, or needs extra disposal handling. Small pickups may be near a minimum, while larger cleanouts are priced by volume and complexity. Junk Command gives upfront estimates from photos and confirms the final price before loading. Start at /pricing or call 810-336-5865.",
+      "Junk removal usually costs more as the load takes up more truck space, requires more labor, includes heavy or specialty items, or needs extra disposal handling. Small pickups may be near a minimum, while larger cleanouts are priced by volume and complexity. Junk Command gives upfront estimates from photos and confirms the final price before loading. Start at /pricing or call 810-242-0429.",
     image: "/images/services/garage-cleanout.webp",
     imageAlt:
       "Garage cleanout load used to estimate junk removal pricing in Port Huron",
@@ -393,10 +393,10 @@ export const GUIDES: Guide[] = [
       "Junk Command serves Port Huron and many nearby Blue Water Area communities with local junk removal, cleanout, furniture, and appliance hauling.",
     intro: [
       "Junk Command is based around the Port Huron area and built to serve the communities that make up the Blue Water Area. That local focus matters. Routes are shorter, scheduling is more realistic, and the crew understands the mix of older homes, lake cottages, rural properties, downtown apartments, storage units, and seasonal cleanups that shape junk removal in this part of Michigan.",
-      "If you are in Port Huron, Fort Gratiot, Marysville, or a nearby St. Clair County community, there is a good chance we can help. If you are outside the core service area, call 810-336-5865 anyway. We will tell you whether we can schedule the job, whether a travel consideration applies, or whether another timing option would make more sense.",
+      "If you are in Port Huron, Fort Gratiot, Marysville, or a nearby St. Clair County community, there is a good chance we can help. If you are outside the core service area, call 810-242-0429 anyway. We will tell you whether we can schedule the job, whether a travel consideration applies, or whether another timing option would make more sense.",
     ],
     quickAnswer:
-      "Junk Command serves Port Huron and the surrounding Blue Water Area, including nearby communities such as Fort Gratiot, Marysville, Kimball, Clyde, St. Clair, Marine City, and other parts of St. Clair County when scheduling allows. For Port Huron details, visit /service-areas/port-huron. For exact availability at your address, call or text 810-336-5865.",
+      "Junk Command serves Port Huron and the surrounding Blue Water Area, including nearby communities such as Fort Gratiot, Marysville, Kimball, Clyde, St. Clair, Marine City, and other parts of St. Clair County when scheduling allows. For Port Huron details, visit /service-areas/port-huron. For exact availability at your address, call or text 810-242-0429.",
     image: "/images/services/estate-cleanout.webp",
     imageAlt:
       "Junk Command serving Port Huron and Blue Water Area cleanout customers",
@@ -451,7 +451,7 @@ export const GUIDES: Guide[] = [
       {
         question: "Do you serve Port Huron?",
         answer:
-          "Yes. Port Huron is part of Junk Command's core service area. You can learn more at /service-areas/port-huron or call 810-336-5865.",
+          "Yes. Port Huron is part of Junk Command's core service area. You can learn more at /service-areas/port-huron or call 810-242-0429.",
       },
       {
         question: "Do you travel outside St. Clair County?",
@@ -488,7 +488,7 @@ export const GUIDES: Guide[] = [
       "Junk Command removes heavy appliances across Port Huron and the Blue Water Area with a focus on safety and proper handling. The crew can haul refrigerators, freezers, washers, dryers, ranges, dishwashers, water heaters, microwaves, and similar units once they are disconnected and ready to move. If you are planning appliance removal, a little preparation makes the appointment faster and cleaner.",
     ],
     quickAnswer:
-      "For heavy appliance removal, unplug the unit, empty it, disconnect water or gas lines when appropriate, clear a safe path, and tell Junk Command where the appliance is located. We handle the lifting, loading, hauling, and responsible disposal or recycling when possible. For appliance service details, visit /appliance-removal or call 810-336-5865.",
+      "For heavy appliance removal, unplug the unit, empty it, disconnect water or gas lines when appropriate, clear a safe path, and tell Junk Command where the appliance is located. We handle the lifting, loading, hauling, and responsible disposal or recycling when possible. For appliance service details, visit /appliance-removal or call 810-242-0429.",
     image: "/images/services/appliance-removal.webp",
     imageAlt:
       "Heavy appliance removal crew moving a refrigerator from a Port Huron home",
@@ -579,7 +579,7 @@ export const GUIDES: Guide[] = [
       "Junk Command helps Port Huron and Blue Water Area families, homeowners, landlords, and property managers turn large cleanouts into a manageable process. The right time to hire professionals is usually before the project overwhelms the people closest to it. A good crew does not replace the personal decisions; it removes the approved items safely and keeps the project moving.",
     ],
     quickAnswer:
-      "Hire professionals for an estate or garage cleanout when the volume is more than a few carloads, heavy items are involved, deadlines are approaching, family members are overwhelmed, or disposal rules are unclear. Junk Command can remove approved items from garages, basements, sheds, homes, and estates across the Port Huron area. Start with /estate-cleanout, /garage-cleanout, or call 810-336-5865.",
+      "Hire professionals for an estate or garage cleanout when the volume is more than a few carloads, heavy items are involved, deadlines are approaching, family members are overwhelmed, or disposal rules are unclear. Junk Command can remove approved items from garages, basements, sheds, homes, and estates across the Port Huron area. Start with /estate-cleanout, /garage-cleanout, or call 810-242-0429.",
     image: "/images/services/estate-cleanout.webp",
     imageAlt:
       "Estate cleanout items being organized for Junk Command removal in Michigan",
@@ -670,7 +670,7 @@ export const GUIDES: Guide[] = [
       "Junk Command is a veteran-owned Port Huron area company serving the Blue Water Area with professional junk removal, furniture hauling, appliance removal, garage cleanouts, and estate cleanouts. We believe customers should know what to ask before hiring any hauler, whether they choose us or not. A few questions up front can prevent a bad experience later.",
     ],
     quickAnswer:
-      "Choose a junk hauler that is properly licensed where required, insured for the work, locally accountable, clear about pricing, careful inside your property, and responsible about disposal. Ask for the company name, phone number, service area, what is included, what is not accepted, and whether the quote is confirmed before loading. To speak with Junk Command, call 810-336-5865.",
+      "Choose a junk hauler that is properly licensed where required, insured for the work, locally accountable, clear about pricing, careful inside your property, and responsible about disposal. Ask for the company name, phone number, service area, what is included, what is not accepted, and whether the quote is confirmed before loading. To speak with Junk Command, call 810-242-0429.",
     image: "/images/services/hot-tub-removal.webp",
     imageAlt:
       "Professional junk hauler preparing safe removal of a bulky item in Michigan",
@@ -739,7 +739,7 @@ export const GUIDES: Guide[] = [
       {
         question: "Is Junk Command local to the Port Huron area?",
         answer:
-          "Yes. Junk Command serves Port Huron and the Blue Water Area as a veteran-owned local junk removal company. Call 810-336-5865 to discuss your job.",
+          "Yes. Junk Command serves Port Huron and the Blue Water Area as a veteran-owned local junk removal company. Call 810-242-0429 to discuss your job.",
       },
     ],
     relatedSlugs: [

@@ -67,6 +67,6 @@ vercel
 
 - Name: **Junk Command** (not "Junk Commander")
 - Email: `info@junkcommand.com`
-- Phone: `810-336-5865`
+- Phone: `810-242-0429`
 - Tagline: Take Command of Your Clutter.
 - Luna vest: **JUNK COMMAND** / **K-9 CLEANUP UNIT**

@@ -25,7 +25,7 @@ export const FAQS: Faq[] = [
     id: "cost-how-much",
     question: "How much does junk removal cost with Junk Command?",
     answer:
-      "Junk Command prices by volume of space your items take in our truck, not by the hour. Most jobs start at our $99 minimum pickup, and larger loads are quoted upfront before we load anything. Text photos to 810-336-5865 for a fast, accurate estimate.",
+      "Junk Command prices by volume of space your items take in our truck, not by the hour. Most jobs start at our $99 minimum pickup, and larger loads are quoted upfront before we load anything. Text photos to 810-242-0429 for a fast, accurate estimate.",
     category: "pricing",
   },
   {
@@ -46,7 +46,7 @@ export const FAQS: Faq[] = [
     id: "cost-free-quote",
     question: "Is the quote really free?",
     answer:
-      "Yes. Junk Command provides free junk removal quotes with no obligation. Call or text 810-336-5865, send a few photos of what you need hauled, and we’ll reply with clear pricing. You only pay if you book the job.",
+      "Yes. Junk Command provides free junk removal quotes with no obligation. Call or text 810-242-0429, send a few photos of what you need hauled, and we’ll reply with clear pricing. You only pay if you book the job.",
     category: "pricing",
   },
   {
@@ -81,7 +81,7 @@ export const FAQS: Faq[] = [
     id: "cost-mattress",
     question: "How much does mattress removal cost?",
     answer:
-      "Single mattress and box spring pickups often land near our $99 minimum, especially when access is straightforward. Pairing a mattress with other junk can improve overall value under volume pricing. Text pictures to 810-336-5865 for a firm price before we roll out.",
+      "Single mattress and box spring pickups often land near our $99 minimum, especially when access is straightforward. Pairing a mattress with other junk can improve overall value under volume pricing. Text pictures to 810-242-0429 for a firm price before we roll out.",
     category: "pricing",
   },
   {
@@ -95,7 +95,7 @@ export const FAQS: Faq[] = [
     id: "services-hot-tub",
     question: "Do you remove hot tubs?",
     answer:
-      "Yes. Junk Command specializes in hot tub and spa removal across Port Huron and St. Clair County. We handle the heavy lifting, break-down when needed, and haul-away so you do not need a rental truck or a weekend of wrestling with a dead spa. Call 810-336-5865 to schedule.",
+      "Yes. Junk Command specializes in hot tub and spa removal across Port Huron and St. Clair County. We handle the heavy lifting, break-down when needed, and haul-away so you do not need a rental truck or a weekend of wrestling with a dead spa. Call 810-242-0429 to schedule.",
     category: "services",
   },
   {
@@ -144,7 +144,7 @@ export const FAQS: Faq[] = [
     id: "services-commercial",
     question: "Do you take commercial junk removal jobs?",
     answer:
-      "Yes. Junk Command handles office cleanouts, retail clearances, warehouse decluttering, and light commercial debris jobs. We can work around business hours when needed and invoice as appropriate. Call 810-336-5865 to discuss volume, access, and timing.",
+      "Yes. Junk Command handles office cleanouts, retail clearances, warehouse decluttering, and light commercial debris jobs. We can work around business hours when needed and invoice as appropriate. Call 810-242-0429 to discuss volume, access, and timing.",
     category: "services",
   },
   {
@@ -158,14 +158,14 @@ export const FAQS: Faq[] = [
     id: "services-not-taken",
     question: "What won’t Junk Command take?",
     answer:
-      "We cannot accept hazardous waste, liquid chemicals, paint, oil, gasoline, propane tanks, asbestos, medical waste, or other regulated materials. If you're unsure, just ask—we're happy to help you find the proper disposal option. Text a photo to 810-336-5865 and we will tell you the safest next step.",
+      "We cannot accept hazardous waste, liquid chemicals, paint, oil, gasoline, propane tanks, asbestos, medical waste, or other regulated materials. If you're unsure, just ask—we're happy to help you find the proper disposal option. Text a photo to 810-242-0429 and we will tell you the safest next step.",
     category: "services",
   },
   {
     id: "scheduling-availability",
     question: "How quickly can you schedule a junk removal pickup?",
     answer:
-      "We aim to get you the soonest available window that fits our route, but timing is never guaranteed until we confirm it. Call or text 810-336-5865 with photos and your address — we will tell you what openings we have and lock in a clear arrival window.",
+      "We aim to get you the soonest available window that fits our route, but timing is never guaranteed until we confirm it. Call or text 810-242-0429 with photos and your address — we will tell you what openings we have and lock in a clear arrival window.",
     category: "scheduling",
   },
   {
@@ -186,14 +186,14 @@ export const FAQS: Faq[] = [
     id: "scheduling-booking",
     question: "How do I book a junk removal appointment?",
     answer:
-      "Booking is simple: call or text 810-336-5865, use our online booking form, or request a quote with photos. Junk Command confirms pricing, then locks in a time window that works for you. You will get a confirmation so you know when the crew is coming.",
+      "Booking is simple: call or text 810-242-0429, use our online booking form, or request a quote with photos. Junk Command confirms pricing, then locks in a time window that works for you. You will get a confirmation so you know when the crew is coming.",
     category: "scheduling",
   },
   {
     id: "scheduling-cancellation",
     question: "What is your cancellation policy?",
     answer:
-      "We understand plans change. Please cancel or reschedule as soon as you can so we can free the slot for another customer. Reasonable notice keeps things fair for everyone; last-minute no-shows may affect future booking priority. Just call or text 810-336-5865 and we will help.",
+      "We understand plans change. Please cancel or reschedule as soon as you can so we can free the slot for another customer. Reasonable notice keeps things fair for everyone; last-minute no-shows may affect future booking priority. Just call or text 810-242-0429 and we will help.",
     category: "scheduling",
   },
   {
@@ -214,7 +214,7 @@ export const FAQS: Faq[] = [
     id: "process-photos",
     question: "Can I text photos for a quote?",
     answer:
-      "Yes — and it is the fastest way to get accurate pricing. Text clear photos of the junk pile, plus a shot of access (driveway, stairs, or side gate), to 810-336-5865. Junk Command reviews the volume and replies with an upfront quote, often within minutes during business hours.",
+      "Yes — and it is the fastest way to get accurate pricing. Text clear photos of the junk pile, plus a shot of access (driveway, stairs, or side gate), to 810-242-0429. Junk Command reviews the volume and replies with an upfront quote, often within minutes during business hours.",
     category: "process",
   },
   {
@@ -277,7 +277,7 @@ export const FAQS: Faq[] = [
     id: "areas-port-huron",
     question: "Where is Junk Command based?",
     answer:
-      "Junk Command is a Port Huron, Michigan junk removal company serving St. Clair County and nearby communities. Being local means shorter response times and crews that know the area’s neighborhoods and roads. Call 810-336-5865 for service near you.",
+      "Junk Command is a Port Huron, Michigan junk removal company serving St. Clair County and nearby communities. Being local means shorter response times and crews that know the area’s neighborhoods and roads. Call 810-242-0429 for service near you.",
     category: "areas",
   },
   {
@@ -340,7 +340,7 @@ export const FAQS: Faq[] = [
     id: "general-contact",
     question: "What is the best way to reach Junk Command?",
     answer:
-      "Call or text 810-336-5865 — texting photos is the quickest path to a quote. You can also email info@junkcommand.com or use the booking form on getjunkcommand.com. We respond fast during business hours across Port Huron and St. Clair County.",
+      "Call or text 810-242-0429 — texting photos is the quickest path to a quote. You can also email info@junkcommand.com or use the booking form on getjunkcommand.com. We respond fast during business hours across Port Huron and St. Clair County.",
     category: "general",
   },
   {
@@ -383,7 +383,7 @@ export const HOMEPAGE_FAQS: Faq[] = [
     id: "home-same-day",
     question: "Do you offer same day junk removal?",
     answer:
-      "Same-day Port Huron junk removal is often available when our route has an opening. Call or text 810-336-5865 with photos and your address — we will tell you the soonest confirmed window. Timing is never guaranteed until we lock it in, but local Blue Water Area jobs usually move fastest.",
+      "Same-day Port Huron junk removal is often available when our route has an opening. Call or text 810-242-0429 with photos and your address — we will tell you the soonest confirmed window. Timing is never guaranteed until we lock it in, but local Blue Water Area jobs usually move fastest.",
     category: "scheduling",
   },
   {
@@ -404,7 +404,7 @@ export const HOMEPAGE_FAQS: Faq[] = [
     id: "home-cost",
     question: "How much does junk removal cost?",
     answer:
-      "Junk Command prices by volume of space your items take in our truck, not by the hour. Most jobs start at our $99 minimum pickup, and larger loads are quoted upfront before we load anything. Send photos to 810-336-5865 or visit our pricing page for a clear estimate.",
+      "Junk Command prices by volume of space your items take in our truck, not by the hour. Most jobs start at our $99 minimum pickup, and larger loads are quoted upfront before we load anything. Send photos to 810-242-0429 or visit our pricing page for a clear estimate.",
     category: "pricing",
   },
   {

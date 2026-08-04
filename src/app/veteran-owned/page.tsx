@@ -12,7 +12,7 @@ import { BRAND } from "@/lib/constants";
 export const metadata: Metadata = buildPageMetadata({
   title: "Veteran Owned Junk Removal | Junk Command Port Huron",
   description:
-    "Junk Command is a veteran-owned junk removal company based in Port Huron, MI. Mission-focused service across St. Clair County. Call 810-336-5865.",
+    "Junk Command is a veteran-owned junk removal company based in Port Huron, MI. Mission-focused service across St. Clair County. Call 810-242-0429.",
   path: "/veteran-owned",
 });
 

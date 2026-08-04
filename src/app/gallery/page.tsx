@@ -49,7 +49,7 @@ export default function GalleryPage() {
 
       <CtaBanner
         title="WANT RESULTS LIKE THESE?"
-        description="Text photos to 810-336-5865 and we will quote your Port Huron area job fast."
+        description="Text photos to 810-242-0429 and we will quote your Port Huron area job fast."
       />
     </SiteShell>
   );
