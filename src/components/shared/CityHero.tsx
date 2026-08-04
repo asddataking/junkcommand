@@ -49,7 +49,7 @@ export function CityHero({
         <p className="mt-2 text-sm text-muted">{county}</p>
         <p className="mt-4 max-w-2xl text-base text-muted sm:text-lg">{intro}</p>
         <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-          <Button href="/book-online" showArrow>
+          <Button href="/#quote" showArrow>
             Get My Free Quote
           </Button>
           <Button href={BRAND.phoneHref} variant="secondary">

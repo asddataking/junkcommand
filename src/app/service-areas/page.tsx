@@ -48,7 +48,7 @@ export default function ServiceAreasPage() {
             Sanilac County.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <Button href="/book-online" showArrow>
+            <Button href="/#quote" showArrow>
               Book Junk Removal
             </Button>
             <Button href={BRAND.phoneHref} variant="secondary">

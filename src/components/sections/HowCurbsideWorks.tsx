@@ -111,7 +111,7 @@ export function HowCurbsideWorks() {
         </ol>
 
         <div className="mt-10 flex justify-center">
-          <ShimmerButton href="#quote">Get My Curbside Price</ShimmerButton>
+          <ShimmerButton href="/#quote">Get My Curbside Price</ShimmerButton>
         </div>
 
         <div className="mt-16 grid gap-8 lg:grid-cols-2">

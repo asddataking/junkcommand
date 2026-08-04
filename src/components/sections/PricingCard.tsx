@@ -19,7 +19,7 @@ export function PricingCard({ item, priority = false }: PricingCardProps) {
   if (item.isCtaCard) {
     return (
       <Link
-        href="#quote"
+        href="/#quote"
         className="group relative flex h-full min-h-[17.5rem] flex-col justify-between overflow-hidden rounded-[2px] border border-bright/50 bg-[rgba(7,135,255,0.12)] p-5 transition-[border-color,box-shadow,transform] duration-300 hover:-translate-y-0.5 hover:border-bright hover:shadow-[0_0_28px_rgba(7,135,255,0.35)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bright"
         aria-label="Get a free upfront quote for something else"
       >
@@ -49,7 +49,7 @@ export function PricingCard({ item, priority = false }: PricingCardProps) {
 
   return (
     <Link
-      href="#quote"
+      href="/#quote"
       className="group relative flex h-full min-h-[17.5rem] flex-col overflow-hidden rounded-[2px] border border-[rgba(0,135,255,0.4)] bg-[#080B0F] transition-[border-color,box-shadow,transform] duration-300 hover:-translate-y-0.5 hover:border-bright hover:shadow-[0_0_28px_rgba(7,135,255,0.35)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bright"
       aria-label={`Get a quote for ${item.name} removal, starting at ${formatStartingPrice(item.startingPrice)}`}
     >

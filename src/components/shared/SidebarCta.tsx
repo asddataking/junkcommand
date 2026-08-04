@@ -15,7 +15,7 @@ export function SidebarCta({
       <h2 className="font-display text-2xl tracking-[0.08em] text-white">{title}</h2>
       <p className="mt-2 text-sm text-muted">{description}</p>
       <div className="mt-5 space-y-3">
-        <Button href="/book-online" showArrow className="w-full">
+        <Button href="/#quote" showArrow className="w-full">
           Free Quote
         </Button>
         <a

@@ -37,7 +37,7 @@ export function PricingDisclaimer() {
               Send a few photos for a confirmed curbside price — no waiting at
               home required for most pickups.
             </p>
-            <Button href="#quote" className="mt-4 w-full sm:w-auto" showArrow>
+            <Button href="/#quote" className="mt-4 w-full sm:w-auto" showArrow>
               Get My Curbside Price
             </Button>
           </div>

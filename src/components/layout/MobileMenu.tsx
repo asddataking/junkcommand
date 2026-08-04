@@ -47,7 +47,7 @@ export function MobileMenu({
           Call {BRAND.phone}
         </a>
         <div className="pt-2">
-          <ShimmerButton href="#quote" className="w-full" onClick={onClose}>
+          <ShimmerButton href="/#quote" className="w-full" onClick={onClose}>
             Get My Free Quote
           </ShimmerButton>
         </div>

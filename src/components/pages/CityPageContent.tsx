@@ -252,7 +252,7 @@ export function CityPageContent({ city }: { city: City }) {
         description="Call, text photos, or book online — Junk Command is ready."
       />
       <div className="pb-10 text-center">
-        <Button href="/book-online" showArrow>
+        <Button href="/#quote" showArrow>
           Book Online
         </Button>
       </div>

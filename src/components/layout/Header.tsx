@@ -64,7 +64,7 @@ export function Header() {
         </nav>
 
         <div className="hidden items-center gap-3 lg:flex">
-          <ShimmerButton href="#quote">Get My Free Quote</ShimmerButton>
+          <ShimmerButton href="/#quote">Get My Free Quote</ShimmerButton>
         </div>
 
         <button

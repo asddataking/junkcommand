@@ -16,7 +16,7 @@ export function CtaBanner({
   eyebrow = "Take Command",
   title,
   description = "Get a free quote in minutes — call, text photos, or book online.",
-  primaryHref = "/book-online",
+  primaryHref = "/#quote",
   primaryLabel = "Get My Free Quote",
   secondaryHref = BRAND.phoneHref,
   secondaryLabel = `Call ${BRAND.phone}`,

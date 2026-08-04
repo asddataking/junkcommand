@@ -60,7 +60,7 @@ export default function ReviewsPage() {
             </p>
           )}
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <Button href="/book-online" showArrow>
+            <Button href="/#quote" showArrow>
               Get My Free Quote
             </Button>
             <Button href={BRAND.phoneHref} variant="secondary">
@@ -89,7 +89,7 @@ export default function ReviewsPage() {
                 count — and we&apos;ll earn every word.
               </p>
               <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
-                <Button href="/book-online" showArrow>
+                <Button href="/#quote" showArrow>
                   Book a Pickup
                 </Button>
                 <Button href={BRAND.smsHref} variant="secondary">

@@ -67,7 +67,7 @@ export default function AboutPage() {
             four-legged Chief Cleanup Officer, Luna.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <Button href="/book-online" showArrow>
+            <Button href="/#quote" showArrow>
               Get My Free Quote
             </Button>
             <Button href="/meet-the-crew" variant="secondary">
@@ -224,7 +224,7 @@ export default function AboutPage() {
               or book online in minutes.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <Button href="/book-online" showArrow>
+              <Button href="/#quote" showArrow>
                 Book Online
               </Button>
               <Button href="/veteran-owned" variant="secondary">

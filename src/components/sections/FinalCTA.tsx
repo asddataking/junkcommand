@@ -45,7 +45,7 @@ export function FinalCTA() {
                 </p>
               </div>
             </div>
-            <ShimmerButton href="#quote" className="w-full shrink-0 md:w-auto">
+            <ShimmerButton href="/#quote" className="w-full shrink-0 md:w-auto">
               Get Started Now
             </ShimmerButton>
           </div>

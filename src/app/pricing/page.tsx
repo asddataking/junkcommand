@@ -155,7 +155,7 @@ export default function PricingPage() {
             <FaqAccordion items={pricingFaqs} idPrefix="pricing-faq" />
           </div>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <Button href="/book-online" showArrow>
+            <Button href="/#quote" showArrow>
               Lock In a Free Quote
             </Button>
             <Button href="/faqs" variant="secondary">

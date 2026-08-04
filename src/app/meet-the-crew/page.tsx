@@ -67,7 +67,7 @@ export default function MeetTheCrewPage() {
             treats your property like it is on our own block.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <Button href="/book-online" showArrow>
+            <Button href="/#quote" showArrow>
               Book This Crew
             </Button>
             <Button href={BRAND.phoneHref} variant="secondary">

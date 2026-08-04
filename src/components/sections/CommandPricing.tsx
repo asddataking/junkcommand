@@ -91,7 +91,7 @@ export function CommandPricing() {
                   ))}
                 </ul>
                 <div className="mt-8">
-                  <ShimmerButton href="#quote" className="w-full sm:w-auto">
+                  <ShimmerButton href="/#quote" className="w-full sm:w-auto">
                     Get My Curbside Price
                   </ShimmerButton>
                 </div>

@@ -81,7 +81,7 @@ export function Hero() {
 
           <BlurFade delay={0.24} inView={false}>
             <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
-              <ShimmerButton href="#quote" className="w-full sm:w-auto">
+              <ShimmerButton href="/#quote" className="w-full sm:w-auto">
                 Get My Free Quote
               </ShimmerButton>
               <Button
