@@ -101,6 +101,12 @@ export default function RootLayout({
             gtag('config', '${GA_MEASUREMENT_ID}');
           `}
         </Script>
+        <Script
+          src="https://widgets.leadconnectorhq.com/loader.js"
+          strategy="afterInteractive"
+          data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
+          data-widget-id="6a720eb25a8261fbe4d13a08"
+        />
         {schemas.map((schema, index) => (
           <script
             // eslint-disable-next-line react/no-danger

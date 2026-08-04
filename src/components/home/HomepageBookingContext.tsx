@@ -38,13 +38,7 @@ const HomepageBookingContext =
   createContext<HomepageBookingContextValue | null>(null);
 
 function scrollToId(id: string) {
-  const el = document.getElementById(id);
-  el?.scrollIntoView({ behavior: "smooth", block: "start" });
-  if (id === "quote") {
-    window.setTimeout(() => {
-      document.getElementById("fullName")?.focus();
-    }, 450);
-  }
+  document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
 export function HomepageBookingProvider({ children }: { children: ReactNode }) {

@@ -9,11 +9,9 @@ import { BlurFade } from "@/components/magicui/blur-fade";
 import { ShineBorder } from "@/components/magicui/shine-border";
 
 function scrollToQuoteAddress() {
-  const quote = document.getElementById("quote");
-  quote?.scrollIntoView({ behavior: "smooth", block: "start" });
-  window.setTimeout(() => {
-    document.getElementById("serviceAddress")?.focus();
-  }, 450);
+  document
+    .getElementById("quote")
+    ?.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
 export function ServiceAreaSection() {
