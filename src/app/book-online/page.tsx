@@ -119,9 +119,9 @@ export default function BookOnlinePage() {
                 CALENDAR PREVIEW
               </h2>
               <p className="mt-2 text-sm text-muted">
-                Live calendar booking is coming soon. For now, use the quote
-                form and tell us your preferred day and time window in the
-                details field — we will confirm when we reply.
+                Prefer a specific day? Share your preferred window in the
+                booking form below — we will confirm availability with your
+                estimate.
               </p>
 
               <div className="mt-6 grid grid-cols-7 gap-1 text-center text-[10px] font-semibold uppercase tracking-[0.08em] text-muted sm:text-xs">
@@ -193,9 +193,9 @@ export default function BookOnlinePage() {
                   NOTE DATE &amp; TIME
                 </h2>
                 <p className="mt-2 text-sm text-muted">
-                  In the details box, write something like &quot;Thursday after
-                  1 PM&quot; or &quot;Saturday morning preferred.&quot; We will
-                  confirm the closest available window with your quote.
+                  Prefer Thursday after 1 PM or Saturday morning? Note that in
+                  the form so we can confirm the closest available window with
+                  your estimate.
                 </p>
               </div>
             </div>
