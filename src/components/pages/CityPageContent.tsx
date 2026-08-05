@@ -8,7 +8,7 @@ import { FaqAccordion } from "@/components/shared/FaqAccordion";
 import { CtaBanner } from "@/components/shared/CtaBanner";
 import { SidebarCta } from "@/components/shared/SidebarCta";
 import { ReviewCard } from "@/components/shared/ReviewCard";
-import { MapPlaceholder } from "@/components/shared/MapPlaceholder";
+import { GoogleMapsEmbed } from "@/components/shared/GoogleMapsEmbed";
 import { TrustBar } from "@/components/sections/TrustBar";
 import { Button } from "@/components/ui/Button";
 import { MapPin, Check } from "lucide-react";
@@ -170,7 +170,11 @@ export function CityPageContent({ city }: { city: City }) {
                 SERVICE AREA MAP
               </h2>
               <div className="mt-6">
-                <MapPlaceholder label={`${city.name}, Michigan`} />
+                <GoogleMapsEmbed
+                  query={`${city.name}, Michigan`}
+                  label={`Junk Command junk removal service area in ${city.name}, Michigan`}
+                  zoom={city.isCounty ? 9 : 12}
+                />
               </div>
             </div>
 

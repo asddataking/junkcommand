@@ -6,7 +6,7 @@ import { ReviewsWall } from "@/components/pages/ReviewsWall";
 import { TrustBar } from "@/components/sections/TrustBar";
 import { Button } from "@/components/ui/Button";
 import { hasReviews, REVIEWS } from "@/data/reviews";
-import { BRAND } from "@/lib/constants";
+import { BRAND, getGbpReviewHref } from "@/lib/constants";
 import { buildPageMetadata } from "@/lib/seo";
 import {
   getBreadcrumbSchema,
@@ -60,8 +60,13 @@ export default function ReviewsPage() {
             </p>
           )}
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <Button href="/#quote" showArrow>
-              Get My Free Quote
+            <Button
+              href={getGbpReviewHref()}
+              target="_blank"
+              rel="noopener noreferrer"
+              showArrow
+            >
+              Review Us on Google
             </Button>
             <Button href={BRAND.phoneHref} variant="secondary">
               Call {BRAND.phone}
@@ -81,19 +86,24 @@ export default function ReviewsPage() {
           ) : (
             <div className="rounded-[2px] border border-[rgba(0,135,255,0.35)] bg-card p-8 sm:p-10">
               <h2 className="font-display text-3xl tracking-[0.08em] text-white sm:text-4xl">
-                BE ONE OF OUR FIRST REVIEWS
+                REVIEW US ON GOOGLE
               </h2>
               <p className="mx-auto mt-4 max-w-xl text-muted">
-                Book a junk removal with Junk Command, then tell us about your
-                experience. Honest local feedback means more than a fake star
-                count — and we&apos;ll earn every word.
+                After your haul, leave a Google review for Junk Command. Honest
+                local feedback helps neighbors across Port Huron and St. Clair
+                County choose with confidence — and we&apos;ll earn every star.
               </p>
               <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
-                <Button href="/#quote" showArrow>
-                  Book a Pickup
+                <Button
+                  href={getGbpReviewHref()}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  showArrow
+                >
+                  Leave a Google Review
                 </Button>
-                <Button href={BRAND.smsHref} variant="secondary">
-                  Text Us After Your Job
+                <Button href="/book-online" variant="secondary">
+                  Book a Pickup
                 </Button>
               </div>
             </div>

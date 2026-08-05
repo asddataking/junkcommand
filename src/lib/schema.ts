@@ -1,12 +1,15 @@
 import {
   BRAND,
   BRAND_LOGO,
+  BUSINESS_HOURS,
+  GBP,
   HOW_IT_WORKS,
+  LOCATION,
   SITE_URL,
-  SOCIAL_LINKS,
   SOCIAL_SHARE_IMAGE,
   SOCIAL_SHARE_IMAGE_HEIGHT,
   SOCIAL_SHARE_IMAGE_WIDTH,
+  getSameAsLinks,
 } from "@/lib/constants";
 import { SERVICES } from "@/data/services";
 import { CITIES, CITY_NAMES } from "@/data/cities";
@@ -37,22 +40,35 @@ function parseMinPrice(startingPrice?: string): number | undefined {
   return match ? Number(match[1]) : undefined;
 }
 
+function getAreaServed() {
+  const fromCities = CITIES.map((city) => ({
+    "@type": city.isCounty ? "AdministrativeArea" : "City",
+    name: city.name,
+  }));
+
+  const knownNames = new Set(CITIES.map((city) => city.name));
+  const extras = SCHEMA_SERVICE_AREAS.filter(
+    (name) => !knownNames.has(name),
+  ).map((name) => ({
+    "@type": /county|township|area/i.test(name)
+      ? "AdministrativeArea"
+      : "City",
+    name,
+  }));
+
+  return [...fromCities, ...extras];
+}
+
 function openingHoursSpecification() {
-  const weekday = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
-  return [
-    {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: weekday,
-      opens: "07:00",
-      closes: "19:00",
-    },
-    {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: "Saturday",
-      opens: "08:00",
-      closes: "17:00",
-    },
-  ];
+  return BUSINESS_HOURS.filter(
+    (row): row is typeof row & { opens: string; closes: string } =>
+      Boolean(row.opens && row.closes),
+  ).map((row) => ({
+    "@type": "OpeningHoursSpecification",
+    dayOfWeek: `https://schema.org/${row.day}`,
+    opens: row.opens,
+    closes: row.closes,
+  }));
 }
 
 export function getOrganizationSchema() {
@@ -73,10 +89,10 @@ export function getOrganizationSchema() {
       contentUrl: absoluteUrl(BRAND_LOGO),
     },
     image: absoluteUrl(SOCIAL_SHARE_IMAGE),
-    sameAs: SOCIAL_LINKS.map((link) => link.href),
+    sameAs: getSameAsLinks(),
     foundingLocation: {
       "@type": "Place",
-      name: "Port Huron, MI",
+      name: LOCATION.displayLine,
     },
   };
 }
@@ -96,15 +112,13 @@ export function getWebSiteSchema() {
 }
 
 export function getLocalBusinessSchema() {
-  const areaNames = Array.from(
-    new Set([...SCHEMA_SERVICE_AREAS, ...CITY_NAMES]),
-  );
+  const sameAs = getSameAsLinks();
 
   return {
     "@context": "https://schema.org",
     "@type": ["LocalBusiness", "HomeAndConstructionBusiness"],
     "@id": BUSINESS_ID,
-    name: BRAND.name,
+    name: GBP.name,
     alternateName: "Junk Command Junk Removal",
     description:
       "Fast, professional junk removal in Port Huron, Marysville, Fort Gratiot, and throughout St. Clair County and the Blue Water Area. Curbside pickup from $99; full-service from $129.",
@@ -121,22 +135,21 @@ export function getLocalBusinessSchema() {
     currenciesAccepted: "USD",
     paymentAccepted: "Cash, Credit Card, Debit Card",
     slogan: BRAND.tagline,
-    sameAs: SOCIAL_LINKS.map((link) => link.href),
+    sameAs,
+    ...(GBP.mapsUrl ? { hasMap: GBP.mapsUrl } : {}),
     parentOrganization: { "@id": ORGANIZATION_ID },
-    areaServed: areaNames.map((name) => ({
-      "@type": "Place",
-      name,
-    })),
+    areaServed: getAreaServed(),
     address: {
       "@type": "PostalAddress",
-      addressLocality: "Port Huron",
-      addressRegion: "MI",
-      addressCountry: "US",
+      addressLocality: LOCATION.locality,
+      addressRegion: LOCATION.region,
+      postalCode: LOCATION.postalCode,
+      addressCountry: LOCATION.country,
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: 42.9709,
-      longitude: -82.4249,
+      latitude: LOCATION.geo.latitude,
+      longitude: LOCATION.geo.longitude,
     },
     openingHoursSpecification: openingHoursSpecification(),
     knowsAbout: [

@@ -1,6 +1,14 @@
 import Link from "next/link";
-import { Instagram, MapPin, Youtube } from "lucide-react";
-import { BRAND, FOOTER_LINKS, SOCIAL_LINKS } from "@/lib/constants";
+import { Instagram, MapPin, Star, Youtube } from "lucide-react";
+import {
+  BRAND,
+  FOOTER_LINKS,
+  HOURS_SUMMARY,
+  LOCATION,
+  SOCIAL_LINKS,
+  getGbpMapsHref,
+  getGbpReviewHref,
+} from "@/lib/constants";
 import { CITIES } from "@/data/cities";
 import { Logo } from "@/components/ui/Logo";
 import { MascotBadge } from "@/components/ui/MascotBadge";
@@ -27,6 +35,14 @@ export function Footer() {
             className="items-start"
           />
           <ul className="space-y-2 text-sm text-muted">
+            <li className="inline-flex items-start gap-2">
+              <MapPin className="mt-0.5 size-3.5 shrink-0 text-bright" aria-hidden />
+              <span>
+                {BRAND.name}
+                <br />
+                {LOCATION.displayLine}
+              </span>
+            </li>
             <li>
               <a href={BRAND.phoneHref} className="hover:text-bright">
                 {BRAND.phone}
@@ -35,6 +51,31 @@ export function Footer() {
             <li>
               <a href={BRAND.emailHref} className="hover:text-bright">
                 {BRAND.email}
+              </a>
+            </li>
+            <li>{HOURS_SUMMARY}</li>
+          </ul>
+          <ul className="flex flex-col gap-2 text-sm">
+            <li>
+              <a
+                href={getGbpMapsHref()}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-bright hover:text-white"
+              >
+                <MapPin className="size-3.5" aria-hidden />
+                Find us on Google
+              </a>
+            </li>
+            <li>
+              <a
+                href={getGbpReviewHref()}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-bright hover:text-white"
+              >
+                <Star className="size-3.5" aria-hidden />
+                Leave a Google Review
               </a>
             </li>
           </ul>

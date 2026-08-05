@@ -3,13 +3,19 @@ import { SiteShell } from "@/components/layout/SiteShell";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 import { CtaBanner } from "@/components/shared/CtaBanner";
-import { MapPlaceholder } from "@/components/shared/MapPlaceholder";
+import { GoogleMapsEmbed } from "@/components/shared/GoogleMapsEmbed";
 import { QuoteForm } from "@/components/forms/QuoteForm";
 import { TrustBar } from "@/components/sections/TrustBar";
 import { Button } from "@/components/ui/Button";
-import { BRAND, BUSINESS_HOURS } from "@/lib/constants";
+import {
+  BRAND,
+  BUSINESS_HOURS,
+  GBP,
+  LOCATION,
+  getGbpMapsHref,
+} from "@/lib/constants";
 import { buildPageMetadata } from "@/lib/seo";
-import { getBreadcrumbSchema, getLocalBusinessSchema } from "@/lib/schema";
+import { getBreadcrumbSchema } from "@/lib/schema";
 
 const crumbs = [
   { name: "Home", href: "/" },
@@ -26,7 +32,7 @@ export const metadata = buildPageMetadata({
 export default function ContactPage() {
   return (
     <SiteShell>
-      <JsonLd data={[getLocalBusinessSchema(), getBreadcrumbSchema(crumbs)]} />
+      <JsonLd data={getBreadcrumbSchema(crumbs)} />
 
       <section className="relative overflow-hidden border-b border-[rgba(0,135,255,0.2)] py-16 sm:py-20 lg:py-24">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(7,135,255,0.15),transparent_55%)]" />
@@ -59,7 +65,23 @@ export default function ContactPage() {
       <section className="py-16 sm:py-20 lg:py-24">
         <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
           <div className="space-y-8">
-            <MapPlaceholder label="Port Huron, Michigan HQ" className="min-h-72" />
+            <div className="space-y-3">
+              <GoogleMapsEmbed
+                query={`${LOCATION.locality}, ${LOCATION.regionName}`}
+                label="Junk Command service area around Port Huron, Michigan"
+                className="min-h-72"
+              />
+              <Button
+                href={getGbpMapsHref()}
+                target="_blank"
+                rel="noopener noreferrer"
+                variant="secondary"
+                className="w-full sm:w-auto"
+                showArrow
+              >
+                {GBP.mapsUrl ? "View us on Google" : "Find Junk Command on Google"}
+              </Button>
+            </div>
 
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.28em] text-bright">
@@ -118,8 +140,9 @@ export default function ContactPage() {
                 ))}
               </ul>
               <p className="mt-3 text-xs text-muted">
-                Based in Port Huron, MI. Serving St. Clair, Macomb, and nearby
-                Blue Water communities.
+                Based in {LOCATION.displayLine}. Serving St. Clair, Macomb, and
+                nearby Blue Water communities. Service-area business — we come
+                to you.
               </p>
             </div>
           </div>

@@ -4,13 +4,13 @@ import { SiteShell } from "@/components/layout/SiteShell";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 import { CtaBanner } from "@/components/shared/CtaBanner";
-import { MapPlaceholder } from "@/components/shared/MapPlaceholder";
+import { GoogleMapsEmbed } from "@/components/shared/GoogleMapsEmbed";
 import { TrustBar } from "@/components/sections/TrustBar";
 import { Button } from "@/components/ui/Button";
 import { CITIES } from "@/data/cities";
 import { BRAND } from "@/lib/constants";
 import { buildPageMetadata } from "@/lib/seo";
-import { getBreadcrumbSchema, getLocalBusinessSchema } from "@/lib/schema";
+import { getBreadcrumbSchema } from "@/lib/schema";
 
 const crumbs = [
   { name: "Home", href: "/" },
@@ -29,7 +29,7 @@ export const metadata = buildPageMetadata({
 export default function ServiceAreasPage() {
   return (
     <SiteShell>
-      <JsonLd data={[getLocalBusinessSchema(), getBreadcrumbSchema(crumbs)]} />
+      <JsonLd data={getBreadcrumbSchema(crumbs)} />
 
       <section className="relative overflow-hidden border-b border-[rgba(0,135,255,0.2)] py-16 sm:py-20 lg:py-24">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(7,135,255,0.16),transparent_55%)]" />
@@ -62,9 +62,11 @@ export default function ServiceAreasPage() {
 
       <section className="py-16 sm:py-20 lg:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <MapPlaceholder
-            label="Junk Command Service Map"
+          <GoogleMapsEmbed
+            query="St. Clair County, Michigan"
+            label="Junk Command junk removal service area across St. Clair County, Michigan"
             className="min-h-72"
+            zoom={9}
           />
 
           <div className="mt-16 space-y-14">

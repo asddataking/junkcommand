@@ -172,14 +172,14 @@ export const FAQS: Faq[] = [
     id: "scheduling-weekends",
     question: "Do you work weekends?",
     answer:
-      "Yes. We run Saturday appointments and can schedule Sunday by appointment when demand and crew availability allow. Weekend junk removal is popular for garage cleanouts and move-outs, so booking ahead helps. Reach out and we will find a window that fits.",
+      "Yes — we run Saturday appointments from 8:00 AM to 6:00 PM. Sunday is closed. Weekend junk removal is popular for garage cleanouts and move-outs, so booking ahead helps. Reach out and we will find a Saturday window that fits.",
     category: "scheduling",
   },
   {
     id: "scheduling-hours",
     question: "What are Junk Command’s hours?",
     answer:
-      "We typically serve customers Monday through Friday from 7:00 AM to 7:00 PM and Saturdays from 8:00 AM to 5:00 PM, with Sunday available by appointment. Quote requests by text are answered quickly during business hours. If you need an early or late window, ask — we try to accommodate.",
+      "We serve customers Monday through Saturday from 8:00 AM to 6:00 PM. Sunday is closed. Quote requests by text are answered quickly during business hours. If you need an early or late window, ask — we try to accommodate when the schedule allows.",
     category: "scheduling",
   },
   {

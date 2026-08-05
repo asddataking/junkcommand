@@ -8,21 +8,20 @@ import { TrustBar } from "@/components/sections/TrustBar";
 import { Button } from "@/components/ui/Button";
 import { BRAND } from "@/lib/constants";
 import { buildPageMetadata } from "@/lib/seo";
-import { getBreadcrumbSchema, getLocalBusinessSchema } from "@/lib/schema";
+import { getBreadcrumbSchema } from "@/lib/schema";
 
 const crumbs = [
   { name: "Home", href: "/" },
   { name: "Book Online", href: "/book-online" },
 ];
 
-const DAYS = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"] as const;
+const DAYS = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat"] as const;
 const TIME_SLOTS = [
-  "7–9 AM",
-  "9–11 AM",
-  "11 AM–1 PM",
-  "1–3 PM",
-  "3–5 PM",
-  "5–7 PM",
+  "8–10 AM",
+  "10 AM–12 PM",
+  "12–2 PM",
+  "2–4 PM",
+  "4–6 PM",
 ] as const;
 
 export const metadata = buildPageMetadata({
@@ -35,7 +34,7 @@ export const metadata = buildPageMetadata({
 export default function BookOnlinePage() {
   return (
     <SiteShell>
-      <JsonLd data={[getLocalBusinessSchema(), getBreadcrumbSchema(crumbs)]} />
+      <JsonLd data={getBreadcrumbSchema(crumbs)} />
 
       <section className="relative overflow-hidden border-b border-[rgba(0,135,255,0.2)] py-16 sm:py-20 lg:py-24">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(7,135,255,0.16),transparent_60%)]" />

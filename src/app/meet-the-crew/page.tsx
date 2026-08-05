@@ -11,7 +11,6 @@ import { BRAND } from "@/lib/constants";
 import { buildPageMetadata } from "@/lib/seo";
 import {
   getBreadcrumbSchema,
-  getLocalBusinessSchema,
   getPersonSchema,
 } from "@/lib/schema";
 
@@ -32,7 +31,6 @@ export default function MeetTheCrewPage() {
     <SiteShell>
       <JsonLd
         data={[
-          getLocalBusinessSchema(),
           getBreadcrumbSchema(crumbs),
           getPersonSchema({
             name: "Dan",

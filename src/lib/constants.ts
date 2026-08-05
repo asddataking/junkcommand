@@ -10,6 +10,34 @@ export const BRAND = {
 
 export const SITE_URL = "https://www.getjunkcommand.com";
 
+/** Public HQ locality only — no street address (service-area GBP). */
+export const LOCATION = {
+  locality: "Port Huron",
+  region: "MI",
+  regionName: "Michigan",
+  postalCode: "48060",
+  country: "US",
+  displayLine: "Port Huron, MI 48060",
+  geo: {
+    latitude: 42.9709,
+    longitude: -82.4249,
+  },
+} as const;
+
+/**
+ * Google Business Profile links.
+ * Paste the Maps share URL and “Get more reviews” URL from GBP.
+ * Schema only includes hasMap/sameAs when mapsUrl is set.
+ * UI falls back to a Google Maps search until those URLs are pasted.
+ */
+export const GBP = {
+  name: "Junk Command",
+  mapsUrl: "",
+  reviewUrl: "",
+} as const;
+
+export const GBP_WEBSITE_UTM = `${SITE_URL}/?utm_source=google&utm_medium=organic&utm_campaign=gbp`;
+
 /** Public social profiles (footer + schema sameAs) */
 export const SOCIAL_LINKS = [
   {
@@ -26,6 +54,25 @@ export const SOCIAL_LINKS = [
   },
 ] as const;
 
+export function getSameAsLinks(): string[] {
+  const links = SOCIAL_LINKS.map((link) => link.href);
+  if (GBP.mapsUrl) links.push(GBP.mapsUrl);
+  return links;
+}
+
+export function getGbpMapsHref() {
+  return (
+    GBP.mapsUrl ||
+    `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+      `${GBP.name} ${LOCATION.displayLine} junk removal`,
+    )}`
+  );
+}
+
+export function getGbpReviewHref() {
+  return GBP.reviewUrl || getGbpMapsHref();
+}
+
 /** Default Open Graph / Twitter / iMessage share image (1200×630) */
 export const SOCIAL_SHARE_IMAGE = "/images/og/junk-command-social.jpg";
 export const SOCIAL_SHARE_IMAGE_ALT =
@@ -37,14 +84,16 @@ export const SOCIAL_SHARE_IMAGE_HEIGHT = 630;
 export const BRAND_LOGO = "/images/junk-command-logo.png";
 
 export const BUSINESS_HOURS = [
-  { day: "Monday", hours: "7:00 AM – 7:00 PM" },
-  { day: "Tuesday", hours: "7:00 AM – 7:00 PM" },
-  { day: "Wednesday", hours: "7:00 AM – 7:00 PM" },
-  { day: "Thursday", hours: "7:00 AM – 7:00 PM" },
-  { day: "Friday", hours: "7:00 AM – 7:00 PM" },
-  { day: "Saturday", hours: "8:00 AM – 5:00 PM" },
-  { day: "Sunday", hours: "By Appointment" },
+  { day: "Monday", hours: "8:00 AM – 6:00 PM", opens: "08:00", closes: "18:00" },
+  { day: "Tuesday", hours: "8:00 AM – 6:00 PM", opens: "08:00", closes: "18:00" },
+  { day: "Wednesday", hours: "8:00 AM – 6:00 PM", opens: "08:00", closes: "18:00" },
+  { day: "Thursday", hours: "8:00 AM – 6:00 PM", opens: "08:00", closes: "18:00" },
+  { day: "Friday", hours: "8:00 AM – 6:00 PM", opens: "08:00", closes: "18:00" },
+  { day: "Saturday", hours: "8:00 AM – 6:00 PM", opens: "08:00", closes: "18:00" },
+  { day: "Sunday", hours: "Closed", opens: null, closes: null },
 ] as const;
+
+export const HOURS_SUMMARY = "Mon–Sat 8:00 AM – 6:00 PM · Sunday Closed";
 
 /** Primary header nav — matches homepage mockup anchors */
 export const NAV_LINKS = [
