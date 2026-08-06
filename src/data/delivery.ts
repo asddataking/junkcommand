@@ -19,6 +19,10 @@ export type DeliveryPage = {
   image: string;
   imageAlt: string;
   primaryCta: { label: string; href: string };
+  contextSection?: {
+    title: string;
+    paragraphs: string[];
+  };
   process: { title: string; description: string }[];
   features: DeliveryFeature[];
   removalCta?: {
@@ -68,6 +72,13 @@ export const GARAGE_SALE_TRAIL: DeliveryPage = {
   imageAlt:
     "Junk Command trailer ready for garage sale furniture delivery in Port Huron",
   primaryCta: { label: "Request Delivery", href: "#quote" },
+  contextSection: {
+    title: "MICHIGAN'S THUMB YARD SALE TRAIL",
+    paragraphs: [
+      "Each August, Michigan's Thumb Antique Yard Sale Trail turns the shoreline roads of the Blue Water Area into miles of garage sales, barn sales, and antique stops. The route stretches along M-29 and M-25 — up the St. Clair River through communities like New Baltimore, Marine City, St. Clair, and Port Huron, then north along Lake Huron through Lexington and the Thumb coast.",
+      "Shoppers often base around Port Huron and work a segment at a time. When you find furniture, antiques, or appliances too big for your car, Junk Command provides garage sale pickup and large item delivery so you can keep browsing instead of hunting for a trailer rental.",
+    ],
+  },
   process: [
     {
       title: "Text photos & pickup spot",

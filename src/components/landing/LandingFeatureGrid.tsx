@@ -33,7 +33,9 @@ export function LandingFeatureGrid({
               key={feature.title}
               className="rounded-[2px] border border-[rgba(0,135,255,0.3)] bg-card p-5"
             >
-              <h3 className="font-heading text-lg text-white">{feature.title}</h3>
+              <h2 className="font-heading text-lg text-white sm:text-xl">
+                {feature.title}
+              </h2>
               <p className="mt-2 text-sm leading-relaxed text-muted">
                 {feature.description}
               </p>

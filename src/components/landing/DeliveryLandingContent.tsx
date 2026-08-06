@@ -36,6 +36,20 @@ export function DeliveryLandingContent({ page }: { page: DeliveryPage }) {
         ]}
       />
       <TrustBar />
+      {page.contextSection ? (
+        <section className="border-b border-[rgba(0,135,255,0.15)] py-12 sm:py-16">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <h2 className="font-display text-3xl tracking-[0.06em] text-white sm:text-4xl">
+              {page.contextSection.title}
+            </h2>
+            <div className="mt-5 max-w-3xl space-y-4 text-muted">
+              {page.contextSection.paragraphs.map((paragraph) => (
+                <p key={paragraph.slice(0, 48)}>{paragraph}</p>
+              ))}
+            </div>
+          </div>
+        </section>
+      ) : null}
       <LandingHowItWorks steps={page.process} />
       <LandingFeatureGrid features={page.features} />
       {page.removalCta ? (
