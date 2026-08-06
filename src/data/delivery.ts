@@ -6,6 +6,14 @@ export type DeliveryArea = {
 export type DeliveryFeature = {
   title: string;
   description: string;
+  image?: string;
+  imageAlt?: string;
+};
+
+export type DeliveryGalleryImage = {
+  src: string;
+  alt: string;
+  caption?: string;
 };
 
 export type DeliveryPage = {
@@ -22,7 +30,10 @@ export type DeliveryPage = {
   contextSection?: {
     title: string;
     paragraphs: string[];
+    image?: string;
+    imageAlt?: string;
   };
+  gallery?: DeliveryGalleryImage[];
   process: { title: string; description: string }[];
   features: DeliveryFeature[];
   removalCta?: {
@@ -68,9 +79,9 @@ export const GARAGE_SALE_TRAIL: DeliveryPage = {
   h1: "Bought Something Too Big? We'll Bring It Home.",
   intro:
     "Score a dresser, antique, or appliance along Michigan's Thumb Antique Yard Sale Trail — then text Junk Command. We haul large garage sale finds home across Port Huron, the Blue Water Area, and communities along M-29 and M-25 so you can keep shopping without a trailer.",
-  image: "/images/trailer.webp",
+  image: "/images/garage-sale-trail/lexington-lake-huron-beach.webp",
   imageAlt:
-    "Junk Command trailer ready for garage sale furniture delivery in Port Huron",
+    "Lexington, Michigan beach on Lake Huron along the Thumb Yard Sale Trail",
   primaryCta: { label: "Request Delivery", href: "#quote" },
   contextSection: {
     title: "MICHIGAN'S THUMB YARD SALE TRAIL",
@@ -78,7 +89,27 @@ export const GARAGE_SALE_TRAIL: DeliveryPage = {
       "Each August, Michigan's Thumb Antique Yard Sale Trail turns the shoreline roads of the Blue Water Area into miles of garage sales, barn sales, and antique stops. The route stretches along M-29 and M-25 — up the St. Clair River through communities like New Baltimore, Marine City, St. Clair, and Port Huron, then north along Lake Huron through Lexington and the Thumb coast.",
       "Shoppers often base around Port Huron and work a segment at a time. When you find furniture, antiques, or appliances too big for your car, Junk Command provides garage sale pickup and large item delivery so you can keep browsing instead of hunting for a trailer rental.",
     ],
+    image: "/images/garage-sale-trail/lexington-downtown-waterfront.webp",
+    imageAlt:
+      "Lexington, Michigan downtown near the Lake Huron waterfront on the Yard Sale Trail",
   },
+  gallery: [
+    {
+      src: "/images/garage-sale-trail/lexington-lake-huron-beach.webp",
+      alt: "Sandy beach and Lake Huron shoreline in Lexington, Michigan",
+      caption: "Lexington Beach · Lake Huron",
+    },
+    {
+      src: "/images/garage-sale-trail/lexington-downtown-waterfront.webp",
+      alt: "Downtown Lexington, Michigan near the waterfront",
+      caption: "Downtown Lexington",
+    },
+    {
+      src: "/images/garage-sale-trail/thumb-coast-m25-trail.webp",
+      alt: "Coastal Michigan highway along Lake Huron on the Thumb Yard Sale Trail",
+      caption: "M-25 Thumb Coast",
+    },
+  ],
   process: [
     {
       title: "Text photos & pickup spot",

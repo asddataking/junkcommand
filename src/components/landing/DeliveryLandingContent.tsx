@@ -8,7 +8,10 @@ import {
 import { LandingServiceAreas } from "@/components/landing/LandingServiceAreas";
 import { LandingFaq } from "@/components/landing/LandingFaq";
 import { LandingEndCta } from "@/components/landing/LandingEndCta";
+import { LandingPhotoGallery } from "@/components/landing/LandingPhotoGallery";
 import { TrustBar } from "@/components/sections/TrustBar";
+import { MediaImage } from "@/components/ui/MediaImage";
+import { BlurFade } from "@/components/magicui/blur-fade";
 import { BRAND } from "@/lib/constants";
 import type { DeliveryPage } from "@/data/delivery";
 
@@ -38,17 +41,38 @@ export function DeliveryLandingContent({ page }: { page: DeliveryPage }) {
       <TrustBar />
       {page.contextSection ? (
         <section className="border-b border-[rgba(0,135,255,0.15)] py-12 sm:py-16">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <h2 className="font-display text-3xl tracking-[0.06em] text-white sm:text-4xl">
-              {page.contextSection.title}
-            </h2>
-            <div className="mt-5 max-w-3xl space-y-4 text-muted">
-              {page.contextSection.paragraphs.map((paragraph) => (
-                <p key={paragraph.slice(0, 48)}>{paragraph}</p>
-              ))}
-            </div>
+          <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-2 lg:items-center lg:px-8">
+            <BlurFade>
+              <h2 className="font-display text-3xl tracking-[0.06em] text-white sm:text-4xl">
+                {page.contextSection.title}
+              </h2>
+              <div className="mt-5 space-y-4 text-muted">
+                {page.contextSection.paragraphs.map((paragraph) => (
+                  <p key={paragraph.slice(0, 48)}>{paragraph}</p>
+                ))}
+              </div>
+            </BlurFade>
+            {page.contextSection.image ? (
+              <BlurFade delay={0.1}>
+                <div className="relative aspect-[4/3] overflow-hidden rounded-[2px] border border-[rgba(0,135,255,0.35)]">
+                  <MediaImage
+                    src={page.contextSection.image}
+                    alt={
+                      page.contextSection.imageAlt ??
+                      page.contextSection.title
+                    }
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    className="object-cover"
+                  />
+                </div>
+              </BlurFade>
+            ) : null}
           </div>
         </section>
+      ) : null}
+      {page.gallery?.length ? (
+        <LandingPhotoGallery images={page.gallery} />
       ) : null}
       <LandingHowItWorks steps={page.process} />
       <LandingFeatureGrid features={page.features} />
