@@ -4,6 +4,7 @@ import { SERVICES } from "@/data/services";
 import { CITIES } from "@/data/cities";
 import { BLOG_POSTS } from "@/data/blog";
 import { GUIDES } from "@/data/guides";
+import { getAllPartnerIndustrySlugs } from "@/data/partners";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
@@ -27,6 +28,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/blog`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
     { url: `${SITE_URL}/privacy`, lastModified: now, changeFrequency: "yearly", priority: 0.3 },
     { url: `${SITE_URL}/terms`, lastModified: now, changeFrequency: "yearly", priority: 0.3 },
+    {
+      url: `${SITE_URL}/garage-sale-trail`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.75,
+    },
+    {
+      url: `${SITE_URL}/furniture-delivery`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.75,
+    },
+    {
+      url: `${SITE_URL}/partners`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.75,
+    },
   ];
 
   const services: MetadataRoute.Sitemap = SERVICES.map((service) => ({
@@ -57,5 +76,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  return [...staticPages, ...services, ...cities, ...posts, ...guides];
+  const partnerIndustries: MetadataRoute.Sitemap =
+    getAllPartnerIndustrySlugs().map((slug) => ({
+      url: `${SITE_URL}/partners/${slug}`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    }));
+
+  return [
+    ...staticPages,
+    ...services,
+    ...cities,
+    ...posts,
+    ...guides,
+    ...partnerIndustries,
+  ];
 }

@@ -32,8 +32,27 @@ export type GhlQuotePayload = {
   submittedAt?: string;
 };
 
-export async function sendToGoHighLevel(
-  payload: GhlQuotePayload,
+export type GhlPartnerPayload = {
+  formType: "partner_application";
+  businessName: string;
+  contactName: string;
+  fullName: string;
+  email: string;
+  phone: string;
+  businessType: string;
+  estimatedReferrals: string;
+  message?: string;
+  serviceType: "Partner Application";
+  junkType: "Partner Application";
+  pageUrl?: string;
+  submittedAt?: string;
+  utm_source?: string;
+  utm_medium?: string;
+  utm_campaign?: string;
+};
+
+async function postToGoHighLevel(
+  payload: GhlQuotePayload | GhlPartnerPayload,
 ): Promise<{ ok: boolean; status?: number; error?: string }> {
   const webhookUrl = process.env.GHL_WEBHOOK_URL;
 
@@ -67,4 +86,16 @@ export async function sendToGoHighLevel(
       error: error instanceof Error ? error.message : "GHL webhook error",
     };
   }
+}
+
+export async function sendToGoHighLevel(
+  payload: GhlQuotePayload,
+): Promise<{ ok: boolean; status?: number; error?: string }> {
+  return postToGoHighLevel(payload);
+}
+
+export async function sendPartnerToGoHighLevel(
+  payload: GhlPartnerPayload,
+): Promise<{ ok: boolean; status?: number; error?: string }> {
+  return postToGoHighLevel(payload);
 }

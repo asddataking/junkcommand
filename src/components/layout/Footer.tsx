@@ -106,6 +106,18 @@ export function Footer() {
               </li>
             ))}
           </ul>
+          <h2 className="mt-8 font-display text-xl tracking-[0.12em] text-white">
+            Additional Services
+          </h2>
+          <ul className="mt-4 space-y-2 text-sm text-muted">
+            {FOOTER_LINKS.additionalServices.map((link) => (
+              <li key={link.href}>
+                <Link href={link.href} className="hover:text-bright">
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
 
         <div>
@@ -114,6 +126,18 @@ export function Footer() {
           </h2>
           <ul className="mt-4 space-y-2 text-sm text-muted">
             {FOOTER_LINKS.resources.map((link) => (
+              <li key={link.href}>
+                <Link href={link.href} className="hover:text-bright">
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <h2 className="mt-8 font-display text-xl tracking-[0.12em] text-white">
+            Partners
+          </h2>
+          <ul className="mt-4 space-y-2 text-sm text-muted">
+            {FOOTER_LINKS.partners.map((link) => (
               <li key={link.href}>
                 <Link href={link.href} className="hover:text-bright">
                   {link.label}

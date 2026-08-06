@@ -328,6 +328,37 @@ export function getServicePageSchema(service: (typeof SERVICES)[number]) {
   };
 }
 
+/** Schema for SEO landing pages (delivery, partners) outside the primary SERVICES catalog */
+export function getLandingServiceSchema(input: {
+  name: string;
+  serviceType: string;
+  description: string;
+  path: string;
+  image: string;
+  areaNames?: string[];
+}) {
+  const url = absoluteUrl(input.path);
+  const areas = input.areaNames?.length
+    ? input.areaNames
+    : CITY_NAMES;
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": `${url}#service`,
+    name: input.name,
+    serviceType: input.serviceType,
+    description: input.description,
+    url,
+    image: absoluteUrl(input.image),
+    provider: { "@id": BUSINESS_ID },
+    areaServed: areas.map((name) => ({
+      "@type": "AdministrativeArea",
+      name,
+    })),
+  };
+}
+
 export function getCityPageSchema(city: (typeof CITIES)[number]) {
   return {
     "@context": "https://schema.org",

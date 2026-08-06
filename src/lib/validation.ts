@@ -32,3 +32,23 @@ export const quoteSchema = z.object({
 });
 
 export type QuoteFormValues = z.infer<typeof quoteSchema>;
+
+export const partnerSchema = z.object({
+  businessName: z.string().min(2, "Enter your business name"),
+  contactName: z.string().min(2, "Enter a contact name"),
+  email: z.string().email("Enter a valid email address"),
+  phone: z
+    .string()
+    .min(10, "Enter a valid phone number")
+    .regex(/^[\d\s()+.-]+$/, "Enter a valid phone number"),
+  businessType: z.string().min(2, "Select a business type"),
+  estimatedReferrals: z.string().min(1, "Select estimated referrals"),
+  message: z.string().optional(),
+  pageUrl: z.string().optional(),
+  submittedAt: z.string().optional(),
+  utm_source: z.string().optional(),
+  utm_medium: z.string().optional(),
+  utm_campaign: z.string().optional(),
+});
+
+export type PartnerFormValues = z.infer<typeof partnerSchema>;

@@ -118,6 +118,19 @@ export const FOOTER_LINKS = {
     { label: "Furniture Removal", href: "/furniture-removal" },
     { label: "Hot Tub Removal", href: "/hot-tub-removal" },
   ],
+  additionalServices: [
+    { label: "Garage Sale Delivery", href: "/garage-sale-trail" },
+    {
+      label: "Furniture & Marketplace Delivery",
+      href: "/furniture-delivery",
+    },
+  ],
+  partners: [
+    { label: "Partner Program", href: "/partners" },
+    { label: "Realtors", href: "/partners/realtors" },
+    { label: "Property Managers", href: "/partners/property-managers" },
+    { label: "Contractors", href: "/partners/contractors" },
+  ],
   resources: [
     { label: "Pricing", href: "/pricing" },
     { label: "FAQs", href: "/faqs" },
