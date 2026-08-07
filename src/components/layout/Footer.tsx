@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Instagram, MapPin, Star, Youtube } from "lucide-react";
 import {
   BRAND,
@@ -22,6 +23,8 @@ const SOCIAL_ICONS = {
   TikTok: TikTokIcon,
 } as const;
 
+const VOB_DIRECTORY_URL = "https://www.veteranownedbusiness.com/";
+
 export function Footer() {
   return (
     <footer className="border-t border-[rgba(0,135,255,0.25)] bg-[#080B0F] pb-24 md:pb-0">
@@ -34,6 +37,21 @@ export function Footer() {
             caption="Luna · K-9 Cleanup Unit"
             className="items-start"
           />
+          <a
+            href={VOB_DIRECTORY_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block transition-opacity hover:opacity-90"
+            aria-label="Junk Command is a Verified Veteran Owned Business proud member on VeteranOwnedBusiness.com"
+          >
+            <Image
+              src="/images/badges/vob-verified-proud-member.webp"
+              alt="Veteran Owned Business Verified Proud Member badge"
+              width={140}
+              height={140}
+              className="h-auto w-[120px] sm:w-[140px]"
+            />
+          </a>
           <ul className="space-y-2 text-sm text-muted">
             <li className="inline-flex items-start gap-2">
               <MapPin className="mt-0.5 size-3.5 shrink-0 text-bright" aria-hidden />
