@@ -11,7 +11,22 @@ type GhlFormEmbedProps = {
   title?: string;
   className?: string;
   minHeightClassName?: string;
+  query?: Record<string, string | undefined>;
+  embedId?: string;
 };
+
+function formSrcWithQuery(
+  formId: string,
+  query?: Record<string, string | undefined>,
+) {
+  const url = new URL(`https://api.leadconnectorhq.com/widget/form/${formId}`);
+  if (query) {
+    for (const [key, value] of Object.entries(query)) {
+      if (value) url.searchParams.set(key, value);
+    }
+  }
+  return url.toString();
+}
 
 export function GhlFormEmbed({
   formId = DEFAULT_GHL_FORM_ID,
@@ -19,9 +34,11 @@ export function GhlFormEmbed({
   title = "Free Estimate",
   className = "",
   minHeightClassName = "min-h-[720px]",
+  query,
+  embedId,
 }: GhlFormEmbedProps) {
-  const iframeId = `inline-${formId}`;
-  const formSrc = `https://api.leadconnectorhq.com/widget/form/${formId}`;
+  const iframeId = embedId ?? `inline-${formId}`;
+  const formSrc = formSrcWithQuery(formId, query);
 
   return (
     <div

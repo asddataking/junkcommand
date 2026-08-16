@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import { NAV_LINKS } from "@/lib/constants";
 import { Logo } from "@/components/ui/Logo";
 import { MobileMenu } from "@/components/layout/MobileMenu";
-import { ShimmerButton } from "@/components/magicui/shimmer-button";
+import { FreeEstimateButton } from "@/components/forms/FreeEstimateButton";
 
 export function Header() {
   const [open, setOpen] = useState(false);
@@ -64,7 +64,9 @@ export function Header() {
         </nav>
 
         <div className="hidden items-center gap-3 lg:flex">
-          <ShimmerButton href="/#quote">Get My Free Quote</ShimmerButton>
+          <FreeEstimateButton shimmer ctaPosition="header" pageType="site">
+            Get My Free Quote
+          </FreeEstimateButton>
         </div>
 
         <button

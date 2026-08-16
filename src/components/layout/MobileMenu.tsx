@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 import { BRAND, NAV_LINKS } from "@/lib/constants";
-import { ShimmerButton } from "@/components/magicui/shimmer-button";
+import { FreeEstimateButton } from "@/components/forms/FreeEstimateButton";
+import { PhoneLink } from "@/components/forms/PhoneLink";
 
 export function MobileMenu({
   open,
@@ -39,17 +40,24 @@ export function MobileMenu({
         >
           Veteran Owned
         </Link>
-        <a
-          href={BRAND.phoneHref}
+        <PhoneLink
+          ctaPosition="mobile_menu"
+          pageType="site"
           className="rounded-[2px] px-3 py-3 text-sm font-semibold text-bright"
           onClick={onClose}
         >
           Call {BRAND.phone}
-        </a>
+        </PhoneLink>
         <div className="pt-2">
-          <ShimmerButton href="/#quote" className="w-full" onClick={onClose}>
+          <FreeEstimateButton
+            shimmer
+            className="w-full"
+            ctaPosition="mobile_menu"
+            pageType="site"
+            onClick={onClose}
+          >
             Get My Free Quote
-          </ShimmerButton>
+          </FreeEstimateButton>
         </div>
       </nav>
     </div>

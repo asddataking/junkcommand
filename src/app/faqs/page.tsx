@@ -5,6 +5,7 @@ import { CtaBanner } from "@/components/shared/CtaBanner";
 import { FaqAccordion } from "@/components/shared/FaqAccordion";
 import { TrustBar } from "@/components/sections/TrustBar";
 import { Button } from "@/components/ui/Button";
+import { FreeEstimateButton } from "@/components/forms/FreeEstimateButton";
 import { FAQ_CATEGORIES, FAQS } from "@/data/faqs";
 import { BRAND } from "@/lib/constants";
 import { buildPageMetadata } from "@/lib/seo";
@@ -59,9 +60,9 @@ export default function FaqsPage() {
             — a real person will help.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <Button href="/#quote" showArrow>
+            <FreeEstimateButton ctaPosition="faqs_hero" pageType="faqs">
               Get My Free Quote
-            </Button>
+            </FreeEstimateButton>
             <Button href="/pricing" variant="secondary">
               View Pricing
             </Button>

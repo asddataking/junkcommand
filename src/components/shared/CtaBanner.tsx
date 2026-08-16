@@ -1,5 +1,9 @@
+"use client";
+
 import { BRAND } from "@/lib/constants";
 import { Button } from "@/components/ui/Button";
+import { FreeEstimateButton } from "@/components/forms/FreeEstimateButton";
+import { PhoneLink } from "@/components/forms/PhoneLink";
 
 type CtaBannerProps = {
   eyebrow?: string;
@@ -10,17 +14,23 @@ type CtaBannerProps = {
   secondaryHref?: string;
   secondaryLabel?: string;
   className?: string;
+  ctaPosition?: string;
+  locationSlug?: string;
+  pageType?: string;
 };
 
 export function CtaBanner({
   eyebrow = "Take Command",
   title,
   description = "Get a free quote in minutes — call, text photos, or book online.",
-  primaryHref = "/#quote",
+  primaryHref,
   primaryLabel = "Get My Free Quote",
   secondaryHref = BRAND.phoneHref,
   secondaryLabel = `Call ${BRAND.phone}`,
   className = "",
+  ctaPosition = "cta_banner",
+  locationSlug,
+  pageType,
 }: CtaBannerProps) {
   return (
     <section
@@ -38,12 +48,33 @@ export function CtaBanner({
           <p className="mx-auto mt-4 max-w-2xl text-muted">{description}</p>
         ) : null}
         <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-          <Button href={primaryHref} showArrow>
-            {primaryLabel}
-          </Button>
-          <Button href={secondaryHref} variant="secondary">
-            {secondaryLabel}
-          </Button>
+          {primaryHref ? (
+            <Button href={primaryHref} showArrow>
+              {primaryLabel}
+            </Button>
+          ) : (
+            <FreeEstimateButton
+              ctaPosition={ctaPosition}
+              locationSlug={locationSlug}
+              pageType={pageType}
+            >
+              {primaryLabel}
+            </FreeEstimateButton>
+          )}
+          {secondaryHref === BRAND.phoneHref ? (
+            <PhoneLink
+              ctaPosition={`${ctaPosition}_phone`}
+              locationSlug={locationSlug}
+              pageType={pageType}
+              className="inline-flex items-center justify-center gap-2 rounded-[2px] border border-[rgba(0,135,255,0.55)] px-5 py-3 text-sm font-semibold uppercase tracking-[0.08em] text-white transition-colors hover:border-bright hover:bg-[rgba(7,135,255,0.08)]"
+            >
+              {secondaryLabel}
+            </PhoneLink>
+          ) : (
+            <Button href={secondaryHref} variant="secondary">
+              {secondaryLabel}
+            </Button>
+          )}
         </div>
       </div>
     </section>

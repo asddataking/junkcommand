@@ -12,7 +12,7 @@ import {
   Truck,
 } from "lucide-react";
 import { CURBSIDE_START, FULL_SERVICE_START } from "@/data/curbside-pricing";
-import { ShimmerButton } from "@/components/magicui/shimmer-button";
+import { FreeEstimateButton } from "@/components/forms/FreeEstimateButton";
 import { BlurFade } from "@/components/magicui/blur-fade";
 
 const steps = [
@@ -111,7 +111,13 @@ export function HowCurbsideWorks() {
         </ol>
 
         <div className="mt-10 flex justify-center">
-          <ShimmerButton href="/#quote">Get My Curbside Price</ShimmerButton>
+          <FreeEstimateButton
+            shimmer
+            ctaPosition="how_curbside"
+            pageType="homepage"
+          >
+            Get My Curbside Price
+          </FreeEstimateButton>
         </div>
 
         <div className="mt-16 grid gap-8 lg:grid-cols-2">

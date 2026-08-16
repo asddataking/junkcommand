@@ -15,7 +15,22 @@ import { Logo } from "@/components/ui/Logo";
 import { MascotBadge } from "@/components/ui/MascotBadge";
 import { TikTokIcon } from "@/components/ui/SocialIcons";
 
-const FOOTER_CITIES = CITIES.filter((c) => !c.isCounty).slice(0, 10);
+const FOOTER_CITY_SLUGS = [
+  "port-huron",
+  "fort-gratiot",
+  "marysville",
+  "st-clair",
+  "imlay-city",
+  "lapeer",
+  "richmond",
+  "armada",
+  "almont",
+  "memphis",
+] as const;
+
+const FOOTER_CITIES = FOOTER_CITY_SLUGS.map((slug) =>
+  CITIES.find((city) => city.slug === slug),
+).filter((city): city is NonNullable<typeof city> => Boolean(city));
 
 const SOCIAL_ICONS = {
   YouTube: Youtube,

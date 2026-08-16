@@ -6,7 +6,7 @@ import {
   FULL_SERVICE_START,
 } from "@/data/curbside-pricing";
 import { BlurFade } from "@/components/magicui/blur-fade";
-import { ShimmerButton } from "@/components/magicui/shimmer-button";
+import { FreeEstimateButton } from "@/components/forms/FreeEstimateButton";
 import { Button } from "@/components/ui/Button";
 import { ShineBorder } from "@/components/magicui/shine-border";
 
@@ -91,9 +91,14 @@ export function CommandPricing() {
                   ))}
                 </ul>
                 <div className="mt-8">
-                  <ShimmerButton href="/#quote" className="w-full sm:w-auto">
+                  <FreeEstimateButton
+                    shimmer
+                    className="w-full sm:w-auto"
+                    ctaPosition="command_pricing"
+                    pageType="homepage"
+                  >
                     Get My Curbside Price
-                  </ShimmerButton>
+                  </FreeEstimateButton>
                 </div>
               </div>
             </article>

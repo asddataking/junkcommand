@@ -1,30 +1,44 @@
+"use client";
+
 import Link from "next/link";
 import { BRAND } from "@/lib/constants";
-import { Button } from "@/components/ui/Button";
 import { Phone, MessageSquare, CalendarDays } from "lucide-react";
+import { FreeEstimateButton } from "@/components/forms/FreeEstimateButton";
+import { PhoneLink } from "@/components/forms/PhoneLink";
 
 export function SidebarCta({
   title = "Ready to Clear It?",
   description = "Call, text photos, or book online for a free junk removal quote.",
+  locationSlug,
+  pageType,
 }: {
   title?: string;
   description?: string;
+  locationSlug?: string;
+  pageType?: string;
 }) {
   return (
     <aside className="rounded-[2px] border border-[rgba(0,135,255,0.4)] bg-[#080B0F] p-5 glow-border lg:sticky lg:top-24">
       <h2 className="font-display text-2xl tracking-[0.08em] text-white">{title}</h2>
       <p className="mt-2 text-sm text-muted">{description}</p>
       <div className="mt-5 space-y-3">
-        <Button href="/#quote" showArrow className="w-full">
+        <FreeEstimateButton
+          className="w-full"
+          ctaPosition="sidebar"
+          locationSlug={locationSlug}
+          pageType={pageType}
+        >
           Free Quote
-        </Button>
-        <a
-          href={BRAND.phoneHref}
+        </FreeEstimateButton>
+        <PhoneLink
+          ctaPosition="sidebar_phone"
+          locationSlug={locationSlug}
+          pageType={pageType}
           className="flex items-center gap-3 rounded-[2px] border border-[rgba(0,135,255,0.35)] px-4 py-3 text-sm font-semibold text-white transition-colors hover:border-bright hover:text-bright"
         >
           <Phone className="size-4 text-bright" aria-hidden />
           {BRAND.phone}
-        </a>
+        </PhoneLink>
         <a
           href={BRAND.smsHref}
           className="flex items-center gap-3 rounded-[2px] border border-[rgba(0,135,255,0.35)] px-4 py-3 text-sm font-semibold text-white transition-colors hover:border-bright hover:text-bright"

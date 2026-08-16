@@ -6,6 +6,7 @@ import { CtaBanner } from "@/components/shared/CtaBanner";
 import { TrustBar } from "@/components/sections/TrustBar";
 import { MediaImage } from "@/components/ui/MediaImage";
 import { Button } from "@/components/ui/Button";
+import { FreeEstimateButton } from "@/components/forms/FreeEstimateButton";
 import { BRAND } from "@/lib/constants";
 import { buildPageMetadata } from "@/lib/seo";
 import {
@@ -65,9 +66,9 @@ export default function AboutPage() {
             four-legged Chief Cleanup Officer, Luna.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <Button href="/#quote" showArrow>
+            <FreeEstimateButton ctaPosition="about_hero" pageType="about">
               Get My Free Quote
-            </Button>
+            </FreeEstimateButton>
             <Button href="/meet-the-crew" variant="secondary">
               Meet the Crew
             </Button>
@@ -222,9 +223,9 @@ export default function AboutPage() {
               or book online in minutes.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <Button href="/#quote" showArrow>
+              <FreeEstimateButton ctaPosition="about_bottom" pageType="about">
                 Book Online
-              </Button>
+              </FreeEstimateButton>
               <Button href="/veteran-owned" variant="secondary">
                 Our Veteran Story
               </Button>

@@ -5,6 +5,7 @@ import { CtaBanner } from "@/components/shared/CtaBanner";
 import { CrewCards } from "@/components/pages/CrewCards";
 import { TrustBar } from "@/components/sections/TrustBar";
 import { Button } from "@/components/ui/Button";
+import { FreeEstimateButton } from "@/components/forms/FreeEstimateButton";
 import { MediaImage } from "@/components/ui/MediaImage";
 import { BorderBeam } from "@/components/magicui/border-beam";
 import { BRAND } from "@/lib/constants";
@@ -65,9 +66,9 @@ export default function MeetTheCrewPage() {
             treats your property like it is on our own block.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <Button href="/#quote" showArrow>
+            <FreeEstimateButton ctaPosition="crew_hero" pageType="meet_the_crew">
               Book This Crew
-            </Button>
+            </FreeEstimateButton>
             <Button href={BRAND.phoneHref} variant="secondary">
               Call {BRAND.phone}
             </Button>

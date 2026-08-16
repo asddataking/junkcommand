@@ -1,7 +1,11 @@
+"use client";
+
 import { MediaImage } from "@/components/ui/MediaImage";
 import { Button } from "@/components/ui/Button";
 import { BRAND } from "@/lib/constants";
 import { Breadcrumbs, type BreadcrumbItem } from "@/components/shared/Breadcrumbs";
+import { FreeEstimateButton } from "@/components/forms/FreeEstimateButton";
+import { PhoneLink } from "@/components/forms/PhoneLink";
 
 type ServiceHeroProps = {
   eyebrow: string;
@@ -52,12 +56,16 @@ export function ServiceHero({
           </p>
         ) : null}
         <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-          <Button href="/#quote" showArrow>
+          <FreeEstimateButton ctaPosition="service_hero" pageType="service">
             Get My Free Quote
-          </Button>
-          <Button href={BRAND.phoneHref} variant="secondary">
+          </FreeEstimateButton>
+          <PhoneLink
+            ctaPosition="service_hero_phone"
+            pageType="service"
+            className="inline-flex items-center justify-center gap-2 rounded-[2px] border border-[rgba(0,135,255,0.55)] px-5 py-3 text-sm font-semibold uppercase tracking-[0.08em] text-white transition-colors hover:border-bright hover:bg-[rgba(7,135,255,0.08)]"
+          >
             Call {BRAND.phone}
-          </Button>
+          </PhoneLink>
           <Button href={BRAND.smsHref} variant="ghost">
             Text Photos
           </Button>

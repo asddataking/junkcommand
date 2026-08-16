@@ -7,7 +7,7 @@ import {
   LOAD_TIERS,
 } from "@/data/curbside-pricing";
 import { BRAND } from "@/lib/constants";
-import { Button } from "@/components/ui/Button";
+import { FreeEstimateButton } from "@/components/forms/FreeEstimateButton";
 
 const SERVICE_OPTIONS = [
   {
@@ -104,9 +104,12 @@ export function EstimateCalculator() {
           </p>
         </div>
         <div className="flex flex-col gap-2 sm:items-end">
-          <Button href="/#quote" showArrow>
+          <FreeEstimateButton
+            ctaPosition="estimate_calculator"
+            pageType="pricing"
+          >
             Confirm With Photos
-          </Button>
+          </FreeEstimateButton>
           <a
             href={BRAND.smsHref}
             className="text-sm font-semibold text-bright hover:text-white"

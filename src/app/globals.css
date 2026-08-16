@@ -145,6 +145,15 @@ body {
   text-wrap: balance;
 }
 
+/* Hide the GHL chat launcher while the estimate modal is open so they do not stack. */
+body.estimate-modal-open iframe[src*="widgets.leadconnectorhq.com"],
+body.estimate-modal-open iframe[src*="chat-widget"],
+body.estimate-modal-open [class*="lc_text-widget"],
+body.estimate-modal-open [id*="chat-widget"] {
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

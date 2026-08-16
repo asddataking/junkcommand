@@ -68,12 +68,14 @@ export function GET() {
   }
 
   for (const city of CITIES) {
-    entries.push({
-      pageUrl: `${SITE_URL}/service-areas/${city.slug}`,
-      imageUrl: absoluteImage(city.image),
-      title: `Junk removal in ${city.name}`,
-      caption: city.imageAlt,
-    });
+    for (const image of city.images) {
+      entries.push({
+        pageUrl: `${SITE_URL}/service-areas/${city.slug}`,
+        imageUrl: absoluteImage(image.src),
+        title: `Junk removal in ${city.name}`,
+        caption: image.caption || city.imageAlt,
+      });
+    }
   }
 
   for (const post of BLOG_POSTS) {

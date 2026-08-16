@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { MessageSquare } from "lucide-react";
 import {
   formatStartingPrice,
@@ -9,6 +8,7 @@ import {
 import { MediaImage } from "@/components/ui/MediaImage";
 import { NumberTicker } from "@/components/magicui/number-ticker";
 import { ShineBorder } from "@/components/magicui/shine-border";
+import { useEstimateModal } from "@/components/forms/EstimateModalProvider";
 
 type PricingCardProps = {
   item: PricingItem;
@@ -16,11 +16,16 @@ type PricingCardProps = {
 };
 
 export function PricingCard({ item, priority = false }: PricingCardProps) {
+  const { openModal } = useEstimateModal();
+  const openQuote = () =>
+    openModal({ ctaPosition: "pricing_card", pageType: "homepage" });
+
   if (item.isCtaCard) {
     return (
-      <Link
-        href="/#quote"
-        className="group relative flex h-full min-h-[17.5rem] flex-col justify-between overflow-hidden rounded-[2px] border border-bright/50 bg-[rgba(7,135,255,0.12)] p-5 transition-[border-color,box-shadow,transform] duration-300 hover:-translate-y-0.5 hover:border-bright hover:shadow-[0_0_28px_rgba(7,135,255,0.35)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bright"
+      <button
+        type="button"
+        onClick={openQuote}
+        className="group relative flex h-full min-h-[17.5rem] w-full flex-col justify-between overflow-hidden rounded-[2px] border border-bright/50 bg-[rgba(7,135,255,0.12)] p-5 text-left transition-[border-color,box-shadow,transform] duration-300 hover:-translate-y-0.5 hover:border-bright hover:shadow-[0_0_28px_rgba(7,135,255,0.35)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bright"
         aria-label="Get a free upfront quote for something else"
       >
         <ShineBorder
@@ -43,14 +48,15 @@ export function PricingCard({ item, priority = false }: PricingCardProps) {
         <p className="relative z-10 mt-6 text-sm font-semibold uppercase tracking-[0.12em] text-bright">
           Get My Free Quote →
         </p>
-      </Link>
+      </button>
     );
   }
 
   return (
-    <Link
-      href="/#quote"
-      className="group relative flex h-full min-h-[17.5rem] flex-col overflow-hidden rounded-[2px] border border-[rgba(0,135,255,0.4)] bg-[#080B0F] transition-[border-color,box-shadow,transform] duration-300 hover:-translate-y-0.5 hover:border-bright hover:shadow-[0_0_28px_rgba(7,135,255,0.35)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bright"
+    <button
+      type="button"
+      onClick={openQuote}
+      className="group relative flex h-full min-h-[17.5rem] w-full flex-col overflow-hidden rounded-[2px] border border-[rgba(0,135,255,0.4)] bg-[#080B0F] text-left transition-[border-color,box-shadow,transform] duration-300 hover:-translate-y-0.5 hover:border-bright hover:shadow-[0_0_28px_rgba(7,135,255,0.35)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bright"
       aria-label={`Get a quote for ${item.name} removal, starting at ${formatStartingPrice(item.startingPrice)}`}
     >
       <div className="relative aspect-[4/3] w-full overflow-hidden">
@@ -84,6 +90,6 @@ export function PricingCard({ item, priority = false }: PricingCardProps) {
           />
         </p>
       </div>
-    </Link>
+    </button>
   );
 }

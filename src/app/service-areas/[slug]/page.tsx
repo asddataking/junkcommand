@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getAllCitySlugs, getCityBySlug } from "@/data/cities";
+import { getLocationBySlug } from "@/data/locations";
 import { buildPageMetadata } from "@/lib/seo";
 import {
   getBreadcrumbSchema,
@@ -54,7 +55,7 @@ export default async function CityPage({ params }: Props) {
           getBreadcrumbSchema(crumbs),
         ]}
       />
-      <CityPageContent city={city} />
+      <CityPageContent location={getLocationBySlug(slug) ?? city} />
     </SiteShell>
   );
 }

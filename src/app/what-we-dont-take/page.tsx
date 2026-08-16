@@ -136,7 +136,6 @@ export default function WhatWeDontTakePage() {
       <CtaBanner
         title="Ready to clear the rest?"
         description="Send photos of your pile for a free, upfront quote on everything we can haul."
-        primaryHref="/#quote"
         primaryLabel="Get My Free Quote"
       />
     </SiteShell>
