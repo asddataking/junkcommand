@@ -5,6 +5,19 @@ const nextConfig: NextConfig = {
   images: {
     formats: ["image/avif", "image/webp"],
   },
+  async headers() {
+    return [
+      {
+        source: "/:path*",
+        headers: [
+          {
+            key: "Link",
+            value: `</llms.txt>; rel="describedby", </llms-full.txt>; rel="alternate"; type="text/markdown"`,
+          },
+        ],
+      },
+    ];
+  },
   turbopack: {
     root: path.join(__dirname),
   },

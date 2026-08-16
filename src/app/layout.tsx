@@ -39,6 +39,15 @@ export const metadata: Metadata = {
     "Affordable junk removal in Port Huron and the Blue Water Area. Curbside pickup starts at $99 and full-service removal starts at $129. Send photos for a confirmed price.",
   alternates: {
     canonical: SITE_URL,
+    types: {
+      "text/markdown": `${SITE_URL}/llms.txt`,
+    },
+  },
+  other: {
+    "geo.region": "US-MI",
+    "geo.placename": "Port Huron",
+    "geo.position": "42.9709;-82.4249",
+    ICBM: "42.9709, -82.4249",
   },
   openGraph: {
     type: "website",

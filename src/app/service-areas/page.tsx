@@ -9,7 +9,7 @@ import { GoogleMapsEmbed } from "@/components/shared/GoogleMapsEmbed";
 import { TrustBar } from "@/components/sections/TrustBar";
 import { FreeEstimateButton } from "@/components/forms/FreeEstimateButton";
 import { PhoneLink } from "@/components/forms/PhoneLink";
-import { BRAND } from "@/lib/constants";
+import { BRAND, LOCATION, MAPS_SEARCH_QUERY } from "@/lib/constants";
 import { buildPageMetadata } from "@/lib/seo";
 import { getBreadcrumbSchema } from "@/lib/schema";
 import { LOCATION_REGIONS, getLocationBySlug } from "@/data/locations";
@@ -71,10 +71,12 @@ export default function ServiceAreasPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-8 lg:grid-cols-[1.15fr_0.85fr] lg:items-start">
             <GoogleMapsEmbed
-              query="St. Clair County, Michigan"
+              query={MAPS_SEARCH_QUERY}
               label="Junk Command junk removal service area across St. Clair County, Michigan"
               className="min-h-72"
               zoom={9}
+              lat={LOCATION.geo.latitude}
+              lng={LOCATION.geo.longitude}
             />
             <CaptionedFigure
               src="/images/junk-command-hero.webp"

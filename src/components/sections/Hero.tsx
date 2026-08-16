@@ -50,16 +50,17 @@ export function Hero() {
 
           <BlurFade delay={0.05} inView={false}>
             <h1 className="font-display text-[clamp(3.25rem,10vw,5.75rem)] leading-[0.9] tracking-[0.04em] text-white">
-              TAKE COMMAND
+              JUNK REMOVAL
               <br />
-              <span className="text-bright">OF YOUR CLUTTER.</span>
+              <span className="text-bright">IN PORT HURON</span>
             </h1>
           </BlurFade>
 
           <BlurFade delay={0.12} inView={false}>
             <p className="max-w-xl text-base text-muted sm:text-lg">
-              Fast, reliable Port Huron junk removal — furniture, appliances,
-              and full cleanouts handled by a local veteran-owned crew.
+              Take command of your clutter. Fast, reliable furniture, appliance,
+              and full cleanouts by a local veteran-owned crew — curbside from
+              $99.
             </p>
           </BlurFade>
 

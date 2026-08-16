@@ -12,6 +12,7 @@ import { ServiceAreaSection } from "@/components/sections/ServiceAreaSection";
 import { ServicesGrid } from "@/components/sections/ServicesGrid";
 import { HomepageFaq } from "@/components/sections/HomepageFaq";
 import { FinalCTA } from "@/components/sections/FinalCTA";
+import { GoogleMapsListing } from "@/components/shared/GoogleMapsListing";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { getHomepageFaqs } from "@/data/faqs";
 import { SITE_URL } from "@/lib/constants";
@@ -43,6 +44,7 @@ export default function Home() {
         <QuoteForm />
         <WhyChooseUs />
         <ServiceAreaSection />
+        <GoogleMapsListing />
         <ServicesGrid />
         <HomepageFaq />
         <FinalCTA />

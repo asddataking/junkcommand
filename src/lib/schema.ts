@@ -5,10 +5,13 @@ import {
   GBP,
   HOW_IT_WORKS,
   LOCATION,
+  SERVICE_RADIUS_METERS,
+  SERVICE_RADIUS_MILES,
   SITE_URL,
   SOCIAL_SHARE_IMAGE,
   SOCIAL_SHARE_IMAGE_HEIGHT,
   SOCIAL_SHARE_IMAGE_WIDTH,
+  getGbpMapsHref,
   getSameAsLinks,
 } from "@/lib/constants";
 import { SERVICES } from "@/data/services";
@@ -40,6 +43,19 @@ function parseMinPrice(startingPrice?: string): number | undefined {
   return match ? Number(match[1]) : undefined;
 }
 
+function getGeoCircle() {
+  return {
+    "@type": "GeoCircle",
+    name: `${GBP.name} ${SERVICE_RADIUS_MILES}-mile junk removal service area`,
+    geoMidpoint: {
+      "@type": "GeoCoordinates",
+      latitude: LOCATION.geo.latitude,
+      longitude: LOCATION.geo.longitude,
+    },
+    geoRadius: String(SERVICE_RADIUS_METERS),
+  };
+}
+
 function getAreaServed() {
   const fromCities = CITIES.map((city) => ({
     "@type": city.isCounty ? "AdministrativeArea" : "City",
@@ -56,7 +72,7 @@ function getAreaServed() {
     name,
   }));
 
-  return [...fromCities, ...extras];
+  return [getGeoCircle(), ...fromCities, ...extras];
 }
 
 function openingHoursSpecification() {
@@ -90,6 +106,13 @@ export function getOrganizationSchema() {
     },
     image: absoluteUrl(SOCIAL_SHARE_IMAGE),
     sameAs: getSameAsLinks(),
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: PHONE_E164,
+      contactType: "customer service",
+      areaServed: "US-MI",
+      availableLanguage: ["English"],
+    },
     foundingLocation: {
       "@type": "Place",
       name: LOCATION.displayLine,
@@ -119,7 +142,8 @@ export function getLocalBusinessSchema() {
     "@type": ["LocalBusiness", "HomeAndConstructionBusiness"],
     "@id": BUSINESS_ID,
     name: GBP.name,
-    alternateName: "Junk Command Junk Removal",
+    alternateName: ["Junk Command Junk Removal", "Junk Command Port Huron"],
+    additionalType: "https://schema.org/WasteManagement",
     description:
       "Fast, professional junk removal in Port Huron, Marysville, Fort Gratiot, and throughout St. Clair County and the Blue Water Area. Curbside pickup from $99; full-service from $129.",
     url: SITE_URL,
@@ -136,9 +160,16 @@ export function getLocalBusinessSchema() {
     paymentAccepted: "Cash, Credit Card, Debit Card",
     slogan: BRAND.tagline,
     sameAs,
-    ...(GBP.mapsUrl ? { hasMap: GBP.mapsUrl } : {}),
+    hasMap: getGbpMapsHref(),
     parentOrganization: { "@id": ORGANIZATION_ID },
     areaServed: getAreaServed(),
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: PHONE_E164,
+      contactType: "customer service",
+      areaServed: "US-MI",
+      availableLanguage: ["English"],
+    },
     address: {
       "@type": "PostalAddress",
       addressLocality: LOCATION.locality,

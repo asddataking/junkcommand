@@ -1,4 +1,4 @@
-import { AlertTriangle, MessageSquare, Phone } from "lucide-react";
+import { AlertTriangle, MessageSquare } from "lucide-react";
 import { SiteShell } from "@/components/layout/SiteShell";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
@@ -124,9 +124,8 @@ export default function WhatWeDontTakePage() {
                 <MessageSquare className="size-4" aria-hidden />
                 Text Photos to {BRAND.phone}
               </Button>
-              <Button href={BRAND.phoneHref} variant="secondary">
-                <Phone className="size-4" aria-hidden />
-                Call {BRAND.phone}
+              <Button href="/what-we-take" variant="secondary">
+                See what we take
               </Button>
             </div>
           </div>

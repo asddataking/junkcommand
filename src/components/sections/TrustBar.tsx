@@ -56,6 +56,7 @@ export function TrustBar() {
 
       <Marquee
         pauseOnHover
+        aria-hidden
         className="py-4 [--duration:32s] [--gap:0.75rem]"
       >
         {TRUST_ITEMS.map((item) => (

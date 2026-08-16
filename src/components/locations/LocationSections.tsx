@@ -422,10 +422,14 @@ export function LocationMap({ location }: { location: LocationPage }) {
       </h2>
       <div className="mt-6">
         <GoogleMapsEmbed
-          query={`${location.name}, Michigan`}
+          query={`${location.name}, Michigan junk removal`}
           label={`Junk Command junk removal service area in ${location.name}, Michigan`}
           zoom={location.isCounty ? 9 : 12}
         />
+        <p className="mt-3 text-sm text-muted">
+          Coverage map for {location.name}. Junk Command is based in Port Huron
+          and comes to your property — this is not a second storefront.
+        </p>
       </div>
     </div>
   );

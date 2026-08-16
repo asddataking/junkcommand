@@ -24,19 +24,64 @@ export const LOCATION = {
   },
 } as const;
 
+/** Approximate drive-time coverage used for GeoCircle schema (Maps local pack). */
+export const SERVICE_RADIUS_MILES = 45;
+export const SERVICE_RADIUS_METERS = Math.round(SERVICE_RADIUS_MILES * 1609.34);
+
 /**
- * Google Business Profile links.
- * Paste the Maps share URL and “Get more reviews” URL from GBP.
- * Schema only includes hasMap/sameAs when mapsUrl is set.
- * UI falls back to a Google Maps search until those URLs are pasted.
+ * Google Business Profile / Maps listing.
+ * Service-area profile: no public street address.
+ * Paste `placeId` from GBP (Share listing → Place ID) when available — that
+ * unlocks the exact Maps pin and the official “write a review” URL.
  */
 export const GBP = {
   name: "Junk Command",
+  category: "Junk removal service",
+  placeId: "",
   mapsUrl: "",
   reviewUrl: "",
 } as const;
 
 export const GBP_WEBSITE_UTM = `${SITE_URL}/?utm_source=google&utm_medium=organic&utm_campaign=gbp`;
+
+export const MAPS_SEARCH_QUERY = `${GBP.name} ${LOCATION.displayLine} junk removal`;
+
+export function getGbpMapsHref() {
+  if (GBP.placeId) {
+    return `https://www.google.com/maps/place/?q=place_id:${GBP.placeId}`;
+  }
+  if (GBP.mapsUrl) return GBP.mapsUrl;
+  return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+    MAPS_SEARCH_QUERY,
+  )}`;
+}
+
+export function getGbpReviewHref() {
+  if (GBP.placeId) {
+    return `https://search.google.com/local/writereview?placeid=${GBP.placeId}`;
+  }
+  if (GBP.reviewUrl) return GBP.reviewUrl;
+  return getGbpMapsHref();
+}
+
+export function getGoogleMapsEmbedSrc(input?: {
+  query?: string;
+  zoom?: number;
+  lat?: number;
+  lng?: number;
+}) {
+  const query = input?.query ?? MAPS_SEARCH_QUERY;
+  const zoom = input?.zoom ?? 11;
+  const lat = input?.lat ?? LOCATION.geo.latitude;
+  const lng = input?.lng ?? LOCATION.geo.longitude;
+  const params = new URLSearchParams({
+    q: query,
+    ll: `${lat},${lng}`,
+    z: String(zoom),
+    output: "embed",
+  });
+  return `https://maps.google.com/maps?${params.toString()}`;
+}
 
 /** Public social profiles (footer + schema sameAs) */
 export const SOCIAL_LINKS = [
@@ -55,22 +100,9 @@ export const SOCIAL_LINKS = [
 ] as const;
 
 export function getSameAsLinks(): string[] {
-  const links = SOCIAL_LINKS.map((link) => link.href);
-  if (GBP.mapsUrl) links.push(GBP.mapsUrl);
+  const links: string[] = SOCIAL_LINKS.map((link) => link.href);
+  links.push(getGbpMapsHref());
   return links;
-}
-
-export function getGbpMapsHref() {
-  return (
-    GBP.mapsUrl ||
-    `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-      `${GBP.name} ${LOCATION.displayLine} junk removal`,
-    )}`
-  );
-}
-
-export function getGbpReviewHref() {
-  return GBP.reviewUrl || getGbpMapsHref();
 }
 
 /** Default Open Graph / Twitter / iMessage share image (1200×630) */
@@ -134,7 +166,10 @@ export const FOOTER_LINKS = {
   resources: [
     { label: "Pricing", href: "/pricing" },
     { label: "FAQs", href: "/faqs" },
+    { label: "What We Take", href: "/what-we-take" },
     { label: "What We Don't Take", href: "/what-we-dont-take" },
+    { label: "Commercial Junk Removal", href: "/commercial-junk-removal" },
+    { label: "Responsible Disposal", href: "/responsible-disposal" },
     { label: "Guides", href: "/guides" },
     { label: "Reviews", href: "/reviews" },
     { label: "Blog", href: "/blog" },

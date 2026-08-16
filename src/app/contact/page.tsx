@@ -10,8 +10,8 @@ import { Button } from "@/components/ui/Button";
 import {
   BRAND,
   BUSINESS_HOURS,
-  GBP,
   LOCATION,
+  MAPS_SEARCH_QUERY,
   getGbpMapsHref,
 } from "@/lib/constants";
 import { buildPageMetadata } from "@/lib/seo";
@@ -67,9 +67,12 @@ export default function ContactPage() {
           <div className="space-y-8">
             <div className="space-y-3">
               <GoogleMapsEmbed
-                query={`${LOCATION.locality}, ${LOCATION.regionName}`}
-                label="Junk Command service area around Port Huron, Michigan"
+                query={MAPS_SEARCH_QUERY}
+                label="Junk Command junk removal on Google Maps in Port Huron, Michigan"
                 className="min-h-72"
+                lat={LOCATION.geo.latitude}
+                lng={LOCATION.geo.longitude}
+                showOpenLink={false}
               />
               <Button
                 href={getGbpMapsHref()}
@@ -79,7 +82,7 @@ export default function ContactPage() {
                 className="w-full sm:w-auto"
                 showArrow
               >
-                {GBP.mapsUrl ? "View us on Google" : "Find Junk Command on Google"}
+                View Junk Command on Google Maps
               </Button>
             </div>
 
