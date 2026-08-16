@@ -5,6 +5,7 @@ import { CtaBanner } from "@/components/shared/CtaBanner";
 import { ReviewsWall } from "@/components/pages/ReviewsWall";
 import { TrustBar } from "@/components/sections/TrustBar";
 import { Button } from "@/components/ui/Button";
+import { GoogleReviewCta } from "@/components/shared/GoogleReviewCta";
 import { hasReviews, REVIEWS } from "@/data/reviews";
 import { BRAND, getGbpReviewHref } from "@/lib/constants";
 import { buildPageMetadata } from "@/lib/seo";
@@ -53,10 +54,10 @@ export default function ReviewsPage() {
             </p>
           ) : (
             <p className="mt-4 max-w-2xl text-muted">
-              We&apos;re a new local crew building our reputation one job at a
-              time. After your haul, we&apos;d love to hear how we did — your
-              feedback helps neighbors across Port Huron and St. Clair County
-              choose with confidence.
+              We&apos;re on Google Maps for junk removal near Kimball, Port
+              Huron, and the Blue Water Area. After your haul, a Google review
+              is the #1 way neighbors find a local crew instead of a franchise
+              driving up from Detroit.
             </p>
           )}
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -84,29 +85,7 @@ export default function ReviewsPage() {
               <ReviewsWall reviews={REVIEWS} />
             </div>
           ) : (
-            <div className="rounded-[2px] border border-[rgba(0,135,255,0.35)] bg-card p-8 sm:p-10">
-              <h2 className="font-display text-3xl tracking-[0.08em] text-white sm:text-4xl">
-                REVIEW US ON GOOGLE
-              </h2>
-              <p className="mx-auto mt-4 max-w-xl text-muted">
-                After your haul, leave a Google review for Junk Command. Honest
-                local feedback helps neighbors across Port Huron and St. Clair
-                County choose with confidence — and we&apos;ll earn every star.
-              </p>
-              <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
-                <Button
-                  href={getGbpReviewHref()}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  showArrow
-                >
-                  Leave a Google Review
-                </Button>
-                <Button href="/book-online" variant="secondary">
-                  Book a Pickup
-                </Button>
-              </div>
-            </div>
+            <GoogleReviewCta />
           )}
         </div>
       </section>

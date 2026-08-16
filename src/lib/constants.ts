@@ -72,14 +72,14 @@ export function getGoogleMapsEmbedSrc(input?: {
 }) {
   const query = input?.query ?? MAPS_SEARCH_QUERY;
   const zoom = input?.zoom ?? 11;
-  const lat = input?.lat ?? LOCATION.geo.latitude;
-  const lng = input?.lng ?? LOCATION.geo.longitude;
   const params = new URLSearchParams({
     q: query,
-    ll: `${lat},${lng}`,
     z: String(zoom),
     output: "embed",
   });
+  if (input?.lat != null && input?.lng != null) {
+    params.set("ll", `${input.lat},${input.lng}`);
+  }
   return `https://maps.google.com/maps?${params.toString()}`;
 }
 

@@ -1,8 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { BRAND } from "@/lib/constants";
-import { Phone, MessageSquare, CalendarDays } from "lucide-react";
+import { BRAND, getGbpMapsHref, getGbpReviewHref } from "@/lib/constants";
+import { Phone, MessageSquare, CalendarDays, MapPin, Star } from "lucide-react";
 import { FreeEstimateButton } from "@/components/forms/FreeEstimateButton";
 import { PhoneLink } from "@/components/forms/PhoneLink";
 
@@ -53,6 +53,24 @@ export function SidebarCta({
           <CalendarDays className="size-4 text-bright" aria-hidden />
           Book Online
         </Link>
+        <a
+          href={getGbpReviewHref()}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-3 rounded-[2px] border border-[rgba(0,135,255,0.35)] px-4 py-3 text-sm font-semibold text-white transition-colors hover:border-bright hover:text-bright"
+        >
+          <Star className="size-4 text-bright" aria-hidden />
+          Google review
+        </a>
+        <a
+          href={getGbpMapsHref()}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-3 rounded-[2px] border border-[rgba(0,135,255,0.35)] px-4 py-3 text-sm font-semibold text-white transition-colors hover:border-bright hover:text-bright"
+        >
+          <MapPin className="size-4 text-bright" aria-hidden />
+          Find us on Maps
+        </a>
       </div>
     </aside>
   );

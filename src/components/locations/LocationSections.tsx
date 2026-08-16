@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Check, MapPin } from "lucide-react";
 import type { LocationImage, LocationPage } from "@/data/locations/types";
 import { getNearbyLocations } from "@/data/locations";
+import { getLocationGeo } from "@/data/locations/geo";
 import { getServiceBySlug } from "@/data/services";
 import { getReviewsByCity, getFeaturedReviews } from "@/data/reviews";
 import { BRAND } from "@/lib/constants";
@@ -10,6 +11,7 @@ import { RichText, RichTextBlock } from "@/components/shared/RichText";
 import { FaqAccordion } from "@/components/shared/FaqAccordion";
 import { ReviewCard } from "@/components/shared/ReviewCard";
 import { GoogleMapsEmbed } from "@/components/shared/GoogleMapsEmbed";
+import { GoogleReviewCta } from "@/components/shared/GoogleReviewCta";
 import { FreeEstimateButton } from "@/components/forms/FreeEstimateButton";
 import { PhoneLink } from "@/components/forms/PhoneLink";
 import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
@@ -415,21 +417,28 @@ export function LocationNearby({
 }
 
 export function LocationMap({ location }: { location: LocationPage }) {
+  const geo = getLocationGeo(location.slug);
+  const searchName = geo?.searchName ?? location.name;
+
   return (
     <div>
       <h2 className="font-display text-3xl tracking-[0.06em] text-white sm:text-4xl">
-        SERVICE AREA MAP
+        JUNK REMOVAL NEAR {searchName.toUpperCase()}
       </h2>
+      <p className="mt-3 text-sm text-muted">
+        Coverage map for junk removal near {searchName}
+        {geo?.zips?.length ? ` (${geo.zips.join(", ")})` : ""}. Junk Command is
+        based in Port Huron and comes to your property — this is not a second
+        storefront.
+      </p>
       <div className="mt-6">
         <GoogleMapsEmbed
-          query={`${location.name}, Michigan junk removal`}
-          label={`Junk Command junk removal service area in ${location.name}, Michigan`}
+          query={`junk removal near ${searchName} MI`}
+          label={`Junk Command junk removal near ${searchName}, Michigan`}
           zoom={location.isCounty ? 9 : 12}
+          lat={geo?.latitude}
+          lng={geo?.longitude}
         />
-        <p className="mt-3 text-sm text-muted">
-          Coverage map for {location.name}. Junk Command is based in Port Huron
-          and comes to your property — this is not a second storefront.
-        </p>
       </div>
     </div>
   );
@@ -439,21 +448,29 @@ export function LocationReviews({ location }: { location: LocationPage }) {
   const cityReviews = getReviewsByCity(location.slug);
   const reviews =
     cityReviews.length >= 2 ? cityReviews.slice(0, 3) : getFeaturedReviews(3);
-  if (!reviews.length) return null;
+  const geo = getLocationGeo(location.slug);
+  const searchName = geo?.searchName ?? location.name;
 
   return (
     <div>
-      <h2 className="font-display text-3xl tracking-[0.06em] text-white sm:text-4xl">
-        REVIEWS FROM THE BLUE WATER AREA
-      </h2>
-      <p className="mt-3 text-sm text-muted">
-        Real Junk Command reviews. We do not invent local testimonials for{" "}
-        {location.name}.
-      </p>
-      <div className="mt-6 grid gap-4 sm:grid-cols-3">
-        {reviews.map((review) => (
-          <ReviewCard key={review.id} review={review} />
-        ))}
+      {reviews.length ? (
+        <>
+          <h2 className="font-display text-3xl tracking-[0.06em] text-white sm:text-4xl">
+            REVIEWS FROM THE BLUE WATER AREA
+          </h2>
+          <p className="mt-3 text-sm text-muted">
+            Real Junk Command reviews. We do not invent local testimonials for{" "}
+            {location.name}.
+          </p>
+          <div className="mt-6 grid gap-4 sm:grid-cols-3">
+            {reviews.map((review) => (
+              <ReviewCard key={review.id} review={review} />
+            ))}
+          </div>
+        </>
+      ) : null}
+      <div className={reviews.length ? "mt-8" : undefined}>
+        <GoogleReviewCta placeName={searchName} />
       </div>
     </div>
   );

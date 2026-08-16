@@ -284,7 +284,14 @@ export const FAQS: Faq[] = [
     id: "areas-st-clair",
     question: "Do you serve all of St. Clair County?",
     answer:
-      "Yes. We regularly serve Port Huron, Marysville, Fort Gratiot, Kimball, St. Clair, Marine City, Algonac, and surrounding St. Clair County towns. If your address is in the county, odds are strong that Junk Command can reach you. Text your city with photos for confirmation.",
+      "Yes. We regularly serve Port Huron, Marysville, Fort Gratiot, Kimball, Wadhams, Smiths Creek, St. Clair, Marine City, Algonac, and surrounding St. Clair County towns. If your address is in the county, odds are strong that Junk Command can reach you. Text your city with photos for confirmation.",
+    category: "areas",
+  },
+  {
+    id: "areas-kimball",
+    question: "Do you offer junk removal near Kimball MI?",
+    answer:
+      "Yes. Junk Command provides junk removal near Kimball MI, including Wadhams and Smiths Creek (48074 / 48094). We are based in Port Huron, so Kimball is a regular route — not a long-distance appointment. Call or text 810-242-0429 with photos.",
     category: "areas",
   },
   {
@@ -411,7 +418,7 @@ export const HOMEPAGE_FAQS: Faq[] = [
     id: "home-areas",
     question: "What areas do you serve?",
     answer:
-      "We provide Port Huron junk hauling plus service throughout the Blue Water Area — including Fort Gratiot, Kimball Township, Clyde Township, Marysville, St. Clair, Marine City, Algonac, Yale, Capac, Croswell, Lexington, Richmond, Lenox Township, Romeo, Armada, Imlay City, Chesterfield, New Baltimore, Memphis, and surrounding St. Clair and Macomb County communities.",
+      "We provide Port Huron junk hauling plus junk removal near Kimball, Wadhams, and Smiths Creek, plus Fort Gratiot, Clyde Township, Marysville, St. Clair, Marine City, Algonac, Yale, Capac, Croswell, Lexington, Richmond, Lenox Township, Romeo, Armada, Imlay City, Chesterfield, New Baltimore, Memphis, and surrounding St. Clair and Macomb County communities.",
     category: "areas",
   },
   {

@@ -52,6 +52,7 @@ export {
   LOCATION_REGIONS,
   type LocationRegion,
 } from "@/data/locations/regions";
+export { getLocationGeo, LOCATION_GEO } from "@/data/locations/geo";
 export type {
   LocationPage,
   LocationLayout,

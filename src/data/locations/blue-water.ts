@@ -211,15 +211,15 @@ export const BLUE_WATER_LOCATIONS: LocationPage[] = [
     county: "St. Clair County",
     regionId: "blue-water",
     layout: "editorial",
-    eyebrow: "Serving Kimball Township",
-    metaTitle: "Junk Removal Kimball Township MI | Junk Command",
+    eyebrow: "Kimball · Wadhams · Smiths Creek",
+    metaTitle: "Junk Removal Kimball MI | Wadhams & Smiths Creek | Junk Command",
     metaDescription:
-      "Need junk removal in Kimball Township, Michigan? Junk Command handles garages, barns, estates, and household junk along I-69. Get a free estimate.",
-    h1: "Junk Removal in Kimball Township, MI",
+      "Junk removal near Kimball MI — Wadhams, Smiths Creek, and Kimball Township. Veteran-owned Port Huron crew for garages, barns, and household junk. Call 810-242-0429.",
+    h1: "Junk Removal Near Kimball, MI",
     heroIntro:
-      "Kimball Township cleanouts often mean long driveways, pole barns, sheds, and mixed rural loads — not just a sofa at the curb. Junk Command brings a Port Huron crew that already runs Wadhams, Smiths Creek, and the I-69 corridor.",
+      "Searching junk removal near Kimball MI? Junk Command is the Port Huron crew already running Wadhams, Smiths Creek, and the I-69 corridor — long driveways, pole barns, and mixed rural loads included.",
     localIntro: [
-      "West of Port Huron, Kimball Township mixes subdivision streets with acreage, workshops, detached garages, and inherited storage spread across more than one building. Lapeer Road, Range Road, Allen Road, and the I-69 corridor are the routes we already travel, so a Kimball stop is part of the regular Blue Water map.",
+      "West of Port Huron, Kimball MI mixes subdivision streets with acreage, workshops, detached garages, and inherited storage spread across more than one building. Lapeer Road, Range Road, Allen Road, Wadhams, Smiths Creek, and the I-69 corridor are the routes we already travel, so junk removal near Kimball is a regular Blue Water stop — not a special trip from Detroit.",
       "The hard part of these jobs is rarely just weight. Gravel drives, uneven barn floors, low basement ceilings, and items stored far from the truck all change how we stage a crew. Photos of the buildings and the path out save time on estimate day.",
       "If the garage, barn, and house all have stuff that needs to leave, that is a [property cleanout](/estate-cleanout), not a single-item pickup. We also handle [shed removal](/shed-removal) contents and [yard debris](/yard-debris-removal) that built up around outbuildings. Nearby, we also serve [Port Huron](/service-areas/port-huron) and [Emmett](/service-areas/emmett).",
     ],
@@ -231,7 +231,7 @@ export const BLUE_WATER_LOCATIONS: LocationPage[] = [
       "Larger Kimball properties collect years of tools, furniture, freezers, boxes, and outdoor items before anyone calls a hauler. Junk Command is set up for that — multiple buildings, mixed loads, and a crew that treats rural access as normal work.",
       "We help with estates, inherited homes, rental houses, moving cleanouts, garages, basements, and whole-property jobs. You do not need a dumpster sitting in the drive for a week if the goal is simply to get the unwanted stuff gone.",
     ],
-    midCtaTitle: "Got Junk in Kimball Township?",
+    midCtaTitle: "Need Junk Removal Near Kimball?",
     midCtaDescription:
       "Barn, garage, basement, or the whole property — send photos and we will tell you what the job looks like before we roll west of Port Huron.",
     nearbySlugs: [
@@ -241,6 +241,11 @@ export const BLUE_WATER_LOCATIONS: LocationPage[] = [
       "clyde-township",
     ],
     faqs: [
+      {
+        question: "Do you offer junk removal near Kimball MI?",
+        answer:
+          "Yes. Kimball, Wadhams, and Smiths Creek (48074 / 48094) are everyday stops on our Port Huron routes. Call or text 810-242-0429 with photos and your address — we will confirm the soonest window.",
+      },
       {
         question: "Do you clean out barns and pole buildings in Kimball?",
         answer:

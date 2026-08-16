@@ -18,6 +18,7 @@ import { SERVICES } from "@/data/services";
 import { CITIES, CITY_NAMES } from "@/data/cities";
 import { SCHEMA_SERVICE_AREAS } from "@/data/homepage-service-areas";
 import { hasReviews, AGGREGATE, REVIEWS } from "@/data/reviews";
+import { getLocationGeo } from "@/data/locations/geo";
 import {
   CURBSIDE_START,
   FULL_SERVICE_START,
@@ -391,24 +392,49 @@ export function getLandingServiceSchema(input: {
 }
 
 export function getCityPageSchema(city: (typeof CITIES)[number]) {
+  const geo = getLocationGeo(city.slug);
+  const searchName = geo?.searchName ?? city.name;
+  const aliasNames = (geo?.aliases ?? []).filter((name) => name !== city.name);
+  const place = {
+    "@type": city.isCounty ? "AdministrativeArea" : "City",
+    name: searchName,
+    ...(aliasNames.length ? { alternateName: aliasNames } : {}),
+    containedInPlace: {
+      "@type": "AdministrativeArea",
+      name: city.county,
+    },
+    ...(geo
+      ? {
+          geo: {
+            "@type": "GeoCoordinates",
+            latitude: geo.latitude,
+            longitude: geo.longitude,
+          },
+        }
+      : {}),
+  };
+
   return {
     "@context": "https://schema.org",
     "@type": "Service",
     "@id": `${SITE_URL}/service-areas/${city.slug}#service`,
-    name: `Junk Removal in ${city.name}`,
+    name: `Junk Removal in ${searchName}`,
     serviceType: "Junk Removal",
     description: city.intro,
     url: `${SITE_URL}/service-areas/${city.slug}`,
     image: absoluteUrl(city.image),
     provider: { "@id": BUSINESS_ID },
-    areaServed: {
-      "@type": city.isCounty ? "AdministrativeArea" : "City",
-      name: city.name,
-      containedInPlace: {
-        "@type": "AdministrativeArea",
-        name: city.county,
-      },
-    },
+    areaServed: [
+      place,
+      ...aliasNames
+        .filter((name) => name !== searchName)
+        .map((name) => ({
+          "@type": /township|county|area/i.test(name)
+            ? "AdministrativeArea"
+            : "City",
+          name,
+        })),
+    ],
     offers: {
       "@type": "Offer",
       url: `${SITE_URL}/service-areas/${city.slug}`,
@@ -419,7 +445,7 @@ export function getCityPageSchema(city: (typeof CITIES)[number]) {
         priceCurrency: "USD",
         minPrice: CURBSIDE_START,
       },
-      description: `Curbside junk pickup in ${city.name} from $${CURBSIDE_START}; full-service from $${FULL_SERVICE_START}.`,
+      description: `Curbside junk pickup near ${searchName} from $${CURBSIDE_START}; full-service from $${FULL_SERVICE_START}.`,
     },
   };
 }

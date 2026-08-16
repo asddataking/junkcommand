@@ -18,6 +18,15 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  async redirects() {
+    return [
+      {
+        source: "/service-areas/kimball",
+        destination: "/service-areas/kimball-township",
+        permanent: true,
+      },
+    ];
+  },
   turbopack: {
     root: path.join(__dirname),
   },
