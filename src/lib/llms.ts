@@ -60,7 +60,7 @@ ${mdLink("Veteran owned", "/veteran-owned")}
 
 export function buildLlmsFullTxt() {
   const itemPrices = PRICING_ITEMS.filter((item) => !item.isCtaCard)
-    .map((item) => `- ${item.name}: from $${item.startingPrice}`)
+    .map((item) => `- ${item.name}: starting at $${item.startingPrice}`)
     .join("\n");
   const loadPrices = LOAD_TIERS.map(
     (tier) =>

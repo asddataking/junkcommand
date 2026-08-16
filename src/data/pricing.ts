@@ -31,7 +31,7 @@ export const PRICING_ITEMS: PricingItem[] = [
   {
     id: "refrigerator",
     name: "Refrigerator",
-    startingPrice: 139,
+    startingPrice: 129,
     image: "/images/pricing/refrigerator.webp",
     alt: "Refrigerator ready for appliance removal pickup",
     href: "/refrigerator-removal",
@@ -39,7 +39,7 @@ export const PRICING_ITEMS: PricingItem[] = [
   {
     id: "washer",
     name: "Washer",
-    startingPrice: 109,
+    startingPrice: 129,
     image: "/images/pricing/washer-dryer.webp",
     alt: "Washer ready for appliance removal",
     href: "/appliance-removal",
@@ -47,7 +47,7 @@ export const PRICING_ITEMS: PricingItem[] = [
   {
     id: "dryer",
     name: "Dryer",
-    startingPrice: 109,
+    startingPrice: 129,
     image: "/images/pricing/washer-dryer.webp",
     alt: "Dryer ready for appliance removal",
     href: "/appliance-removal",

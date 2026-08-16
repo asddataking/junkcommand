@@ -51,9 +51,20 @@ export function ServiceHero({
         </h1>
         <p className="mt-4 max-w-2xl text-base text-muted sm:text-lg">{intro}</p>
         {startingPrice ? (
-          <p className="mt-3 text-sm font-semibold text-bright">
-            Starting at {startingPrice}
-          </p>
+          startingPrice.startsWith("$") ? (
+            <div className="mt-3">
+              <p className="text-[11px] font-semibold uppercase leading-none tracking-[0.16em] text-muted">
+                Starting at
+              </p>
+              <p className="mt-1 font-display text-3xl leading-none tracking-[0.06em] text-bright">
+                {startingPrice}
+              </p>
+            </div>
+          ) : (
+            <p className="mt-3 text-sm font-semibold text-bright">
+              Starting at {startingPrice}
+            </p>
+          )
         ) : null}
         <div className="mt-8 flex flex-col gap-3 sm:flex-row">
           <FreeEstimateButton ctaPosition="service_hero" pageType="service">

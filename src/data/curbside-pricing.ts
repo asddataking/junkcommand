@@ -181,7 +181,7 @@ export const ESTIMATOR_ITEMS: EstimatorItem[] = [
   {
     id: "washer",
     name: "Washer",
-    startingPrice: 109,
+    startingPrice: 129,
     category: "appliance",
     image: "/images/pricing/washer-dryer.webp",
     alt: "Washer ready for appliance removal",
@@ -189,7 +189,7 @@ export const ESTIMATOR_ITEMS: EstimatorItem[] = [
   {
     id: "dryer",
     name: "Dryer",
-    startingPrice: 109,
+    startingPrice: 129,
     category: "appliance",
     image: "/images/pricing/washer-dryer.webp",
     alt: "Dryer ready for appliance removal",
@@ -197,7 +197,7 @@ export const ESTIMATOR_ITEMS: EstimatorItem[] = [
   {
     id: "refrigerator",
     name: "Refrigerator",
-    startingPrice: 139,
+    startingPrice: 129,
     category: "specialty",
     image: "/images/pricing/refrigerator.webp",
     alt: "Refrigerator ready for specialty appliance removal",
@@ -205,7 +205,7 @@ export const ESTIMATOR_ITEMS: EstimatorItem[] = [
   {
     id: "freezer",
     name: "Freezer",
-    startingPrice: 139,
+    startingPrice: 129,
     category: "specialty",
     image: "/images/pricing/refrigerator.webp",
     alt: "Freezer ready for specialty appliance removal",
@@ -299,8 +299,8 @@ export const COMMON_ITEM_CARDS: CommonItemCard[] = [
   {
     id: "washer-dryer",
     name: "Washer or Dryer",
-    priceLabel: "Starting at $109",
-    startingPrice: 109,
+    priceLabel: "Starting at $129",
+    startingPrice: 129,
     serviceLabel: "Curbside",
     disclaimer: "Single washer or dryer; access affects final price.",
     estimatorItemId: "washer",
@@ -310,8 +310,8 @@ export const COMMON_ITEM_CARDS: CommonItemCard[] = [
   {
     id: "fridge-freezer",
     name: "Refrigerator or Freezer",
-    priceLabel: "Starting at $139",
-    startingPrice: 139,
+    priceLabel: "Starting at $129",
+    startingPrice: 129,
     serviceLabel: "Curbside",
     disclaimer: "Specialty appliance pricing; photos required.",
     estimatorItemId: "refrigerator",

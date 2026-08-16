@@ -75,20 +75,22 @@ export function PricingCard({ item, priority = false }: PricingCardProps) {
         />
       </div>
 
-      <div className="relative z-10 flex flex-1 flex-col justify-end gap-1 px-4 pb-4 pt-2">
+      <div className="relative z-10 flex flex-1 flex-col justify-end px-4 pb-4 pt-2">
         <h3 className="font-display text-xl tracking-[0.08em] text-white sm:text-2xl">
           {item.name}
         </h3>
-        <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-muted">
-          Starting at
-        </p>
-        <p className="font-display text-3xl tracking-[0.06em] text-bright drop-shadow-[0_0_12px_rgba(24,160,255,0.45)]">
-          $
-          <NumberTicker
-            value={item.startingPrice}
-            className="font-display text-3xl tracking-[0.06em] text-bright"
-          />
-        </p>
+        <div className="mt-2">
+          <p className="text-[11px] font-semibold uppercase leading-none tracking-[0.16em] text-muted">
+            Starting at
+          </p>
+          <p className="mt-1 font-display text-3xl leading-none tracking-[0.06em] text-bright drop-shadow-[0_0_12px_rgba(24,160,255,0.45)]">
+            $
+            <NumberTicker
+              value={item.startingPrice}
+              className="font-display text-3xl leading-none tracking-[0.06em] text-bright"
+            />
+          </p>
+        </div>
       </div>
     </button>
   );

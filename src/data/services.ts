@@ -155,7 +155,7 @@ export const SERVICES: Service[] = [
       },
     ],
     relatedSlugs: ["refrigerator-removal", "electronics-recycling", "garage-cleanout"],
-    startingPrice: "$99+",
+    startingPrice: "$129",
   },
   {
     slug: "mattress-removal",
@@ -1313,7 +1313,7 @@ export const SERVICES: Service[] = [
       },
     ],
     relatedSlugs: ["appliance-removal", "electronics-recycling", "basement-cleanout"],
-    startingPrice: "$99+",
+    startingPrice: "$129",
   },
 ];
 
