@@ -168,7 +168,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <QuoteForm />
+      <QuoteForm embedForm pageType="contact" />
 
       <CtaBanner
         title="NEED JUNK GONE SOON?"

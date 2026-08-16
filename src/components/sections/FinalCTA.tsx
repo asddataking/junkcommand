@@ -3,7 +3,7 @@
 import { BRAND } from "@/lib/constants";
 import { Logo } from "@/components/ui/Logo";
 import { BlurFade } from "@/components/magicui/blur-fade";
-import { ShimmerButton } from "@/components/magicui/shimmer-button";
+import { FreeEstimateButton } from "@/components/forms/FreeEstimateButton";
 import { BorderBeam } from "@/components/magicui/border-beam";
 import { DotPattern } from "@/components/magicui/dot-pattern";
 import { MediaImage } from "@/components/ui/MediaImage";
@@ -45,9 +45,14 @@ export function FinalCTA() {
                 </p>
               </div>
             </div>
-            <ShimmerButton href="/#quote" className="w-full shrink-0 md:w-auto">
+            <FreeEstimateButton
+              shimmer
+              className="w-full shrink-0 md:w-auto"
+              ctaPosition="final_cta"
+              pageType="homepage"
+            >
               Get Started Now
-            </ShimmerButton>
+            </FreeEstimateButton>
           </div>
           <p className="sr-only">Call {BRAND.phone} for a fast quote.</p>
         </div>

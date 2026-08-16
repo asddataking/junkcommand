@@ -202,7 +202,7 @@ export default function BookOnlinePage() {
         </div>
       </section>
 
-      <QuoteForm />
+      <QuoteForm embedForm pageType="book-online" />
 
       <CtaBanner
         title="OR CALL TO BOOK NOW"

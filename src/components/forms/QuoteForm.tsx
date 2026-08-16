@@ -1,6 +1,9 @@
+"use client";
+
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { BlurFade } from "@/components/magicui/blur-fade";
 import { DotPattern } from "@/components/magicui/dot-pattern";
+import { FreeEstimateButton } from "@/components/forms/FreeEstimateButton";
 import { GhlFormEmbed } from "@/components/forms/GhlFormEmbed";
 
 const benefits = [
@@ -14,12 +17,17 @@ type QuoteFormProps = {
   title?: string;
   description?: string;
   benefitItems?: readonly string[];
+  /** Keep the inline GHL embed on dedicated form pages. */
+  embedForm?: boolean;
+  pageType?: string;
 };
 
 export function QuoteForm({
   title = "CONFIRM YOUR PRICE WITH PHOTOS",
   description = "Request a free estimate below. We will review your details and photos, then confirm pricing before pickup.",
   benefitItems = benefits,
+  embedForm = false,
+  pageType = "homepage",
 }: QuoteFormProps = {}) {
   const titleLines = title.includes("\n")
     ? title.split("\n")
@@ -38,7 +46,7 @@ export function QuoteForm({
         cr={0.8}
         className="pointer-events-none opacity-20 [mask-image:linear-gradient(to_right,white,transparent)]"
       />
-      <div className="relative mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-start lg:gap-14 lg:px-8">
+      <div className="relative mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:gap-14 lg:px-8">
         <BlurFade>
           <h2 className="font-display text-4xl tracking-[0.06em] text-white sm:text-5xl">
             {titleLines.length > 1 ? (
@@ -70,7 +78,29 @@ export function QuoteForm({
         </BlurFade>
 
         <BlurFade delay={0.1}>
-          <GhlFormEmbed />
+          {embedForm ? (
+            <GhlFormEmbed />
+          ) : (
+            <div className="rounded-[10px] border border-[rgba(0,135,255,0.4)] bg-[#020305] p-6 sm:p-8">
+              <p className="text-xs font-semibold uppercase tracking-[0.28em] text-bright">
+                Stay on this page
+              </p>
+              <h3 className="mt-2 font-display text-3xl tracking-[0.08em] text-white">
+                GET A FREE ESTIMATE
+              </h3>
+              <p className="mt-3 text-sm text-muted">
+                Open the form, send a few photos, and we will confirm pricing
+                before pickup.
+              </p>
+              <FreeEstimateButton
+                className="mt-6"
+                ctaPosition="quote_section"
+                pageType={pageType}
+              >
+                Get My Free Quote
+              </FreeEstimateButton>
+            </div>
+          )}
         </BlurFade>
       </div>
     </section>

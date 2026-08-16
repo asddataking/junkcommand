@@ -100,7 +100,7 @@ export const NAV_LINKS = [
   { label: "Services", href: "/#services" },
   { label: "How It Works", href: "/#how-it-works" },
   { label: "Reviews", href: "/reviews" },
-  { label: "Service Areas", href: "/#service-areas" },
+  { label: "Service Areas", href: "/service-areas" },
 ] as const;
 
 export const FOOTER_LINKS = {

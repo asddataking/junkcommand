@@ -1,5 +1,5 @@
 import { Truck } from "lucide-react";
-import { Button } from "@/components/ui/Button";
+import { FreeEstimateButton } from "@/components/forms/FreeEstimateButton";
 
 export function PricingDisclaimer() {
   return (
@@ -37,9 +37,13 @@ export function PricingDisclaimer() {
               Send a few photos for a confirmed curbside price — no waiting at
               home required for most pickups.
             </p>
-            <Button href="/#quote" className="mt-4 w-full sm:w-auto" showArrow>
+            <FreeEstimateButton
+              className="mt-4 w-full sm:w-auto"
+              ctaPosition="pricing_disclaimer"
+              pageType="pricing"
+            >
               Get My Curbside Price
-            </Button>
+            </FreeEstimateButton>
           </div>
         </div>
       </div>

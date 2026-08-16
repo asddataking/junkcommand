@@ -6,6 +6,7 @@ import { EstimateCalculator } from "@/components/shared/EstimateCalculator";
 import { FaqAccordion } from "@/components/shared/FaqAccordion";
 import { TrustBar } from "@/components/sections/TrustBar";
 import { Button } from "@/components/ui/Button";
+import { FreeEstimateButton } from "@/components/forms/FreeEstimateButton";
 import { FAQS } from "@/data/faqs";
 import { BRAND } from "@/lib/constants";
 import { buildPageMetadata } from "@/lib/seo";
@@ -75,9 +76,9 @@ export default function PricingPage() {
             Pricing — you approve the quote before we load a single item.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <Button href="/#quote" showArrow>
+            <FreeEstimateButton ctaPosition="pricing_hero" pageType="pricing">
               Get My Curbside Price
-            </Button>
+            </FreeEstimateButton>
             <Button href={BRAND.smsHref} variant="secondary">
               Text Photos to {BRAND.phone}
             </Button>
@@ -155,9 +156,9 @@ export default function PricingPage() {
             <FaqAccordion items={pricingFaqs} idPrefix="pricing-faq" />
           </div>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <Button href="/#quote" showArrow>
+            <FreeEstimateButton ctaPosition="pricing_faq" pageType="pricing">
               Lock In a Free Quote
-            </Button>
+            </FreeEstimateButton>
             <Button href="/faqs" variant="secondary">
               View All FAQs
             </Button>

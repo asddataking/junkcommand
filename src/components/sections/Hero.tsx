@@ -5,7 +5,7 @@ import { BRAND } from "@/lib/constants";
 import { Button } from "@/components/ui/Button";
 import { MediaImage } from "@/components/ui/MediaImage";
 import { BlurFade } from "@/components/magicui/blur-fade";
-import { ShimmerButton } from "@/components/magicui/shimmer-button";
+import { FreeEstimateButton } from "@/components/forms/FreeEstimateButton";
 import { DotPattern } from "@/components/magicui/dot-pattern";
 import { BorderBeam } from "@/components/magicui/border-beam";
 import { AnimatedShinyText } from "@/components/magicui/animated-shiny-text";
@@ -81,9 +81,14 @@ export function Hero() {
 
           <BlurFade delay={0.24} inView={false}>
             <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
-              <ShimmerButton href="/#quote" className="w-full sm:w-auto">
+              <FreeEstimateButton
+                shimmer
+                className="w-full sm:w-auto"
+                ctaPosition="hero"
+                pageType="homepage"
+              >
                 Get My Free Quote
-              </ShimmerButton>
+              </FreeEstimateButton>
               <Button
                 href={BRAND.phoneHref}
                 variant="secondary"

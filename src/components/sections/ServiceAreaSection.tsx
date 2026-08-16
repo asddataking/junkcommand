@@ -4,15 +4,9 @@ import Link from "next/link";
 import { Check, Shield } from "lucide-react";
 import { HOMEPAGE_SERVICE_AREAS } from "@/data/homepage-service-areas";
 import { MichiganServiceMap } from "@/components/sections/MichiganServiceMap";
-import { Button } from "@/components/ui/Button";
+import { FreeEstimateButton } from "@/components/forms/FreeEstimateButton";
 import { BlurFade } from "@/components/magicui/blur-fade";
 import { ShineBorder } from "@/components/magicui/shine-border";
-
-function scrollToQuoteAddress() {
-  document
-    .getElementById("quote")
-    ?.scrollIntoView({ behavior: "smooth", block: "start" });
-}
 
 export function ServiceAreaSection() {
   return (
@@ -92,12 +86,21 @@ export function ServiceAreaSection() {
                   .
                 </p>
 
-                <Button
-                  className="mt-5 hidden w-full sm:w-auto lg:inline-flex"
-                  onClick={scrollToQuoteAddress}
-                >
-                  Check My Address
-                </Button>
+                <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:items-center">
+                  <FreeEstimateButton
+                    className="hidden w-full sm:w-auto lg:inline-flex"
+                    ctaPosition="homepage_areas"
+                    pageType="homepage"
+                  >
+                    Check My Address
+                  </FreeEstimateButton>
+                  <Link
+                    href="/service-areas"
+                    className="text-sm font-semibold text-bright hover:text-white"
+                  >
+                    View all areas we serve →
+                  </Link>
+                </div>
               </div>
 
               <div className="order-2">
@@ -132,12 +135,13 @@ export function ServiceAreaSection() {
                   <span>Family Focused</span>
                 </p>
 
-                <Button
+                <FreeEstimateButton
                   className="w-full lg:hidden"
-                  onClick={scrollToQuoteAddress}
+                  ctaPosition="homepage_areas_mobile"
+                  pageType="homepage"
                 >
                   Check My Address
-                </Button>
+                </FreeEstimateButton>
               </div>
             </div>
           </div>

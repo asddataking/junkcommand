@@ -6,6 +6,7 @@ import { CtaBanner } from "@/components/shared/CtaBanner";
 import { ServiceLinkCard } from "@/components/shared/ServiceLinkCard";
 import { TrustBar } from "@/components/sections/TrustBar";
 import { Button } from "@/components/ui/Button";
+import { FreeEstimateButton } from "@/components/forms/FreeEstimateButton";
 import { SERVICES } from "@/data/services";
 import { BRAND } from "@/lib/constants";
 import { buildPageMetadata } from "@/lib/seo";
@@ -50,9 +51,9 @@ export default function ServicesPage() {
             scheduling when you need junk gone.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <Button href="/#quote" showArrow>
+            <FreeEstimateButton ctaPosition="services_hero" pageType="services">
               Get My Free Quote
-            </Button>
+            </FreeEstimateButton>
             <Button href={BRAND.phoneHref} variant="secondary">
               Call {BRAND.phone}
             </Button>
