@@ -15,7 +15,7 @@ export const PRICING_ITEMS: PricingItem[] = [
   {
     id: "couch",
     name: "Couch",
-    startingPrice: 99,
+    startingPrice: 129,
     image: "/images/pricing/couch.webp",
     alt: "Couch ready for junk removal pickup in Port Huron",
     href: "/couch-removal",
@@ -23,7 +23,7 @@ export const PRICING_ITEMS: PricingItem[] = [
   {
     id: "mattress",
     name: "Mattress",
-    startingPrice: 99,
+    startingPrice: 129,
     image: "/images/pricing/mattress.webp",
     alt: "Mattress ready for junk removal pickup",
     href: "/mattress-removal",
@@ -63,7 +63,7 @@ export const PRICING_ITEMS: PricingItem[] = [
   {
     id: "recliner",
     name: "Recliner",
-    startingPrice: 99,
+    startingPrice: 129,
     image: "/images/pricing/recliner.webp",
     alt: "Recliner staged for furniture removal",
     href: "/furniture-removal",

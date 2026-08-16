@@ -93,7 +93,7 @@ export const ESTIMATOR_ITEMS: EstimatorItem[] = [
   {
     id: "small-chair",
     name: "Small chair",
-    startingPrice: 99,
+    startingPrice: 129,
     category: "small",
     icon: "chair",
     alt: "Small chair ready for curbside junk pickup",
@@ -101,7 +101,7 @@ export const ESTIMATOR_ITEMS: EstimatorItem[] = [
   {
     id: "recliner",
     name: "Recliner",
-    startingPrice: 99,
+    startingPrice: 129,
     category: "bulky",
     image: "/images/pricing/recliner.webp",
     alt: "Recliner staged for curbside furniture removal",
@@ -109,7 +109,7 @@ export const ESTIMATOR_ITEMS: EstimatorItem[] = [
   {
     id: "mattress",
     name: "Mattress",
-    startingPrice: 99,
+    startingPrice: 129,
     category: "bulky",
     image: "/images/pricing/mattress.webp",
     alt: "Mattress ready for curbside junk removal",
@@ -117,7 +117,7 @@ export const ESTIMATOR_ITEMS: EstimatorItem[] = [
   {
     id: "box-spring",
     name: "Box spring",
-    startingPrice: 99,
+    startingPrice: 129,
     category: "bulky",
     image: "/images/pricing/box-spring.webp",
     alt: "Box spring ready for curbside haul-away",
@@ -125,7 +125,7 @@ export const ESTIMATOR_ITEMS: EstimatorItem[] = [
   {
     id: "standard-couch",
     name: "Standard couch",
-    startingPrice: 99,
+    startingPrice: 129,
     category: "bulky",
     image: "/images/pricing/couch.webp",
     alt: "Standard couch ready for curbside pickup",
@@ -133,7 +133,7 @@ export const ESTIMATOR_ITEMS: EstimatorItem[] = [
   {
     id: "large-couch",
     name: "Large couch",
-    startingPrice: 119,
+    startingPrice: 129,
     category: "bulky",
     image: "/images/pricing/couch.webp",
     alt: "Large couch ready for curbside junk pickup",
@@ -141,7 +141,7 @@ export const ESTIMATOR_ITEMS: EstimatorItem[] = [
   {
     id: "sectional-piece",
     name: "Sectional piece",
-    startingPrice: 109,
+    startingPrice: 129,
     category: "bulky",
     icon: "sectional",
     alt: "Sectional sofa piece ready for pickup",
@@ -149,7 +149,7 @@ export const ESTIMATOR_ITEMS: EstimatorItem[] = [
   {
     id: "small-dresser",
     name: "Small dresser",
-    startingPrice: 99,
+    startingPrice: 129,
     category: "bulky",
     image: "/images/pricing/dresser.webp",
     alt: "Small dresser ready for furniture removal",
@@ -157,7 +157,7 @@ export const ESTIMATOR_ITEMS: EstimatorItem[] = [
   {
     id: "large-dresser",
     name: "Large dresser",
-    startingPrice: 99,
+    startingPrice: 129,
     category: "bulky",
     image: "/images/pricing/dresser.webp",
     alt: "Large dresser ready for furniture removal",
@@ -165,7 +165,7 @@ export const ESTIMATOR_ITEMS: EstimatorItem[] = [
   {
     id: "desk",
     name: "Desk",
-    startingPrice: 99,
+    startingPrice: 129,
     category: "bulky",
     icon: "desk",
     alt: "Desk ready for curbside junk pickup",
@@ -173,7 +173,7 @@ export const ESTIMATOR_ITEMS: EstimatorItem[] = [
   {
     id: "bookshelf",
     name: "Bookshelf",
-    startingPrice: 99,
+    startingPrice: 129,
     category: "bulky",
     icon: "bookshelf",
     alt: "Bookshelf ready for curbside junk pickup",
@@ -213,7 +213,7 @@ export const ESTIMATOR_ITEMS: EstimatorItem[] = [
   {
     id: "television",
     name: "Television",
-    startingPrice: 99,
+    startingPrice: 129,
     category: "small",
     image: "/images/pricing/television.webp",
     alt: "Television ready for curbside junk pickup",
@@ -255,8 +255,8 @@ export const COMMON_ITEM_CARDS: CommonItemCard[] = [
   {
     id: "couch",
     name: "Couch",
-    priceLabel: "Curbside from $99",
-    startingPrice: 99,
+    priceLabel: "Starting at $129",
+    startingPrice: 129,
     serviceLabel: "Curbside",
     disclaimer: "Typical sofa already outside and ready to load.",
     estimatorItemId: "standard-couch",
@@ -266,8 +266,8 @@ export const COMMON_ITEM_CARDS: CommonItemCard[] = [
   {
     id: "mattress",
     name: "Mattress",
-    priceLabel: "Curbside from $99",
-    startingPrice: 99,
+    priceLabel: "Starting at $129",
+    startingPrice: 129,
     serviceLabel: "Curbside",
     disclaimer: "Standard mattress ready at the curb.",
     estimatorItemId: "mattress",
@@ -277,8 +277,8 @@ export const COMMON_ITEM_CARDS: CommonItemCard[] = [
   {
     id: "recliner",
     name: "Recliner",
-    priceLabel: "Curbside from $99",
-    startingPrice: 99,
+    priceLabel: "Starting at $129",
+    startingPrice: 129,
     serviceLabel: "Curbside",
     disclaimer: "Qualifying recliner already outside.",
     estimatorItemId: "recliner",
@@ -288,8 +288,8 @@ export const COMMON_ITEM_CARDS: CommonItemCard[] = [
   {
     id: "small-dresser",
     name: "Small Dresser",
-    priceLabel: "Curbside from $99",
-    startingPrice: 99,
+    priceLabel: "Starting at $129",
+    startingPrice: 129,
     serviceLabel: "Curbside",
     disclaimer: "Small dresser staged for easy loading.",
     estimatorItemId: "small-dresser",

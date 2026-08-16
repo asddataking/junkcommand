@@ -24,9 +24,9 @@ const crumbs = [
 const PRICE_ROWS = [
   { item: "Curbside Command", price: "From $99" },
   { item: "Full-Service Command", price: "From $129" },
-  { item: "Mattress / Box Spring (curbside)", price: "From $99" },
-  { item: "Couch / Sofa (curbside)", price: "From $99–$119" },
-  { item: "Recliner (curbside)", price: "From $99" },
+  { item: "Mattress / Box Spring", price: "Starting at $129" },
+  { item: "Couch / Sofa", price: "Starting at $129" },
+  { item: "Recliner", price: "Starting at $129" },
   { item: "Washer or Dryer", price: "Starting at $129" },
   { item: "Refrigerator / Freezer", price: "Starting at $129" },
   { item: "Quick Clear (25% load)", price: "$179" },

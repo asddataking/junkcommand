@@ -72,7 +72,7 @@ export const SERVICES: Service[] = [
       {
         question: "How much does furniture removal cost?",
         answer:
-          "Most single-item furniture pickups start near our $99 minimum. Larger loads are priced by volume. Send photos for an exact quote before we arrive.",
+          "Most single-item furniture pickups start at $129. Larger loads are priced by volume. Send photos for an exact quote before we arrive.",
       },
       {
         question: "Do you remove furniture from upstairs?",
@@ -86,7 +86,7 @@ export const SERVICES: Service[] = [
       },
     ],
     relatedSlugs: ["couch-removal", "mattress-removal", "estate-cleanout"],
-    startingPrice: "$99+",
+    startingPrice: "$129",
   },
   {
     slug: "appliance-removal",
@@ -176,7 +176,7 @@ export const SERVICES: Service[] = [
       "Mattresses, box springs, and bed frames in one visit",
       "No waiting for bulk trash day",
       "Clean removal from bedrooms, basements, and storage",
-      "Affordable single-item pricing starting near $99",
+      "Affordable single-item pricing starting at $129",
     ],
     process: [
       {
@@ -209,7 +209,7 @@ export const SERVICES: Service[] = [
       {
         question: "How much is mattress removal?",
         answer:
-          "Most mattress pickups fall near our minimum service rate. Pairing a mattress with other junk can improve overall value. Text photos for exact pricing.",
+          "Most mattress pickups start at $129. Pairing a mattress with other junk can improve overall value. Text photos for exact pricing.",
       },
       {
         question: "Will the city take my mattress at the curb?",
@@ -223,7 +223,7 @@ export const SERVICES: Service[] = [
       },
     ],
     relatedSlugs: ["furniture-removal", "couch-removal", "basement-cleanout"],
-    startingPrice: "$99+",
+    startingPrice: "$129",
   },
   {
     slug: "couch-removal",
@@ -291,7 +291,7 @@ export const SERVICES: Service[] = [
       },
     ],
     relatedSlugs: ["furniture-removal", "mattress-removal", "estate-cleanout"],
-    startingPrice: "$99+",
+    startingPrice: "$129",
   },
   {
     slug: "garage-cleanout",
@@ -1177,7 +1177,7 @@ export const SERVICES: Service[] = [
       },
     ],
     relatedSlugs: ["tv-removal", "appliance-removal", "garage-cleanout"],
-    startingPrice: "$99+",
+    startingPrice: "$129",
   },
   {
     slug: "tv-removal",
@@ -1245,7 +1245,7 @@ export const SERVICES: Service[] = [
       },
     ],
     relatedSlugs: ["electronics-recycling", "furniture-removal", "appliance-removal"],
-    startingPrice: "$99+",
+    startingPrice: "$129",
   },
   {
     slug: "refrigerator-removal",
