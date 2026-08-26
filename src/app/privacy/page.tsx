@@ -13,7 +13,11 @@ export const metadata: Metadata = buildPageMetadata({
   path: "/privacy",
 });
 
-const UPDATED = "July 28, 2026";
+const UPDATED = "August 26, 2026";
+const SUPPORT_EMAIL = "dan@getjunkcommand.com";
+const MAILING_ADDRESS = "4576 11th St, Smiths Creek, MI 48074";
+const SMS_NON_SHARING =
+  "No mobile information will be shared with third parties/affiliates for marketing/promotional purposes. Information sharing to subcontractors in support services, such as customer service, is permitted. All other use case categories exclude text messaging originator opt-in data and consent; this information will not be shared with any third parties.";
 
 export default function PrivacyPage() {
   const crumbs = [
@@ -40,12 +44,13 @@ export default function PrivacyPage() {
             WHO WE ARE
           </h2>
           <p>
-            Junk Command (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;)
-            provides junk removal and related services in Port Huron, St. Clair
-            County, and surrounding Michigan communities. This Privacy Policy
-            explains how we collect, use, and share information when you visit{" "}
-            {SITE_URL}, request a quote, call or text us, or otherwise interact
-            with our business.
+            Junk Command of Michigan DBA Junk Command (&quot;Junk Command,&quot;
+            &quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) provides junk
+            removal and related services in Port Huron, St. Clair County, and
+            surrounding Michigan communities. This Privacy Policy explains how
+            we collect, use, and share information when you visit {SITE_URL},
+            request a quote, call or text us, or otherwise interact with our
+            business.
           </p>
           <p>
             Contact:{" "}
@@ -122,8 +127,10 @@ export default function PrivacyPage() {
           <p>
             Service providers process data on our behalf under contractual
             obligations to protect it and use it only for providing their
-            services to us (hosting, CRM, SMS/email delivery, analytics, payment
-            processing if applicable). We do not sell your personal information.
+            services to us (hosting, CRM, SMS/email delivery, and analytics). We
+            do not sell your personal information. Mobile information and SMS
+            opt-in data are not shared with third parties or affiliates for
+            marketing or promotional purposes; see SMS / Text Messaging below.
           </p>
         </section>
 
@@ -134,10 +141,81 @@ export default function PrivacyPage() {
           <p>
             When you call or text {BRAND.phone}, we use your number and message
             content to provide quotes and service. Message and data rates may
-            apply. You can opt out of promotional SMS by following opt-out
-            instructions in those messages (for example, replying STOP) where
-            applicable. Operational messages about an active job may still be
-            necessary to complete service you requested.
+            apply. SMS program terms, including how to opt out by replying STOP,
+            are described in the SMS / Text Messaging section below.
+          </p>
+        </section>
+
+        <section className="space-y-4">
+          <h2 className="font-display text-2xl tracking-[0.06em] text-white">
+            SMS / Text Messaging
+          </h2>
+          <p>
+            Junk Command of Michigan DBA Junk Command operates an SMS / text
+            messaging program for junk removal quote follow-ups,
+            appointment/scheduling confirmations, crew arrival updates, and
+            post-job follow-up. We collect this information to deliver consented
+            SMS messages and to keep a record of your consent.
+          </p>
+          <p>{SMS_NON_SHARING}</p>
+          <h3 className="font-display text-xl tracking-[0.06em] text-white">
+            Information We Collect
+          </h3>
+          <p>
+            When you submit our Free Estimate form or otherwise opt in to SMS,
+            we collect your phone number, name, email, job and address details,
+            and photos you submit. We use this information to send the consented
+            SMS messages described above and to maintain a consent record.
+          </p>
+          <h3 className="font-display text-xl tracking-[0.06em] text-white">
+            Data Security
+          </h3>
+          <p>
+            We protect SMS-related information in transit with TLS/HTTPS and
+            limit access through access controls. GoHighLevel is our processor
+            for CRM, forms, and messaging.
+          </p>
+          <h3 className="font-display text-xl tracking-[0.06em] text-white">
+            Opt-Out
+          </h3>
+          <p>
+            You may opt out of SMS at any time by replying STOP to{" "}
+            {BRAND.phone}. After you send STOP, we will send one confirmation
+            message and you will receive no further SMS from us. You may also
+            contact us at{" "}
+            <a
+              href={`mailto:${SUPPORT_EMAIL}`}
+              className="text-bright hover:text-white"
+            >
+              {SUPPORT_EMAIL}
+            </a>{" "}
+            or{" "}
+            <a href={BRAND.phoneHref} className="text-bright hover:text-white">
+              {BRAND.phone}
+            </a>
+            .
+          </p>
+          <h3 className="font-display text-xl tracking-[0.06em] text-white">
+            Contact
+          </h3>
+          <p>
+            Privacy questions about SMS or this policy can be sent to{" "}
+            <a
+              href={`mailto:${SUPPORT_EMAIL}`}
+              className="text-bright hover:text-white"
+            >
+              {SUPPORT_EMAIL}
+            </a>{" "}
+            or{" "}
+            <a href={BRAND.phoneHref} className="text-bright hover:text-white">
+              {BRAND.phone}
+            </a>
+            . You may also write to us at {MAILING_ADDRESS}. General inquiries
+            may still be sent to{" "}
+            <a href={BRAND.emailHref} className="text-bright hover:text-white">
+              {BRAND.email}
+            </a>
+            .
           </p>
         </section>
 
@@ -219,14 +297,21 @@ export default function PrivacyPage() {
           </h2>
           <p>
             Questions about privacy? Email{" "}
+            <a
+              href={`mailto:${SUPPORT_EMAIL}`}
+              className="text-bright hover:text-white"
+            >
+              {SUPPORT_EMAIL}
+            </a>{" "}
+            or{" "}
             <a href={BRAND.emailHref} className="text-bright hover:text-white">
               {BRAND.email}
-            </a>{" "}
-            or call{" "}
+            </a>
+            , call{" "}
             <a href={BRAND.phoneHref} className="text-bright hover:text-white">
               {BRAND.phone}
             </a>
-            .
+            , or write to {MAILING_ADDRESS}.
           </p>
         </section>
       </article>
