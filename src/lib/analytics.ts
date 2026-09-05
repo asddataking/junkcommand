@@ -9,8 +9,14 @@ declare global {
   interface Window {
     gtag?: (...args: unknown[]) => void;
     dataLayer?: unknown[];
+    fbq?: (...args: unknown[]) => void;
   }
 }
+
+const FACEBOOK_STANDARD_EVENTS: Record<string, string> = {
+  estimate_form_submit: "Lead",
+  phone_click: "Contact",
+};
 
 export function getPageUrl() {
   if (typeof window === "undefined") return "";
@@ -27,11 +33,19 @@ export function trackEvent(name: string, params: AnalyticsContext = {}) {
 
   if (typeof window.gtag === "function") {
     window.gtag("event", name, payload);
-    return;
+  } else {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ event: name, ...payload });
   }
 
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({ event: name, ...payload });
+  if (typeof window.fbq === "function") {
+    const facebookEvent = FACEBOOK_STANDARD_EVENTS[name];
+    if (facebookEvent) {
+      window.fbq("track", facebookEvent, payload);
+    } else {
+      window.fbq("trackCustom", name, payload);
+    }
+  }
 }
 
 export function trackEstimateModalOpen(params: AnalyticsContext) {

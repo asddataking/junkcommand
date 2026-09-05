@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Antonio, IBM_Plex_Sans } from "next/font/google";
 import Script from "next/script";
+import { MetaPixelRouteTracker } from "@/components/layout/MetaPixelRouteTracker";
 import {
   getLocalBusinessSchema,
   getOrganizationSchema,
@@ -16,6 +17,7 @@ import {
 import "./globals.css";
 
 const GA_MEASUREMENT_ID = "G-9ZVZX7M7FJ";
+const META_PIXEL_ID = "2080431076173636";
 
 /** Commanding condensed display — fleet / signage energy without stock “Impact” vibes */
 const antonio = Antonio({
@@ -116,6 +118,32 @@ export default function RootLayout({
           data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
           data-widget-id="6a720eb25a8261fbe4d13a08"
         />
+        <Script id="meta-pixel" strategy="afterInteractive">
+          {`
+            !function(f,b,e,v,n,t,s)
+            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window, document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '${META_PIXEL_ID}');
+            fbq('track', 'PageView');
+          `}
+        </Script>
+        <noscript>
+          {/* Meta Pixel noscript fallback must be a raw 1x1 tracking pixel */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            height={1}
+            width={1}
+            style={{ display: "none" }}
+            src={`https://www.facebook.com/tr?id=${META_PIXEL_ID}&ev=PageView&noscript=1`}
+            alt=""
+          />
+        </noscript>
+        <MetaPixelRouteTracker />
         {schemas.map((schema, index) => (
           <script
             // eslint-disable-next-line react/no-danger
