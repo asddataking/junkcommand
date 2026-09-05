@@ -13,7 +13,22 @@ export const metadata: Metadata = buildPageMetadata({
   path: "/terms",
 });
 
-const UPDATED = "July 28, 2026";
+const UPDATED = "August 26, 2026";
+const SUPPORT_EMAIL = "dan@getjunkcommand.com";
+const SMS_PROGRAM =
+  "Junk Command of Michigan DBA Junk Command SMS Alerts Program — quote follow-ups, scheduling/appointment confirmations, crew arrival updates, and post-job follow-up.";
+const SMS_OPT_OUT =
+  'You can cancel the SMS service at any time. Just text "STOP" to 810-242-0429. After you send the SMS message "STOP" to us, we will send you an SMS message to confirm that you have been unsubscribed. After this, you will no longer receive SMS messages from us. If you want to join again, just sign up as you did the first time and we will start sending SMS messages to you again.';
+const SMS_HELP =
+  "If you are experiencing issues with the messaging program you can reply with the keyword HELP for more assistance, or you can get help directly at dan@getjunkcommand.com or 810-242-0429.";
+const SMS_CARRIER_LIABILITY =
+  "Carriers are not liable for delayed or undelivered messages.";
+const SMS_RATES =
+  "Message and data rates may apply. Message frequency varies. If you have any questions about your text plan or data plan, it is best to contact your wireless provider.";
+const SMS_AGE =
+  "You must be 18 years of age or older to use this SMS service.";
+const SMS_REENROLL =
+  "If you opt out and want to start receiving messages again, text START to 810-242-0429.";
 
 export default function TermsPage() {
   const crumbs = [
@@ -41,12 +56,64 @@ export default function TermsPage() {
           </h2>
           <p>
             These Terms of Service (&quot;Terms&quot;) govern your use of the
-            Junk Command website at {SITE_URL} and the junk removal services we
-            provide in Port Huron, St. Clair County, and surrounding areas. By
-            using our site, submitting a quote request, or booking service, you
-            agree to these Terms. If you do not agree, do not use the site or
-            hire us.
+            Junk Command of Michigan DBA Junk Command website at {SITE_URL} and
+            the junk removal services we provide in Port Huron, St. Clair
+            County, and surrounding areas. By using our site, submitting a quote
+            request, or booking service, you agree to these Terms. If you do not
+            agree, do not use the site or hire us.
           </p>
+        </section>
+
+        <section className="space-y-4">
+          <h2 className="font-display text-2xl tracking-[0.06em] text-white">
+            SMS Messaging Terms
+          </h2>
+          <p>
+            By opting in to SMS on our Free Estimate form or by texting Junk
+            Command, you agree to these SMS Messaging Terms in addition to the
+            rest of this page.
+          </p>
+          <h3 className="font-display text-xl tracking-[0.06em] text-white">
+            1. Business identity / program
+          </h3>
+          <p>{SMS_PROGRAM}</p>
+          <h3 className="font-display text-xl tracking-[0.06em] text-white">
+            2. Opt-Out
+          </h3>
+          <p>{SMS_OPT_OUT}</p>
+          <h3 className="font-display text-xl tracking-[0.06em] text-white">
+            3. Help
+          </h3>
+          <p>{SMS_HELP}</p>
+          <h3 className="font-display text-xl tracking-[0.06em] text-white">
+            4. Carrier Liability
+          </h3>
+          <p>{SMS_CARRIER_LIABILITY}</p>
+          <h3 className="font-display text-xl tracking-[0.06em] text-white">
+            5. Message Frequency and Rates
+          </h3>
+          <p>{SMS_RATES}</p>
+          <h3 className="font-display text-xl tracking-[0.06em] text-white">
+            6. Privacy
+          </h3>
+          <p>
+            If you have any questions regarding privacy, please read our privacy
+            policy:{" "}
+            <a
+              href="https://www.getjunkcommand.com/privacy"
+              className="text-bright hover:text-white"
+            >
+              https://www.getjunkcommand.com/privacy
+            </a>
+          </p>
+          <h3 className="font-display text-xl tracking-[0.06em] text-white">
+            7. Age Restriction
+          </h3>
+          <p>{SMS_AGE}</p>
+          <h3 className="font-display text-xl tracking-[0.06em] text-white">
+            Re-Enrollment
+          </h3>
+          <p>{SMS_REENROLL}</p>
         </section>
 
         <section className="space-y-4">
@@ -232,7 +299,14 @@ export default function TermsPage() {
             CONTACT
           </h2>
           <p>
-            Junk Command ·{" "}
+            Junk Command of Michigan DBA Junk Command ·{" "}
+            <a
+              href={`mailto:${SUPPORT_EMAIL}`}
+              className="text-bright hover:text-white"
+            >
+              {SUPPORT_EMAIL}
+            </a>{" "}
+            ·{" "}
             <a href={BRAND.emailHref} className="text-bright hover:text-white">
               {BRAND.email}
             </a>{" "}
