@@ -35,6 +35,14 @@ GHL_WEBHOOK_URL=https://services.leadconnectorhq.com/hooks/YOUR_WEBHOOK_ID
 
 The quote API (`POST /api/quote`) validates the form, then posts JSON to that URL via `src/lib/ghl.ts`. Without the env var, submissions still succeed locally and log the payload.
 
+Labor pool page (`/work-with-junk-command`) embeds a GHL form the same way Free Estimate does (iframe + `form_embed.js`). Set the public form URL or form ID:
+
+```
+NEXT_PUBLIC_GHL_LABOR_FORM_URL=https://api.leadconnectorhq.com/widget/form/YOUR_FORM_ID
+```
+
+Until that env var is set (Vercel + `.env.local`), the embed uses the placeholder `REPLACE_WITH_GHL_LABOR_FORM_URL`. A widget URL or a bare GHL form ID both work.
+
 ## Images
 
 Drop WebP assets into `public/images/` (see `public/images/README.md`):
@@ -53,7 +61,7 @@ Until real photos are added, UI falls back to dark neon gradients.
 
 1. Push this repo to GitHub
 2. Import the project in [Vercel](https://vercel.com/new)
-3. Add `GHL_WEBHOOK_URL` under Project → Settings → Environment Variables
+3. Add `GHL_WEBHOOK_URL` and `NEXT_PUBLIC_GHL_LABOR_FORM_URL` under Project → Settings → Environment Variables
 4. Deploy (Vercel auto-detects Next.js)
 
 Or CLI:

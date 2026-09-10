@@ -135,12 +135,19 @@ export const NAV_LINKS = [
   { label: "Service Areas", href: "/service-areas" },
 ] as const;
 
+/** Labor pool landing — header/mobile CTA + footer, not in the 4-item homepage nav */
+export const LABOR_POOL = {
+  label: "Work With Junk Command",
+  href: "/work-with-junk-command",
+} as const;
+
 export const FOOTER_LINKS = {
   company: [
     { label: "About Us", href: "/about" },
     { label: "Meet the Crew", href: "/meet-the-crew" },
     { label: "Veteran Owned", href: "/veteran-owned" },
     { label: "Careers", href: "/careers" },
+    { label: LABOR_POOL.label, href: LABOR_POOL.href },
     { label: "Before & After", href: "/gallery" },
   ],
   services: [

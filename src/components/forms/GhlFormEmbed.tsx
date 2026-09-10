@@ -7,6 +7,8 @@ export const DEFAULT_GHL_FORM_ID = "yw2y86G2nD6Vmzn2HjN2";
 
 type GhlFormEmbedProps = {
   formId?: string;
+  /** Full GHL widget URL, or a form ID. Overrides `formId` when set. */
+  formUrl?: string;
   formName?: string;
   title?: string;
   className?: string;
@@ -15,21 +17,47 @@ type GhlFormEmbedProps = {
   embedId?: string;
 };
 
+function applyQuery(
+  url: URL,
+  query?: Record<string, string | undefined>,
+) {
+  if (!query) return url;
+  for (const [key, value] of Object.entries(query)) {
+    if (value) url.searchParams.set(key, value);
+  }
+  return url;
+}
+
 function formSrcWithQuery(
   formId: string,
   query?: Record<string, string | undefined>,
 ) {
   const url = new URL(`https://api.leadconnectorhq.com/widget/form/${formId}`);
-  if (query) {
-    for (const [key, value] of Object.entries(query)) {
-      if (value) url.searchParams.set(key, value);
-    }
+  return applyQuery(url, query).toString();
+}
+
+function resolveFormEmbed(
+  formId: string,
+  formUrl: string | undefined,
+  query?: Record<string, string | undefined>,
+) {
+  const trimmed = formUrl?.trim();
+  if (!trimmed) {
+    return { formId, src: formSrcWithQuery(formId, query) };
   }
-  return url.toString();
+
+  if (/^https?:\/\//i.test(trimmed)) {
+    const url = new URL(trimmed);
+    const idFromPath = trimmed.match(/\/form\/([^/?#]+)/)?.[1] ?? formId;
+    return { formId: idFromPath, src: applyQuery(url, query).toString() };
+  }
+
+  return { formId: trimmed, src: formSrcWithQuery(trimmed, query) };
 }
 
 export function GhlFormEmbed({
   formId = DEFAULT_GHL_FORM_ID,
+  formUrl,
   formName = "Free Estimate",
   title = "Free Estimate",
   className = "",
@@ -37,8 +65,9 @@ export function GhlFormEmbed({
   query,
   embedId,
 }: GhlFormEmbedProps) {
-  const iframeId = embedId ?? `inline-${formId}`;
-  const formSrc = formSrcWithQuery(formId, query);
+  const resolved = resolveFormEmbed(formId, formUrl, query);
+  const iframeId = embedId ?? `inline-${resolved.formId}`;
+  const formSrc = resolved.src;
 
   return (
     <div
@@ -78,7 +107,7 @@ export function GhlFormEmbed({
           data-form-name={formName}
           data-height="undefined"
           data-layout-iframe-id={iframeId}
-          data-form-id={formId}
+          data-form-id={resolved.formId}
           title={title}
           className={`absolute inset-0 h-full w-full ${minHeightClassName}`}
         />

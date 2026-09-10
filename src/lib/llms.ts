@@ -55,6 +55,7 @@ ${mdLink("Blog", "/blog")}
 ${mdLink("Reviews", "/reviews")}
 ${mdLink("About", "/about")}
 ${mdLink("Veteran owned", "/veteran-owned")}
+${mdLink("Work with Junk Command", "/work-with-junk-command", "Flexible labor pool — texted when junk removal jobs are available")}
 `;
 }
 

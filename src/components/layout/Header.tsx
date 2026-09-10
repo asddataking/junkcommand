@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
-import { NAV_LINKS } from "@/lib/constants";
+import { LABOR_POOL, NAV_LINKS } from "@/lib/constants";
 import { Logo } from "@/components/ui/Logo";
 import { MobileMenu } from "@/components/layout/MobileMenu";
 import { FreeEstimateButton } from "@/components/forms/FreeEstimateButton";
@@ -64,21 +64,35 @@ export function Header() {
         </nav>
 
         <div className="hidden items-center gap-3 lg:flex">
+          <Link
+            href={LABOR_POOL.href}
+            className="max-w-[7.5rem] text-center text-[10px] font-semibold uppercase leading-tight tracking-[0.12em] text-bright transition-colors hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-bright xl:max-w-none xl:text-sm xl:leading-normal xl:tracking-[0.14em]"
+          >
+            {LABOR_POOL.label}
+          </Link>
           <FreeEstimateButton shimmer ctaPosition="header" pageType="site">
             Get My Free Quote
           </FreeEstimateButton>
         </div>
 
-        <button
-          type="button"
-          className="inline-flex items-center justify-center rounded-[2px] border border-[rgba(0,135,255,0.45)] p-2 text-white lg:hidden"
-          aria-expanded={open}
-          aria-controls="mobile-menu"
-          aria-label={open ? "Close menu" : "Open menu"}
-          onClick={() => setOpen((v) => !v)}
-        >
-          {open ? <X className="size-5" /> : <Menu className="size-5" />}
-        </button>
+        <div className="flex items-center gap-3 lg:hidden">
+          <Link
+            href={LABOR_POOL.href}
+            className="max-w-[5.5rem] text-center text-[9px] font-semibold uppercase leading-tight tracking-[0.1em] text-bright transition-colors hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bright sm:max-w-[7.5rem] sm:text-[10px] sm:tracking-[0.12em]"
+          >
+            {LABOR_POOL.label}
+          </Link>
+          <button
+            type="button"
+            className="inline-flex items-center justify-center rounded-[2px] border border-[rgba(0,135,255,0.45)] p-2 text-white"
+            aria-expanded={open}
+            aria-controls="mobile-menu"
+            aria-label={open ? "Close menu" : "Open menu"}
+            onClick={() => setOpen((v) => !v)}
+          >
+            {open ? <X className="size-5" /> : <Menu className="size-5" />}
+          </button>
+        </div>
       </div>
 
       <MobileMenu open={open} onClose={() => setOpen(false)} />

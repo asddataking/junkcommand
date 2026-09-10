@@ -5,7 +5,22 @@
  * 1. Create a GHL inbound webhook / workflow trigger
  * 2. Set GHL_WEBHOOK_URL in your environment (.env.local / Vercel)
  * 3. POST quote payloads from /api/quote to that URL
+ *
+ * Labor pool form embed (`/work-with-junk-command`):
+ * Set NEXT_PUBLIC_GHL_LABOR_FORM_URL to a GHL widget URL
+ * (https://api.leadconnectorhq.com/widget/form/FORM_ID) or a form ID.
+ * Until CoS provides the URL, the embed uses REPLACE_WITH_GHL_LABOR_FORM_URL.
  */
+
+/** Searchable placeholder until NEXT_PUBLIC_GHL_LABOR_FORM_URL is set. */
+export const GHL_LABOR_FORM_URL_PLACEHOLDER = "REPLACE_WITH_GHL_LABOR_FORM_URL";
+
+export function getGhlLaborFormUrl(): string {
+  return (
+    process.env.NEXT_PUBLIC_GHL_LABOR_FORM_URL?.trim() ||
+    GHL_LABOR_FORM_URL_PLACEHOLDER
+  );
+}
 
 export type GhlQuotePayload = {
   fullName: string;
