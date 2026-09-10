@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { BRAND, NAV_LINKS } from "@/lib/constants";
+import { BRAND, LABOR_POOL, NAV_LINKS } from "@/lib/constants";
 import { FreeEstimateButton } from "@/components/forms/FreeEstimateButton";
 import { PhoneLink } from "@/components/forms/PhoneLink";
 
@@ -33,6 +33,13 @@ export function MobileMenu({
             {link.label}
           </Link>
         ))}
+        <Link
+          href={LABOR_POOL.href}
+          onClick={onClose}
+          className="rounded-[2px] px-3 py-3 text-sm font-semibold uppercase tracking-[0.14em] text-bright hover:bg-[rgba(7,135,255,0.08)] hover:text-white"
+        >
+          {LABOR_POOL.label}
+        </Link>
         <Link
           href="/veteran-owned"
           onClick={onClose}
