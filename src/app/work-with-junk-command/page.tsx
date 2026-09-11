@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { DollarSign, Dumbbell, Utensils } from "lucide-react";
 import { buildPageMetadata } from "@/lib/seo";
 import { getBreadcrumbSchema } from "@/lib/schema";
 import { JsonLd } from "@/components/seo/JsonLd";
@@ -12,11 +13,29 @@ import { LABOR_POOL } from "@/lib/constants";
 import { getGhlLaborFormUrl } from "@/lib/ghl";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Work With Junk Command | Flexible Junk Removal Labor Pool",
+  title: "Work With Junk Command | $18/hr Flexible Labor Pool",
   description:
-    "Want to make extra money helping Junk Command? Join the labor pool for flexible, part-time junk removal and hauling in Port Huron. We'll text you when work is available.",
+    "Join the Junk Command labor pool — $18/hr, paid lunches on work days, gym membership after 5 jobs. Flexible part-time junk removal in Port Huron.",
   path: LABOR_POOL.href,
 });
+
+const PERKS = [
+  {
+    icon: DollarSign,
+    title: "$18 an hour",
+    detail: "Straight hourly pay when you work a job. No mystery rate.",
+  },
+  {
+    icon: Dumbbell,
+    title: "Gym membership",
+    detail: "We cover it after you finish 5 jobs.",
+  },
+  {
+    icon: Utensils,
+    title: "Lunches paid",
+    detail: "Eat on us the days you work.",
+  },
+] as const;
 
 const crumbs = [
   { name: "Home", href: "/" },
@@ -40,7 +59,10 @@ export default function WorkWithJunkCommandPage() {
             FLEXIBLE WORK WITH JUNK COMMAND
           </h1>
           <p className="mt-4 max-w-2xl text-lg text-white">
-            Want to make some extra money helping Junk Command? Join the crew.
+            Want extra money helping Junk Command? $18 an hour. Join the crew.
+          </p>
+          <p className="mt-3 max-w-2xl text-sm font-semibold uppercase tracking-[0.12em] text-bright">
+            $18/hr · Gym after 5 jobs · Lunches paid on work days
           </p>
           <div className="mt-6 max-w-2xl space-y-4 text-muted">
             <p>
@@ -63,6 +85,44 @@ export default function WorkWithJunkCommandPage() {
         </div>
       </section>
       <TrustBar />
+
+      <section
+        id="perks"
+        aria-labelledby="perks-heading"
+        className="border-b border-[rgba(0,135,255,0.2)] py-14 sm:py-20"
+      >
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <p className="text-xs font-semibold uppercase tracking-[0.28em] text-bright">
+            Perks
+          </p>
+          <h2
+            id="perks-heading"
+            className="mt-3 font-display text-3xl tracking-[0.06em] text-white sm:text-4xl"
+          >
+            WHAT YOU GET
+          </h2>
+          <p className="mt-4 max-w-2xl text-muted">
+            Flexible, part-time labor on a veteran-owned junk crew. Show up,
+            work the job, get paid.
+          </p>
+          <ul className="mt-8 grid gap-4 sm:grid-cols-3">
+            {PERKS.map(({ icon: Icon, title, detail }) => (
+              <li
+                key={title}
+                className="rounded-[2px] border border-[rgba(0,135,255,0.3)] bg-card p-5 sm:p-6"
+              >
+                <Icon className="size-5 text-bright" aria-hidden />
+                <h3 className="mt-4 font-display text-2xl tracking-[0.06em] text-white">
+                  {title}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted">
+                  {detail}
+                </p>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
 
       <section
         id="join"
@@ -90,7 +150,7 @@ export default function WorkWithJunkCommandPage() {
       <CtaBanner
         eyebrow="Join the Crew"
         title="READY TO WORK WITH JUNK COMMAND?"
-        description="Join the labor pool — we'll text you when jobs are available. No guaranteed hours."
+        description="Join the labor pool — $18/hr, paid lunches, gym after 5 jobs. We'll text you when work is available."
         primaryHref="#join"
         primaryLabel="Join the Labor Pool"
       />

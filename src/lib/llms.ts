@@ -55,7 +55,7 @@ ${mdLink("Blog", "/blog")}
 ${mdLink("Reviews", "/reviews")}
 ${mdLink("About", "/about")}
 ${mdLink("Veteran owned", "/veteran-owned")}
-${mdLink("Work with Junk Command", "/work-with-junk-command", "Flexible labor pool — texted when junk removal jobs are available")}
+${mdLink("Work with Junk Command", "/work-with-junk-command", "$18/hr labor pool — paid lunches on work days, gym after 5 jobs, texted when work is available")}
 `;
 }
 
