@@ -99,7 +99,8 @@ export function trackEstimateModalOpen(params: AnalyticsContext) {
  * Retired as a standalone GA4 event. Successful Free Estimate submits
  * now fire `generate_lead` so Meta still receives a Lead via that path.
  */
-export function trackEstimateFormSubmit(_params: AnalyticsContext = {}) {
+export function trackEstimateFormSubmit(params: AnalyticsContext = {}) {
+  void params;
   trackGenerateLead();
 }
 
