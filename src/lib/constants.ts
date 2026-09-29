@@ -164,6 +164,11 @@ export const FOOTER_LINKS = {
     { label: "Marysville", href: "/service-areas/marysville" },
     { label: "Kimball Township", href: "/service-areas/kimball-township" },
     { label: "St. Clair", href: "/service-areas/st-clair" },
+    { label: "Marine City", href: "/service-areas/marine-city" },
+    { label: "Smiths Creek", href: "/service-areas/smiths-creek" },
+    { label: "Romeo", href: "/service-areas/romeo" },
+    { label: "Imlay City", href: "/service-areas/imlay-city" },
+    { label: "Lapeer", href: "/service-areas/lapeer" },
   ],
 } as const;
 
@@ -278,6 +283,11 @@ export const SERVICE_AREAS = [
   "Fort Gratiot",
   "Kimball Township",
   "St. Clair",
+  "Marine City",
+  "Smiths Creek",
+  "Romeo",
+  "Imlay City",
+  "Lapeer",
 ] as const;
 
 /** @deprecated Prefer REVIEWS from data/reviews */

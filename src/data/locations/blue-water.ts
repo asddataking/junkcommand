@@ -23,7 +23,7 @@ export const BLUE_WATER_LOCATIONS: LocationPage[] = [
       "Because we are based here, we already plan around bridge traffic, winter sidewalks, alley parking, and the kind of older trim and narrow halls you find in many Port Huron homes. Same-day or next-day service may be available depending on the schedule, especially when photos come in early and the load fits a route already running through town.",
       "If you are moving, listing a house, turning a rental, or just tired of staring at the pile, [furniture removal](/furniture-removal) and [appliance removal](/appliance-removal) are usually part of the same visit. Cleaning out an entire property? Our [estate cleanout](/estate-cleanout) crew can handle furniture, appliances, and miscellaneous household junk without turning it into a weekend project.",
       "Pricing here is the same as the rest of the site: curbside starts at $99 when qualifying items are already outside, and full-service starts at $129 when we carry items out. Larger Port Huron piles are quoted by truck volume from photos. You approve the number before we load. We do not publish a street address because this is a service-area business — the crew comes to you.",
-      "Same-day or next-day windows may be available when the load fits a route already in town. Call or text 810-242-0429 or use the free estimate form on this page. Nearby we also run [Fort Gratiot](/service-areas/fort-gratiot), [Marysville](/service-areas/marysville), [Kimball Township](/service-areas/kimball-township), and [St. Clair](/service-areas/st-clair).",
+      "Same-day or next-day windows may be available when the load fits a route already in town. Call or text 810-242-0429 or use the free estimate form on this page. Nearby we also run [Fort Gratiot](/service-areas/fort-gratiot), [Marysville](/service-areas/marysville), [Kimball Township](/service-areas/kimball-township), [St. Clair](/service-areas/st-clair), and [Smiths Creek](/service-areas/smiths-creek).",
     ],
     featuredServiceSlugs: [...SERVICE_PRESETS.urban],
     servicesIntro:
@@ -41,6 +41,7 @@ export const BLUE_WATER_LOCATIONS: LocationPage[] = [
       "marysville",
       "kimball-township",
       "st-clair",
+      "smiths-creek",
     ],
     faqs: [
       {
@@ -89,7 +90,7 @@ export const BLUE_WATER_LOCATIONS: LocationPage[] = [
       "We already run this township regularly from our Port Huron base, so Fort Gratiot is not a special trip. Jobs range from a dead freezer in a garage to a lakeshore cottage reset, retail fixtures near Birchwood Mall, or a family consolidating an inherited house.",
       "If the load is mixed, that is normal. [Garage cleanouts](/garage-cleanout) here often uncover old furniture, seasonal gear, and appliances that never made it to the curb. We confirm pricing before we load and protect driveways and finished interiors — important in association neighborhoods and well-kept township streets.",
       "Curbside pickup starts at $99 when items are already outside. Full-service starts at $129 when we come inside. Cottage cleanouts and packed garages are quoted by volume from photos. Fort Gratiot is minutes from our Port Huron base, so it is a regular route, not a long-haul appointment.",
-      "We also run [Port Huron](/service-areas/port-huron), [Marysville](/service-areas/marysville), [Kimball Township](/service-areas/kimball-township), and [St. Clair](/service-areas/st-clair). Call or text 810-242-0429 or use the free estimate form.",
+      "We also run [Port Huron](/service-areas/port-huron), [Marysville](/service-areas/marysville), [Kimball Township](/service-areas/kimball-township), [Smiths Creek](/service-areas/smiths-creek), and [St. Clair](/service-areas/st-clair). Call or text 810-242-0429 or use the free estimate form.",
     ],
     featuredServiceSlugs: [...SERVICE_PRESETS.waterfront],
     servicesIntro:
@@ -107,6 +108,7 @@ export const BLUE_WATER_LOCATIONS: LocationPage[] = [
       "marysville",
       "kimball-township",
       "st-clair",
+      "smiths-creek",
     ],
     faqs: [
       {
@@ -159,7 +161,7 @@ export const BLUE_WATER_LOCATIONS: LocationPage[] = [
       "Because Marysville is minutes from our shop, we treat it as a local route, not a long haul. Finished floors, attached garages, and well-kept entries are common, so careful carrying matters as much as getting the truck loaded. We protect doorways, confirm keepers, and leave the driveway presentable.",
       "If you are clearing space before winter parking, summer guests, or a listing, [furniture removal](/furniture-removal) and a [garage cleanout](/garage-cleanout) are the two calls we hear most. We are also nearby when you need junk hauled in [Port Huron](/service-areas/port-huron) or [St. Clair](/service-areas/st-clair).",
       "Marysville pricing uses the same published floors: curbside from $99 and full-service from $129, then volume for larger piles. Photos of the furniture, appliances, or garage get you a confirmed range. You approve the price before we load. This is still a service-area pickup — we come to the house; there is no shop counter to visit.",
-      "Same-day or next-day service may be available when Marysville fits that day’s river route. Call or text 810-242-0429 or open the free estimate form. We also serve [Fort Gratiot](/service-areas/fort-gratiot) and [Kimball Township](/service-areas/kimball-township).",
+      "Same-day or next-day service may be available when Marysville fits that day’s river route. Call or text 810-242-0429 or open the free estimate form. We also serve [Fort Gratiot](/service-areas/fort-gratiot), [Kimball Township](/service-areas/kimball-township), [Marine City](/service-areas/marine-city), and [Romeo](/service-areas/romeo).",
     ],
     featuredServiceSlugs: [...SERVICE_PRESETS.village],
     servicesIntro:
@@ -177,6 +179,8 @@ export const BLUE_WATER_LOCATIONS: LocationPage[] = [
       "st-clair",
       "kimball-township",
       "fort-gratiot",
+      "romeo",
+      "marine-city",
     ],
     faqs: [
       {
@@ -227,7 +231,7 @@ export const BLUE_WATER_LOCATIONS: LocationPage[] = [
     localIntro: [
       "West of Port Huron, Kimball MI mixes subdivision streets with acreage, workshops, detached garages, and inherited storage spread across more than one building. Lapeer Road, Range Road, Allen Road, Wadhams, Smiths Creek, and the I-69 corridor are the routes we already travel, so junk removal near Kimball is a regular Blue Water stop — not a special trip from Detroit.",
       "The hard part of these jobs is rarely just weight. Gravel drives, uneven barn floors, low basement ceilings, and items stored far from the truck all change how we stage a crew. Photos of the buildings and the path out save time on estimate day.",
-      "If the garage, barn, and house all have stuff that needs to leave, that is a [property cleanout](/estate-cleanout), not a single-item pickup. We also handle [construction debris](/construction-debris-removal) that built up around outbuildings. Nearby, we also serve [Port Huron](/service-areas/port-huron) and [Fort Gratiot](/service-areas/fort-gratiot).",
+      "If the garage, barn, and house all have stuff that needs to leave, that is a [property cleanout](/estate-cleanout), not a single-item pickup. We also handle [construction debris](/construction-debris-removal) that built up around outbuildings. Nearby, we also serve [Port Huron](/service-areas/port-huron), [Fort Gratiot](/service-areas/fort-gratiot), and dedicated [Smiths Creek](/service-areas/smiths-creek) pickups on the same west-county roads.",
       "Rural Kimball quotes still start from the published floors: curbside from $99 and full-service from $129. Multi-building cleanouts are priced by volume and may take more than one load. Photos of the driveway, the buildings, and the pile get you a number before we roll west of Port Huron. You approve the price before we load.",
       "Same-day or next-day service may be available on our everyday Blue Water routes. Call or text 810-242-0429 or use the free estimate form. We also serve [Marysville](/service-areas/marysville) and [St. Clair](/service-areas/st-clair).",
     ],
@@ -247,6 +251,7 @@ export const BLUE_WATER_LOCATIONS: LocationPage[] = [
       "marysville",
       "fort-gratiot",
       "st-clair",
+      "smiths-creek",
     ],
     faqs: [
       {
@@ -287,6 +292,84 @@ export const BLUE_WATER_LOCATIONS: LocationPage[] = [
     ),
   },
   {
+    slug: "smiths-creek",
+    name: "Smiths Creek",
+    county: "St. Clair County",
+    regionId: "blue-water",
+    layout: "editorial",
+    eyebrow: "Smiths Creek · 48074",
+    metaTitle: "Smiths Creek MI Junk Removal | West County Acreage | Junk Command",
+    metaDescription:
+      "Junk removal in Smiths Creek, Michigan — rural lots, barns, and packed garages about 15–20 minutes west of Port Huron. Volume quotes. Call 810-242-0429.",
+    h1: "Junk Removal in Smiths Creek, Michigan",
+    heroIntro:
+      "Smiths Creek is rural St. Clair County, not a downtown curb. Junk Command hauls furniture, appliances, garage overflow, and barn contents from properties west of Port Huron where the driveway, the outbuilding, and the path to the truck matter as much as the pile.",
+    localIntro: [
+      "Smiths Creek is an unincorporated community in Kimball Township — ZIP 48074 — with acreage, workshops, detached garages, and houses set back from the road. It is not a walkable village core. Jobs here are defined by gravel drives, pole barns, low basement ceilings, and items stored far from where a trailer can sit. If you have been searching for junk removal in Smiths Creek specifically, this page is that stop, separate from the broader [Kimball Township](/service-areas/kimball-township) page.",
+      "The drive from our Port Huron base is about 15 to 20 minutes west in ordinary traffic. We already run these roads with Wadhams and the I-69 corridor, so Smiths Creek is a regular west-county pickup, not a Detroit-metro dispatch. There is no public street address on this site because we are a service-area business. The crew comes to the property.",
+      "Property types are mixed rural: a ranch with a packed two-car garage, a house plus a shop, an inherited place with a freezer in the barn, or a rental that collected leftover furniture across more than one building. Range Road, Lapeer Road, and the roads toward Wadhams are the usual landmarks people use when they describe access. Photos of the driveway and the buildings save a wasted site visit.",
+      "The work we do here is [garage cleanouts](/garage-cleanout), barn and shed contents, [estate cleanouts](/estate-cleanout) when a family is emptying an inherited property, [furniture removal](/furniture-removal), and [appliance removal](/appliance-removal) — often all on the same load. [Construction debris](/construction-debris-removal) from a small addition or a torn-down shed can ride along when it is mixed, non-hazardous, and already on the ground. We are not a hazardous-waste contractor. Fuels, wet paint, and asbestos stay off the truck.",
+      "Pricing follows volume and access, same as every other Junk Command page. Curbside Command starts at $99 when qualifying items are already outside. Full-service Command starts at $129 when we carry items out of a house, garage, or barn. Multi-building cleanouts may take more than one load. We say that up front from photos. You approve the price before we load.",
+      "Addresses people call Smiths Creek are often on Smiths Creek Road, Range Road, or the grid west of Wadhams — a house, a garage, and at least one extra building. If your mail says Kimball Township but you tell neighbors you live in Smiths Creek, use this page. The [Kimball Township](/service-areas/kimball-township) page is the broader township stop. This one is for the 48074 community people actually name when they call.",
+      "Same-day or next-day windows may be available when Smiths Creek fits a west-county route already leaving Port Huron. Call or text 810-242-0429 or use the free estimate form. Nearby we also serve [Port Huron](/service-areas/port-huron), [Marysville](/service-areas/marysville), and [Fort Gratiot](/service-areas/fort-gratiot).",
+    ],
+    featuredServiceSlugs: [...SERVICE_PRESETS.rural],
+    servicesIntro:
+      "Smiths Creek calls lean toward packed garages, barn overflow, mixed household junk, and bulky furniture that never made it to the curb. Combining [furniture removal](/furniture-removal) with [appliance removal](/appliance-removal) is common when a family is clearing an inherited lot. A [garage cleanout](/garage-cleanout) is often the first visit that tells us whether the house itself needs an [estate cleanout](/estate-cleanout).",
+    cleanoutHeading: "Barn, Garage, and House — One Plan",
+    cleanoutBody: [
+      "Smiths Creek properties collect tools, freezers, boxed clutter, and outdoor junk across more than one building before anyone calls a hauler. Treating that as a single-item sofa pickup wastes everyone’s time. We quote the buildings you actually need emptied and stage the crew for gravel drives and long carries.",
+      "You do not need a dumpster sitting in the yard for a week if the goal is simply to get the unwanted stuff gone. Mark keepers. Send photos of each building and the path out. We will tell you whether it is one load or a staged cleanout before we roll west of Port Huron. If the address is Wadhams or another Kimball Township road that is not Smiths Creek, use the [Kimball Township](/service-areas/kimball-township) page — same crew, clearer routing.",
+    ],
+    midCtaTitle: "Need Junk Gone in Smiths Creek?",
+    midCtaDescription:
+      "Barn, garage, basement, or the whole property — send photos and we will quote the Smiths Creek job before we leave Port Huron.",
+    nearbySlugs: [
+      "kimball-township",
+      "port-huron",
+      "marysville",
+      "fort-gratiot",
+      "imlay-city",
+    ],
+    faqs: [
+      {
+        question: "Is Smiths Creek part of Kimball Township?",
+        answer:
+          "Yes. Smiths Creek is an unincorporated community in Kimball Township (48074). This page is for Smiths Creek addresses specifically. Kimball Township and Wadhams jobs are covered on the Kimball page.",
+      },
+      {
+        question: "How far are you from Smiths Creek?",
+        answer:
+          "About 15 to 20 minutes west of our Port Huron base in ordinary traffic. It is a regular west-county stop, not a special long-distance trip.",
+      },
+      {
+        question: "Do you clean out barns and pole buildings?",
+        answer:
+          "Yes, as long as the contents are non-hazardous and we can access them safely. Photos of the building, the driveway, and the pile help us quote accurately.",
+      },
+      {
+        question: "How is junk removal priced for larger properties?",
+        answer:
+          "By volume and access. Curbside starts at $99. Full-service starts at $129. A multi-building cleanout may take more than one load. We discuss that from photos before we arrive.",
+      },
+      {
+        question: "Do I have to sort everything first?",
+        answer:
+          "Set aside anything you want to keep. We can help identify junk versus keepers on site, but we do not provide full estate-sale packing services.",
+      },
+      {
+        question: "How do I get an estimate?",
+        answer:
+          "Use the free estimate form on this page or text photos to 810-242-0429. Include the driveway and any buildings that need to be cleared.",
+      },
+    ],
+    images: buildLocationImages(
+      "Smiths Creek",
+      "western St. Clair County",
+      "rural",
+    ),
+  },
+  {
     slug: "st-clair",
     name: "St. Clair",
     county: "St. Clair County",
@@ -304,7 +387,7 @@ export const BLUE_WATER_LOCATIONS: LocationPage[] = [
       "We run St. Clair as a natural stop south of Marysville. Older entries, riverfront parking, and finished interiors mean we plan the carry before we lift. Estate contents, pre-listing garage cleanups, and appliance changeouts are the usual reasons people call.",
       "If you are getting a house ready for guests, buyers, or a remodel, [estate cleanouts](/estate-cleanout) and [furniture removal](/furniture-removal) are the services that come up most. We also serve nearby [Marysville](/service-areas/marysville) and [Port Huron](/service-areas/port-huron) on the same river corridor.",
       "St. Clair jobs use the same pricing model: curbside from $99, full-service from $129, then volume for larger piles. Riverfront parking and long carries can affect the quote, which is why photos of the path out matter. You approve the number before we load. We come to the property — this is not a drop-off shop.",
-      "Call or text 810-242-0429 or open the free estimate form. We also run [Fort Gratiot](/service-areas/fort-gratiot) and [Kimball Township](/service-areas/kimball-township).",
+      "Call or text 810-242-0429 or open the free estimate form. We also run [Fort Gratiot](/service-areas/fort-gratiot), [Kimball Township](/service-areas/kimball-township), and [Marine City](/service-areas/marine-city) downriver.",
     ],
     featuredServiceSlugs: [...SERVICE_PRESETS.waterfront],
     servicesIntro:
@@ -322,6 +405,7 @@ export const BLUE_WATER_LOCATIONS: LocationPage[] = [
       "port-huron",
       "fort-gratiot",
       "kimball-township",
+      "marine-city",
     ],
     faqs: [
       {
@@ -362,55 +446,64 @@ export const BLUE_WATER_LOCATIONS: LocationPage[] = [
     county: "St. Clair County",
     regionId: "blue-water",
     layout: "gallery",
-    eyebrow: "Serving Marine City",
-    metaTitle: "Junk Removal Marine City MI | Junk Command",
+    eyebrow: "Downriver from Port Huron",
+    metaTitle: "Marine City Junk Removal | St. Clair River Town | Junk Command",
     metaDescription:
-      "Need junk removal in Marine City, Michigan? Junk Command hauls furniture, appliances, and cottage cleanouts in this historic river town. Get a free estimate.",
-    h1: "Junk Removal in Marine City, MI",
+      "Junk removal in Marine City, MI for historic river homes, Broadway storefronts, and cottages. About 20–25 minutes from Port Huron. Free photo estimate. 810-242-0429.",
+    h1: "Junk Removal in Marine City Along the St. Clair River",
     heroIntro:
-      "Marine City properties deserve junk removal that respects older homes, riverfront streets, and tight downtown access. Junk Command hauls furniture, appliances, and cleanout debris along Broadway, Water Street, and the M-29 corridor.",
+      "Marine City is a compact river town with older houses, tight downtown streets, and cottages that do not forgive a sloppy haul. Junk Command comes down from Port Huron to carry furniture, appliances, and cleanout debris out of the building — not leave it stacked on Water Street.",
     localIntro: [
-      "Marine City is a compact river town — historic houses, the arts district around Broadway, ferry-area traffic, cottages, and neighborhoods that stretch west from the St. Clair River. Narrow streets and older staircases are part of the job, not an exception.",
-      "We plan Marine City stops with St. Clair and Algonac on the same lower-river route. Cottage cleanouts, estate furniture, storefront fixtures, and garage overflow after a busy season are the calls that come in most often.",
-      "If the house is older, tell us about porch steps and parking when you send photos. [Furniture removal](/furniture-removal) through a tight entry is something we do regularly here. We also help when you need junk gone in [Algonac](/service-areas/algonac) or [St. Clair](/service-areas/st-clair).",
+      "Marine City sits on the St. Clair River south of St. Clair, with Broadway, Water Street, and the M-29 corridor shaping how a truck actually gets to the house. Historic homes, the arts-district blocks, ferry-area traffic, and neighborhoods that stretch west from the river all share the same constraint: narrow streets, older stairs, and not much room for a messy curb pile. That is the work we plan for, not a surprise on arrival.",
+      "The drive from our Port Huron base is about 20 to 25 minutes in ordinary traffic, following the river towns rather than looping through Detroit. We treat Marine City as a natural stop on the same lower-river route as [St. Clair](/service-areas/st-clair) and [Marysville](/service-areas/marysville). It is not a long-haul appointment, and it is not a claim that we keep a shop on Broadway. We are a service-area crew. The truck comes to you.",
+      "Housing here is mixed in a specifically river-town way. There are compact lots with porches and steep basement stairs, cottages that fill up after a busy season, rental interiors that turn over with leftover mattresses, and small downtown spaces where fixtures and boxed clutter have nowhere to go. A sofa through a tight entry, a dead refrigerator in a galley kitchen, or a garage that has become winter storage are the usual Marine City calls.",
+      "Jobs we actually do here include [furniture removal](/furniture-removal) through older doorways, [appliance removal](/appliance-removal) after a delivery crew leaves the old unit, [garage cleanouts](/garage-cleanout) before the stall has to become parking again, and [estate cleanouts](/estate-cleanout) when an inherited river house needs to be empty. Patio sets, cottage mattresses, and mixed household junk ride on the same load when they fit the truck. Light [construction debris](/construction-debris-removal) can come along after a small remodel if it is mixed, non-hazardous, and already on the property.",
+      "Pricing is the same published model as the rest of the site. Curbside Command starts at $99 when qualifying items are already outside and ready to load. Full-service Command starts at $129 when we come inside and carry items out. Larger cottage or whole-house piles are quoted by how much space they take in the truck. Photos of the items, the stairs, and the parking get you a confirmed range. You approve the number before we load.",
+      "Summer traffic on M-29 and the ferry-area blocks near Water Street change how we stage a truck. Tell us if the pickup is downtown versus west of the river corridor so we do not plan the wrong parking. We are not a Broadway storefront. We roll down from Port Huron, load, and leave the curb clean.",
+      "Same-day or next-day windows may be available when Marine City fits that day’s river route. Call or text 810-242-0429 or use the free estimate form on this page. We also run [Port Huron](/service-areas/port-huron) and upriver stops on the same map.",
     ],
     featuredServiceSlugs: [...SERVICE_PRESETS.waterfront],
     servicesIntro:
-      "Common Marine City loads include cottage mattresses, living-room furniture, old appliances, basement junk, patio sets, and rental leftovers. [Garage cleanouts](/garage-cleanout) and [estate cleanouts](/estate-cleanout) are the larger jobs; a single [appliance removal](/appliance-removal) is still worth a call if you do not want to wrestle it yourself.",
-    cleanoutHeading: "More Than Just Junk Pickup",
+      "Typical Marine City loads are sofas, mattresses, refrigerators, washers, patio furniture after a windy stretch, basement boxes, and garage overflow. [Hot tub removal](/hot-tub-removal) comes up on river lots when a dead spa is blocking a deck. A single appliance is still worth a call if you do not want to walk it down porch steps yourself.",
+    cleanoutHeading: "River-Town Cleanouts, Not Curbside Piles",
     cleanoutBody: [
-      "Seasonal properties and inherited river-town homes often need more than a one-item haul. Junk Command can clear cottages, garages, basements, and whole houses so the property is ready for family, guests, or a sale.",
-      "We also help small downtown businesses with fixtures and leftover remodel debris when it is mixed, non-hazardous, and can be loaded with household junk. Photos of the space tell us whether it is a short stop or a cleanout day.",
+      "Seasonal properties and inherited houses in Marine City often need more than a one-item haul. Cottages collect mattresses, extra furniture, and garage shelves that never got sorted. Downtown rentals need leftover contents gone before the next showing. Junk Command can clear rooms, garages, and basements in one coordinated visit so the property is actually usable — or listable — the same day.",
+      "Small Broadway and Water Street businesses also call for fixtures and leftover remodel debris when it is mixed with household junk and can be loaded without a dumpster sitting in a customer parking space. Send photos of the room, the stairs, and where the truck can sit. We will tell you whether it is a short stop or a dedicated cleanout.",
     ],
     midCtaTitle: "Got Junk in Marine City?",
     midCtaDescription:
-      "Cottage clutter, estate furniture, or a packed garage — send Junk Command a few photos and we will quote the easiest way to clear it.",
-    nearbySlugs: ["st-clair", "algonac", "marysville", "anchorville"],
+      "Cottage furniture, a packed garage, or an inherited river house — send photos and we will quote the Marine City job before we roll down from Port Huron.",
+    nearbySlugs: ["st-clair", "marysville", "port-huron", "smiths-creek"],
     faqs: [
       {
-        question: "Can you work in downtown Marine City with limited parking?",
+        question: "How far is Marine City from your Port Huron base?",
         answer:
-          "Yes. We plan staging around downtown and riverfront parking. Mention tight streets or alley access when you request the estimate.",
+          "About 20 to 25 minutes in ordinary traffic, down the river corridor. Marine City is a regular lower-river stop, not a special long-distance trip.",
+      },
+      {
+        question: "Can you work downtown with limited parking?",
+        answer:
+          "Yes. Mention tight streets, alley access, or ferry-area congestion when you send photos so we can plan staging. We do not leave a messy pile on Broadway.",
       },
       {
         question: "Do you clean out cottages and seasonal homes?",
         answer:
-          "Yes. Cottage turnovers — mattresses, furniture, appliances, and garage items — are a regular Marine City request, especially around seasonal changes.",
+          "Yes. Cottage turnovers — mattresses, furniture, appliances, and garage items — are a common Marine City request around seasonal changes.",
       },
       {
-        question: "How much does junk removal cost here?",
+        question: "How is junk removal priced in Marine City?",
         answer:
-          "We quote by volume and access. Older stairs and long carries can affect the number. Photos help us confirm it before we arrive.",
+          "By volume and access. Curbside starts at $99 when items are already outside. Full-service starts at $129 when we carry items out. Older stairs and long carries can affect a larger quote. Photos confirm the number before we load.",
       },
       {
-        question: "Do you take appliances?",
+        question: "Do I have to move everything to the curb?",
         answer:
-          "Yes. Refrigerators, washers, dryers, stoves, and similar appliances can be combined with furniture and general junk.",
+          "No. If items are safely accessible, we remove them from rooms, basements, garages, and porches.",
       },
       {
         question: "Is same-day service available?",
         answer:
-          "Same-day or next-day service may be available depending on the schedule and how Marine City fits that day’s river-town route.",
+          "Same-day or next-day service may be available depending on the schedule and how Marine City fits that day’s river-town route. Send photos and your timeline.",
       },
     ],
     images: buildLocationImages(

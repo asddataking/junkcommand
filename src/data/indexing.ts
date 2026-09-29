@@ -19,6 +19,11 @@ export const KEPT_CITY_SLUGS = [
   "fort-gratiot",
   "kimball-township",
   "st-clair",
+  "marine-city",
+  "smiths-creek",
+  "romeo",
+  "imlay-city",
+  "lapeer",
 ] as const;
 
 export type KeptPath =
@@ -62,6 +67,11 @@ export const KEPT_PAGES: {
     group: "areas",
   },
   { path: "/service-areas/st-clair", label: "St. Clair", group: "areas" },
+  { path: "/service-areas/marine-city", label: "Marine City", group: "areas" },
+  { path: "/service-areas/smiths-creek", label: "Smiths Creek", group: "areas" },
+  { path: "/service-areas/romeo", label: "Romeo", group: "areas" },
+  { path: "/service-areas/imlay-city", label: "Imlay City", group: "areas" },
+  { path: "/service-areas/lapeer", label: "Lapeer", group: "areas" },
   { path: "/about", label: "About", group: "company" },
   { path: "/contact", label: "Contact", group: "company" },
   {
@@ -112,7 +122,6 @@ const SERVICE_REDIRECTS: RedirectRule[] = [
 const CITY_REDIRECTS: RedirectRule[] = [
   { source: "/service-areas/kimball", destination: "/service-areas/kimball-township" },
   { source: "/service-areas/clyde-township", destination: "/service-areas/kimball-township" },
-  { source: "/service-areas/marine-city", destination: "/service-areas/st-clair" },
   { source: "/service-areas/algonac", destination: "/service-areas/st-clair" },
   { source: "/service-areas/new-baltimore", destination: "/service-areas/st-clair" },
   { source: "/service-areas/chesterfield", destination: "/service-areas/st-clair" },
@@ -121,20 +130,28 @@ const CITY_REDIRECTS: RedirectRule[] = [
   { source: "/service-areas/memphis", destination: "/service-areas/marysville" },
   { source: "/service-areas/richmond", destination: "/service-areas/marysville" },
   { source: "/service-areas/armada", destination: "/service-areas/marysville" },
-  { source: "/service-areas/romeo", destination: "/service-areas/marysville" },
   { source: "/service-areas/yale", destination: "/service-areas/port-huron" },
   { source: "/service-areas/croswell", destination: "/service-areas/port-huron" },
   { source: "/service-areas/lexington", destination: "/service-areas/port-huron" },
   { source: "/service-areas/emmett", destination: "/service-areas/kimball-township" },
   { source: "/service-areas/capac", destination: "/service-areas/port-huron" },
-  { source: "/service-areas/imlay-city", destination: "/service-areas/port-huron" },
   { source: "/service-areas/attica", destination: "/service-areas/port-huron" },
-  { source: "/service-areas/lapeer", destination: "/service-areas/port-huron" },
   { source: "/service-areas/almont", destination: "/service-areas/port-huron" },
   { source: "/service-areas/dryden", destination: "/service-areas/port-huron" },
   { source: "/service-areas/metamora", destination: "/service-areas/port-huron" },
   { source: "/service-areas/st-clair-county", destination: "/service-areas/port-huron" },
   { source: "/service-areas/macomb-county", destination: "/service-areas/port-huron" },
+  { source: "/service-areas/marinecity", destination: "/service-areas/marine-city" },
+  { source: "/service-areas/marine-city-mi", destination: "/service-areas/marine-city" },
+  { source: "/service-areas/smithscreek", destination: "/service-areas/smiths-creek" },
+  { source: "/service-areas/smiths_creek", destination: "/service-areas/smiths-creek" },
+  { source: "/service-areas/smiths-creek-mi", destination: "/service-areas/smiths-creek" },
+  { source: "/service-areas/romeo-mi", destination: "/service-areas/romeo" },
+  { source: "/service-areas/imlay", destination: "/service-areas/imlay-city" },
+  { source: "/service-areas/imlaycity", destination: "/service-areas/imlay-city" },
+  { source: "/service-areas/imlay-city-mi", destination: "/service-areas/imlay-city" },
+  { source: "/service-areas/lapeer-mi", destination: "/service-areas/lapeer" },
+  { source: "/service-areas/lapeer-city", destination: "/service-areas/lapeer" },
 ];
 
 const STATIC_REDIRECTS: RedirectRule[] = [
@@ -200,6 +217,16 @@ const CONTENT_REDIRECTS: RedirectRule[] = [
     destination: "/estate-cleanout",
   },
   { source: "/guides/licensed-insured-junk-hauler", destination: "/about" },
+  { source: "/guides/junk-removal-lapeer", destination: "/service-areas/lapeer" },
+  { source: "/guides/junk-removal-romeo", destination: "/service-areas/romeo" },
+  { source: "/guides/junk-removal-marine-city", destination: "/service-areas/marine-city" },
+  { source: "/guides/junk-removal-imlay-city", destination: "/service-areas/imlay-city" },
+  { source: "/guides/junk-removal-smiths-creek", destination: "/service-areas/smiths-creek" },
+  { source: "/blog/junk-removal-lapeer", destination: "/service-areas/lapeer" },
+  { source: "/blog/junk-removal-romeo", destination: "/service-areas/romeo" },
+  { source: "/blog/junk-removal-marine-city", destination: "/service-areas/marine-city" },
+  { source: "/blog/junk-removal-imlay-city", destination: "/service-areas/imlay-city" },
+  { source: "/blog/junk-removal-smiths-creek", destination: "/service-areas/smiths-creek" },
 ];
 
 const CATCH_ALL_REDIRECTS: RedirectRule[] = [

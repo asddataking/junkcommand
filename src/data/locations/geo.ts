@@ -35,8 +35,15 @@ export const LOCATION_GEO: Record<string, LocationGeo> = {
     latitude: 42.94809,
     longitude: -82.56242,
     searchName: "Kimball",
-    aliases: ["Kimball", "Kimball Township", "Wadhams", "Smiths Creek"],
+    aliases: ["Kimball", "Kimball Township", "Wadhams"],
     zips: ["48074", "48094"],
+  },
+  "smiths-creek": {
+    latitude: 42.9128,
+    longitude: -82.6077,
+    searchName: "Smiths Creek",
+    aliases: ["Smiths Creek, Michigan"],
+    zips: ["48074"],
   },
   "st-clair": {
     latitude: 42.8231,

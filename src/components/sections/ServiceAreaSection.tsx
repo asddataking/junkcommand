@@ -35,21 +35,16 @@ export function ServiceAreaSection() {
                   id="service-areas-heading"
                   className="font-display text-3xl tracking-[0.06em] text-white sm:text-4xl lg:text-[2.65rem] lg:leading-[1.05]"
                 >
-                  WE SERVE PORT HURON &amp; ST. CLAIR COUNTY
+                  WE SERVE PORT HURON, ST. CLAIR COUNTY &amp; NEARBY
                 </h2>
                 <p className="mt-3 max-w-xl text-sm leading-relaxed text-muted sm:text-base">
                   Junk Command provides fast, professional{" "}
-                  <span className="text-white">Port Huron junk removal</span>,{" "}
-                  <span className="text-white">
-                    junk removal near Kimball
-                  </span>
-                  , and{" "}
-                  <span className="text-white">Blue Water Area junk removal</span>{" "}
-                  — plus trusted{" "}
-                  <span className="text-white">Fort Gratiot junk removal</span>{" "}
+                  <span className="text-white">Port Huron junk removal</span>{" "}
                   and{" "}
-                  <span className="text-white">Marysville junk removal</span>{" "}
-                  for residential and light commercial jobs.
+                  <span className="text-white">Blue Water Area junk removal</span>
+                  , plus indexed pages for Marine City, Smiths Creek, Romeo,
+                  Imlay City, and Lapeer — residential and light commercial
+                  jobs quoted from photos.
                 </p>
 
                 <ul className="mt-6 grid grid-cols-1 gap-x-6 gap-y-2.5 sm:grid-cols-2">

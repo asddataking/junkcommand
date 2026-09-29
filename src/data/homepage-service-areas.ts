@@ -4,6 +4,11 @@ export const HOMEPAGE_SERVICE_AREAS = [
   { name: "Marysville", slug: "marysville" },
   { name: "Kimball Township", slug: "kimball-township" },
   { name: "St. Clair", slug: "st-clair" },
+  { name: "Marine City", slug: "marine-city" },
+  { name: "Smiths Creek", slug: "smiths-creek" },
+  { name: "Romeo", slug: "romeo" },
+  { name: "Imlay City", slug: "imlay-city" },
+  { name: "Lapeer", slug: "lapeer" },
 ] as const;
 
 /** Linked cities for the homepage "Serving the Blue Water Area" section */
@@ -26,6 +31,12 @@ export const SCHEMA_SERVICE_AREAS = [
   "Smiths Creek",
   "Marysville",
   "St. Clair",
+  "Marine City",
+  "Romeo",
+  "Imlay City",
+  "Lapeer",
   "St. Clair County",
+  "Lapeer County",
+  "Macomb County",
   "Blue Water Area",
 ] as const;
