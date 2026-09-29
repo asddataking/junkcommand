@@ -38,7 +38,7 @@ export function Header() {
         <div className="flex min-w-0 items-center gap-3 sm:gap-4">
           <Logo />
           <Link
-            href="/veteran-owned"
+            href="/about"
             className="inline-flex items-center gap-1.5 rounded-[2px] border border-[rgba(0,135,255,0.4)] bg-[#080B0F] px-2 py-1.5 text-[9px] font-semibold uppercase tracking-[0.12em] text-bright shadow-[0_0_14px_rgba(7,135,255,0.18)] transition-colors hover:border-bright hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bright sm:px-2.5 sm:text-[10px] sm:tracking-[0.14em]"
             aria-label="Veteran-owned junk removal company"
           >

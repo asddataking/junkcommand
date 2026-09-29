@@ -93,12 +93,6 @@ export function ServiceAreaSection() {
                   >
                     Check My Address
                   </FreeEstimateButton>
-                  <Link
-                    href="/service-areas"
-                    className="text-sm font-semibold text-bright hover:text-white"
-                  >
-                    View all areas we serve →
-                  </Link>
                 </div>
               </div>
 

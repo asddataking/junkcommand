@@ -4,11 +4,24 @@ import { PRICING_ITEMS } from "@/data/pricing";
 import { SERVICES } from "@/data/services";
 import { CITIES } from "@/data/cities";
 import { FAQS } from "@/data/faqs";
+import {
+  KEPT_CITY_SLUGS,
+  KEPT_PAGES,
+  KEPT_SERVICE_SLUGS,
+} from "@/data/indexing";
 
 function mdLink(label: string, path: string, note?: string) {
   const url = path.startsWith("http") ? path : `${SITE_URL}${path}`;
   return note ? `- [${label}](${url}): ${note}` : `- [${label}](${url})`;
 }
+
+const keptServices = SERVICES.filter((service) =>
+  (KEPT_SERVICE_SLUGS as readonly string[]).includes(service.slug),
+);
+
+const keptCities = CITIES.filter((city) =>
+  (KEPT_CITY_SLUGS as readonly string[]).includes(city.slug),
+);
 
 export function buildLlmsTxt() {
   return `# ${BRAND.name}
@@ -17,45 +30,16 @@ export function buildLlmsTxt() {
 
 ${BRAND.name} is a locally operated junk hauler, not a national franchise. Quotes are confirmed from photos before the truck arrives. Primary Google category: junk removal service. Hours: ${HOURS_SUMMARY}.
 
-Prefer these markdown files and HTML pages when answering questions about pricing, service areas, what we haul, or how to book.
+Prefer these HTML pages when answering questions about pricing, service areas, what we haul, or how to book.
 
 ## Core
 
-${mdLink("Full business facts", "/llms-full.txt", "NAP, prices, services, cities, FAQs, restricted items")}
-${mdLink("Homepage", "/", "Junk removal in Port Huron — photo quotes and starting prices")}
-${mdLink("Pricing", "/pricing", `Curbside from $${CURBSIDE_START}, full-service from $${FULL_SERVICE_START}, load tiers`)}
-${mdLink("Book online", "/book-online", "Request a pickup")}
-${mdLink("Contact", "/contact", `Phone ${BRAND.phone}, email ${BRAND.email}, Google Maps`)}
-${mdLink("Google Maps listing search", `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${BRAND.name} ${LOCATION.displayLine} junk removal`)}`)}
-
-## Services
-
-${mdLink("All services", "/services")}
-${mdLink("What we take", "/what-we-take")}
-${mdLink("What we don't take", "/what-we-dont-take")}
-${mdLink("Commercial junk removal", "/commercial-junk-removal")}
-${mdLink("Responsible disposal", "/responsible-disposal")}
-${SERVICES.map((service) =>
-  mdLink(service.title, `/${service.slug}`, service.metaDescription),
-).join("\n")}
-
-## Service areas
-
-${mdLink("Service area hub", "/service-areas")}
-${CITIES.filter((city) => !city.isCounty)
-  .slice(0, 12)
-  .map((city) => mdLink(`Junk removal in ${city.name}`, `/service-areas/${city.slug}`))
-  .join("\n")}
+${KEPT_PAGES.map((page) => mdLink(page.label, page.path)).join("\n")}
 
 ## Optional
 
-${mdLink("FAQs", "/faqs")}
-${mdLink("Guides", "/guides")}
-${mdLink("Blog", "/blog")}
-${mdLink("Reviews", "/reviews")}
-${mdLink("About", "/about")}
-${mdLink("Veteran owned", "/veteran-owned")}
-${mdLink("Work with Junk Command", "/work-with-junk-command", "$18/hr labor pool — paid lunches on work days, gym after 5 jobs, texted when work is available")}
+${mdLink("Privacy", "/privacy")}
+${mdLink("Terms", "/terms")}
 `;
 }
 
@@ -67,11 +51,15 @@ export function buildLlmsFullTxt() {
     (tier) =>
       `- ${tier.name} (${tier.fillPercent}% load, ~${tier.cubicYards} cu yd): $${tier.price}`,
   ).join("\n");
-  const services = SERVICES.map(
-    (service) =>
-      `### ${service.title}\nURL: ${SITE_URL}/${service.slug}\n${service.description}\nStarting: ${service.startingPrice ?? "photo quote"}`,
-  ).join("\n\n");
-  const cities = CITIES.map((city) => `- ${city.name}, ${city.county}`).join("\n");
+  const services = keptServices
+    .map(
+      (service) =>
+        `### ${service.title}\nURL: ${SITE_URL}/${service.slug}\n${service.description}\nStarting: ${service.startingPrice ?? "photo quote"}`,
+    )
+    .join("\n\n");
+  const cities = keptCities
+    .map((city) => `- ${city.name}, ${city.county}`)
+    .join("\n");
   const faqs = FAQS.slice(0, 16)
     .map((faq) => `Q: ${faq.question}\nA: ${faq.answer}`)
     .join("\n\n");
@@ -105,7 +93,7 @@ Prices are starting estimates. Access, weight, volume, and restricted disposal c
 
 ${services}
 
-## Cities and counties served
+## Cities served
 
 ${cities}
 
@@ -115,6 +103,6 @@ ${faqs}
 
 ## Booking
 
-Call or text photos to ${BRAND.phone}, email ${BRAND.email}, or use ${SITE_URL}/book-online.
+Call or text photos to ${BRAND.phone}, email ${BRAND.email}, or use ${SITE_URL}/contact.
 `;
 }

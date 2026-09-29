@@ -47,7 +47,7 @@ export function SidebarCta({
           Text Photos
         </a>
         <Link
-          href="/book-online"
+          href="/contact"
           className="flex items-center gap-3 rounded-[2px] border border-[rgba(0,135,255,0.35)] px-4 py-3 text-sm font-semibold text-white transition-colors hover:border-bright hover:text-bright"
         >
           <CalendarDays className="size-4 text-bright" aria-hidden />

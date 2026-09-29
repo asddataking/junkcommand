@@ -5,9 +5,11 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 import { CtaBanner } from "@/components/shared/CtaBanner";
 import { TrustBar } from "@/components/sections/TrustBar";
+import { FaqAccordion } from "@/components/shared/FaqAccordion";
 import { Button } from "@/components/ui/Button";
 import { FreeEstimateButton } from "@/components/forms/FreeEstimateButton";
 import { SERVICES } from "@/data/services";
+import { KEPT_SERVICE_SLUGS } from "@/data/indexing";
 import { BRAND, SITE_URL } from "@/lib/constants";
 import { buildPageMetadata } from "@/lib/seo";
 import { getBreadcrumbSchema, getFaqSchema } from "@/lib/schema";
@@ -40,7 +42,7 @@ const CATEGORIES = [
   },
   {
     title: "Electronics",
-    href: "/electronics-recycling",
+    href: "/what-we-take",
     items: ["TVs and monitors", "Computers and printers", "Exercise equipment", "Misc. household junk"],
   },
 ] as const;
@@ -59,14 +61,14 @@ const pageFaqs = [
   {
     question: "What will you not take?",
     answer:
-      "Hazardous waste, liquids, paint, oil, gasoline, propane tanks, asbestos, and medical waste. See /what-we-dont-take or text a photo and we will tell you before we come.",
+      "Hazardous waste, liquids, paint, oil, gasoline, propane tanks, asbestos, and medical waste. Text a photo and we will tell you before we come.",
   },
 ];
 
 export const metadata = buildPageMetadata({
-  title: "What We Take | Junk Removal Items Port Huron | Junk Command",
+  title: "Items Junk Command Hauls in Port Huron | What We Take",
   description:
-    "Junk Command hauls furniture, appliances, mattresses, garage cleanouts, construction debris, and electronics in Port Huron and the Blue Water Area. See what we take.",
+    "What Junk Command hauls in Port Huron and St. Clair County: furniture, appliances, mattresses, garage and estate contents, hot tubs, and mixed construction debris.",
   path: "/what-we-take",
 });
 
@@ -88,18 +90,27 @@ export default function WhatWeTakePage() {
             Item List
           </p>
           <h1 className="mt-3 max-w-3xl font-display text-4xl tracking-[0.06em] text-white sm:text-6xl">
-            WHAT WE TAKE
+            WHAT JUNK COMMAND TAKES IN ST. CLAIR COUNTY
           </h1>
           <p className="mt-4 max-w-2xl text-muted">
             If two people can lift it and it is not hazardous, Junk Command can
             usually haul it from Port Huron and the Blue Water Area. You point.
-            We load, donate or recycle when we can, and leave the space broom-clean.
+            We load, donate or recycle when we can, and leave the space
+            broom-clean. This is a service-area pickup — we come to the house,
+            garage, or shop.
+          </p>
+          <p className="mt-4 max-w-2xl text-muted">
+            Pricing is by how much space the load takes in the truck. Curbside
+            Command starts at $99 when qualifying items are already outside.
+            Full-service Command starts at $129 when we carry items out. Photos
+            get you a free estimate. You approve the price before we load. We do
+            not invent a per-item menu beyond those published starting points.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <FreeEstimateButton ctaPosition="what_we_take_hero" pageType="what_we_take">
               Send Photos for a Price
             </FreeEstimateButton>
-            <Button href="/what-we-dont-take" variant="secondary">
+            <Button href="#dont-take" variant="secondary">
               See what we don&apos;t take
             </Button>
           </div>
@@ -141,7 +152,9 @@ export default function WhatWeTakePage() {
             pricing notes, process, and FAQs.
           </p>
           <ul className="mt-6 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
-            {SERVICES.map((service) => (
+            {SERVICES.filter((service) =>
+              (KEPT_SERVICE_SLUGS as readonly string[]).includes(service.slug),
+            ).map((service) => (
               <li key={service.slug}>
                 <Link
                   href={`/${service.slug}`}
@@ -151,11 +164,35 @@ export default function WhatWeTakePage() {
                 </Link>
               </li>
             ))}
+            <li>
+              <Link
+                href="/commercial-junk-removal"
+                className="block rounded-[2px] border border-[rgba(0,135,255,0.25)] bg-[#080B0F] px-4 py-3 text-sm font-semibold text-white hover:border-bright hover:text-bright"
+              >
+                Commercial Junk Removal
+              </Link>
+            </li>
           </ul>
-          <p className="mt-8 text-sm text-muted">
-            Not sure? Text a photo to {BRAND.phone} before you drag anything
-            outside.
-          </p>
+          <div id="dont-take" className="mt-16 max-w-3xl scroll-mt-24">
+            <h2 className="font-display text-3xl tracking-[0.06em] text-white">
+              WHAT WE DON&apos;T TAKE
+            </h2>
+            <p className="mt-4 leading-relaxed text-muted">
+              We do not haul hazardous waste, liquids, paint, oil, gasoline,
+              propane tanks, asbestos, or medical waste. If an item looks
+              borderline, text a photo to {BRAND.phone} before you drag it
+              outside. We would rather tell you no on the estimate than leave a
+              pile sitting on a Port Huron driveway.
+            </p>
+          </div>
+          <div className="mt-16 max-w-3xl">
+            <h2 className="font-display text-3xl tracking-[0.06em] text-white">
+              WHAT WE TAKE FAQS
+            </h2>
+            <div className="mt-6">
+              <FaqAccordion items={pageFaqs} idPrefix="what-we-take" />
+            </div>
+          </div>
         </div>
       </section>
 

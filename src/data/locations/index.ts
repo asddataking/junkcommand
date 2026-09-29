@@ -8,6 +8,7 @@ import {
   COUNTY_LOCATIONS,
 } from "@/data/locations/existing-other";
 import { LOCATION_REGIONS } from "@/data/locations/regions";
+import { isKeptCitySlug } from "@/data/indexing";
 
 export const LOCATIONS: LocationPage[] = [
   ...BLUE_WATER_LOCATIONS,
@@ -30,6 +31,7 @@ export function getAllLocationSlugs(): string[] {
 
 export function getNearbyLocations(location: LocationPage): LocationPage[] {
   return location.nearbySlugs
+    .filter((slug) => isKeptCitySlug(slug))
     .map((slug) => bySlug.get(slug))
     .filter((item): item is LocationPage => Boolean(item));
 }

@@ -11,6 +11,7 @@ export const metadata: Metadata = buildPageMetadata({
   description:
     "Privacy policy for Junk Command junk removal — how we handle quote forms, photos, phone/SMS, and GoHighLevel CRM data for Port Huron customers.",
   path: "/privacy",
+  noIndex: true,
 });
 
 const UPDATED = "August 26, 2026";

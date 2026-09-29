@@ -37,16 +37,16 @@ function Sidebar({ location }: { location: LocationPage }) {
             Homepage →
           </Link>
           <Link
-            href="/services"
+            href="/furniture-removal"
             className="block text-sm text-bright hover:text-white"
           >
-            All services →
+            Furniture removal →
           </Link>
           <Link
-            href="/service-areas"
+            href="/what-we-take"
             className="block text-sm text-bright hover:text-white"
           >
-            Areas we serve →
+            What we take →
           </Link>
         </div>
       </div>

@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import {
-  getAllServiceSlugs,
-  getServiceBySlug,
-} from "@/data/services";
+import { getServiceBySlug } from "@/data/services";
+import { KEPT_SERVICE_SLUGS } from "@/data/indexing";
 import { buildPageMetadata } from "@/lib/seo";
 import {
   getBreadcrumbSchema,
@@ -16,8 +14,10 @@ import { ServicePageContent } from "@/components/pages/ServicePageContent";
 
 type Props = { params: Promise<{ slug: string }> };
 
+export const dynamicParams = false;
+
 export function generateStaticParams() {
-  return getAllServiceSlugs().map((slug) => ({ slug }));
+  return KEPT_SERVICE_SLUGS.map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -42,7 +42,6 @@ export default async function ServiceSlugPage({ params }: Props) {
 
   const crumbs = [
     { name: "Home", href: "/" },
-    { name: "Services", href: "/services" },
     { name: service.title, href: `/${service.slug}` },
   ];
 

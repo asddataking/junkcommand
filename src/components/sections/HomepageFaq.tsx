@@ -34,13 +34,13 @@ export function HomepageFaq() {
         </BlurFade>
 
         <p className="mt-6 text-center text-sm text-muted">
-          Want more detail? Browse our{" "}
-          <Link href="/guides" className="font-semibold text-bright hover:text-white">
-            junk removal guides
+          Still have a question? See{" "}
+          <Link href="/what-we-take" className="font-semibold text-bright hover:text-white">
+            what we take
           </Link>{" "}
-          or see the{" "}
-          <Link href="/faqs" className="font-semibold text-bright hover:text-white">
-            full FAQ list
+          or{" "}
+          <Link href="/contact" className="font-semibold text-bright hover:text-white">
+            contact the Port Huron crew
           </Link>
           .
         </p>

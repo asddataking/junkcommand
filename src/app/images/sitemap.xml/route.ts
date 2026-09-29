@@ -1,7 +1,6 @@
-import { SERVICES } from "@/data/services";
-import { CITIES } from "@/data/cities";
-import { BLOG_POSTS } from "@/data/blog";
-import { GALLERY_ITEMS } from "@/data/gallery";
+import { getServiceBySlug } from "@/data/services";
+import { getCityBySlug } from "@/data/cities";
+import { KEPT_CITY_SLUGS, KEPT_SERVICE_SLUGS } from "@/data/indexing";
 import { SITE_URL, SOCIAL_SHARE_IMAGE, SOCIAL_SHARE_IMAGE_ALT } from "@/lib/constants";
 
 export const dynamic = "force-static";
@@ -42,14 +41,9 @@ export function GET() {
       caption: "Veteran-owned junk removal serving St. Clair County",
     },
     {
-      pageUrl: `${SITE_URL}/meet-the-crew`,
+      pageUrl: `${SITE_URL}/about`,
       imageUrl: absoluteImage("/images/dan-gage-luna.webp"),
-      title: "Dan Gage and Luna — Junk Command",
-    },
-    {
-      pageUrl: `${SITE_URL}/meet-the-crew`,
-      imageUrl: absoluteImage("/images/luna-mascot.webp"),
-      title: "Luna — Junk Command K-9 Cleanup Unit",
+      title: "Dan, Gage, and Luna — Junk Command",
     },
     {
       pageUrl: `${SITE_URL}/about`,
@@ -58,7 +52,9 @@ export function GET() {
     },
   ];
 
-  for (const service of SERVICES) {
+  for (const slug of KEPT_SERVICE_SLUGS) {
+    const service = getServiceBySlug(slug);
+    if (!service) continue;
     entries.push({
       pageUrl: `${SITE_URL}/${service.slug}`,
       imageUrl: absoluteImage(service.image),
@@ -67,38 +63,16 @@ export function GET() {
     });
   }
 
-  for (const city of CITIES) {
-    for (const image of city.images) {
-      entries.push({
-        pageUrl: `${SITE_URL}/service-areas/${city.slug}`,
-        imageUrl: absoluteImage(image.src),
-        title: `Junk removal in ${city.name}`,
-        caption: image.caption || city.imageAlt,
-      });
-    }
-  }
-
-  for (const post of BLOG_POSTS) {
+  for (const slug of KEPT_CITY_SLUGS) {
+    const city = getCityBySlug(slug);
+    if (!city) continue;
+    const hero = city.images.find((image) => image.role === "hero") ?? city.images[0];
+    if (!hero) continue;
     entries.push({
-      pageUrl: `${SITE_URL}/blog/${post.slug}`,
-      imageUrl: absoluteImage(post.image),
-      title: post.title,
-      caption: post.imageAlt,
-    });
-  }
-
-  for (const item of GALLERY_ITEMS) {
-    entries.push({
-      pageUrl: `${SITE_URL}/gallery`,
-      imageUrl: absoluteImage(item.beforeImage),
-      title: `${item.title} — before`,
-      caption: item.beforeAlt,
-    });
-    entries.push({
-      pageUrl: `${SITE_URL}/gallery`,
-      imageUrl: absoluteImage(item.afterImage),
-      title: `${item.title} — after`,
-      caption: item.afterAlt,
+      pageUrl: `${SITE_URL}/service-areas/${city.slug}`,
+      imageUrl: absoluteImage(hero.src),
+      title: `Junk removal in ${city.name}`,
+      caption: hero.caption || city.imageAlt,
     });
   }
 

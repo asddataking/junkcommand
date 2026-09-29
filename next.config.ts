@@ -1,5 +1,6 @@
 import type { NextConfig } from "next";
 import path from "path";
+import { PERMANENT_REDIRECTS } from "./src/data/indexing";
 
 const nextConfig: NextConfig = {
   images: {
@@ -19,13 +20,11 @@ const nextConfig: NextConfig = {
     ];
   },
   async redirects() {
-    return [
-      {
-        source: "/service-areas/kimball",
-        destination: "/service-areas/kimball-township",
-        permanent: true,
-      },
-    ];
+    return PERMANENT_REDIRECTS.map((rule) => ({
+      source: rule.source,
+      destination: rule.destination,
+      permanent: true,
+    }));
   },
   turbopack: {
     root: path.join(__dirname),

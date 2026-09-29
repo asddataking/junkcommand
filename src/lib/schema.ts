@@ -15,8 +15,8 @@ import {
   getSameAsLinks,
 } from "@/lib/constants";
 import { SERVICES } from "@/data/services";
-import { CITIES, CITY_NAMES } from "@/data/cities";
-import { SCHEMA_SERVICE_AREAS } from "@/data/homepage-service-areas";
+import { CITIES } from "@/data/cities";
+import { KEPT_CITY_SLUGS, KEPT_SERVICE_SLUGS } from "@/data/indexing";
 import { hasReviews, AGGREGATE, REVIEWS } from "@/data/reviews";
 import { getLocationGeo } from "@/data/locations/geo";
 import {
@@ -57,21 +57,26 @@ function getGeoCircle() {
   };
 }
 
+const KEPT_CITIES = CITIES.filter((city) =>
+  (KEPT_CITY_SLUGS as readonly string[]).includes(city.slug),
+);
+
+const KEPT_CITY_NAMES = KEPT_CITIES.map((city) => city.name);
+
+const KEPT_SERVICE_CATALOG = SERVICES.filter((service) =>
+  (KEPT_SERVICE_SLUGS as readonly string[]).includes(service.slug),
+);
+
 function getAreaServed() {
-  const fromCities = CITIES.map((city) => ({
+  const fromCities = KEPT_CITIES.map((city) => ({
     "@type": city.isCounty ? "AdministrativeArea" : "City",
     name: city.name,
   }));
 
-  const knownNames = new Set(CITIES.map((city) => city.name));
-  const extras = SCHEMA_SERVICE_AREAS.filter(
-    (name) => !knownNames.has(name),
-  ).map((name) => ({
-    "@type": /county|township|area/i.test(name)
-      ? "AdministrativeArea"
-      : "City",
-    name,
-  }));
+  const extras = [
+    { "@type": "AdministrativeArea", name: "St. Clair County" },
+    { "@type": "AdministrativeArea", name: "Blue Water Area" },
+  ];
 
   return [getGeoCircle(), ...fromCities, ...extras];
 }
@@ -201,7 +206,7 @@ export function getLocalBusinessSchema() {
           name: "Curbside Command",
           description:
             "Qualifying items placed outside for pickup. Confirmed price from photos.",
-          url: `${SITE_URL}/pricing`,
+          url: SITE_URL,
           priceCurrency: "USD",
           price: String(CURBSIDE_START),
           priceSpecification: {
@@ -216,7 +221,7 @@ export function getLocalBusinessSchema() {
           name: "Full-Service Command",
           description:
             "We carry items out of your home or property. Confirmed price before loading.",
-          url: `${SITE_URL}/pricing`,
+          url: SITE_URL,
           priceCurrency: "USD",
           price: String(FULL_SERVICE_START),
           priceSpecification: {
@@ -251,17 +256,17 @@ export function getServiceCatalogSchema() {
     serviceType: "Junk Removal",
     description:
       "Full-service and curbside junk removal for homes and light commercial properties across Port Huron and the Blue Water Area.",
-    url: `${SITE_URL}/services`,
+    url: SITE_URL,
     provider: { "@id": BUSINESS_ID },
-    areaServed: CITY_NAMES.map((name) => ({
+    areaServed: KEPT_CITY_NAMES.map((name) => ({
       "@type": "AdministrativeArea",
       name,
     })),
     hasOfferCatalog: {
       "@type": "OfferCatalog",
-      "@id": `${SITE_URL}/services#catalog`,
+      "@id": `${SITE_URL}/#catalog`,
       name: "Junk Removal Services",
-      itemListElement: SERVICES.map((service) => {
+      itemListElement: KEPT_SERVICE_CATALOG.map((service) => {
         const minPrice = parseMinPrice(service.startingPrice);
         return {
           "@type": "Offer",
@@ -337,7 +342,7 @@ export function getServicePageSchema(service: (typeof SERVICES)[number]) {
     url: `${SITE_URL}/${service.slug}`,
     image: absoluteUrl(service.image),
     provider: { "@id": BUSINESS_ID },
-    areaServed: CITY_NAMES.map((name) => ({
+    areaServed: KEPT_CITY_NAMES.map((name) => ({
       "@type": "AdministrativeArea",
       name,
     })),
@@ -372,7 +377,7 @@ export function getLandingServiceSchema(input: {
   const url = absoluteUrl(input.path);
   const areas = input.areaNames?.length
     ? input.areaNames
-    : CITY_NAMES;
+    : KEPT_CITY_NAMES;
 
   return {
     "@context": "https://schema.org",
@@ -474,7 +479,7 @@ export function getPricingOfferCatalogSchema() {
     (item) => ({
       "@type": "Offer",
       name: `${item.name} removal`,
-      url: `${SITE_URL}/pricing`,
+      url: SITE_URL,
       priceCurrency: "USD",
       price: String(item.startingPrice),
       priceSpecification: {
@@ -490,7 +495,7 @@ export function getPricingOfferCatalogSchema() {
   const loadOffers = LOAD_TIERS.map((tier) => ({
     "@type": "Offer",
     name: `${tier.name} (${tier.fillPercent}% load)`,
-    url: `${SITE_URL}/pricing`,
+    url: SITE_URL,
     priceCurrency: "USD",
     price: String(tier.price),
     availability: "https://schema.org/InStock",
@@ -500,9 +505,9 @@ export function getPricingOfferCatalogSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "OfferCatalog",
-    "@id": `${SITE_URL}/pricing#catalog`,
+    "@id": `${SITE_URL}/#pricing-catalog`,
     name: "Junk Command Pricing",
-    url: `${SITE_URL}/pricing`,
+    url: SITE_URL,
     itemListElement: [
       {
         "@type": "Offer",
@@ -515,7 +520,7 @@ export function getPricingOfferCatalogSchema() {
           minPrice: CURBSIDE_START,
         },
         availability: "https://schema.org/InStock",
-        url: `${SITE_URL}/pricing`,
+        url: SITE_URL,
       },
       {
         "@type": "Offer",
@@ -528,7 +533,7 @@ export function getPricingOfferCatalogSchema() {
           minPrice: FULL_SERVICE_START,
         },
         availability: "https://schema.org/InStock",
-        url: `${SITE_URL}/pricing`,
+        url: SITE_URL,
       },
       ...itemOffers,
       ...loadOffers,
@@ -544,7 +549,7 @@ export function getReviewSchema() {
     "@type": "Organization",
     "@id": `${SITE_URL}/#reviews`,
     name: BRAND.name,
-    url: `${SITE_URL}/reviews`,
+    url: SITE_URL,
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: String(AGGREGATE.rating),
