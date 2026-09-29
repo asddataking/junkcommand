@@ -1331,7 +1331,7 @@ export function getRelatedServices(service: Service): Service[] {
   const fromRelated = service.relatedSlugs
     .filter((slug) => isKeptServiceSlug(slug))
     .map((slug) => getServiceBySlug(slug))
-    .filter((item): item is Service => Boolean(item) && item.slug !== service.slug);
+    .filter((item): item is Service => item != null && item.slug !== service.slug);
 
   const extras = KEPT_SERVICE_SLUGS
     .filter(
