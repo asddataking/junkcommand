@@ -12,27 +12,52 @@ import {
   BUSINESS_HOURS,
   LOCATION,
   MAPS_SEARCH_QUERY,
+  SITE_URL,
   getGbpMapsHref,
 } from "@/lib/constants";
 import { buildPageMetadata } from "@/lib/seo";
-import { getBreadcrumbSchema } from "@/lib/schema";
+import { getBreadcrumbSchema, getFaqSchema } from "@/lib/schema";
+import { FaqAccordion } from "@/components/shared/FaqAccordion";
 
 const crumbs = [
   { name: "Home", href: "/" },
   { name: "Contact", href: "/contact" },
 ];
 
+const pageFaqs = [
+  {
+    question: "How do I get a junk removal estimate in Port Huron?",
+    answer:
+      "Call or text photos to 810-242-0429, email info@junkcommand.com, or use the quote form on this page. Photos get you a confirmed range. You approve the price before we load.",
+  },
+  {
+    question: "Where is Junk Command based?",
+    answer:
+      "We are a service-area business based in Port Huron, MI 48060. We come to your property in Port Huron, Fort Gratiot, Marysville, Kimball Township, and St. Clair. There is no public street address on this page.",
+  },
+  {
+    question: "How does pricing work?",
+    answer:
+      "We price by how much space the load takes in the truck. Curbside Command starts at $99 when qualifying items are already outside. Full-service Command starts at $129 when we carry items out.",
+  },
+];
+
 export const metadata = buildPageMetadata({
-  title: "Contact Junk Command | Junk Removal Port Huron MI",
+  title: "Call or Text Junk Command in Port Huron | Free Estimate",
   description:
-    "Contact Junk Command for junk removal in Port Huron & SE Michigan. Call or text 810-242-0429, email info@junkcommand.com, or request a free quote online.",
+    "Contact Junk Command in Port Huron, MI. Call or text 810-242-0429, email info@junkcommand.com, or request a free photo estimate for St. Clair County junk removal.",
   path: "/contact",
 });
 
 export default function ContactPage() {
   return (
     <SiteShell>
-      <JsonLd data={getBreadcrumbSchema(crumbs)} />
+      <JsonLd
+        data={[
+          getBreadcrumbSchema(crumbs),
+          getFaqSchema(pageFaqs, { id: `${SITE_URL}/contact#faq` }),
+        ]}
+      />
 
       <section className="relative overflow-hidden border-b border-[rgba(0,135,255,0.2)] py-16 sm:py-20 lg:py-24">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(7,135,255,0.15),transparent_55%)]" />
@@ -42,12 +67,32 @@ export default function ContactPage() {
             Get In Touch
           </p>
           <h1 className="mt-3 max-w-3xl font-display text-4xl tracking-[0.06em] text-white sm:text-6xl">
-            CONTACT JUNK COMMAND
+            CONTACT JUNK COMMAND IN PORT HURON
           </h1>
           <p className="mt-4 max-w-2xl text-muted">
-            Ready to clear clutter in Port Huron or anywhere across our Blue
-            Water service area? Call, text photos, email, or use the quote form
-            below — we respond fast.
+            Ready to clear clutter in Port Huron, Fort Gratiot, Marysville,
+            Kimball Township, or St. Clair? Call, text photos, email, or use the
+            quote form below — we respond fast. This is a service-area business:
+            we come to your property. There is no public street address on this
+            page.
+          </p>
+          <p className="mt-4 max-w-2xl text-muted">
+            Pricing is by volume. Curbside Command starts at $99 when qualifying
+            items are already outside. Full-service Command starts at $129 when
+            we carry items out. Photos get you a free estimate. You approve the
+            price before we load. We haul furniture, appliances, garage and
+            estate contents, hot tubs, and mixed construction debris that is not
+            hazardous.
+          </p>
+          <p className="mt-4 max-w-2xl text-muted">
+            Hours are Monday through Saturday, 8:00 AM to 6:00 PM. Sunday is
+            closed. Same-day or next-day windows may be available when the job
+            fits a route already moving through the Blue Water Area. If you want
+            to work on the crew instead of booking a haul, see{" "}
+            <a href="/work-with-junk-command" className="text-bright hover:text-white">
+              Work With Junk Command
+            </a>
+            .
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Button href={BRAND.phoneHref} showArrow>
@@ -167,6 +212,17 @@ export default function ContactPage() {
                 Scroll to Form
               </Button>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-t border-[rgba(0,135,255,0.2)] py-16 sm:py-20">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+          <h2 className="font-display text-3xl tracking-[0.06em] text-white">
+            CONTACT FAQS
+          </h2>
+          <div className="mt-6">
+            <FaqAccordion items={pageFaqs} idPrefix="contact" />
           </div>
         </div>
       </section>

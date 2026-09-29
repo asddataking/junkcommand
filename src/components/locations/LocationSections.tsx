@@ -5,6 +5,7 @@ import { getNearbyLocations } from "@/data/locations";
 import { getLocationGeo } from "@/data/locations/geo";
 import { getServiceBySlug } from "@/data/services";
 import { getReviewsByCity, getFeaturedReviews } from "@/data/reviews";
+import { isKeptServiceSlug } from "@/data/indexing";
 import { BRAND } from "@/lib/constants";
 import { CaptionedFigure } from "@/components/shared/CaptionedFigure";
 import { RichText, RichTextBlock } from "@/components/shared/RichText";
@@ -34,7 +35,6 @@ export function galleryImages(location: LocationPage): LocationImage[] {
 export function locationCrumbs(location: LocationPage) {
   return [
     { name: "Home", href: "/" },
-    { name: "Service Areas", href: "/service-areas" },
     { name: location.name, href: `/service-areas/${location.slug}` },
   ];
 }
@@ -229,6 +229,7 @@ export function LocationServices({
   compact?: boolean;
 }) {
   const services = location.featuredServiceSlugs
+    .filter((slug) => isKeptServiceSlug(slug))
     .map((slug) => getServiceBySlug(slug))
     .filter((service): service is NonNullable<typeof service> => Boolean(service));
   const photo = imageByRole(location, "services");
@@ -281,10 +282,10 @@ export function LocationServices({
         </ul>
       )}
       <Link
-        href="/services"
+        href="/#services"
         className="mt-4 inline-block text-sm font-semibold text-bright hover:text-white"
       >
-        Browse all services →
+        Browse junk removal services →
       </Link>
     </div>
   );

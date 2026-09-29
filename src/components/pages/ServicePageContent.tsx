@@ -2,22 +2,25 @@ import Link from "next/link";
 import { Check } from "lucide-react";
 import type { Service } from "@/data/services";
 import { getRelatedServices } from "@/data/services";
-import { getFeaturedReviews } from "@/data/reviews";
-import { CITIES } from "@/data/cities";
+import { SERVICE_LONGFORM } from "@/data/service-longform";
+import { pagesInGroup } from "@/data/indexing";
+import { CURBSIDE_START, FULL_SERVICE_START } from "@/data/curbside-pricing";
+import { BRAND } from "@/lib/constants";
 import { ServiceHero } from "@/components/shared/ServiceHero";
 import { FaqAccordion } from "@/components/shared/FaqAccordion";
 import { CtaBanner } from "@/components/shared/CtaBanner";
 import { SidebarCta } from "@/components/shared/SidebarCta";
-import { ReviewCard } from "@/components/shared/ReviewCard";
 import { ServiceLinkCard } from "@/components/shared/ServiceLinkCard";
 import { TrustBar } from "@/components/sections/TrustBar";
 import { MediaImage } from "@/components/ui/MediaImage";
-import { Button } from "@/components/ui/Button";
+import { FreeEstimateButton } from "@/components/forms/FreeEstimateButton";
+import { PhoneLink } from "@/components/forms/PhoneLink";
+
+const AREA_PAGES = pagesInGroup("areas");
 
 export function ServicePageContent({ service }: { service: Service }) {
   const related = getRelatedServices(service);
-  const reviews = getFeaturedReviews(3);
-  const areaSample = CITIES.filter((c) => !c.isCounty).slice(0, 8);
+  const longform = SERVICE_LONGFORM[service.slug] ?? [];
 
   return (
     <>
@@ -30,7 +33,6 @@ export function ServicePageContent({ service }: { service: Service }) {
         startingPrice={service.startingPrice}
         breadcrumbs={[
           { name: "Home", href: "/" },
-          { name: "Services", href: "/services" },
           { name: service.title, href: `/${service.slug}` },
         ]}
       />
@@ -39,23 +41,37 @@ export function ServicePageContent({ service }: { service: Service }) {
       <section className="py-16 sm:py-20 lg:py-24">
         <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[1fr_320px] lg:px-8">
           <div className="space-y-12">
-            <div>
-              <h2 className="font-display text-3xl tracking-[0.06em] text-white sm:text-4xl">
-                WHY CHOOSE JUNK COMMAND
-              </h2>
-              <p className="mt-4 text-muted">{service.description}</p>
-              <ul className="mt-6 grid gap-3 sm:grid-cols-2">
-                {service.benefits.map((benefit) => (
-                  <li
-                    key={benefit}
-                    className="flex gap-3 rounded-[2px] border border-[rgba(0,135,255,0.25)] bg-card px-4 py-3 text-sm text-foreground"
-                  >
-                    <Check className="mt-0.5 size-4 shrink-0 text-bright" aria-hidden />
-                    {benefit}
-                  </li>
-                ))}
-              </ul>
-            </div>
+            {longform.length > 0 ? (
+              <div>
+                <h2 className="font-display text-3xl tracking-[0.06em] text-white sm:text-4xl">
+                  {service.title.toUpperCase()} IN PORT HURON
+                </h2>
+                <div className="mt-4 space-y-4 text-base leading-relaxed text-muted">
+                  {longform.map((paragraph) => (
+                    <p key={paragraph.slice(0, 48)}>{paragraph}</p>
+                  ))}
+                </div>
+              </div>
+            ) : (
+              <div>
+                <h2 className="font-display text-3xl tracking-[0.06em] text-white sm:text-4xl">
+                  WHY CHOOSE JUNK COMMAND
+                </h2>
+                <p className="mt-4 text-muted">{service.description}</p>
+              </div>
+            )}
+
+            <ul className="grid gap-3 sm:grid-cols-2">
+              {service.benefits.map((benefit) => (
+                <li
+                  key={benefit}
+                  className="flex gap-3 rounded-[2px] border border-[rgba(0,135,255,0.25)] bg-card px-4 py-3 text-sm text-foreground"
+                >
+                  <Check className="mt-0.5 size-4 shrink-0 text-bright" aria-hidden />
+                  {benefit}
+                </li>
+              ))}
+            </ul>
 
             <div className="relative aspect-[16/9] overflow-hidden rounded-[2px] border border-[rgba(0,135,255,0.35)]">
               <MediaImage
@@ -65,6 +81,36 @@ export function ServicePageContent({ service }: { service: Service }) {
                 sizes="(max-width: 1024px) 100vw, 760px"
                 className="object-cover"
               />
+            </div>
+
+            <div>
+              <h2 className="font-display text-3xl tracking-[0.06em] text-white sm:text-4xl">
+                HOW PRICING WORKS
+              </h2>
+              <p className="mt-4 leading-relaxed text-muted">
+                Junk Command quotes {service.shortTitle.toLowerCase()} jobs by
+                how much space the load takes in the truck, plus access. Curbside
+                Command starts at ${CURBSIDE_START} when qualifying items are
+                already outside. Full-service Command starts at $
+                {FULL_SERVICE_START} when we carry items out of the home or
+                garage. Photos get you a free estimate. You approve the price
+                before we load.
+              </p>
+              <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+                <FreeEstimateButton
+                  ctaPosition={`${service.slug}_pricing`}
+                  pageType="service_page"
+                >
+                  Get a Free Estimate
+                </FreeEstimateButton>
+                <PhoneLink
+                  ctaPosition={`${service.slug}_pricing_phone`}
+                  pageType="service_page"
+                  className="inline-flex items-center justify-center gap-2 rounded-[2px] border border-[rgba(0,135,255,0.55)] px-5 py-3 text-sm font-semibold uppercase tracking-[0.08em] text-white transition-colors hover:border-bright hover:bg-[rgba(7,135,255,0.08)]"
+                >
+                  Call {BRAND.phone}
+                </PhoneLink>
+              </div>
             </div>
 
             <div>
@@ -91,8 +137,10 @@ export function ServicePageContent({ service }: { service: Service }) {
 
             <CtaBanner
               title={`NEED ${service.shortTitle.toUpperCase()} GONE?`}
-              description={`Junk Command removes ${service.shortTitle.toLowerCase()} fast across Southeast Michigan. Get your free quote now.`}
+              description={`Junk Command removes ${service.shortTitle.toLowerCase()} across Port Huron and St. Clair County. Get your free estimate now.`}
               className="border-x border-[rgba(0,135,255,0.25)]"
+              ctaPosition={`${service.slug}_mid`}
+              pageType="service_page"
             />
 
             <div>
@@ -110,25 +158,21 @@ export function ServicePageContent({ service }: { service: Service }) {
                   </li>
                 ))}
               </ul>
+              <p className="mt-4 text-sm text-muted">
+                Full item list:{" "}
+                <Link href="/what-we-take" className="text-bright hover:text-white">
+                  what we take
+                </Link>
+                . Light commercial loads:{" "}
+                <Link
+                  href="/commercial-junk-removal"
+                  className="text-bright hover:text-white"
+                >
+                  commercial junk removal
+                </Link>
+                .
+              </p>
             </div>
-
-            {reviews.length > 0 ? (
-              <div>
-                <h2 className="font-display text-3xl tracking-[0.06em] text-white sm:text-4xl">
-                  CUSTOMER REVIEWS
-                </h2>
-                <div className="mt-6 grid gap-4 sm:grid-cols-3">
-                  {reviews.map((review) => (
-                    <ReviewCard key={review.id} review={review} />
-                  ))}
-                </div>
-                <div className="mt-6">
-                  <Button href="/reviews" variant="secondary">
-                    Read More Reviews
-                  </Button>
-                </div>
-              </div>
-            ) : null}
 
             <div>
               <h2 className="font-display text-3xl tracking-[0.06em] text-white sm:text-4xl">
@@ -137,17 +181,6 @@ export function ServicePageContent({ service }: { service: Service }) {
               <div className="mt-6">
                 <FaqAccordion items={service.faqs} idPrefix={service.slug} />
               </div>
-              <p className="mt-4 text-sm text-muted">
-                More answers on our{" "}
-                <Link href="/faqs" className="text-bright hover:text-white">
-                  full FAQ page
-                </Link>{" "}
-                and{" "}
-                <Link href="/pricing" className="text-bright hover:text-white">
-                  pricing guide
-                </Link>
-                .
-              </p>
             </div>
           </div>
 
@@ -155,29 +188,24 @@ export function ServicePageContent({ service }: { service: Service }) {
             <SidebarCta
               title={`${service.shortTitle} Quote`}
               description="Send photos for a fast, accurate estimate — or call now."
+              pageType="service_page"
             />
             <div className="rounded-[2px] border border-[rgba(0,135,255,0.3)] bg-card p-5">
               <h2 className="font-display text-xl tracking-[0.08em] text-white">
                 SERVICE AREAS
               </h2>
               <ul className="mt-4 space-y-2">
-                {areaSample.map((city) => (
-                  <li key={city.slug}>
+                {AREA_PAGES.map((city) => (
+                  <li key={city.path}>
                     <Link
-                      href={`/service-areas/${city.slug}`}
+                      href={city.path}
                       className="text-sm text-muted transition-colors hover:text-bright"
                     >
-                      Junk Removal in {city.name}
+                      Junk Removal in {city.label}
                     </Link>
                   </li>
                 ))}
               </ul>
-              <Link
-                href="/service-areas"
-                className="mt-4 inline-block text-sm font-semibold text-bright hover:text-white"
-              >
-                View all areas →
-              </Link>
             </div>
           </div>
         </div>
@@ -198,7 +226,11 @@ export function ServicePageContent({ service }: { service: Service }) {
         </section>
       ) : null}
 
-      <CtaBanner title="BOOK YOUR PICKUP TODAY" />
+      <CtaBanner
+        title="BOOK YOUR PICKUP TODAY"
+        ctaPosition={`${service.slug}_bottom`}
+        pageType="service_page"
+      />
     </>
   );
 }

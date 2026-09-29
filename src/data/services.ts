@@ -1,3 +1,5 @@
+import { KEPT_SERVICE_SLUGS, isKeptServiceSlug } from "@/data/indexing";
+
 export type Service = {
   slug: string;
   title: string;
@@ -23,10 +25,10 @@ export const SERVICES: Service[] = [
     slug: "furniture-removal",
     title: "Furniture Removal",
     shortTitle: "Furniture",
-    metaTitle: "Furniture Removal Port Huron MI | Junk Command",
+    metaTitle: "Sofa, Mattress & Furniture Haul-Away in Port Huron | Junk Command",
     metaDescription:
-      "Professional furniture removal in Port Huron & St. Clair County. Sofas, beds, desks, and more hauled away fast. Free quotes. Call 810-242-0429.",
-    h1: "Furniture Removal in Southeast Michigan",
+      "Local furniture removal in Port Huron and St. Clair County. Sofas, mattresses, and bulky pieces carried out and hauled. Free photo estimate. Call 810-242-0429.",
+    h1: "Furniture Removal for Port Huron Homes",
     eyebrow: "Heavy Lifting Done Right",
     intro:
       "When old sofas, dressers, and dining sets are blocking your space, Junk Command hauls them out fast — no rental trucks, no strained backs, no leftover mess.",
@@ -85,17 +87,17 @@ export const SERVICES: Service[] = [
           "When items are clean and structurally sound, we route them to local donation partners whenever possible instead of the landfill.",
       },
     ],
-    relatedSlugs: ["couch-removal", "mattress-removal", "estate-cleanout"],
+    relatedSlugs: ["estate-cleanout", "appliance-removal", "garage-cleanout"],
     startingPrice: "$129",
   },
   {
     slug: "appliance-removal",
     title: "Appliance Removal",
     shortTitle: "Appliances",
-    metaTitle: "Appliance Removal Port Huron MI | Junk Command",
+    metaTitle: "Refrigerator, Washer & Dryer Removal in St. Clair County | Junk Command",
     metaDescription:
-      "Fridge, washer, dryer, and stove removal in Port Huron & St. Clair County. Fast, insured appliance haul-away. Call Junk Command at 810-242-0429.",
-    h1: "Appliance Removal in Port Huron",
+      "Appliance haul-away from Port Huron kitchens, laundry rooms, and basements. Fridges, washers, dryers, and stoves. Free estimate. Call 810-242-0429.",
+    h1: "Appliance Removal Across the Blue Water Area",
     eyebrow: "White Goods Gone",
     intro:
       "Old refrigerators, washers, and ranges are too heavy for most households. We disconnect guidance, haul, and dispose of appliances responsibly across Southeast Michigan.",
@@ -154,7 +156,7 @@ export const SERVICES: Service[] = [
           "Yes. We prioritize scrap metal recycling and proper handling whenever facilities accept the material.",
       },
     ],
-    relatedSlugs: ["refrigerator-removal", "electronics-recycling", "garage-cleanout"],
+    relatedSlugs: ["furniture-removal", "garage-cleanout", "estate-cleanout"],
     startingPrice: "$129",
   },
   {
@@ -297,10 +299,10 @@ export const SERVICES: Service[] = [
     slug: "garage-cleanout",
     title: "Garage Cleanouts",
     shortTitle: "Garage",
-    metaTitle: "Garage Cleanout Port Huron MI | Junk Command",
+    metaTitle: "Garage Cleanouts in Port Huron, Marysville & Kimball | Junk Command",
     metaDescription:
-      "Full garage cleanouts in Port Huron, Marysville & St. Clair County. Reclaim your space in one visit. Veteran-owned. Call 810-242-0429.",
-    h1: "Garage Cleanouts in Port Huron",
+      "Clear a packed Port Huron or St. Clair County garage in one visit. Volume pricing, free photo estimate, broom-clean finish. Call 810-242-0429.",
+    h1: "Garage Cleanouts That Free Up Blue Water Driveways",
     eyebrow: "Park in Your Garage Again",
     intro:
       "Years of tools, boxes, sports gear, and forgotten projects disappear in a single visit. Junk Command runs efficient garage cleanouts that restore usable space fast.",
@@ -359,7 +361,7 @@ export const SERVICES: Service[] = [
           "Absolutely. Mark keepers clearly or walk the crew through the garage before we load.",
       },
     ],
-    relatedSlugs: ["basement-cleanout", "shed-removal", "yard-debris-removal"],
+    relatedSlugs: ["estate-cleanout", "construction-debris-removal", "furniture-removal"],
     startingPrice: "Volume-based",
   },
   {
@@ -434,10 +436,10 @@ export const SERVICES: Service[] = [
     slug: "estate-cleanout",
     title: "Estate Cleanouts",
     shortTitle: "Estate",
-    metaTitle: "Estate Cleanout Port Huron MI | Junk Command",
+    metaTitle: "Estate & Whole-Home Cleanouts in Port Huron | Junk Command",
     metaDescription:
-      "Respectful estate cleanouts in Port Huron & St. Clair County. Full-home clearing for families, executors, and realtors. Call 810-242-0429.",
-    h1: "Estate Cleanouts in Port Huron",
+      "Respectful estate cleanouts for St. Clair County families, executors, and listings. Furniture, appliances, and garage contents hauled. Call 810-242-0429.",
+    h1: "Estate Cleanouts for St. Clair County Families",
     eyebrow: "Respectful. Thorough. Local.",
     intro:
       "Settling an estate is emotional enough. Junk Command handles full-property cleanouts with dignity — clearing rooms, garages, and yards so families can move forward.",
@@ -496,7 +498,7 @@ export const SERVICES: Service[] = [
           "When requested, we separate donation-worthy items and route them to local partners.",
       },
     ],
-    relatedSlugs: ["foreclosure-cleanout", "hoarder-cleanout", "storage-unit-cleanout"],
+    relatedSlugs: ["garage-cleanout", "furniture-removal", "appliance-removal"],
     startingPrice: "Custom quote",
   },
   {
@@ -707,10 +709,10 @@ export const SERVICES: Service[] = [
     slug: "hot-tub-removal",
     title: "Hot Tub Removal",
     shortTitle: "Hot Tubs",
-    metaTitle: "Hot Tub Removal Port Huron MI | Junk Command",
+    metaTitle: "Backyard Hot Tub Removal in Port Huron & Fort Gratiot | Junk Command",
     metaDescription:
-      "Hot tub and spa removal in Port Huron & St. Clair County. We cut, haul, and dispose of broken or unwanted hot tubs. Call 810-242-0429.",
-    h1: "Hot Tub Removal in Port Huron",
+      "Cut, haul, and dispose of a dead hot tub in Port Huron or St. Clair County. Drain it first, send photos for a free estimate. Call 810-242-0429.",
+    h1: "Hot Tub Removal for St. Clair County Yards",
     eyebrow: "The Heavy Job Done Right",
     intro:
       "Dead hot tubs are a backyard eyesore and a nightmare to move. Junk Command cuts, breaks down, and hauls spas so your patio is usable again.",
@@ -768,7 +770,7 @@ export const SERVICES: Service[] = [
           "Yes. Gate width and access photos help us plan. We regularly remove tubs from tight Michigan yards.",
       },
     ],
-    relatedSlugs: ["deck-removal", "shed-removal", "yard-debris-removal"],
+    relatedSlugs: ["construction-debris-removal", "estate-cleanout", "garage-cleanout"],
     startingPrice: "Custom quote",
   },
   {
@@ -911,10 +913,10 @@ export const SERVICES: Service[] = [
     slug: "construction-debris-removal",
     title: "Construction Debris Removal",
     shortTitle: "Construction",
-    metaTitle: "Construction Debris Removal Port Huron MI | Junk Command",
+    metaTitle: "Renovation Debris Hauling in Port Huron | Junk Command",
     metaDescription:
-      "Construction and renovation debris removal in Port Huron & St. Clair County. Post-demo cleanup without the dumpster hassle. 810-242-0429.",
-    h1: "Construction Debris Removal in Port Huron",
+      "Construction debris removal for Port Huron remodels without a driveway dumpster. Drywall, lumber, cabinets, and fixture scrap. Call 810-242-0429.",
+    h1: "Construction Debris Removal for St. Clair County Remodels",
     eyebrow: "Job-Site Cleanup",
     intro:
       "Renovations create mountains of scrap. Skip the dumpster rental — Junk Command hauls construction debris on your schedule so trades can keep moving.",
@@ -972,7 +974,7 @@ export const SERVICES: Service[] = [
           "Yes. Talk to us about repeat job-site hauls across your Southeast Michigan projects.",
       },
     ],
-    relatedSlugs: ["yard-debris-removal", "deck-removal", "foreclosure-cleanout"],
+    relatedSlugs: ["hot-tub-removal", "garage-cleanout", "estate-cleanout"],
     startingPrice: "Volume-based",
   },
   {
@@ -1326,9 +1328,20 @@ export function getAllServiceSlugs(): string[] {
 }
 
 export function getRelatedServices(service: Service): Service[] {
-  return service.relatedSlugs
+  const fromRelated = service.relatedSlugs
+    .filter((slug) => isKeptServiceSlug(slug))
     .map((slug) => getServiceBySlug(slug))
-    .filter((s): s is Service => Boolean(s));
+    .filter((item): item is Service => item != null && item.slug !== service.slug);
+
+  const extras = KEPT_SERVICE_SLUGS
+    .filter(
+      (slug) =>
+        slug !== service.slug && !fromRelated.some((item) => item.slug === slug),
+    )
+    .map((slug) => getServiceBySlug(slug))
+    .filter((item): item is Service => Boolean(item));
+
+  return [...fromRelated, ...extras].slice(0, 3);
 }
 
 export function getFeaturedServices(): Service[] {

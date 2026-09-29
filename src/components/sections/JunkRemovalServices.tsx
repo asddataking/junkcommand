@@ -63,6 +63,19 @@ export function JunkRemovalServices() {
             );
           })}
         </ul>
+
+        <ul className="mt-6 flex flex-wrap justify-center gap-4 text-sm">
+          <li>
+            <Link href="/commercial-junk-removal" className="font-semibold text-bright hover:text-white">
+              Commercial junk removal
+            </Link>
+          </li>
+          <li>
+            <Link href="/what-we-take" className="font-semibold text-bright hover:text-white">
+              What we take
+            </Link>
+          </li>
+        </ul>
       </div>
     </section>
   );

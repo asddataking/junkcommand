@@ -41,7 +41,7 @@ export function MobileMenu({
           {LABOR_POOL.label}
         </Link>
         <Link
-          href="/veteran-owned"
+          href="/about"
           onClick={onClose}
           className="rounded-[2px] px-3 py-3 text-sm font-semibold uppercase tracking-[0.14em] text-bright hover:bg-[rgba(7,135,255,0.08)] hover:text-white"
         >

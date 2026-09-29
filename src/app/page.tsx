@@ -11,6 +11,7 @@ import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
 import { ServiceAreaSection } from "@/components/sections/ServiceAreaSection";
 import { ServicesGrid } from "@/components/sections/ServicesGrid";
 import { HomepageFaq } from "@/components/sections/HomepageFaq";
+import { HomepageIndexSections } from "@/components/sections/HomepageIndexSections";
 import { FinalCTA } from "@/components/sections/FinalCTA";
 import { GoogleMapsListing } from "@/components/shared/GoogleMapsListing";
 import { JsonLd } from "@/components/seo/JsonLd";
@@ -36,6 +37,7 @@ export default function Home() {
       />
       <HomepageBookingProvider>
         <Hero />
+        <HomepageIndexSections />
         <TrustBar />
         <PricingCarousel />
         <CommandLoadPricing />

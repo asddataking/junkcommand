@@ -62,16 +62,12 @@ export function ServiceAreaSection() {
                         className="size-4 shrink-0 text-bright"
                         aria-hidden
                       />
-                      {area.slug ? (
-                        <Link
-                          href={`/service-areas/${area.slug}`}
-                          className="transition-colors hover:text-bright focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bright"
-                        >
-                          {area.name}
-                        </Link>
-                      ) : (
-                        <span>{area.name}</span>
-                      )}
+                      <Link
+                        href={`/service-areas/${area.slug}`}
+                        className="transition-colors hover:text-bright focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bright"
+                      >
+                        {area.name}
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -93,12 +89,6 @@ export function ServiceAreaSection() {
                   >
                     Check My Address
                   </FreeEstimateButton>
-                  <Link
-                    href="/service-areas"
-                    className="text-sm font-semibold text-bright hover:text-white"
-                  >
-                    View all areas we serve →
-                  </Link>
                 </div>
               </div>
 

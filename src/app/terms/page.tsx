@@ -11,6 +11,7 @@ export const metadata: Metadata = buildPageMetadata({
   description:
     "Terms of service for Junk Command junk removal in Port Huron and St. Clair County — quotes, scheduling, payments, and website use.",
   path: "/terms",
+  noIndex: true,
 });
 
 const UPDATED = "August 26, 2026";

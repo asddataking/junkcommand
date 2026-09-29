@@ -131,8 +131,8 @@ export const HOURS_SUMMARY = "Mon–Sat 8:00 AM – 6:00 PM · Sunday Closed";
 export const NAV_LINKS = [
   { label: "Services", href: "/#services" },
   { label: "How It Works", href: "/#how-it-works" },
-  { label: "Reviews", href: "/reviews" },
-  { label: "Service Areas", href: "/service-areas" },
+  { label: "About", href: "/about" },
+  { label: "Service Areas", href: "/#service-areas" },
 ] as const;
 
 /** Labor pool landing — header/mobile CTA + footer, not in the 4-item homepage nav */
@@ -143,45 +143,27 @@ export const LABOR_POOL = {
 
 export const FOOTER_LINKS = {
   company: [
+    { label: "Home", href: "/" },
     { label: "About Us", href: "/about" },
-    { label: "Meet the Crew", href: "/meet-the-crew" },
-    { label: "Veteran Owned", href: "/veteran-owned" },
-    { label: "Careers", href: "/careers" },
+    { label: "Contact", href: "/contact" },
     { label: LABOR_POOL.label, href: LABOR_POOL.href },
-    { label: "Before & After", href: "/gallery" },
   ],
   services: [
-    { label: "All Services", href: "/services" },
-    { label: "Garage Cleanouts", href: "/garage-cleanout" },
-    { label: "Estate Cleanouts", href: "/estate-cleanout" },
     { label: "Furniture Removal", href: "/furniture-removal" },
+    { label: "Appliance Removal", href: "/appliance-removal" },
     { label: "Hot Tub Removal", href: "/hot-tub-removal" },
-  ],
-  additionalServices: [
-    { label: "Garage Sale Delivery", href: "/garage-sale-trail" },
-    {
-      label: "Furniture & Marketplace Delivery",
-      href: "/furniture-delivery",
-    },
-  ],
-  partners: [
-    { label: "Partner Program", href: "/partners" },
-    { label: "Realtors", href: "/partners/realtors" },
-    { label: "Property Managers", href: "/partners/property-managers" },
-    { label: "Contractors", href: "/partners/contractors" },
-  ],
-  resources: [
-    { label: "Pricing", href: "/pricing" },
-    { label: "FAQs", href: "/faqs" },
-    { label: "What We Take", href: "/what-we-take" },
-    { label: "What We Don't Take", href: "/what-we-dont-take" },
+    { label: "Estate Cleanouts", href: "/estate-cleanout" },
+    { label: "Garage Cleanouts", href: "/garage-cleanout" },
+    { label: "Construction Debris", href: "/construction-debris-removal" },
     { label: "Commercial Junk Removal", href: "/commercial-junk-removal" },
-    { label: "Responsible Disposal", href: "/responsible-disposal" },
-    { label: "Guides", href: "/guides" },
-    { label: "Reviews", href: "/reviews" },
-    { label: "Blog", href: "/blog" },
-    { label: "Book Online", href: "/book-online" },
-    { label: "Contact", href: "/contact" },
+    { label: "What We Take", href: "/what-we-take" },
+  ],
+  areas: [
+    { label: "Port Huron", href: "/service-areas/port-huron" },
+    { label: "Fort Gratiot", href: "/service-areas/fort-gratiot" },
+    { label: "Marysville", href: "/service-areas/marysville" },
+    { label: "Kimball Township", href: "/service-areas/kimball-township" },
+    { label: "St. Clair", href: "/service-areas/st-clair" },
   ],
 } as const;
 
@@ -295,19 +277,7 @@ export const SERVICE_AREAS = [
   "Marysville",
   "Fort Gratiot",
   "Kimball Township",
-  "Clyde Township",
   "St. Clair",
-  "Marine City",
-  "Algonac",
-  "Richmond",
-  "Lenox Township",
-  "Romeo",
-  "Armada",
-  "Imlay City",
-  "New Baltimore",
-  "Chesterfield",
-  "St. Clair County",
-  "Macomb County",
 ] as const;
 
 /** @deprecated Prefer REVIEWS from data/reviews */

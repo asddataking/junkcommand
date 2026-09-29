@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { getAllCitySlugs, getCityBySlug } from "@/data/cities";
+import { getCityBySlug } from "@/data/cities";
+import { KEPT_CITY_SLUGS } from "@/data/indexing";
 import { getLocationBySlug } from "@/data/locations";
 import { buildPageMetadata } from "@/lib/seo";
 import {
@@ -14,8 +15,10 @@ import { CityPageContent } from "@/components/pages/CityPageContent";
 
 type Props = { params: Promise<{ slug: string }> };
 
+export const dynamicParams = false;
+
 export function generateStaticParams() {
-  return getAllCitySlugs().map((slug) => ({ slug }));
+  return KEPT_CITY_SLUGS.map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -40,7 +43,6 @@ export default async function CityPage({ params }: Props) {
 
   const crumbs = [
     { name: "Home", href: "/" },
-    { name: "Service Areas", href: "/service-areas" },
     { name: city.name, href: `/service-areas/${city.slug}` },
   ];
 

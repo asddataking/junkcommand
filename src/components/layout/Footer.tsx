@@ -10,27 +10,9 @@ import {
   getGbpMapsHref,
   getGbpReviewHref,
 } from "@/lib/constants";
-import { CITIES } from "@/data/cities";
 import { Logo } from "@/components/ui/Logo";
 import { MascotBadge } from "@/components/ui/MascotBadge";
 import { TikTokIcon } from "@/components/ui/SocialIcons";
-
-const FOOTER_CITY_SLUGS = [
-  "port-huron",
-  "fort-gratiot",
-  "marysville",
-  "st-clair",
-  "imlay-city",
-  "lapeer",
-  "richmond",
-  "armada",
-  "almont",
-  "memphis",
-] as const;
-
-const FOOTER_CITIES = FOOTER_CITY_SLUGS.map((slug) =>
-  CITIES.find((city) => city.slug === slug),
-).filter((city): city is NonNullable<typeof city> => Boolean(city));
 
 const SOCIAL_ICONS = {
   YouTube: Youtube,
@@ -127,7 +109,10 @@ export function Footer() {
               </li>
             ))}
           </ul>
-          <h2 className="mt-8 font-display text-xl tracking-[0.12em] text-white">
+        </div>
+
+        <div>
+          <h2 className="font-display text-xl tracking-[0.12em] text-white">
             Services
           </h2>
           <ul className="mt-4 space-y-2 text-sm text-muted">
@@ -139,71 +124,24 @@ export function Footer() {
               </li>
             ))}
           </ul>
-          <h2 className="mt-8 font-display text-xl tracking-[0.12em] text-white">
-            Additional Services
-          </h2>
-          <ul className="mt-4 space-y-2 text-sm text-muted">
-            {FOOTER_LINKS.additionalServices.map((link) => (
-              <li key={link.href}>
-                <Link href={link.href} className="hover:text-bright">
-                  {link.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
         </div>
 
-        <div>
-          <h2 className="font-display text-xl tracking-[0.12em] text-white">
-            Resources
-          </h2>
-          <ul className="mt-4 space-y-2 text-sm text-muted">
-            {FOOTER_LINKS.resources.map((link) => (
-              <li key={link.href}>
-                <Link href={link.href} className="hover:text-bright">
-                  {link.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-          <h2 className="mt-8 font-display text-xl tracking-[0.12em] text-white">
-            Partners
-          </h2>
-          <ul className="mt-4 space-y-2 text-sm text-muted">
-            {FOOTER_LINKS.partners.map((link) => (
-              <li key={link.href}>
-                <Link href={link.href} className="hover:text-bright">
-                  {link.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <div id="service-areas" className="scroll-mt-24">
+        <div id="footer-service-areas" className="scroll-mt-24">
           <h2 className="font-display text-xl tracking-[0.12em] text-white">
             Service Areas
           </h2>
           <ul className="mt-4 space-y-2 text-sm text-muted">
-            {FOOTER_CITIES.map((city) => (
-              <li key={city.slug}>
+            {FOOTER_LINKS.areas.map((link) => (
+              <li key={link.href}>
                 <Link
-                  href={`/service-areas/${city.slug}`}
+                  href={link.href}
                   className="inline-flex items-center gap-2 hover:text-bright"
                 >
                   <MapPin className="size-3.5 text-bright" aria-hidden />
-                  {city.name}
+                  {link.label}
                 </Link>
               </li>
             ))}
-            <li>
-              <Link
-                href="/service-areas"
-                className="font-semibold text-bright hover:text-white"
-              >
-                View all service areas →
-              </Link>
-            </li>
           </ul>
           <h2 className="mt-8 font-display text-xl tracking-[0.12em] text-white">
             Follow Us

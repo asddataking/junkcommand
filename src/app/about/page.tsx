@@ -20,9 +20,9 @@ const crumbs = [
 ];
 
 export const metadata = buildPageMetadata({
-  title: "About Junk Command | Veteran-Owned Junk Removal Port Huron",
+  title: "About Junk Command | Veteran-Owned Crew in Port Huron, MI",
   description:
-    "Junk Command is a veteran-owned, family-operated junk removal company in Port Huron, MI — Dan, Gage, and Blue Heeler Luna serving St. Clair County with pride.",
+    "Meet the Port Huron junk removal crew — Dan, Gage, and Luna. Veteran-owned, family-operated, volume pricing, and a free photo estimate for St. Clair County.",
   path: "/about",
 });
 
@@ -69,8 +69,8 @@ export default function AboutPage() {
             <FreeEstimateButton ctaPosition="about_hero" pageType="about">
               Get My Free Quote
             </FreeEstimateButton>
-            <Button href="/meet-the-crew" variant="secondary">
-              Meet the Crew
+            <Button href="/contact" variant="secondary">
+              Contact the Crew
             </Button>
           </div>
         </div>
@@ -101,15 +101,26 @@ export default function AboutPage() {
               After years of seeing neighbors wrestle dumpsters, borrow trucks,
               and wait weeks for bulk pickup, we launched Junk Command to make
               haul-away simple: honest quotes, strong crews, and respect for
-              every driveway we pull into.
+              every driveway we pull into. Port Huron is a working city — older
+              housing, rentals around SC4, downtown storefronts, and lakefront
+              blocks that turn over with the seasons. That is the work we
+              actually do, not a national call-center script.
             </p>
             <p className="mt-4 text-muted">
               Our headquarters is Port Huron — so when someone in Marysville,
-              Fort Gratiot, or Kimball needs help fast, we are already close.
-              That local density is how we keep response times sharp and service
-              personal across St. Clair and Macomb Counties.
+              Fort Gratiot, Kimball Township, or St. Clair needs help, we are
+              already close. We are a service-area business. There is no public
+              street address on this site because the truck comes to you.
             </p>
-            <Button href="/service-areas" className="mt-6" variant="secondary">
+            <p className="mt-4 text-muted">
+              Pricing is volume-based. Curbside Command starts at $99 when
+              qualifying items are already outside. Full-service Command starts
+              at $129 when we carry items out of the home, garage, or basement.
+              Photos get you a free estimate. You approve the price before we
+              load. We haul furniture, appliances, garage and estate contents,
+              hot tubs, and mixed construction debris that is not hazardous.
+            </p>
+            <Button href="/#service-areas" className="mt-6" variant="secondary">
               See Where We Serve
             </Button>
           </div>
@@ -184,12 +195,18 @@ export default function AboutPage() {
             ))}
           </div>
 
-          <div className="mt-8">
+          <div className="mt-8 flex flex-wrap gap-4">
             <Link
-              href="/meet-the-crew"
+              href="/work-with-junk-command"
               className="text-sm font-semibold text-bright hover:text-white"
             >
-              Full crew profiles →
+              Work with Junk Command →
+            </Link>
+            <Link
+              href="/contact"
+              className="text-sm font-semibold text-bright hover:text-white"
+            >
+              Contact →
             </Link>
           </div>
         </div>
@@ -220,16 +237,81 @@ export default function AboutPage() {
               >
                 {BRAND.phone}
               </a>{" "}
-              or book online in minutes.
+              or request a free estimate. If you want extra work on the crew,
+              the labor pool lives on{" "}
+              <Link
+                href="/work-with-junk-command"
+                className="font-semibold text-bright hover:text-white"
+              >
+                Work With Junk Command
+              </Link>
+              .
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <FreeEstimateButton ctaPosition="about_bottom" pageType="about">
-                Book Online
+                Get a Free Estimate
               </FreeEstimateButton>
-              <Button href="/veteran-owned" variant="secondary">
-                Our Veteran Story
+              <Button href="/contact" variant="secondary">
+                Contact
               </Button>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-t border-[rgba(0,135,255,0.2)] py-16 sm:py-20 lg:py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl">
+            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-bright">
+              How We Haul
+            </p>
+            <h2 className="mt-3 font-display text-3xl tracking-[0.06em] text-white sm:text-4xl">
+              WHAT WE TAKE — AND HOW TO BOOK
+            </h2>
+            <p className="mt-4 text-muted">
+              Everyday Port Huron calls are sofas, mattresses, refrigerators,
+              packed garages, inherited houses, dead hot tubs, and renovation
+              scrap that will not fit the weekly cart. Read{" "}
+              <Link href="/what-we-take" className="text-bright hover:text-white">
+                what we take
+              </Link>
+              ,{" "}
+              <Link
+                href="/furniture-removal"
+                className="text-bright hover:text-white"
+              >
+                furniture removal
+              </Link>
+              ,{" "}
+              <Link
+                href="/appliance-removal"
+                className="text-bright hover:text-white"
+              >
+                appliance removal
+              </Link>
+              ,{" "}
+              <Link
+                href="/estate-cleanout"
+                className="text-bright hover:text-white"
+              >
+                estate cleanouts
+              </Link>
+              , and{" "}
+              <Link
+                href="/commercial-junk-removal"
+                className="text-bright hover:text-white"
+              >
+                commercial junk removal
+              </Link>{" "}
+              if you want the details by job type.
+            </p>
+            <p className="mt-4 text-muted">
+              We do not take hazardous waste, fuels, wet paint, asbestos,
+              propane tanks, or medical waste. If you are unsure, send a photo.
+              Same-day or next-day windows may be available when the load fits a
+              route already running through Port Huron or the Blue Water towns
+              on this site.
+            </p>
           </div>
         </div>
       </section>

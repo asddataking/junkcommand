@@ -1,15 +1,16 @@
 import type { Metadata } from "next";
 import { DollarSign, Dumbbell, Utensils } from "lucide-react";
 import { buildPageMetadata } from "@/lib/seo";
-import { getBreadcrumbSchema } from "@/lib/schema";
+import { getBreadcrumbSchema, getFaqSchema } from "@/lib/schema";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { SiteShell } from "@/components/layout/SiteShell";
 import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 import { CtaBanner } from "@/components/shared/CtaBanner";
 import { TrustBar } from "@/components/sections/TrustBar";
+import { FaqAccordion } from "@/components/shared/FaqAccordion";
 import { Button } from "@/components/ui/Button";
 import { GhlFormEmbed } from "@/components/forms/GhlFormEmbed";
-import { LABOR_POOL } from "@/lib/constants";
+import { LABOR_POOL, SITE_URL } from "@/lib/constants";
 import { getGhlLaborFormUrl } from "@/lib/ghl";
 
 export const metadata: Metadata = buildPageMetadata({
@@ -42,12 +43,35 @@ const crumbs = [
   { name: LABOR_POOL.label, href: LABOR_POOL.href },
 ];
 
+const pageFaqs = [
+  {
+    question: "Is this a full-time job in Port Huron?",
+    answer:
+      "No. The labor pool is flexible part-time work. There are no guaranteed hours. We text you when junk removal jobs are available.",
+  },
+  {
+    question: "What does the work pay?",
+    answer:
+      "Pay is $18 an hour when you work a job. Lunches are paid on work days. A gym membership is covered after you finish 5 jobs.",
+  },
+  {
+    question: "Where do jobs happen?",
+    answer:
+      "Jobs are junk removal and hauling around Port Huron and St. Clair County — furniture, appliances, garages, and mixed loads. The crew meets at the job. This is a service-area business, not a shop with a public street address.",
+  },
+];
+
 export default function WorkWithJunkCommandPage() {
   const laborFormUrl = getGhlLaborFormUrl();
 
   return (
     <SiteShell>
-      <JsonLd data={getBreadcrumbSchema(crumbs)} />
+      <JsonLd
+        data={[
+          getBreadcrumbSchema(crumbs),
+          getFaqSchema(pageFaqs, { id: `${SITE_URL}${LABOR_POOL.href}#faq` }),
+        ]}
+      />
 
       <section className="border-b border-[rgba(0,135,255,0.2)] bg-[radial-gradient(ellipse_at_top,rgba(7,135,255,0.12),transparent_55%)]">
         <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
@@ -66,15 +90,33 @@ export default function WorkWithJunkCommandPage() {
           </p>
           <div className="mt-6 max-w-2xl space-y-4 text-muted">
             <p>
-              We&apos;re building a local network of dependable people who want
-              flexible, part-time work helping with junk removal and hauling.
+              We&apos;re building a local network of dependable people in Port
+              Huron and St. Clair County who want flexible, part-time work
+              helping with junk removal and hauling — furniture, appliances,
+              garage cleanouts, and mixed loads on a veteran-owned crew.
             </p>
             <p>
               No guaranteed hours. Work is offered when we have jobs available.
+              Join the Junk Command Labor Pool and we&apos;ll text you when work
+              becomes available. Pay is $18 an hour when you work a job. Lunches
+              are paid on work days. A gym membership is covered after you finish
+              5 jobs.
             </p>
             <p>
-              Join the Junk Command Labor Pool and we&apos;ll text you when work
-              becomes available.
+              This is physical work: lifting, carrying, and loading a trailer in
+              Port Huron weather. You show up on time, treat the customer&apos;s
+              property with respect, and finish the pile. We are a service-area
+              business based in Port Huron, MI — there is no public street
+              address on this page because the crew meets at the job.
+            </p>
+            <p>
+              If you need junk hauled instead of extra work, call{" "}
+              <a href="tel:8102420429" className="text-bright hover:text-white">
+                810-242-0429
+              </a>{" "}
+              or request a free estimate from the homepage. Curbside junk pickup
+              starts at $99 and full-service starts at $129, quoted by volume
+              from photos.
             </p>
           </div>
           <div className="mt-8">
@@ -121,6 +163,17 @@ export default function WorkWithJunkCommandPage() {
               </li>
             ))}
           </ul>
+        </div>
+      </section>
+
+      <section className="border-b border-[rgba(0,135,255,0.2)] py-14 sm:py-20">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+          <h2 className="font-display text-3xl tracking-[0.06em] text-white sm:text-4xl">
+            LABOR POOL FAQS
+          </h2>
+          <div className="mt-6">
+            <FaqAccordion items={pageFaqs} idPrefix="labor-pool" />
+          </div>
         </div>
       </section>
 
