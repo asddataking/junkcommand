@@ -31,10 +31,12 @@ export function HomepageIndexSections() {
               Junk Command is a veteran-owned junk hauler based in Port Huron,
               Michigan. We run furniture, appliances, garage cleanouts, estate
               cleanouts, hot tubs, and renovation debris across the Blue Water
-              Area — Port Huron, Fort Gratiot, Marysville, Kimball Township, and
-              St. Clair. This is a service-area business. We come to your
-              driveway. There is no public storefront to visit and no street
-              address published on these pages.
+              Area — Port Huron, Fort Gratiot, Marysville, Kimball Township, St.
+              Clair, Marine City, and Smiths Creek, plus Romeo, Imlay City, and
+              Lapeer on the western and north Macomb routes. This is a
+              service-area business. We come to your driveway. There is no
+              public storefront to visit and no street address published on
+              these pages.
             </p>
             <p>
               The weekly cart will not take a sofa, a dead refrigerator, or a
@@ -135,13 +137,13 @@ export function HomepageIndexSections() {
             id="kept-areas-heading"
             className="mt-3 font-display text-4xl tracking-[0.08em] text-white sm:text-5xl"
           >
-            CITIES WE SERVE ON THE BLUE WATER
+            CITIES WE SERVE FROM PORT HURON
           </h2>
           <p className="mt-4 max-w-3xl text-muted">
-            Indexed city pages cover the core St. Clair County stops we already
-            run from Port Huron. Nearby towns still get service — those older
-            URLs redirect here so search results land on a useful page instead
-            of a thin template.
+            Indexed city pages cover the stops we already run from Port Huron —
+            the Blue Water core plus Marine City, Smiths Creek, Romeo, Imlay
+            City, and Lapeer. Nearby towns still get service; older thin URLs
+            redirect to the closest kept page.
           </p>
           <ul className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
             {AREA_PAGES.map((page) => (

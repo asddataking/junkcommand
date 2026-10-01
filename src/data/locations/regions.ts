@@ -21,6 +21,7 @@ export const LOCATION_REGIONS: LocationRegion[] = [
       "fort-gratiot",
       "marysville",
       "kimball-township",
+      "smiths-creek",
       "st-clair",
       "marine-city",
       "algonac",

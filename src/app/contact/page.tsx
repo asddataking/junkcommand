@@ -33,7 +33,7 @@ const pageFaqs = [
   {
     question: "Where is Junk Command based?",
     answer:
-      "We are a service-area business based in Port Huron, MI 48060. We come to your property in Port Huron, Fort Gratiot, Marysville, Kimball Township, and St. Clair. There is no public street address on this page.",
+      "We are a service-area business based in Port Huron, MI 48060. We come to your property in Port Huron, Fort Gratiot, Marysville, Kimball Township, St. Clair, Marine City, Smiths Creek, Romeo, Imlay City, and Lapeer. There is no public street address on this page.",
   },
   {
     question: "How does pricing work?",
@@ -71,9 +71,10 @@ export default function ContactPage() {
           </h1>
           <p className="mt-4 max-w-2xl text-muted">
             Ready to clear clutter in Port Huron, Fort Gratiot, Marysville,
-            Kimball Township, or St. Clair? Call, text photos, email, or use the
-            quote form below — we respond fast. This is a service-area business:
-            we come to your property. There is no public street address on this
+            Kimball Township, St. Clair, Marine City, Smiths Creek, Romeo,
+            Imlay City, or Lapeer? Call, text photos, email, or use the quote
+            form below — we respond fast. This is a service-area business: we
+            come to your property. There is no public street address on this
             page.
           </p>
           <p className="mt-4 max-w-2xl text-muted">

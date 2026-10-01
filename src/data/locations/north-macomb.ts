@@ -205,40 +205,48 @@ export const NORTH_MACOMB_LOCATIONS: LocationPage[] = [
     county: "Macomb County",
     regionId: "north-macomb",
     layout: "gallery",
-    eyebrow: "Serving Romeo",
-    metaTitle: "Junk Removal Romeo MI | Junk Command",
+    eyebrow: "North Macomb Village",
+    metaTitle: "Romeo MI Junk Removal | Village and Orchard Country | Junk Command",
     metaDescription:
-      "Need junk removal in Romeo, Michigan? Junk Command hauls furniture, appliances, and estate contents from village homes and nearby north Macomb properties. Get a free estimate.",
-    h1: "Junk Removal in Romeo, MI",
+      "Junk removal in Romeo, Michigan for historic village homes and north Macomb properties. About 40–50 minutes from Port Huron. Free photo estimate. 810-242-0429.",
+    h1: "Junk Removal in Romeo Village and North Macomb",
     heroIntro:
-      "Romeo homeowners and shop owners call Junk Command for junk removal in and around the historic village — furniture, appliances, garage clutter, and estate contents with upfront pricing.",
+      "Romeo is a historic north Macomb village — Main Street, older homes, and orchard-country roads — not a Port Huron neighborhood with a swapped name. Junk Command hauls furniture, appliances, garage overflow, and estate contents with careful carrying and a price you approve before we load.",
     localIntro: [
-      "Romeo blends historic village streets, nearby subdivisions, and orchard-country roads that connect to Armada, Richmond, and the M-53 corridor toward Almont. Van Dyke, 32 Mile, and Main Street are the reference points most people use when they describe the property.",
-      "The work here is often careful work: older homes, finished interiors, village parking, and businesses that cannot have a messy pile out front. Estate furniture, basement boxes, garage overflow, and patio sets after a downsizing are typical.",
-      "If you are preparing a house for showings or clearing a shop after a remodel, [estate cleanouts](/estate-cleanout) and [furniture removal](/furniture-removal) usually overlap. We also serve [Armada](/service-areas/armada), [Richmond](/service-areas/richmond), and [Almont](/service-areas/almont).",
+      "Romeo sits in Macomb County on the M-53 / Van Dyke corridor, ZIP 48065, with a compact historic village, nearby subdivisions, and roads that run toward orchard country and the Richmond area. Van Dyke, 32 Mile, and Main Street are the landmarks people use when they describe parking. Village lots are tight. Older interiors need a crew that plans the path through trim and stairs before the first piece moves.",
+      "The drive from our Port Huron base is about 40 to 50 minutes southwest in ordinary traffic. That is farther than [Marysville](/service-areas/marysville) and a different county. We already travel this north Macomb / Richmond-area corridor, so Romeo is a scheduled stop, not a random pin. We do not have a Romeo office. We are a service-area business based in Port Huron. The truck comes to the property.",
+      "The work is careful village work plus larger lots outside town. Historic homes, finished interiors, and businesses that cannot have a messy pile on Main Street are common. Estate furniture, basement boxes, garage overflow, patio sets after a downsizing, and leftover remodel debris from a shop are the usual loads. [Furniture removal](/furniture-removal) and [appliance removal](/appliance-removal) overlap on almost every visit. A [garage cleanout](/garage-cleanout) is often what people book first. An [estate cleanout](/estate-cleanout) is the right call when the whole house has to be empty.",
+      "Richmond-area jobs that used to live on a thin template now land on this page or on [Marysville](/service-areas/marysville), depending on which town is closer to the address. If you are in Romeo proper, use this page. Pricing is the published model: curbside from $99 when qualifying items are already outside, full-service from $129 when we carry items out. Larger village or whole-house piles are quoted by volume from photos. You approve the number before we load.",
+      "Romeo’s village core is walkable and historic; a few minutes out you are on orchard and acreage roads where a packed barn or a detached garage is the real job. We do not keep a crew sitting on Main Street. We schedule Romeo with other north Macomb and Richmond-area stops so the drive from Port Huron is used, not wasted. Tight village parking, older trim, and a long gravel carry outside town are the three things photos should show. We take the household side — furniture, appliances, boxed clutter, non-hazardous debris. Farm chemicals stay off the truck.",
+      "Same-day is not something we promise at this distance. Next available window on a north Macomb route is the honest answer. Call or text 810-242-0429 or use the free estimate form. Indexed neighbors include [Marysville](/service-areas/marysville), [Imlay City](/service-areas/imlay-city) up M-53, [Lapeer](/service-areas/lapeer), and [Port Huron](/service-areas/port-huron).",
     ],
     featuredServiceSlugs: [...SERVICE_PRESETS.village],
     servicesIntro:
-      "Romeo pickups include sofas, dining sets, [appliance removal](/appliance-removal), [garage cleanouts](/garage-cleanout), and [basement cleanouts](/basement-cleanout). Village businesses sometimes add fixtures or leftover remodel debris to the same load.",
-    cleanoutHeading: "More Than Just Junk Pickup",
+      "Romeo pickups include sofas, dining sets, mattresses, refrigerators, washers, garage overflow, and basement boxes. Village businesses sometimes add fixtures or leftover remodel debris. Light [construction debris](/construction-debris-removal) can ride along when it is mixed and non-hazardous. A single bulky piece is still worth a call if you do not want to walk it down village porch steps yourself.",
+    cleanoutHeading: "Village Fronts and Whole-House Jobs",
     cleanoutBody: [
-      "Historic and village properties in Romeo need a cleanout crew that protects trim, floors, and the front of the house. Junk Command handles inherited homes, move-outs, garages, basements, and whole-property jobs with that standard.",
-      "We do not operate a Romeo office. We serve Romeo. Send photos and we will tell you how the job fits our north Macomb route and what the load looks like before we arrive.",
+      "Historic and village properties in Romeo need a cleanout crew that protects trim, floors, and the front of the house. Inherited homes, move-outs, garages, basements, and whole-property jobs are the larger calls. We walk the property so keepers stay.",
+      "A Main Street business reset and a house on orchard-country roads outside the village are both Romeo work, but parking and carry distance are different. We do not operate a Romeo office. Send photos of the items, the stairs, and the parking. We will tell you how the job fits a north Macomb route and what the load looks like before we leave Port Huron. Richmond-area addresses that are not in Romeo still belong on the [Marysville](/service-areas/marysville) page, which is where those old URLs now go.",
     ],
     midCtaTitle: "Got Junk in Romeo?",
     midCtaDescription:
-      "Village furniture, a packed garage, or an estate cleanout — send photos and Junk Command will quote a Romeo pickup.",
-    nearbySlugs: ["armada", "richmond", "almont", "memphis"],
+      "Village furniture, a packed garage, or an estate cleanout — send photos and we will quote a Romeo pickup from Port Huron.",
+    nearbySlugs: ["marysville", "imlay-city", "lapeer", "port-huron", "st-clair"],
     faqs: [
+      {
+        question: "How far is Romeo from Port Huron?",
+        answer:
+          "About 40 to 50 minutes southwest in ordinary traffic. Romeo is on our north Macomb / Richmond-area corridor. Same-day service is not guaranteed at this distance.",
+      },
       {
         question: "Can you work in the historic village with limited parking?",
         answer:
-          "Yes. Mention village parking, alleys, or tight streets when you send photos so we can plan staging.",
+          "Yes. Mention village parking, alleys, or tight streets when you send photos so we can plan staging. We do not leave a messy pile on Main Street.",
       },
       {
         question: "How much does junk removal cost in Romeo?",
         answer:
-          "Volume and access. Older stairs and long carries from a basement can affect the quote. Photos help us confirm it first.",
+          "Volume and access. Curbside starts at $99 when items are outside. Full-service starts at $129 when we come inside. Older stairs and long basement carries can affect a larger quote. Photos confirm it first.",
       },
       {
         question: "Do you handle estate cleanouts?",
@@ -246,14 +254,14 @@ export const NORTH_MACOMB_LOCATIONS: LocationPage[] = [
           "Yes. Estate and inherited-home cleanouts are a regular Romeo request. We walk the property so keepers stay.",
       },
       {
-        question: "Do you take appliances?",
+        question: "I am near Richmond — is this the right page?",
         answer:
-          "Yes. Refrigerators, washers, dryers, and similar appliances can be combined with furniture and household junk.",
+          "If the address is in Romeo, use this page. Richmond-area URLs redirect to Marysville. Send the address with your photos and we will route the job correctly.",
       },
       {
-        question: "How soon can you schedule Romeo?",
+        question: "How do I get an estimate?",
         answer:
-          "Romeo sits on our north Macomb route with Armada and Richmond. Same-day or next-day service may be available depending on the schedule.",
+          "Use the free estimate form on this page or text photos to 810-242-0429. Include parking notes for village streets. Romeo is a scheduled north Macomb stop from Port Huron, not a same-day promise.",
       },
     ],
     images: buildLocationImages(
