@@ -60,5 +60,6 @@ export type {
   LocationLayout,
   LocationImage,
   LocationFaq,
+  LocationLocalContext,
   LocationRegionId,
 } from "@/data/locations/types";

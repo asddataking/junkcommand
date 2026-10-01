@@ -435,6 +435,13 @@ export const HOMEPAGE_FAQS: Faq[] = [
       "Yes. Junk Command is a licensed, bonded, and insured junk removal company based in Port Huron. Our veteran-owned crew is trained to protect floors, walls, and driveways. Proof of insurance is available on request for property managers and HOAs.",
     category: "general",
   },
+  {
+    id: "home-city-bulk",
+    question: "Does Port Huron city trash or bulk pickup take junk?",
+    answer:
+      "The City of Port Huron’s residential refuse program includes limited bulky items with regular curbside collection — typically one bulk item per household per week when it is already at the curb and follows city rules. That can cover a single sofa or appliance. Call Junk Command when the pile is larger than one item, still inside the house, construction debris, a garage or estate cleanout, or you need it gone this week. Curbside Command starts at $99 when qualifying items are already outside. Full-service Command starts at $129 when we carry items out. See our Port Huron trash and bulk pickup page for the city-vs-hauler breakdown.",
+    category: "areas",
+  },
 ];
 
 export function getHomepageFaqs(): Faq[] {

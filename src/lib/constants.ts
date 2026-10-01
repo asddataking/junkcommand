@@ -146,6 +146,7 @@ export const FOOTER_LINKS = {
     { label: "Home", href: "/" },
     { label: "About Us", href: "/about" },
     { label: "Contact", href: "/contact" },
+    { label: "Port Huron Trash & Bulk Pickup", href: "/port-huron-trash-bulk-pickup" },
     { label: LABOR_POOL.label, href: LABOR_POOL.href },
   ],
   services: [

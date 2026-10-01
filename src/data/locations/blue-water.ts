@@ -25,6 +25,16 @@ export const BLUE_WATER_LOCATIONS: LocationPage[] = [
       "Pricing here is the same as the rest of the site: curbside starts at $99 when qualifying items are already outside, and full-service starts at $129 when we carry items out. Larger Port Huron piles are quoted by truck volume from photos. You approve the number before we load. We do not publish a street address because this is a service-area business — the crew comes to you.",
       "Same-day or next-day windows may be available when the load fits a route already in town. Call or text 810-242-0429 or use the free estimate form on this page. Nearby we also run [Fort Gratiot](/service-areas/fort-gratiot), [Marysville](/service-areas/marysville), [Kimball Township](/service-areas/kimball-township), [St. Clair](/service-areas/st-clair), and [Smiths Creek](/service-areas/smiths-creek).",
     ],
+    localContext: {
+      municipality:
+        "City of Port Huron, the county seat of St. Clair County, Michigan.",
+      neighborhoods:
+        "Jobs here run through downtown on Military Street and Huron Avenue (the Military Road Historic District), Pine Grove, Lakeside along Gratiot, and the Black River canal area near SC4. Older housing, rentals, and lakefront blocks all sit inside the city limits — not a neighboring township.",
+      landmarks:
+        "Well-known markers include the Blue Water Bridge, Pine Grove Park and the Huron Lightship, Lakeside Park and Beach, Lighthouse Park with the Fort Gratiot Light Station (in Port Huron, not Fort Gratiot Township), McMorran Place, and the Thomas Edison Depot Museum.",
+      disposal:
+        "The City of Port Huron’s residential refuse program includes limited bulky items with regular curbside collection — typically one bulk item per household per week, including furniture and many appliances, when the item is at the curb and follows city rules. Check the current City DPW refuse page for set-out rules; we do not publish pickup days here because they change. Construction debris, garage and estate cleanouts, items still inside the house, and piles larger than that one-item limit are when a junk hauler is the better fit. St. Clair County’s landfill is Smiths Creek Landfill on Smiths Creek Road. See [Port Huron trash & bulk pickup](/port-huron-trash-bulk-pickup).",
+    },
     featuredServiceSlugs: [...SERVICE_PRESETS.urban],
     servicesIntro:
       "Most Port Huron calls mix household junk with bulky pieces that will not go in the weekly cart. We take sofas, mattresses, refrigerators, washers, boxed clutter, and garage overflow from the room where it sits. A [garage cleanout](/garage-cleanout) is often the fastest way to get a house back in usable shape before a move or remodel.",
@@ -69,6 +79,11 @@ export const BLUE_WATER_LOCATIONS: LocationPage[] = [
         answer:
           "Yes. Photos are the fastest way to get a useful quote. Text them to 810-242-0429 or use the free estimate form on this page.",
       },
+      {
+        question: "Does Port Huron city trash pickup take junk?",
+        answer:
+          "The City of Port Huron’s residential program includes limited bulky items with regular curbside collection, typically one bulk item per household per week when it is at the curb and follows city rules. Call Junk Command when the pile is larger than that, still inside the house, construction debris, a garage or estate cleanout, or you need it gone this week. See our Port Huron trash and bulk pickup page.",
+      },
     ],
     images: buildLocationImages("Port Huron", "the Blue Water Area", "urban"),
   },
@@ -92,6 +107,16 @@ export const BLUE_WATER_LOCATIONS: LocationPage[] = [
       "Curbside pickup starts at $99 when items are already outside. Full-service starts at $129 when we come inside. Cottage cleanouts and packed garages are quoted by volume from photos. Fort Gratiot is minutes from our Port Huron base, so it is a regular route, not a long-haul appointment.",
       "We also run [Port Huron](/service-areas/port-huron), [Marysville](/service-areas/marysville), [Kimball Township](/service-areas/kimball-township), [Smiths Creek](/service-areas/smiths-creek), and [St. Clair](/service-areas/st-clair). Call or text 810-242-0429 or use the free estimate form.",
     ],
+    localContext: {
+      municipality:
+        "Fort Gratiot Charter Township, St. Clair County, immediately north of the City of Port Huron.",
+      neighborhoods:
+        "Residential and commercial streets cluster along 24th Avenue (M-25 / Pine Grove Avenue), with lakeshore homes off Lakeshore Road and quieter township roads toward Keewahdin, Krafft, and State Road.",
+      landmarks:
+        "The 24th Avenue commercial corridor is anchored by Birchwood Mall. Fort Gratiot County Park sits on Lake Huron with a public beach and boardwalk. The Fort Gratiot Light Station is a nearby Port Huron landmark, not inside the township line.",
+      disposal:
+        "Fort Gratiot Township contracts township-wide residential trash, recycling, and seasonal yard waste. The township’s published bulk rule is one bulk item per household with regular pickup (furniture such as mattresses, couches, and tables). Metal and Freon appliances typically have to be arranged with the township’s hauler rather than left as ordinary trash. Confirm current rules with the township. Large volumes, construction debris, and items still inside the house are junk-hauler jobs. County disposal is Smiths Creek Landfill.",
+    },
     featuredServiceSlugs: [...SERVICE_PRESETS.waterfront],
     servicesIntro:
       "Fort Gratiot customers most often need [furniture removal](/furniture-removal), [appliance removal](/appliance-removal), garage resets, and outdoor items after lake weather. We also handle [construction debris](/construction-debris-removal) that the weekly cart will not take and larger [estate cleanouts](/estate-cleanout) when a house needs to be emptied.",
@@ -136,6 +161,11 @@ export const BLUE_WATER_LOCATIONS: LocationPage[] = [
         answer:
           "Fort Gratiot is minutes from our Port Huron base. Same-day or next-day service may be available depending on the schedule.",
       },
+      {
+        question: "Does Fort Gratiot Township pick up bulk junk?",
+        answer:
+          "The township’s contracted residential program allows a limited bulk item with regular pickup. Metal and Freon appliances typically have to be arranged with the township’s hauler. Confirm current rules with Fort Gratiot Township. Call us for large volumes, construction debris, or items we carry out of the house.",
+      },
     ],
     images: buildLocationImages(
       "Fort Gratiot",
@@ -163,6 +193,15 @@ export const BLUE_WATER_LOCATIONS: LocationPage[] = [
       "Marysville pricing uses the same published floors: curbside from $99 and full-service from $129, then volume for larger piles. Photos of the furniture, appliances, or garage get you a confirmed range. You approve the price before we load. This is still a service-area pickup — we come to the house; there is no shop counter to visit.",
       "Same-day or next-day service may be available when Marysville fits that day’s river route. Call or text 810-242-0429 or open the free estimate form. We also serve [Fort Gratiot](/service-areas/fort-gratiot), [Kimball Township](/service-areas/kimball-township), [Marine City](/service-areas/marine-city), and [Romeo](/service-areas/romeo).",
     ],
+    localContext: {
+      municipality: "City of Marysville, St. Clair County, south of Port Huron on the St. Clair River.",
+      neighborhoods:
+        "Established neighborhoods sit off Huron Boulevard and Wills Road, with riverfront streets along Busha Highway and business pockets on Gratiot and Michigan Avenue.",
+      landmarks:
+        "Chrysler Beach and the city riverfront, Marysville City Park on East Huron Boulevard, Veterans Park, the living-shoreline boardwalk along River Road, and Morton Park on Busha Highway are the markers most residents use.",
+      disposal:
+        "The City of Marysville collects bulky items with regular residential trash when they are at the curb and follow city rules. Construction materials, auto parts, and hazardous items are not a city-cart job — the city points residents to St. Clair County landfill information for those. Confirm current set-out rules with Marysville Public Services. Garage cleanouts, remodel debris, and more than a curb pile are when to call Junk Command. County disposal is Smiths Creek Landfill.",
+    },
     featuredServiceSlugs: [...SERVICE_PRESETS.village],
     servicesIntro:
       "Typical Marysville loads include sofas, mattresses, washers and dryers, basement boxes, and garage overflow. We also handle [appliance removal](/appliance-removal) after a delivery and [garage cleanouts](/garage-cleanout) before a remodel. Light [construction debris](/construction-debris-removal) can ride along when it is non-hazardous and mixed with household junk.",
@@ -208,6 +247,11 @@ export const BLUE_WATER_LOCATIONS: LocationPage[] = [
         answer:
           "Use the free estimate form on this page or text photos to 810-242-0429. Include access notes if items are in a basement or tight garage.",
       },
+      {
+        question: "Does Marysville pick up bulky items with city trash?",
+        answer:
+          "Yes — the City of Marysville collects bulky items with regular residential trash when they are at the curb and follow city rules. Construction materials and large indoor piles are not a city-cart job. Confirm current rules with Marysville Public Services, or send photos if you want Junk Command to carry it out.",
+      },
     ],
     images: buildLocationImages(
       "Marysville",
@@ -235,6 +279,16 @@ export const BLUE_WATER_LOCATIONS: LocationPage[] = [
       "Rural Kimball quotes still start from the published floors: curbside from $99 and full-service from $129. Multi-building cleanouts are priced by volume and may take more than one load. Photos of the driveway, the buildings, and the pile get you a number before we roll west of Port Huron. You approve the price before we load.",
       "Same-day or next-day service may be available on our everyday Blue Water routes. Call or text 810-242-0429 or use the free estimate form. We also serve [Marysville](/service-areas/marysville) and [St. Clair](/service-areas/st-clair).",
     ],
+    localContext: {
+      municipality:
+        "Kimball Township, St. Clair County, west of Port Huron. Wadhams and Smiths Creek are communities in the township.",
+      neighborhoods:
+        "The township mixes subdivision streets with acreage along Lapeer Road, Range Road, Allen Road, Wadhams, Smiths Creek, and the I-69 corridor — not a single downtown grid.",
+      landmarks:
+        "St. Clair County International Airport is in Kimball Township. Smiths Creek Landfill, the county’s municipal landfill, is on Smiths Creek Road in the Smiths Creek community of the township.",
+      disposal:
+        "Kimball Township does not run a township-wide trash contract. Residents hire their own licensed hauler, so bulk rules depend on that company. The township sometimes hosts cleanup dumpster events at the township office; those are occasional, not weekly curbside. Public and commercial customers can take acceptable municipal solid waste to Smiths Creek Landfill. Construction debris, barns, and multi-building piles are junk-hauler work.",
+    },
     featuredServiceSlugs: [...SERVICE_PRESETS.rural],
     servicesIntro:
       "Kimball jobs lean toward [garage cleanouts](/garage-cleanout), barn and shed contents, [estate cleanouts](/estate-cleanout), and mixed household junk. [Furniture removal](/furniture-removal) and [appliance removal](/appliance-removal) are usually part of the same load when a family is clearing an inherited property.",
@@ -284,6 +338,11 @@ export const BLUE_WATER_LOCATIONS: LocationPage[] = [
         answer:
           "Kimball is on our everyday Blue Water routes. Same-day or next-day service may be available depending on the schedule.",
       },
+      {
+        question: "Does Kimball Township pick up bulk junk at the curb?",
+        answer:
+          "No township-wide trash contract. Residents hire their own licensed hauler, so bulk rules depend on that company. The township sometimes hosts cleanup dumpster events. Smiths Creek Landfill on Smiths Creek Road is the county landfill. Call Junk Command for barns, construction debris, and multi-building piles.",
+      },
     ],
     images: buildLocationImages(
       "Kimball Township",
@@ -313,6 +372,16 @@ export const BLUE_WATER_LOCATIONS: LocationPage[] = [
       "Addresses people call Smiths Creek are often on Smiths Creek Road, Range Road, or the grid west of Wadhams — a house, a garage, and at least one extra building. If your mail says Kimball Township but you tell neighbors you live in Smiths Creek, use this page. The [Kimball Township](/service-areas/kimball-township) page is the broader township stop. This one is for the 48074 community people actually name when they call.",
       "Same-day or next-day windows may be available when Smiths Creek fits a west-county route already leaving Port Huron. Call or text 810-242-0429 or use the free estimate form. Nearby we also serve [Port Huron](/service-areas/port-huron), [Marysville](/service-areas/marysville), and [Fort Gratiot](/service-areas/fort-gratiot).",
     ],
+    localContext: {
+      municipality:
+        "Smiths Creek is an unincorporated community in Kimball Township, St. Clair County (ZIP 48074) — not its own city.",
+      neighborhoods:
+        "Addresses people call Smiths Creek are often on Smiths Creek Road, Range Road, or the grid west of Wadhams: a house, a garage, and often an extra outbuilding set back from the road.",
+      landmarks:
+        "Smiths Creek Landfill (St. Clair County Environmental Services) is the area landfill, on Smiths Creek Road. It is the county facility that receives municipal solid waste from commercial haulers and the public.",
+      disposal:
+        "There is no city bulk-pickup program here because Smiths Creek is not a city. Household trash is whatever private hauler the property uses under Kimball Township’s hire-your-own-hauler model. Residents and haulers can take acceptable waste to Smiths Creek Landfill; hours and accepted materials are on the county landfill page. Barn contents, construction debris, and whole-property piles are why people call Junk Command instead of making landfill runs.",
+    },
     featuredServiceSlugs: [...SERVICE_PRESETS.rural],
     servicesIntro:
       "Smiths Creek calls lean toward packed garages, barn overflow, mixed household junk, and bulky furniture that never made it to the curb. Combining [furniture removal](/furniture-removal) with [appliance removal](/appliance-removal) is common when a family is clearing an inherited lot. A [garage cleanout](/garage-cleanout) is often the first visit that tells us whether the house itself needs an [estate cleanout](/estate-cleanout).",
@@ -362,6 +431,11 @@ export const BLUE_WATER_LOCATIONS: LocationPage[] = [
         answer:
           "Use the free estimate form on this page or text photos to 810-242-0429. Include the driveway and any buildings that need to be cleared.",
       },
+      {
+        question: "Is Smiths Creek Landfill in Smiths Creek?",
+        answer:
+          "Yes. Smiths Creek Landfill is St. Clair County’s municipal landfill on Smiths Creek Road in this community. It accepts municipal solid waste from commercial haulers and the public. There is no city bulk-pickup program because Smiths Creek is not a city. Residents use a private hauler or the landfill; we haul the piles you do not want to trailer yourself.",
+      },
     ],
     images: buildLocationImages(
       "Smiths Creek",
@@ -389,6 +463,15 @@ export const BLUE_WATER_LOCATIONS: LocationPage[] = [
       "St. Clair jobs use the same pricing model: curbside from $99, full-service from $129, then volume for larger piles. Riverfront parking and long carries can affect the quote, which is why photos of the path out matter. You approve the number before we load. We come to the property — this is not a drop-off shop.",
       "Call or text 810-242-0429 or open the free estimate form. We also run [Fort Gratiot](/service-areas/fort-gratiot), [Kimball Township](/service-areas/kimball-township), and [Marine City](/service-areas/marine-city) downriver.",
     ],
+    localContext: {
+      municipality: "City of St. Clair, St. Clair County, on the St. Clair River south of Marysville.",
+      neighborhoods:
+        "Historic and riverfront homes cluster near downtown and M-29 / Riverside, with residential streets branching west from Clinton Avenue and Range Road.",
+      landmarks:
+        "Palmer Park and the St. Clair River boardwalk sit next to downtown. Rotary Park follows the Pine River off Clinton Avenue. Freighter watching from the boardwalk is the local landmark most people name.",
+      disposal:
+        "The City of St. Clair has a bulky-item program through its waste contractor. Large furniture and many appliances can go to the curb when they follow the city’s current rules; construction materials, hazardous waste, and tires generally do not. Confirm pickup with the city or its hauler — we do not list days here because programs change. Whole-house cleanouts and remodel debris are junk-hauler jobs. County disposal is Smiths Creek Landfill.",
+    },
     featuredServiceSlugs: [...SERVICE_PRESETS.waterfront],
     servicesIntro:
       "St. Clair pickups often include sofas, dining sets, appliances from riverfront homes, patio furniture after storms, and garage overflow before a listing. We also handle [appliance removal](/appliance-removal) and [garage cleanouts](/garage-cleanout) without leaving debris on a visible driveway.",
@@ -433,6 +516,11 @@ export const BLUE_WATER_LOCATIONS: LocationPage[] = [
         answer:
           "Send photos through the free estimate form or text 810-242-0429. We confirm pricing before we load.",
       },
+      {
+        question: "Does the City of St. Clair pick up bulky items?",
+        answer:
+          "The city has a bulky-item program through its waste contractor for furniture and many appliances that follow current rules. Construction materials and hazardous waste generally are not accepted. Confirm with the city or its hauler. Call Junk Command for whole-house cleanouts, remodel debris, or items still inside.",
+      },
     ],
     images: buildLocationImages(
       "St. Clair",
@@ -462,6 +550,16 @@ export const BLUE_WATER_LOCATIONS: LocationPage[] = [
       "Summer traffic on M-29 and the ferry-area blocks near Water Street change how we stage a truck. Tell us if the pickup is downtown versus west of the river corridor so we do not plan the wrong parking. We are not a Broadway storefront. We roll down from Port Huron, load, and leave the curb clean.",
       "Same-day or next-day windows may be available when Marine City fits that day’s river route. Call or text 810-242-0429 or use the free estimate form on this page. We also run [Port Huron](/service-areas/port-huron) and upriver stops on the same map.",
     ],
+    localContext: {
+      municipality:
+        "City of Marine City, St. Clair County, at the confluence of the St. Clair and Belle rivers.",
+      neighborhoods:
+        "Broadway and Water Street shape downtown. Neighborhoods stretch west from the river along the M-29 corridor, with compact lots, older stairs, and cottages rather than a suburban subdivision grid.",
+      landmarks:
+        "The Bluewater Ferry runs between Marine City and Sombra, Ontario, from the Water Street riverfront. Historic downtown Broadway is the walkable commercial strip.",
+      disposal:
+        "Marine City contracts residential garbage, recycling, and yard waste. Bulky appliances and large goods typically have to be arranged with the city’s contractor rather than left with regular bags. Construction debris and whole-cottage cleanouts are outside that program. Confirm current rules with the city. County disposal is Smiths Creek Landfill.",
+    },
     featuredServiceSlugs: [...SERVICE_PRESETS.waterfront],
     servicesIntro:
       "Typical Marine City loads are sofas, mattresses, refrigerators, washers, patio furniture after a windy stretch, basement boxes, and garage overflow. [Hot tub removal](/hot-tub-removal) comes up on river lots when a dead spa is blocking a deck. A single appliance is still worth a call if you do not want to walk it down porch steps yourself.",
@@ -504,6 +602,11 @@ export const BLUE_WATER_LOCATIONS: LocationPage[] = [
         question: "Is same-day service available?",
         answer:
           "Same-day or next-day service may be available depending on the schedule and how Marine City fits that day’s river-town route. Send photos and your timeline.",
+      },
+      {
+        question: "Does Marine City pick up bulky appliances with regular trash?",
+        answer:
+          "Usually no — bulky appliances and large goods typically have to be arranged with the city’s contracted hauler rather than left with regular bags. Confirm current rules with Marine City. Call Junk Command when you want items carried out of the house this week, or when the load is a cottage or garage cleanout.",
       },
     ],
     images: buildLocationImages(

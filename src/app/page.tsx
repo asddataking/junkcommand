@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { SiteShell } from "@/components/layout/SiteShell";
 import { HomepageBookingProvider } from "@/components/home/HomepageBookingContext";
 import { Hero } from "@/components/sections/Hero";
@@ -23,6 +24,15 @@ import {
   getHowToSchema,
   getServiceCatalogSchema,
 } from "@/lib/schema";
+
+const HOME_TITLE =
+  "Junk Removal Port Huron & St. Clair County, MI | Curbside Pickup From $99";
+
+export const metadata: Metadata = {
+  title: { absolute: HOME_TITLE },
+  openGraph: { title: HOME_TITLE },
+  twitter: { title: HOME_TITLE },
+};
 
 export default function Home() {
   return (

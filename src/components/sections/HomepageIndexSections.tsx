@@ -59,6 +59,18 @@ export function HomepageIndexSections() {
               route already moving through town.
             </p>
             <p>
+              Not sure whether the city cart is enough?{" "}
+              <Link
+                href="/port-huron-trash-bulk-pickup"
+                className="font-semibold text-bright hover:text-white"
+              >
+                Port Huron trash &amp; bulk pickup
+              </Link>{" "}
+              explains when curbside bulk covers a single item and when to call
+              a junk hauler for large volumes, appliances, construction debris,
+              cleanouts, or same-week timing.
+            </p>
+            <p>
               Call or text{" "}
               <a
                 href={BRAND.phoneHref}

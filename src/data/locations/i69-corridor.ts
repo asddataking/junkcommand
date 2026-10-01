@@ -85,6 +85,15 @@ export const I69_CORRIDOR_LOCATIONS: LocationPage[] = [
       "M-53 south of town is the road people take toward Romeo; I-69 is the road we take from Port Huron. Village lots near downtown need alley or street parking notes. Properties a few minutes out toward Capac or Attica need driveway photos. We will not quote Imlay City as if it were a Port Huron neighborhood — the drive is real, and the window follows the westbound route.",
       "Call or text 810-242-0429 or use the free estimate form. Include a shot of the driveway or alley if parking is tight downtown. Nearby indexed pages include [Lapeer](/service-areas/lapeer), [Port Huron](/service-areas/port-huron), and [Romeo](/service-areas/romeo) on the M-53 side of the map.",
     ],
+    localContext: {
+      municipality: "City of Imlay City, Lapeer County (ZIP 48444), at I-69 and M-53.",
+      neighborhoods:
+        "Downtown and neighborhood streets sit close together around Main Street. A few minutes out, lots open into farm roads toward Capac and Attica.",
+      landmarks:
+        "The Eastern Michigan State Fairgrounds is in Imlay City. I-69 is the road from Port Huron; M-53 is the road south toward Romeo.",
+      disposal:
+        "Imlay City publishes residential trash, recycling, and seasonal yard-waste and brush programs for city residents. Confirm current set-out rules with City Hall — we do not list pickup days here. The city’s program is for household trash and yard waste, not construction debris or a packed garage. Whole-house piles and remodel scrap are junk-hauler jobs. Imlay City is in Lapeer County, not the Smiths Creek Landfill service area in St. Clair County.",
+    },
     featuredServiceSlugs: [...SERVICE_PRESETS.village],
     servicesIntro:
       "Imlay City requests most often include sofas, mattresses, refrigerators, washers, boxed clutter, and garage resets. Combining furniture and appliances in one visit is usual. A [garage cleanout](/garage-cleanout) is the fastest way to see whether the house itself needs a full [estate cleanout](/estate-cleanout). Downtown alleys and farm drives both show up; photos of parking keep the quote honest.",
@@ -127,6 +136,11 @@ export const I69_CORRIDOR_LOCATIONS: LocationPage[] = [
         question: "How do I get an estimate?",
         answer:
           "Use the free estimate form on this page or text photos to 810-242-0429. Include parking if downtown access is tight. Imlay City is a westbound I-69 stop from Port Huron, not a same-day promise by default.",
+      },
+      {
+        question: "Does Imlay City pick up construction debris or a packed garage?",
+        answer:
+          "Imlay City publishes residential trash and seasonal yard-waste and brush programs for city residents. That is household trash and yard waste, not construction debris or a whole-house pile. Confirm current rules with City Hall. Call Junk Command for remodel scrap, estate contents, and garage cleanouts.",
       },
     ],
     images: buildLocationImages(
@@ -219,6 +233,15 @@ export const I69_CORRIDOR_LOCATIONS: LocationPage[] = [
       "Downtown Lapeer and the blocks around the county courthouse are older mixed-use buildings: apartments over storefronts, tight stairs, and alley parking that does not love a long trailer. Neighborhoods off M-24 are more likely to be a ranch with an attached garage, a rental that needs to be empty between tenants, or a house where an estate left rooms of furniture that will not fit in a weekly cart. If you are in Lapeer Township or just off I-69 rather than downtown, say so when you send photos. The quote is volume plus access, not a Lapeer surcharge we made up.",
       "Call or text 810-242-0429 or use the free estimate form. Same-day is not guaranteed at this distance; next available westbound window is the honest answer. Indexed neighbors include [Imlay City](/service-areas/imlay-city), [Romeo](/service-areas/romeo) down M-53, and [Port Huron](/service-areas/port-huron) as home base.",
     ],
+    localContext: {
+      municipality: "City of Lapeer, the county seat of Lapeer County, on M-24 and I-69.",
+      neighborhoods:
+        "Downtown mixed-use blocks sit around the courthouse square. Neighborhoods and rentals spread off M-24, with Lapeer Township and I-69 properties just outside the city — say which one you are in when you send photos.",
+      landmarks:
+        "The Lapeer County Courthouse is Michigan’s oldest operating courthouse still serving its original purpose, a Greek Revival building on Courthouse Square / West Nepessing Street listed on the National Register of Historic Places.",
+      disposal:
+        "The City of Lapeer does not run municipal trash pickup. Residents and businesses hire a city-licensed private hauler, so bulk rules depend on that company. Construction debris, rental turnovers, and estate contents are junk-hauler jobs. Lapeer is in Lapeer County, not St. Clair County’s Smiths Creek Landfill program.",
+    },
     featuredServiceSlugs: [...SERVICE_PRESETS.countySeat],
     servicesIntro:
       "Lapeer customers book sofas, mattresses, refrigerators, garage resets, and leftover rental contents. Combining furniture and appliances in one visit is usual. Landlords often pair tenant leftovers with a broader cleanout so the unit is actually rentable again.",
@@ -261,6 +284,11 @@ export const I69_CORRIDOR_LOCATIONS: LocationPage[] = [
         question: "How do I book?",
         answer:
           "Use the free estimate form on this page or text photos to 810-242-0429. Include your address and any deadline. We quote from Port Huron before we drive west on I-69.",
+      },
+      {
+        question: "Does the City of Lapeer pick up bulk junk?",
+        answer:
+          "No. Lapeer residents hire a city-licensed private hauler, so bulk rules depend on that company. Call Junk Command for rental turnovers, estate contents, construction debris, and loads you do not want to stage at the curb.",
       },
     ],
     images: buildLocationImages(

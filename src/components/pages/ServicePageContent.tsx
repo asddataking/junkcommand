@@ -15,6 +15,7 @@ import { TrustBar } from "@/components/sections/TrustBar";
 import { MediaImage } from "@/components/ui/MediaImage";
 import { FreeEstimateButton } from "@/components/forms/FreeEstimateButton";
 import { PhoneLink } from "@/components/forms/PhoneLink";
+import { AreasWeServe } from "@/components/shared/AreasWeServe";
 
 const AREA_PAGES = pagesInGroup("areas");
 
@@ -174,6 +175,8 @@ export function ServicePageContent({ service }: { service: Service }) {
               </p>
             </div>
 
+            <AreasWeServe />
+
             <div>
               <h2 className="font-display text-3xl tracking-[0.06em] text-white sm:text-4xl">
                 {service.title.toUpperCase()} FAQS
@@ -192,7 +195,7 @@ export function ServicePageContent({ service }: { service: Service }) {
             />
             <div className="rounded-[2px] border border-[rgba(0,135,255,0.3)] bg-card p-5">
               <h2 className="font-display text-xl tracking-[0.08em] text-white">
-                SERVICE AREAS
+                AREAS WE SERVE
               </h2>
               <ul className="mt-4 space-y-2">
                 {AREA_PAGES.map((city) => (
@@ -206,6 +209,14 @@ export function ServicePageContent({ service }: { service: Service }) {
                   </li>
                 ))}
               </ul>
+              <p className="mt-4 text-sm text-muted">
+                <Link
+                  href="/port-huron-trash-bulk-pickup"
+                  className="text-bright hover:text-white"
+                >
+                  Port Huron trash &amp; bulk pickup →
+                </Link>
+              </p>
             </div>
           </div>
         </div>
