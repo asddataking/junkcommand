@@ -22,6 +22,14 @@ export type LocationFaq = {
   answer: string;
 };
 
+/** Verifiable local notes for indexed city pages. Omit anything that is not sourced. */
+export type LocationLocalContext = {
+  municipality: string;
+  neighborhoods: string;
+  landmarks: string;
+  disposal: string;
+};
+
 export type LocationPage = {
   slug: string;
   name: string;
@@ -34,6 +42,7 @@ export type LocationPage = {
   eyebrow: string;
   heroIntro: string;
   localIntro: string[];
+  localContext?: LocationLocalContext;
   featuredServiceSlugs: string[];
   servicesIntro: string;
   cleanoutHeading: string;

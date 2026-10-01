@@ -17,6 +17,7 @@ import {
 import { SERVICES } from "@/data/services";
 import { CITIES } from "@/data/cities";
 import { KEPT_CITY_SLUGS, KEPT_SERVICE_SLUGS } from "@/data/indexing";
+import { SCHEMA_SERVICE_AREAS } from "@/data/homepage-service-areas";
 import { hasReviews, AGGREGATE, REVIEWS } from "@/data/reviews";
 import { getLocationGeo } from "@/data/locations/geo";
 import {
@@ -71,12 +72,22 @@ function getAreaServed() {
   const fromCities = KEPT_CITIES.map((city) => ({
     "@type": city.isCounty ? "AdministrativeArea" : "City",
     name: city.name,
+    containedInPlace: {
+      "@type": "AdministrativeArea",
+      name: city.county,
+    },
   }));
 
-  const extras = [
-    { "@type": "AdministrativeArea", name: "St. Clair County" },
-    { "@type": "AdministrativeArea", name: "Blue Water Area" },
-  ];
+  const extraNames = SCHEMA_SERVICE_AREAS.filter(
+    (name) => !KEPT_CITIES.some((city) => city.name === name),
+  );
+
+  const extras = extraNames.map((name) => ({
+    "@type": /township|county|area/i.test(name)
+      ? "AdministrativeArea"
+      : "City",
+    name,
+  }));
 
   return [getGeoCircle(), ...fromCities, ...extras];
 }
@@ -151,7 +162,7 @@ export function getLocalBusinessSchema() {
     alternateName: ["Junk Command Junk Removal", "Junk Command Port Huron"],
     additionalType: "https://schema.org/WasteManagement",
     description:
-      "Fast, professional junk removal in Port Huron, Marysville, Fort Gratiot, and throughout St. Clair County and the Blue Water Area. Curbside pickup from $99; full-service from $129.",
+      "Fast, professional junk removal in Port Huron, Marysville, Fort Gratiot, and throughout St. Clair County and the Blue Water Area. Serving Port Huron, Fort Gratiot Township, Marysville, Kimball Township, St. Clair, Marine City, Smiths Creek, Romeo, Imlay City, and Lapeer. Curbside pickup from $99; full-service from $129.",
     url: SITE_URL,
     telephone: PHONE_E164,
     email: BRAND.email,

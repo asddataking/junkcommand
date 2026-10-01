@@ -49,10 +49,12 @@ export function Hero() {
           </BlurFade>
 
           <BlurFade delay={0.05} inView={false}>
-            <h1 className="font-display text-[clamp(3.25rem,10vw,5.75rem)] leading-[0.9] tracking-[0.04em] text-white">
-              JUNK REMOVAL
+            <h1 className="font-display text-[clamp(2.35rem,8vw,4.75rem)] leading-[0.92] tracking-[0.04em] text-white">
+              Junk Removal in
               <br />
-              <span className="text-bright">IN PORT HURON</span>
+              <span className="text-bright">Port Huron</span>
+              <br />
+              &amp; St. Clair County, MI
             </h1>
           </BlurFade>
 

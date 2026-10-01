@@ -24,8 +24,8 @@ export function HomepageFaq() {
             JUNK REMOVAL FAQS
           </h2>
           <p className="mx-auto mt-3 max-w-2xl text-muted">
-            Straight answers about Port Huron junk hauling, pricing, and what we
-            take — from a local crew that shows up ready.
+            Straight answers about Port Huron junk hauling, pricing, city bulk
+            pickup, and what we take — from a local crew that shows up ready.
           </p>
         </BlurFade>
 
@@ -37,8 +37,15 @@ export function HomepageFaq() {
           Still have a question? See{" "}
           <Link href="/what-we-take" className="font-semibold text-bright hover:text-white">
             what we take
-          </Link>{" "}
-          or{" "}
+          </Link>
+          ,{" "}
+          <Link
+            href="/port-huron-trash-bulk-pickup"
+            className="font-semibold text-bright hover:text-white"
+          >
+            Port Huron trash &amp; bulk pickup
+          </Link>
+          , or{" "}
           <Link href="/contact" className="font-semibold text-bright hover:text-white">
             contact the Port Huron crew
           </Link>

@@ -36,9 +36,9 @@ const ibmPlexSans = IBM_Plex_Sans({
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Junk Removal Port Huron, MI | Curbside Pickup From $99 | Junk Command",
+  title: "Junk Removal in Port Huron & St. Clair County, MI | Junk Command",
   description:
-    "Affordable junk removal in Port Huron and the Blue Water Area. Curbside pickup starts at $99 and full-service removal starts at $129. Send photos for a confirmed price.",
+    "Affordable junk removal in Port Huron and St. Clair County, MI. Curbside pickup starts at $99 and full-service removal starts at $129. Send photos for a confirmed price.",
   alternates: {
     canonical: SITE_URL,
     types: {
@@ -54,9 +54,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: SITE_URL,
-    title: "Junk Removal Port Huron, MI | Curbside Pickup From $99 | Junk Command",
+    title: "Junk Removal in Port Huron & St. Clair County, MI | Junk Command",
     description:
-      "Affordable junk removal in Port Huron and the Blue Water Area. Curbside pickup starts at $99 and full-service removal starts at $129. Send photos for a confirmed price.",
+      "Affordable junk removal in Port Huron and St. Clair County, MI. Curbside pickup starts at $99 and full-service removal starts at $129. Send photos for a confirmed price.",
     siteName: "Junk Command",
     images: [
       {
@@ -69,9 +69,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Junk Removal Port Huron, MI | Curbside Pickup From $99 | Junk Command",
+    title: "Junk Removal in Port Huron & St. Clair County, MI | Junk Command",
     description:
-      "Curbside junk pickup from $99 and full-service from $129 in Port Huron & the Blue Water Area.",
+      "Curbside junk pickup from $99 and full-service from $129 in Port Huron & St. Clair County, MI.",
     images: [SOCIAL_SHARE_IMAGE],
   },
   robots: {

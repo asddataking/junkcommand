@@ -5,7 +5,7 @@ import { getNearbyLocations } from "@/data/locations";
 import { getLocationGeo } from "@/data/locations/geo";
 import { getServiceBySlug } from "@/data/services";
 import { getReviewsByCity, getFeaturedReviews } from "@/data/reviews";
-import { isKeptServiceSlug } from "@/data/indexing";
+import { isKeptServiceSlug, KEPT_SERVICE_SLUGS } from "@/data/indexing";
 import { BRAND } from "@/lib/constants";
 import { CaptionedFigure } from "@/components/shared/CaptionedFigure";
 import { RichText, RichTextBlock } from "@/components/shared/RichText";
@@ -219,6 +219,50 @@ export function LocationIntro({
   );
 }
 
+function keptServicesForLocation(location: LocationPage) {
+  const featured = location.featuredServiceSlugs
+    .filter((slug) => isKeptServiceSlug(slug))
+    .map((slug) => getServiceBySlug(slug))
+    .filter((service): service is NonNullable<typeof service> => Boolean(service));
+  const extras = KEPT_SERVICE_SLUGS.filter(
+    (slug) => !featured.some((service) => service.slug === slug),
+  )
+    .map((slug) => getServiceBySlug(slug))
+    .filter((service): service is NonNullable<typeof service> => Boolean(service));
+  return [...featured, ...extras];
+}
+
+export function LocationLocalContext({ location }: { location: LocationPage }) {
+  const context = location.localContext;
+  if (!context) return null;
+
+  return (
+    <div>
+      <h2 className="font-display text-3xl tracking-[0.06em] text-white sm:text-4xl">
+        AROUND {location.name.toUpperCase()}
+      </h2>
+      <div className="mt-4 space-y-4 text-base leading-relaxed text-muted">
+        <p>
+          <span className="font-semibold text-white">Township / city: </span>
+          {context.municipality}
+        </p>
+        <p>
+          <span className="font-semibold text-white">Neighborhoods: </span>
+          {context.neighborhoods}
+        </p>
+        <p>
+          <span className="font-semibold text-white">Landmarks: </span>
+          {context.landmarks}
+        </p>
+        <div>
+          <span className="font-semibold text-white">Trash &amp; bulk pickup: </span>
+          <RichText text={context.disposal} className="mt-1 leading-relaxed text-muted" />
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export function LocationServices({
   location,
   visual = false,
@@ -228,10 +272,7 @@ export function LocationServices({
   visual?: boolean;
   compact?: boolean;
 }) {
-  const services = location.featuredServiceSlugs
-    .filter((slug) => isKeptServiceSlug(slug))
-    .map((slug) => getServiceBySlug(slug))
-    .filter((service): service is NonNullable<typeof service> => Boolean(service));
+  const services = keptServicesForLocation(location);
   const photo = imageByRole(location, "services");
 
   return (
@@ -281,12 +322,24 @@ export function LocationServices({
           ))}
         </ul>
       )}
-      <Link
-        href="/#services"
-        className="mt-4 inline-block text-sm font-semibold text-bright hover:text-white"
-      >
-        Browse junk removal services →
-      </Link>
+      <p className="mt-4 text-sm text-muted">
+        Also see{" "}
+        <Link href="/commercial-junk-removal" className="text-bright hover:text-white">
+          commercial junk removal
+        </Link>
+        {" "}and{" "}
+        <Link href="/what-we-take" className="text-bright hover:text-white">
+          what we take
+        </Link>
+        . City carts vs. a hauler:{" "}
+        <Link
+          href="/port-huron-trash-bulk-pickup"
+          className="text-bright hover:text-white"
+        >
+          Port Huron trash &amp; bulk pickup
+        </Link>
+        .
+      </p>
     </div>
   );
 }

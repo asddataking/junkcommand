@@ -9,6 +9,7 @@ import {
   LocationHeroGallery,
   LocationHeroSplit,
   LocationIntro,
+  LocationLocalContext,
   LocationMap,
   LocationMidCta,
   LocationNearby,
@@ -16,6 +17,7 @@ import {
   LocationServices,
 } from "@/components/locations/LocationSections";
 import Link from "next/link";
+import { CityServiceLinks } from "@/components/shared/CityServiceLinks";
 
 function Sidebar({ location }: { location: LocationPage }) {
   return (
@@ -33,20 +35,9 @@ function Sidebar({ location }: { location: LocationPage }) {
           <LocationNearby location={location} compact heading={false} />
         </div>
         <div className="mt-4 space-y-2 border-t border-[rgba(0,135,255,0.15)] pt-4">
+          <CityServiceLinks cityName={location.name} compact />
           <Link href="/" className="block text-sm text-bright hover:text-white">
             Homepage →
-          </Link>
-          <Link
-            href="/furniture-removal"
-            className="block text-sm text-bright hover:text-white"
-          >
-            Furniture removal →
-          </Link>
-          <Link
-            href="/what-we-take"
-            className="block text-sm text-bright hover:text-white"
-          >
-            What we take →
           </Link>
         </div>
       </div>
@@ -63,6 +54,7 @@ function EditorialLayout({ location }: { location: LocationPage }) {
         <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[1fr_320px] lg:px-8">
           <div className="space-y-12">
             <LocationIntro location={location} />
+            <LocationLocalContext location={location} />
             <LocationServices location={location} />
             <LocationMidCta location={location} />
             <LocationCleanouts location={location} split />
@@ -88,6 +80,7 @@ function SplitLayout({ location }: { location: LocationPage }) {
         <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[1fr_320px] lg:px-8">
           <div className="space-y-12">
             <LocationIntro location={location} split withImage={false} />
+            <LocationLocalContext location={location} />
             <LocationMidCta location={location} />
             <LocationServices location={location} compact />
             <LocationCleanouts location={location} />
@@ -115,6 +108,7 @@ function GalleryLayout({ location }: { location: LocationPage }) {
         <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[1fr_320px] lg:px-8">
           <div className="space-y-12">
             <LocationIntro location={location} withImage={false} />
+            <LocationLocalContext location={location} />
             <LocationServices location={location} visual />
             <LocationMidCta location={location} />
             <LocationCleanouts location={location} band />

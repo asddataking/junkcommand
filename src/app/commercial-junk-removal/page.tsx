@@ -5,6 +5,7 @@ import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 import { CtaBanner } from "@/components/shared/CtaBanner";
 import { TrustBar } from "@/components/sections/TrustBar";
 import { FaqAccordion } from "@/components/shared/FaqAccordion";
+import { AreasWeServe } from "@/components/shared/AreasWeServe";
 import { Button } from "@/components/ui/Button";
 import { FreeEstimateButton } from "@/components/forms/FreeEstimateButton";
 import { BRAND, SITE_URL } from "@/lib/constants";
@@ -39,7 +40,7 @@ const pageFaqs = [
 ];
 
 export const metadata = buildPageMetadata({
-  title: "Commercial Junk Removal for Port Huron Businesses | Junk Command",
+  title: "Commercial Junk Removal in Port Huron & St. Clair County, MI | Junk Command",
   description:
     "Office, retail, rental, and light commercial junk hauling in Port Huron and St. Clair County. Photo quotes, volume pricing, and invoicing for local businesses.",
   path: "/commercial-junk-removal",
@@ -73,7 +74,7 @@ export default function CommercialJunkRemovalPage() {
             Businesses &amp; Property Pros
           </p>
           <h1 className="mt-3 max-w-3xl font-display text-4xl tracking-[0.06em] text-white sm:text-6xl">
-            COMMERCIAL JUNK REMOVAL FOR PORT HURON BUSINESSES
+            COMMERCIAL JUNK REMOVAL IN PORT HURON &amp; ST. CLAIR COUNTY, MI
           </h1>
           <p className="mt-4 max-w-2xl text-muted">
             Clear a storefront, rental, office, or job site without tying up
@@ -179,6 +180,9 @@ export default function CommercialJunkRemovalPage() {
               . We do not take hazardous waste, fuels, wet paint, asbestos, or
               medical waste.
             </p>
+          </div>
+          <div className="mt-12">
+            <AreasWeServe heading="Areas we serve" />
           </div>
           <h2 className="mt-12 font-display text-3xl tracking-[0.06em] text-white">
             COMMERCIAL FAQS

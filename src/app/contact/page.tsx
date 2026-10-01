@@ -40,6 +40,11 @@ const pageFaqs = [
     answer:
       "We price by how much space the load takes in the truck. Curbside Command starts at $99 when qualifying items are already outside. Full-service Command starts at $129 when we carry items out.",
   },
+  {
+    question: "Does Port Huron city trash pickup replace a junk hauler?",
+    answer:
+      "Not for large jobs. The City of Port Huron’s residential program includes limited bulky items with regular curbside collection when they are at the curb and follow city rules. Call Junk Command for large volumes, appliances that still need to come out of the house, construction debris, garage or estate cleanouts, and same-week timing. Curbside Command starts at $99. Full-service starts at $129.",
+  },
 ];
 
 export const metadata = buildPageMetadata({

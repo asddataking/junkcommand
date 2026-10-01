@@ -220,6 +220,15 @@ export const NORTH_MACOMB_LOCATIONS: LocationPage[] = [
       "Romeo’s village core is walkable and historic; a few minutes out you are on orchard and acreage roads where a packed barn or a detached garage is the real job. We do not keep a crew sitting on Main Street. We schedule Romeo with other north Macomb and Richmond-area stops so the drive from Port Huron is used, not wasted. Tight village parking, older trim, and a long gravel carry outside town are the three things photos should show. We take the household side — furniture, appliances, boxed clutter, non-hazardous debris. Farm chemicals stay off the truck.",
       "Same-day is not something we promise at this distance. Next available window on a north Macomb route is the honest answer. Call or text 810-242-0429 or use the free estimate form. Indexed neighbors include [Marysville](/service-areas/marysville), [Imlay City](/service-areas/imlay-city) up M-53, [Lapeer](/service-areas/lapeer), and [Port Huron](/service-areas/port-huron).",
     ],
+    localContext: {
+      municipality: "Village of Romeo, Macomb County (ZIP 48065) — not St. Clair County.",
+      neighborhoods:
+        "The compact historic village sits on Main Street and the M-53 / Van Dyke corridor, with 32 Mile as the east-west marker. A few minutes out, lots open into orchard and acreage roads toward Richmond.",
+      landmarks:
+        "Romeo’s historic village district is listed on the National Register of Historic Places. The village is known for orchard country along the M-53 corridor north of Metro Detroit.",
+      disposal:
+        "The Village of Romeo contracts residential trash, recycling, yard waste, and limited bulk pickup. The village program allows a limited bulky item with regular service; extra items typically have to be scheduled with the hauler. Confirm current rules with the village. Construction debris, estate contents, and more than a curb item are junk-hauler jobs. Romeo is in Macomb County, so this is not a Smiths Creek Landfill municipal program — that landfill serves St. Clair County.",
+    },
     featuredServiceSlugs: [...SERVICE_PRESETS.village],
     servicesIntro:
       "Romeo pickups include sofas, dining sets, mattresses, refrigerators, washers, garage overflow, and basement boxes. Village businesses sometimes add fixtures or leftover remodel debris. Light [construction debris](/construction-debris-removal) can ride along when it is mixed and non-hazardous. A single bulky piece is still worth a call if you do not want to walk it down village porch steps yourself.",
@@ -262,6 +271,11 @@ export const NORTH_MACOMB_LOCATIONS: LocationPage[] = [
         question: "How do I get an estimate?",
         answer:
           "Use the free estimate form on this page or text photos to 810-242-0429. Include parking notes for village streets. Romeo is a scheduled north Macomb stop from Port Huron, not a same-day promise.",
+      },
+      {
+        question: "Does the Village of Romeo pick up bulk junk?",
+        answer:
+          "The village contracts limited bulk pickup with regular residential service. Extra items typically have to be scheduled with the hauler. Confirm current rules with the village. Construction debris, estate contents, and more than a curb item are why people call Junk Command.",
       },
     ],
     images: buildLocationImages(
