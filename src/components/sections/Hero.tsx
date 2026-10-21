@@ -49,7 +49,7 @@ export function Hero() {
           </BlurFade>
 
           <BlurFade delay={0.05} inView={false}>
-            <h1 className="font-display text-[clamp(2.35rem,8vw,4.75rem)] leading-[0.92] tracking-[0.04em] text-white">
+            <h1 className="font-display text-[clamp(2.125rem,8.8vw,3.15rem)] text-white lg:text-[3.15rem] xl:text-[3.85rem]">
               Junk Removal in
               <br />
               <span className="text-bright">Port Huron</span>

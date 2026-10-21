@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Antonio, IBM_Plex_Sans } from "next/font/google";
+import { DM_Sans, Outfit } from "next/font/google";
 import Script from "next/script";
 import { MetaPixelRouteTracker } from "@/components/layout/MetaPixelRouteTracker";
 import {
@@ -19,18 +19,19 @@ import "./globals.css";
 const GA_MEASUREMENT_ID = "G-9ZVZX7M7FJ";
 const META_PIXEL_ID = "2080431076173636";
 
-/** Commanding condensed display — fleet / signage energy without stock “Impact” vibes */
-const antonio = Antonio({
+/** Display headings. Wider than Antonio, so heading sizes and tracking are tighter. */
+const outfit = Outfit({
   subsets: ["latin"],
-  variable: "--font-antonio",
+  weight: ["600", "700"],
+  variable: "--font-outfit",
   display: "swap",
 });
 
-/** Technical, premium body type — replaces generic Inter */
-const ibmPlexSans = IBM_Plex_Sans({
+/** Body, UI, and buttons — same weights as the previous IBM Plex Sans set */
+const dmSans = DM_Sans({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
-  variable: "--font-ibm-plex",
+  variable: "--font-dm-sans",
   display: "swap",
 });
 
@@ -107,7 +108,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${antonio.variable} ${ibmPlexSans.variable} h-full`}
+      className={`${outfit.variable} ${dmSans.variable} h-full`}
     >
       <body className="min-h-full bg-background font-sans text-foreground antialiased">
         <Script
