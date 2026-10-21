@@ -340,6 +340,34 @@ export function getBreadcrumbSchema(crumbs: Crumb[]) {
   };
 }
 
+function placeInCounty(type: "City" | "AdministrativeArea", name: string, county: string) {
+  return {
+    "@type": type,
+    name,
+    containedInPlace: {
+      "@type": "AdministrativeArea",
+      name: county,
+    },
+  };
+}
+
+/** Towns for the hot tub service entity. Other services keep the shared city list. */
+function hotTubAreaServed() {
+  return [
+    placeInCounty("City", "Port Huron", "St. Clair County"),
+    placeInCounty("City", "Marysville", "St. Clair County"),
+    placeInCounty("AdministrativeArea", "Fort Gratiot", "St. Clair County"),
+    placeInCounty("City", "St. Clair", "St. Clair County"),
+    placeInCounty("City", "Marine City", "St. Clair County"),
+    placeInCounty("AdministrativeArea", "Smiths Creek", "St. Clair County"),
+    placeInCounty("AdministrativeArea", "Kimball Township", "St. Clair County"),
+    { "@type": "AdministrativeArea", name: "St. Clair County" },
+    placeInCounty("City", "Romeo", "Macomb County"),
+    placeInCounty("City", "Imlay City", "Lapeer County"),
+    placeInCounty("City", "Lapeer", "Lapeer County"),
+  ];
+}
+
 export function getServicePageSchema(service: (typeof SERVICES)[number]) {
   const minPrice = parseMinPrice(service.startingPrice);
 
@@ -353,10 +381,13 @@ export function getServicePageSchema(service: (typeof SERVICES)[number]) {
     url: `${SITE_URL}/${service.slug}`,
     image: absoluteUrl(service.image),
     provider: { "@id": BUSINESS_ID },
-    areaServed: KEPT_CITY_NAMES.map((name) => ({
-      "@type": "AdministrativeArea",
-      name,
-    })),
+    areaServed:
+      service.slug === "hot-tub-removal"
+        ? hotTubAreaServed()
+        : KEPT_CITY_NAMES.map((name) => ({
+            "@type": "AdministrativeArea",
+            name,
+          })),
     ...(minPrice
       ? {
           offers: {

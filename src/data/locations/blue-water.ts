@@ -21,7 +21,7 @@ export const BLUE_WATER_LOCATIONS: LocationPage[] = [
     localIntro: [
       "Port Huron is a working city with older housing, rentals around SC4, downtown storefronts, and lakefront blocks that turn over with the seasons. From Military Street and Pine Grove to Lakeside, Edison, and the Black River canal area, the jobs here are mixed: a basement full of boxes, a sofa that will not fit down a tight stair, a garage that has not been parked in for years, or a rental that needs to be empty before the next lease.",
       "Because we are based here, we already plan around bridge traffic, winter sidewalks, alley parking, and the kind of older trim and narrow halls you find in many Port Huron homes. Same-day or next-day service may be available depending on the schedule, especially when photos come in early and the load fits a route already running through town.",
-      "If you are moving, listing a house, turning a rental, or just tired of staring at the pile, [furniture removal](/furniture-removal) and [appliance removal](/appliance-removal) are usually part of the same visit. Cleaning out an entire property? Our [estate cleanout](/estate-cleanout) crew can handle furniture, appliances, and miscellaneous household junk without turning it into a weekend project.",
+      "If you are moving, listing a house, turning a rental, or just tired of staring at the pile, [furniture removal](/furniture-removal) and [appliance removal](/appliance-removal) are usually part of the same visit. Cleaning out an entire property? Our [estate cleanout](/estate-cleanout) crew can handle furniture, appliances, and miscellaneous household junk without turning it into a weekend project. A dead backyard spa is [hot tub removal](/hot-tub-removal), not a one-item week on the city bulk program.",
       "Pricing here is the same as the rest of the site: curbside starts at $99 when qualifying items are already outside, and full-service starts at $129 when we carry items out. Larger Port Huron piles are quoted by truck volume from photos. You approve the number before we load. We do not publish a street address because this is a service-area business — the crew comes to you.",
       "Same-day or next-day windows may be available when the load fits a route already in town. Call or text 810-242-0429 or use the free estimate form on this page. Nearby we also run [Fort Gratiot](/service-areas/fort-gratiot), [Marysville](/service-areas/marysville), [Kimball Township](/service-areas/kimball-township), [St. Clair](/service-areas/st-clair), and [Smiths Creek](/service-areas/smiths-creek).",
     ],
@@ -119,7 +119,7 @@ export const BLUE_WATER_LOCATIONS: LocationPage[] = [
     },
     featuredServiceSlugs: [...SERVICE_PRESETS.waterfront],
     servicesIntro:
-      "Fort Gratiot customers most often need [furniture removal](/furniture-removal), [appliance removal](/appliance-removal), garage resets, and outdoor items after lake weather. We also handle [construction debris](/construction-debris-removal) that the weekly cart will not take and larger [estate cleanouts](/estate-cleanout) when a house needs to be emptied.",
+      "Fort Gratiot customers most often need [furniture removal](/furniture-removal), [appliance removal](/appliance-removal), garage resets, and outdoor items after lake weather. We also handle [construction debris](/construction-debris-removal) that the weekly cart will not take and larger [estate cleanouts](/estate-cleanout) when a house needs to be emptied. A spa that died on a lakeshore deck is [hot tub removal](/hot-tub-removal).",
     cleanoutHeading: "More Than Just Junk Pickup",
     cleanoutBody: [
       "Township properties here are not always a single-room job. Cottages, split-levels, and houses with packed garages often need a full cleanout before a listing, a family visit, or a seasonal opening.",
@@ -204,7 +204,7 @@ export const BLUE_WATER_LOCATIONS: LocationPage[] = [
     },
     featuredServiceSlugs: [...SERVICE_PRESETS.village],
     servicesIntro:
-      "Typical Marysville loads include sofas, mattresses, washers and dryers, basement boxes, and garage overflow. We also handle [appliance removal](/appliance-removal) after a delivery and [garage cleanouts](/garage-cleanout) before a remodel. Light [construction debris](/construction-debris-removal) can ride along when it is non-hazardous and mixed with household junk.",
+      "Typical Marysville loads include sofas, mattresses, washers and dryers, basement boxes, and garage overflow. We also handle [appliance removal](/appliance-removal) after a delivery and [garage cleanouts](/garage-cleanout) before a remodel. Light [construction debris](/construction-debris-removal) can ride along when it is non-hazardous and mixed with household junk. A spa blocking a riverfront patio is [hot tub removal](/hot-tub-removal) before listing photos.",
     cleanoutHeading: "More Than Just Junk Pickup",
     cleanoutBody: [
       "Marysville cleanouts are often tied to a deadline: a closing, a family coming in, or a garage that needs to become a parking space again. Junk Command can empty rooms, garages, and basements in one coordinated visit instead of a week of dump runs.",
@@ -384,7 +384,7 @@ export const BLUE_WATER_LOCATIONS: LocationPage[] = [
     },
     featuredServiceSlugs: [...SERVICE_PRESETS.rural],
     servicesIntro:
-      "Smiths Creek calls lean toward packed garages, barn overflow, mixed household junk, and bulky furniture that never made it to the curb. Combining [furniture removal](/furniture-removal) with [appliance removal](/appliance-removal) is common when a family is clearing an inherited lot. A [garage cleanout](/garage-cleanout) is often the first visit that tells us whether the house itself needs an [estate cleanout](/estate-cleanout).",
+      "Smiths Creek calls lean toward packed garages, barn overflow, mixed household junk, and bulky furniture that never made it to the curb. Combining [furniture removal](/furniture-removal) with [appliance removal](/appliance-removal) is common when a family is clearing an inherited lot. A [garage cleanout](/garage-cleanout) is often the first visit that tells us whether the house itself needs an [estate cleanout](/estate-cleanout). A tub behind a fence or out past the garage is [hot tub removal](/hot-tub-removal).",
     cleanoutHeading: "Barn, Garage, and House — One Plan",
     cleanoutBody: [
       "Smiths Creek properties collect tools, freezers, boxed clutter, and outdoor junk across more than one building before anyone calls a hauler. Treating that as a single-item sofa pickup wastes everyone’s time. We quote the buildings you actually need emptied and stage the crew for gravel drives and long carries.",
@@ -474,7 +474,7 @@ export const BLUE_WATER_LOCATIONS: LocationPage[] = [
     },
     featuredServiceSlugs: [...SERVICE_PRESETS.waterfront],
     servicesIntro:
-      "St. Clair pickups often include sofas, dining sets, appliances from riverfront homes, patio furniture after storms, and garage overflow before a listing. We also handle [appliance removal](/appliance-removal) and [garage cleanouts](/garage-cleanout) without leaving debris on a visible driveway.",
+      "St. Clair pickups often include sofas, dining sets, appliances from riverfront homes, patio furniture after storms, and garage overflow before a listing. We also handle [appliance removal](/appliance-removal) and [garage cleanouts](/garage-cleanout) without leaving debris on a visible driveway. A dead spa on a riverfront deck is [hot tub removal](/hot-tub-removal).",
     cleanoutHeading: "More Than Just Junk Pickup",
     cleanoutBody: [
       "Riverfront and historic homes in St. Clair deserve a cleanout crew that thinks before moving heavy pieces through tight halls. Junk Command handles inherited houses, move-outs, garages, basements, and whole-property jobs with that in mind.",
