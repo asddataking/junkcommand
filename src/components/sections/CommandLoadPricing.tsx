@@ -128,7 +128,7 @@ export function CommandLoadPricing() {
                     textAnchor="middle"
                     fill="#ffffff"
                     fontSize="22"
-                    fontFamily="var(--font-antonio), sans-serif"
+                    fontFamily="var(--font-outfit), sans-serif"
                   >
                     {fill}%
                   </text>

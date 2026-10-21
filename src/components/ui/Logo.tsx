@@ -9,7 +9,7 @@ export function Logo({ compact = false }: { compact?: boolean }) {
       className="group flex items-center gap-2.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bright sm:gap-3"
       aria-label="Junk Command home"
     >
-      <span className="relative flex h-11 w-11 shrink-0 items-center justify-center sm:h-12 sm:w-12">
+      <span className="relative flex h-10 w-10 shrink-0 items-center justify-center sm:h-12 sm:w-12">
         <Image
           src={BRAND_LOGO}
           alt=""
@@ -21,10 +21,12 @@ export function Logo({ compact = false }: { compact?: boolean }) {
       </span>
       {!compact ? (
         <span className="flex min-w-0 flex-col leading-none">
-          <span className="font-display text-xl tracking-[0.12em] text-white sm:text-2xl">
-            JUNK COMMAND
+          <span className="logo-wordmark font-display text-[1.05rem] text-white sm:text-lg">
+            JUNK
+            <br />
+            COMMAND
           </span>
-          <span className="mt-1 text-[10px] font-semibold uppercase tracking-[0.22em] text-muted">
+          <span className="mt-1 text-[10px] font-semibold uppercase tracking-[0.16em] text-muted">
             Junk Removal
           </span>
         </span>

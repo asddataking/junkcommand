@@ -39,8 +39,8 @@ export function Header() {
           : "border-transparent bg-[#020305]"
       }`}
     >
-      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:h-[4.5rem] lg:px-8">
-        <div className="flex min-w-0 items-center gap-3 sm:gap-4">
+      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-2 px-4 sm:gap-4 sm:px-6 lg:h-[4.5rem] lg:px-8">
+        <div className="flex min-w-0 items-center gap-1.5 sm:gap-4">
           <Logo />
           <Link
             href="/about"
@@ -80,7 +80,7 @@ export function Header() {
           </FreeEstimateButton>
         </div>
 
-        <div className="flex items-center gap-3 lg:hidden">
+        <div className="flex items-center gap-1.5 sm:gap-3 lg:hidden">
           <Link
             href={LABOR_POOL.href}
             className="max-w-[5.5rem] text-center text-[9px] font-semibold uppercase leading-tight tracking-[0.1em] text-bright transition-colors hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bright sm:max-w-[7.5rem] sm:text-[10px] sm:tracking-[0.12em]"
