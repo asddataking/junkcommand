@@ -708,70 +708,95 @@ export const SERVICES: Service[] = [
   {
     slug: "hot-tub-removal",
     title: "Hot Tub Removal",
-    shortTitle: "Hot Tubs",
-    metaTitle: "Hot Tub Removal in Port Huron & St. Clair County, MI | Junk Command",
+    shortTitle: "Hot Tub",
+    metaTitle: "Hot Tub Removal Port Huron, MI | Junk Command",
     metaDescription:
-      "Cut, haul, and dispose of a dead hot tub in Port Huron or St. Clair County. Drain it first, send photos for a free estimate. Call 810-242-0429.",
+      "Hot tub removal in Port Huron, Marysville, and St. Clair County. We cut and haul spas from decks and fenced yards. Send photos for a free estimate.",
     h1: "Hot Tub Removal in Port Huron & St. Clair County, MI",
     eyebrow: "The Heavy Job Done Right",
     intro:
-      "Dead hot tubs are a backyard eyesore and a nightmare to move. Junk Command cuts, breaks down, and hauls spas so your patio is usable again.",
+      "Dead hot tubs sit in Port Huron, Marysville, and St. Clair County yards long after they stop heating. Junk Command cuts, hauls, and disposes of the spa so the deck or pad is usable again.",
     description:
-      "Professional hot tub removal for homeowners across Port Huron, Marysville, Fort Gratiot, and surrounding Michigan communities.",
+      "Hot tub removal in Port Huron, Marysville, Fort Gratiot, St. Clair, Marine City, and Smiths Creek. Junk Command cuts, hauls, and disposes of above-ground spas, swim spas, and in-ground shells quoted from photos.",
     image: "/images/services/hot-tub-removal.webp",
-    imageAlt: "Junk Command dismantling and removing a backyard hot tub",
+    imageAlt:
+      "Junk Command crew carrying a sectioned hot tub shell out of a fenced backyard",
     benefits: [
-      "In-ground surround and deck-access experience",
-      "Breakdown and haul in one visit",
-      "Electrical disconnect guidance before arrival",
-      "Efficient single-visit cleanouts",
+      "Deck, fence, gate, and stair access planned from photos",
+      "Cut, load, and haul in one visit once the tub is drained",
+      "Prep guidance for power and water before we arrive",
+      "Covers, steps, and equipment packs included when you want them",
     ],
     process: [
       {
+        title: "Photos and a price",
+        description:
+          "Send photos of the spa, the gate, and the path to the truck. You get a number before we cut anything.",
+      },
+      {
         title: "Drain and disconnect",
         description:
-          "Please drain the tub and shut off power. We will coach you through prep when you book.",
+          "Drain the water. Shut power off, or have an electrician do it. Close plumbing you can safely cap.",
       },
       {
-        title: "Breakdown on site",
+        title: "Cut, haul, and sweep",
         description:
-          "We cut and section the spa as needed for safe removal from tight yards.",
-      },
-      {
-        title: "Haul and dispose",
-        description:
-          "Debris is loaded and taken for proper disposal — yard left clear.",
+          "We section the shell when the yard requires it, load it, and take it for recycling or disposal.",
       },
     ],
     whatWeTake: [
       "Above-ground hot tubs",
       "Portable spas",
+      "In-ground and semi-in-ground shells (quoted from photos)",
       "Swim spas (case-by-case)",
       "Broken and non-working tubs",
       "Hot tub covers and steps",
       "Pumps and equipment packs",
-      "Surrounding debris",
-      "Related patio junk",
+      "Surrounding debris and patio junk",
     ],
     faqs: [
       {
-        question: "How much does hot tub removal cost?",
+        question: "How much does hot tub removal cost in Port Huron?",
         answer:
-          "Most hot tub removals are quoted individually based on access, size, and whether cutting is required. Send photos for a firm price.",
+          "There is no flat spa price. Curbside Command starts at $99 and full-service Command starts at $129 for ordinary junk, but a hot tub is quoted from photos because of size, cutting, and access. Most spas are more than a minimum pickup. You approve the number before we cut anything. Text photos to 810-242-0429.",
       },
       {
-        question: "Do I need to drain it first?",
+        question: "Do I need to drain the hot tub before you arrive?",
         answer:
-          "Yes — please drain the water before we arrive. It makes removal safer and faster.",
+          "Yes. Drain it before we arrive. A full tub is unsafe to move. If the drain valve has failed or you cannot empty it, say so when you book.",
       },
       {
-        question: "Can you remove a tub from a fenced backyard?",
+        question: "Who disconnects the electrical and plumbing?",
         answer:
-          "Yes. Gate width and access photos help us plan. We regularly remove tubs from tight Michigan yards.",
+          "You, an electrician, or a plumber. Shut power off at the breaker before we arrive. If you are not sure the circuit is dead, have an electrician disconnect it. Close water valves and cap lines you can safely reach. Junk Command hauls the tub. We are not the electrical or plumbing contractor. We can talk through prep when you book.",
+      },
+      {
+        question: "Do I need a permit to remove a hot tub in St. Clair County?",
+        answer:
+          "Hauling a drained, disconnected above-ground spa is usually a junk-removal job, not a new installation. A permit or association notice is more likely when a deck, surround, or in-ground structure comes out with the tub, and those rules vary by city, township, and HOA. Junk Command does not pull permits. Check with your local office or association if a structure is being demolished.",
+      },
+      {
+        question: "Can you remove a hot tub from a deck, fence, or tight backyard?",
+        answer:
+          "Yes, when there is a safe path. Gate width, stairs, fence lines, soft ground, and deck condition change the plan. Send photos of the tub and the way out. We will not promise a carry that would wreck a rotten deck. If the deck has to come down too, we can quote that with the spa.",
+      },
+      {
+        question: "Do you remove swim spas and in-ground hot tubs?",
+        answer:
+          "Above-ground and portable spas are the usual job. Swim spas are larger and quoted case by case. In-ground and semi-in-ground shells and built-in surrounds are heavier and also quoted from photos. We haul the shell and the related debris. Full concrete-pad demolition is a separate scope.",
+      },
+      {
+        question: "What happens to the hot tub after you haul it?",
+        answer:
+          "Metal from pumps, heaters, and frames is recycled when a facility accepts it. Acrylic shells, foam, and cabinet pieces are usually bulky waste and go to proper disposal. Dead spas are rarely donation material. We do not leave the tub on a back road.",
+      },
+      {
+        question: "How soon can you remove a hot tub in Port Huron or Marysville?",
+        answer:
+          "Same-day or next-day windows may be available when the job fits a route already running through Port Huron, Marysville, Fort Gratiot, St. Clair, Marine City, or Smiths Creek. Send photos and the address and we will tell you the soonest window.",
       },
     ],
     relatedSlugs: ["construction-debris-removal", "estate-cleanout", "garage-cleanout"],
-    startingPrice: "Custom quote",
   },
   {
     slug: "shed-removal",

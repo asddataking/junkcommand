@@ -2,7 +2,10 @@ import Link from "next/link";
 import { Check } from "lucide-react";
 import type { Service } from "@/data/services";
 import { getRelatedServices } from "@/data/services";
-import { SERVICE_LONGFORM } from "@/data/service-longform";
+import {
+  SERVICE_DETAIL_SECTIONS,
+  SERVICE_LONGFORM,
+} from "@/data/service-longform";
 import { pagesInGroup } from "@/data/indexing";
 import { CURBSIDE_START, FULL_SERVICE_START } from "@/data/curbside-pricing";
 import { BRAND } from "@/lib/constants";
@@ -16,12 +19,15 @@ import { MediaImage } from "@/components/ui/MediaImage";
 import { FreeEstimateButton } from "@/components/forms/FreeEstimateButton";
 import { PhoneLink } from "@/components/forms/PhoneLink";
 import { AreasWeServe } from "@/components/shared/AreasWeServe";
+import { RichTextBlock } from "@/components/shared/RichText";
 
 const AREA_PAGES = pagesInGroup("areas");
 
 export function ServicePageContent({ service }: { service: Service }) {
   const related = getRelatedServices(service);
   const longform = SERVICE_LONGFORM[service.slug] ?? [];
+  const detailSections = SERVICE_DETAIL_SECTIONS[service.slug] ?? [];
+  const isHotTub = service.slug === "hot-tub-removal";
 
   return (
     <>
@@ -47,11 +53,10 @@ export function ServicePageContent({ service }: { service: Service }) {
                 <h2 className="font-display text-3xl tracking-[0.06em] text-white sm:text-4xl">
                   {service.title.toUpperCase()} IN PORT HURON
                 </h2>
-                <div className="mt-4 space-y-4 text-base leading-relaxed text-muted">
-                  {longform.map((paragraph) => (
-                    <p key={paragraph.slice(0, 48)}>{paragraph}</p>
-                  ))}
-                </div>
+                <RichTextBlock
+                  paragraphs={longform}
+                  className="mt-4 space-y-4 text-base leading-relaxed text-muted"
+                />
               </div>
             ) : (
               <div>
@@ -61,6 +66,18 @@ export function ServicePageContent({ service }: { service: Service }) {
                 <p className="mt-4 text-muted">{service.description}</p>
               </div>
             )}
+
+            {detailSections.map((section) => (
+              <div key={section.heading}>
+                <h2 className="font-display text-3xl tracking-[0.06em] text-white sm:text-4xl">
+                  {section.heading}
+                </h2>
+                <RichTextBlock
+                  paragraphs={section.paragraphs}
+                  className="mt-4 space-y-4 text-base leading-relaxed text-muted"
+                />
+              </div>
+            ))}
 
             <ul className="grid gap-3 sm:grid-cols-2">
               {service.benefits.map((benefit) => (
@@ -89,13 +106,27 @@ export function ServicePageContent({ service }: { service: Service }) {
                 HOW PRICING WORKS
               </h2>
               <p className="mt-4 leading-relaxed text-muted">
-                Junk Command quotes {service.shortTitle.toLowerCase()} jobs by
-                how much space the load takes in the truck, plus access. Curbside
-                Command starts at ${CURBSIDE_START} when qualifying items are
-                already outside. Full-service Command starts at $
-                {FULL_SERVICE_START} when we carry items out of the home or
-                garage. Photos get you a free estimate. You approve the price
-                before we load.
+                {isHotTub ? (
+                  <>
+                    A hot tub is quoted from photos, not from a flat menu
+                    price. Size, cutting, and access — decks, gates, stairs,
+                    and fences — change the number. Curbside Command starts at
+                    ${CURBSIDE_START} and full-service Command starts at $
+                    {FULL_SERVICE_START} for ordinary junk on this site. Most
+                    spas sit above those minimums because of bulk and the cut.
+                    You approve the price before we cut or load.
+                  </>
+                ) : (
+                  <>
+                    Junk Command quotes {service.shortTitle.toLowerCase()} jobs
+                    by how much space the load takes in the truck, plus access.
+                    Curbside Command starts at ${CURBSIDE_START} when qualifying
+                    items are already outside. Full-service Command starts at $
+                    {FULL_SERVICE_START} when we carry items out of the home or
+                    garage. Photos get you a free estimate. You approve the
+                    price before we load.
+                  </>
+                )}
               </p>
               <div className="mt-6 flex flex-col gap-3 sm:flex-row">
                 <FreeEstimateButton
@@ -175,7 +206,16 @@ export function ServicePageContent({ service }: { service: Service }) {
               </p>
             </div>
 
-            <AreasWeServe />
+            <AreasWeServe
+              heading={
+                isHotTub ? "Where we remove hot tubs" : "Areas we serve"
+              }
+              intro={
+                isHotTub
+                  ? "Junk Command removes hot tubs in Port Huron, Marysville, Fort Gratiot, St. Clair, Marine City, and Smiths Creek, plus Kimball Township. Romeo, Imlay City, and Lapeer are on routes we already run."
+                  : undefined
+              }
+            />
 
             <div>
               <h2 className="font-display text-3xl tracking-[0.06em] text-white sm:text-4xl">

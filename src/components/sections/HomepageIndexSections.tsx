@@ -30,7 +30,14 @@ export function HomepageIndexSections() {
             <p>
               Junk Command is a veteran-owned junk hauler based in Port Huron,
               Michigan. We run furniture, appliances, garage cleanouts, estate
-              cleanouts, hot tubs, and renovation debris across the Blue Water
+              cleanouts,{" "}
+              <Link
+                href="/hot-tub-removal"
+                className="font-semibold text-bright hover:text-white"
+              >
+                hot tub removal
+              </Link>
+              , and renovation debris across the Blue Water
               Area — Port Huron, Fort Gratiot, Marysville, Kimball Township, St.
               Clair, Marine City, and Smiths Creek, plus Romeo, Imlay City, and
               Lapeer on the western and north Macomb routes. This is a
