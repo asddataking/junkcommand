@@ -17,7 +17,7 @@ export function MobileMenu({
   return (
     <div
       id="mobile-menu"
-      className="border-t border-[rgba(0,135,255,0.25)] bg-[#080B0F] lg:hidden"
+      className="max-h-[calc(100dvh-4.5rem-env(safe-area-inset-top))] overflow-y-auto border-t border-[rgba(0,135,255,0.25)] bg-[#080B0F] lg:hidden"
     >
       <nav
         className="mx-auto flex max-w-7xl flex-col gap-1 px-4 py-4"
