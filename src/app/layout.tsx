@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Antonio, IBM_Plex_Sans } from "next/font/google";
 import Script from "next/script";
 import { MetaPixelRouteTracker } from "@/components/layout/MetaPixelRouteTracker";
@@ -36,6 +36,13 @@ const ibmPlexSans = IBM_Plex_Sans({
 
 const HOME_TITLE =
   "Junk Removal Port Huron & St. Clair County, MI | Curbside Pickup From $99";
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+  interactiveWidget: "resizes-content",
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),

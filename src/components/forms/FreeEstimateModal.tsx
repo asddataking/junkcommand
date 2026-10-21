@@ -1,10 +1,13 @@
 "use client";
 
 import { useEffect, useId, useRef } from "react";
-import { X } from "lucide-react";
+import Link from "next/link";
+import { Phone, X } from "lucide-react";
 import { GhlFormEmbed } from "@/components/forms/GhlFormEmbed";
+import { PhoneLink } from "@/components/forms/PhoneLink";
 import type { EstimateModalOpenOptions } from "@/components/forms/EstimateModalProvider";
 import { getPageUrl } from "@/lib/analytics";
+import { BRAND } from "@/lib/constants";
 
 export function FreeEstimateModal({
   open,
@@ -15,25 +18,45 @@ export function FreeEstimateModal({
   onClose: () => void;
   options: EstimateModalOpenOptions | null;
 }) {
+  const shellRef = useRef<HTMLDivElement>(null);
   const dialogRef = useRef<HTMLDivElement>(null);
-  const closeRef = useRef<HTMLButtonElement>(null);
   const titleId = useId();
 
   useEffect(() => {
     if (!open) return undefined;
-    closeRef.current?.focus();
+    const shell = shellRef.current;
+    const dialog = dialogRef.current;
+    dialog?.focus();
 
-    const node = dialogRef.current;
-    if (!node) return undefined;
+    const viewport = window.visualViewport;
+    const syncViewport = () => {
+      if (!shell) return;
+      const height = viewport?.height ?? window.innerHeight;
+      const offset = viewport?.offsetTop ?? 0;
+      shell.style.setProperty("--estimate-vvh", `${Math.round(height)}px`);
+      shell.style.setProperty("--estimate-vv-offset", `${Math.round(offset)}px`);
+    };
+    syncViewport();
+    viewport?.addEventListener("resize", syncViewport);
+    viewport?.addEventListener("scroll", syncViewport);
+    window.addEventListener("resize", syncViewport);
 
     const onFocus = (event: FocusEvent) => {
-      if (!node.contains(event.target as Node)) {
-        event.preventDefault();
-        closeRef.current?.focus();
-      }
+      const node = dialogRef.current;
+      const target = event.target;
+      if (!node || !(target instanceof Node) || node.contains(target)) return;
+      if (document.activeElement && node.contains(document.activeElement)) return;
+      if (target instanceof HTMLIFrameElement) return;
+      node.focus();
     };
     document.addEventListener("focusin", onFocus);
-    return () => document.removeEventListener("focusin", onFocus);
+
+    return () => {
+      viewport?.removeEventListener("resize", syncViewport);
+      viewport?.removeEventListener("scroll", syncViewport);
+      window.removeEventListener("resize", syncViewport);
+      document.removeEventListener("focusin", onFocus);
+    };
   }, [open]);
 
   if (!open) return null;
@@ -41,7 +64,7 @@ export function FreeEstimateModal({
   const pageUrl = getPageUrl();
 
   return (
-    <div className="fixed inset-0 z-[80] flex items-end justify-center sm:items-center sm:p-6">
+    <div ref={shellRef} className="estimate-modal">
       <button
         type="button"
         className="absolute inset-0 bg-[#020305]/80 backdrop-blur-sm"
@@ -53,10 +76,11 @@ export function FreeEstimateModal({
         role="dialog"
         aria-modal="true"
         aria-labelledby={titleId}
-        className="relative z-10 flex max-h-[92vh] w-full max-w-3xl flex-col overflow-hidden rounded-t-[10px] border border-[rgba(0,135,255,0.45)] bg-[#080B0F] shadow-[0_0_48px_rgba(7,135,255,0.28)] sm:rounded-[10px]"
+        tabIndex={-1}
+        className="estimate-modal__panel outline-none"
       >
-        <div className="flex items-start justify-between gap-4 border-b border-[rgba(0,135,255,0.25)] px-4 py-4 sm:px-6">
-          <div>
+        <div className="flex shrink-0 items-start justify-between gap-3 border-b border-[rgba(0,135,255,0.25)] px-4 py-3 pt-[max(0.75rem,env(safe-area-inset-top))] sm:px-6 sm:py-4">
+          <div className="min-w-0">
             <p className="text-xs font-semibold uppercase tracking-[0.28em] text-bright">
               Free Estimate
             </p>
@@ -69,21 +93,38 @@ export function FreeEstimateModal({
             <p className="mt-1 text-sm text-muted">
               Send a few photos and we will confirm pricing before pickup.
             </p>
+            <div className="mt-3 flex flex-wrap gap-2">
+              <PhoneLink
+                ctaPosition="estimate_modal"
+                pageType={options?.pageType}
+                locationSlug={options?.locationSlug}
+                className="inline-flex min-h-11 items-center gap-2 rounded-[2px] border border-[rgba(0,135,255,0.45)] px-3 text-sm font-semibold text-white"
+              >
+                <Phone className="size-4 text-bright" aria-hidden />
+                Call {BRAND.phone}
+              </PhoneLink>
+              <Link
+                href="/contact"
+                onClick={onClose}
+                className="inline-flex min-h-11 items-center rounded-[2px] border border-[rgba(0,135,255,0.45)] px-3 text-sm font-semibold text-bright"
+              >
+                Open the contact form
+              </Link>
+            </div>
           </div>
           <button
-            ref={closeRef}
             type="button"
             onClick={onClose}
-            className="inline-flex size-10 shrink-0 items-center justify-center rounded-[2px] border border-[rgba(0,135,255,0.4)] text-white transition-colors hover:border-bright hover:text-bright"
+            className="inline-flex size-11 shrink-0 items-center justify-center rounded-[2px] border border-[rgba(0,135,255,0.4)] text-white transition-colors hover:border-bright hover:text-bright"
             aria-label="Close"
           >
             <X className="size-5" />
           </button>
         </div>
-        <div className="overflow-y-auto px-3 py-3 sm:px-5 sm:py-5">
+        <div className="estimate-modal__body pb-[env(safe-area-inset-bottom)]">
           <GhlFormEmbed
             embedId="modal-free-estimate"
-            minHeightClassName="min-h-[70vh] sm:min-h-[640px]"
+            layout="fill"
             query={{
               page_url: pageUrl,
               location_slug: options?.locationSlug,

@@ -20,15 +20,20 @@ export function Header() {
   }, []);
 
   useEffect(() => {
-    document.body.style.overflow = open ? "hidden" : "";
+    document.body.classList.toggle("mobile-menu-open", open);
+    if (!document.body.classList.contains("estimate-modal-open")) {
+      document.body.style.overflow = open ? "hidden" : "";
+    }
     return () => {
+      document.body.classList.remove("mobile-menu-open");
+      if (document.body.classList.contains("estimate-modal-open")) return;
       document.body.style.overflow = "";
     };
   }, [open]);
 
   return (
     <header
-      className={`sticky top-0 z-50 border-b transition-colors ${
+      className={`sticky top-0 z-[100000150] border-b pt-[env(safe-area-inset-top)] transition-colors ${
         scrolled
           ? "border-[rgba(0,135,255,0.25)] bg-[#020305]/95 backdrop-blur-md"
           : "border-transparent bg-[#020305]"
