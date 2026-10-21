@@ -13,6 +13,8 @@ type GhlFormEmbedProps = {
   title?: string;
   className?: string;
   minHeightClassName?: string;
+  /** `fill` locks the iframe to its container so the form scrolls inside it. */
+  layout?: "auto" | "fill";
   query?: Record<string, string | undefined>;
   embedId?: string;
 };
@@ -62,6 +64,7 @@ export function GhlFormEmbed({
   title = "Free Estimate",
   className = "",
   minHeightClassName = "min-h-[720px]",
+  layout = "auto",
   query,
   embedId,
 }: GhlFormEmbedProps) {
@@ -69,9 +72,15 @@ export function GhlFormEmbed({
   const iframeId = embedId ?? `inline-${resolved.formId}`;
   const formSrc = resolved.src;
 
+  const fill = layout === "fill";
+
   return (
     <div
-      className={`relative overflow-hidden rounded-[10px] border border-[rgba(0,135,255,0.4)] bg-[#020305] p-2 sm:p-3 ${className}`}
+      className={
+        fill
+          ? `ghl-form-embed ghl-form-embed--fill relative min-h-0 overflow-hidden ${className}`
+          : `ghl-form-embed relative overflow-hidden rounded-[10px] border border-[rgba(0,135,255,0.4)] bg-[#020305] p-2 sm:p-3 ${className}`
+      }
     >
       <ShineBorder
         shineColor={["#0787ff", "#18a0ff", "#0787ff"]}
@@ -86,17 +95,19 @@ export function GhlFormEmbed({
         colorTo="#0787ff"
       />
       <div
-        className={`relative z-10 w-full overflow-hidden rounded-[8px] ${minHeightClassName}`}
+        className={`ghl-form-embed__frame relative z-10 w-full overflow-hidden rounded-[8px] ${
+          fill ? "h-full min-h-0" : minHeightClassName
+        }`}
       >
         <iframe
           src={formSrc}
           style={{
             width: "100%",
-            height: "100%",
             border: "none",
             borderRadius: "8px",
           }}
           id={iframeId}
+          scrolling="auto"
           data-layout="{'id':'INLINE'}"
           data-trigger-type="alwaysShow"
           data-trigger-value=""
@@ -109,7 +120,7 @@ export function GhlFormEmbed({
           data-layout-iframe-id={iframeId}
           data-form-id={resolved.formId}
           title={title}
-          className={`absolute inset-0 h-full w-full ${minHeightClassName}`}
+          className="block h-full w-full"
         />
       </div>
       <Script

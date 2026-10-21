@@ -145,13 +145,160 @@ body {
   text-wrap: balance;
 }
 
-/* Hide the GHL chat launcher while the estimate modal is open so they do not stack. */
+/*
+  The HighLevel chat launcher is a <chat-widget> host. The prompt and bubble
+  are fixed inside its shadow root (z-index 99999999), so selectors like
+  .lc_text-widget never match them from this page. Hide the host itself or
+  the prompt covers the estimate form's submit button.
+*/
+body.estimate-modal-open chat-widget,
+body.ghl-form-active chat-widget,
+body.mobile-menu-open chat-widget,
 body.estimate-modal-open iframe[src*="widgets.leadconnectorhq.com"],
 body.estimate-modal-open iframe[src*="chat-widget"],
 body.estimate-modal-open [class*="lc_text-widget"],
 body.estimate-modal-open [id*="chat-widget"] {
+  display: none !important;
   visibility: hidden !important;
   pointer-events: none !important;
+}
+
+body.estimate-modal-open {
+  overflow: hidden !important;
+  touch-action: none;
+}
+
+.estimate-modal {
+  position: fixed;
+  z-index: 100000200;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  touch-action: auto;
+}
+
+.estimate-modal__panel {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  min-height: 0;
+  width: 100%;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid rgba(0, 135, 255, 0.45);
+  background: #080b0f;
+  box-shadow: 0 0 48px rgba(7, 135, 255, 0.28);
+}
+
+@media (max-width: 639px) {
+  .estimate-modal {
+    top: var(--estimate-vv-offset, 0px);
+    height: var(--estimate-vvh, 100dvh);
+    bottom: auto;
+  }
+
+  .estimate-modal__panel {
+    height: 100%;
+    max-height: 100%;
+    border-radius: 0;
+  }
+}
+
+@media (min-width: 640px) {
+  .estimate-modal {
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+  }
+
+  .estimate-modal__panel {
+    width: min(100%, 48rem);
+    height: min(900px, 92dvh);
+    max-height: 92dvh;
+    border-radius: 10px;
+  }
+}
+
+/*
+  form_embed.js writes an inline pixel height equal to the whole form and
+  turns scrolling off. A finger drag then hits the iframe and neither the
+  iframe nor the page moves, so Submit stays off screen. Lock a real height
+  and let the embedded document scroll.
+*/
+.estimate-modal__body {
+  position: relative;
+  flex: 1 1 0;
+  min-height: 0;
+}
+
+.ghl-form-embed--fill {
+  position: absolute;
+  inset: 0;
+  min-height: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+.ghl-form-embed--fill .ghl-form-embed__frame,
+.ghl-form-embed iframe {
+  display: block;
+}
+
+.ghl-form-embed--fill .ghl-form-embed__frame {
+  position: absolute;
+  inset: 0;
+  height: auto;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.ghl-form-embed--fill iframe {
+  position: absolute !important;
+  inset: 0 !important;
+  top: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+
+@media (min-width: 640px) {
+  .ghl-form-embed--fill {
+    border: 1px solid rgba(0, 135, 255, 0.4);
+    border-radius: 10px;
+    background: #020305;
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width: 639px) {
+  .ghl-form-embed:not(.ghl-form-embed--fill) .ghl-form-embed__frame {
+    min-height: 0 !important;
+    overflow: hidden;
+  }
+
+  .ghl-form-embed:not(.ghl-form-embed--fill) iframe {
+    width: 100% !important;
+    height: min(40rem, calc(100dvh - 5.5rem - env(safe-area-inset-bottom, 0px) - 7rem)) !important;
+    max-height: min(40rem, calc(100dvh - 5.5rem - env(safe-area-inset-bottom, 0px) - 7rem)) !important;
+    min-height: 16rem !important;
+    position: relative !important;
+    inset: auto !important;
+    left: auto !important;
+    top: auto !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
