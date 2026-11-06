@@ -255,7 +255,7 @@ export function LocationLocalContext({ location }: { location: LocationPage }) {
           {context.landmarks}
         </p>
         <div>
-          <span className="font-semibold text-white">Bulk junk vs. city curb pickup: </span>
+          <span className="font-semibold text-white">Trash &amp; bulk pickup: </span>
           <RichText text={context.disposal} className="mt-1 leading-relaxed text-muted" />
         </div>
       </div>
@@ -333,10 +333,10 @@ export function LocationServices({
         </Link>
         . City carts vs. a hauler:{" "}
         <Link
-          href="/port-huron-bulk-junk-removal"
+          href="/port-huron-trash-bulk-pickup"
           className="text-bright hover:text-white"
         >
-          Bulk item junk removal in Port Huron
+          Port Huron trash &amp; bulk pickup
         </Link>
         .
       </p>

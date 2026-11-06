@@ -40,10 +40,10 @@ export function CityServiceLinks({
         ))}
         <li>
           <Link
-            href="/port-huron-bulk-junk-removal"
+            href="/port-huron-trash-bulk-pickup"
             className="block text-sm text-muted transition-colors hover:text-bright"
           >
-            Bulk item junk removal in Port Huron
+            Port Huron trash &amp; bulk pickup
           </Link>
         </li>
       </ul>
