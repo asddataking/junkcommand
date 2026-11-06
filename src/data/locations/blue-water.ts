@@ -33,7 +33,7 @@ export const BLUE_WATER_LOCATIONS: LocationPage[] = [
       landmarks:
         "Well-known markers include the Blue Water Bridge, Pine Grove Park and the Huron Lightship, Lakeside Park and Beach, Lighthouse Park with the Fort Gratiot Light Station (in Port Huron, not Fort Gratiot Township), McMorran Place, and the Thomas Edison Depot Museum.",
       disposal:
-        "The City of Port Huron’s residential refuse program includes limited bulky items with regular curbside collection — typically one bulk item per household per week, including furniture and many appliances, when the item is at the curb and follows city rules. Check the current City DPW refuse page for set-out rules; we do not publish pickup days here because they change. Construction debris, garage and estate cleanouts, items still inside the house, and piles larger than that one-item limit are when a junk hauler is the better fit. St. Clair County’s landfill is Smiths Creek Landfill on Smiths Creek Road. See [Port Huron trash & bulk pickup](/port-huron-trash-bulk-pickup).",
+        "The City of Port Huron’s residential refuse program includes limited bulky items with regular curbside collection — typically one bulk item per household per week, including furniture and many appliances, when the item is at the curb and follows city rules. Check the current City DPW refuse page for set-out rules; we do not publish pickup days here because they change. Construction debris, garage and estate cleanouts, items still inside the house, and piles larger than that one-item limit are when a junk hauler is the better fit. St. Clair County’s landfill is Smiths Creek Landfill on Smiths Creek Road.",
     },
     featuredServiceSlugs: [...SERVICE_PRESETS.urban],
     servicesIntro:
@@ -82,7 +82,7 @@ export const BLUE_WATER_LOCATIONS: LocationPage[] = [
       {
         question: "Does Port Huron city trash pickup take junk?",
         answer:
-          "The City of Port Huron’s residential program includes limited bulky items with regular curbside collection, typically one bulk item per household per week when it is at the curb and follows city rules. Call Junk Command when the pile is larger than that, still inside the house, construction debris, a garage or estate cleanout, or you need it gone this week. See our Port Huron trash and bulk pickup page.",
+          "The City of Port Huron’s residential program includes limited bulky items with regular curbside collection, typically one bulk item per household per week when it is at the curb and follows city rules. Call Junk Command when the pile is larger than that, still inside the house, construction debris, a garage or estate cleanout, or you need it gone this week.",
       },
     ],
     images: buildLocationImages("Port Huron", "the Blue Water Area", "urban"),

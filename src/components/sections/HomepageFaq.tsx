@@ -38,13 +38,6 @@ export function HomepageFaq() {
           <Link href="/what-we-take" className="font-semibold text-bright hover:text-white">
             what we take
           </Link>
-          ,{" "}
-          <Link
-            href="/port-huron-trash-bulk-pickup"
-            className="font-semibold text-bright hover:text-white"
-          >
-            Port Huron trash &amp; bulk pickup
-          </Link>
           , or{" "}
           <Link href="/contact" className="font-semibold text-bright hover:text-white">
             contact the Port Huron crew
