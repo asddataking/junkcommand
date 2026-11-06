@@ -33,7 +33,6 @@ export type KeptPath =
   | "/contact"
   | "/what-we-take"
   | "/commercial-junk-removal"
-  | "/port-huron-trash-bulk-pickup"
   | `/${(typeof KEPT_SERVICE_SLUGS)[number]}`
   | `/service-areas/${(typeof KEPT_CITY_SLUGS)[number]}`;
 
@@ -75,11 +74,6 @@ export const KEPT_PAGES: {
   { path: "/service-areas/lapeer", label: "Lapeer", group: "areas" },
   { path: "/about", label: "About", group: "company" },
   { path: "/contact", label: "Contact", group: "company" },
-  {
-    path: "/port-huron-trash-bulk-pickup",
-    label: "Port Huron Trash & Bulk Pickup",
-    group: "company",
-  },
   {
     path: "/work-with-junk-command",
     label: "Work With Junk Command",
@@ -161,6 +155,10 @@ const CITY_REDIRECTS: RedirectRule[] = [
 ];
 
 const STATIC_REDIRECTS: RedirectRule[] = [
+  {
+    source: "/port-huron-trash-bulk-pickup",
+    destination: "/service-areas/port-huron",
+  },
   { source: "/services", destination: "/" },
   { source: "/service-areas", destination: "/" },
   { source: "/pricing", destination: "/" },
