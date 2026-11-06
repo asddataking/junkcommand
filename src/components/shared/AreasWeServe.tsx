@@ -29,12 +29,12 @@ export function AreasWeServe({
         ))}
       </ul>
       <p className="mt-4 text-sm text-muted">
-        City trash and bulk pickup is a different service than a junk hauler.{" "}
+        Need more hauled than a city curb program allows?{" "}
         <Link
-          href="/port-huron-trash-bulk-pickup"
+          href="/port-huron-bulk-junk-removal"
           className="font-semibold text-bright hover:text-white"
         >
-          Port Huron trash &amp; bulk pickup
+          Bulk item junk removal in Port Huron
         </Link>{" "}
         explains when the city cart is enough and when to call us.
       </p>

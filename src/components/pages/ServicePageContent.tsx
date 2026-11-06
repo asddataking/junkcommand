@@ -251,10 +251,10 @@ export function ServicePageContent({ service }: { service: Service }) {
               </ul>
               <p className="mt-4 text-sm text-muted">
                 <Link
-                  href="/port-huron-trash-bulk-pickup"
+                  href="/port-huron-bulk-junk-removal"
                   className="text-bright hover:text-white"
                 >
-                  Port Huron trash &amp; bulk pickup →
+                  Bulk item junk removal in Port Huron →
                 </Link>
               </p>
             </div>
