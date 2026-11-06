@@ -153,9 +153,9 @@ export function LocationHeroGallery({ location }: { location: LocationPage }) {
       <LocationHeroEditorial location={location} />
       <section className="border-b border-[rgba(0,135,255,0.15)] bg-[#080B0F] py-10">
         <div className="mx-auto grid max-w-7xl gap-4 px-4 sm:grid-cols-3 sm:px-6 lg:px-8">
-          {galleryImages(location).map((image) => (
+          {galleryImages(location).map((image, index) => (
             <CaptionedFigure
-              key={`${image.src}-${image.role}`}
+              key={`${location.slug}-${image.role}-${index}`}
               src={image.src}
               alt={image.alt}
               caption={image.caption}
@@ -255,7 +255,7 @@ export function LocationLocalContext({ location }: { location: LocationPage }) {
           {context.landmarks}
         </p>
         <div>
-          <span className="font-semibold text-white">Trash &amp; bulk pickup: </span>
+          <span className="font-semibold text-white">Bulk junk vs. city curb pickup: </span>
           <RichText text={context.disposal} className="mt-1 leading-relaxed text-muted" />
         </div>
       </div>
@@ -333,10 +333,10 @@ export function LocationServices({
         </Link>
         . City carts vs. a hauler:{" "}
         <Link
-          href="/port-huron-trash-bulk-pickup"
+          href="/port-huron-bulk-junk-removal"
           className="text-bright hover:text-white"
         >
-          Port Huron trash &amp; bulk pickup
+          Bulk item junk removal in Port Huron
         </Link>
         .
       </p>
