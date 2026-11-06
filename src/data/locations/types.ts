@@ -4,6 +4,7 @@ export type LocationRegionId =
   | "blue-water"
   | "i69-corridor"
   | "north-macomb"
+  | "macomb"
   | "southern-lapeer"
   | "also-served"
   | "county";

@@ -2,6 +2,7 @@ import type { LocationPage } from "@/data/locations/types";
 import { BLUE_WATER_LOCATIONS } from "@/data/locations/blue-water";
 import { I69_CORRIDOR_LOCATIONS } from "@/data/locations/i69-corridor";
 import { NORTH_MACOMB_LOCATIONS } from "@/data/locations/north-macomb";
+import { MACOMB_COUNTY_LOCATIONS } from "@/data/locations/macomb-county";
 import { SOUTHERN_LAPEER_LOCATIONS } from "@/data/locations/southern-lapeer";
 import {
   ALSO_SERVED_LOCATIONS,
@@ -14,6 +15,7 @@ export const LOCATIONS: LocationPage[] = [
   ...BLUE_WATER_LOCATIONS,
   ...I69_CORRIDOR_LOCATIONS,
   ...NORTH_MACOMB_LOCATIONS,
+  ...MACOMB_COUNTY_LOCATIONS,
   ...SOUTHERN_LAPEER_LOCATIONS,
   ...ALSO_SERVED_LOCATIONS,
   ...COUNTY_LOCATIONS,
