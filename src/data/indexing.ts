@@ -24,6 +24,11 @@ export const KEPT_CITY_SLUGS = [
   "romeo",
   "imlay-city",
   "lapeer",
+  "chesterfield",
+  "new-baltimore",
+  "macomb-township",
+  "clinton-township",
+  "sterling-heights",
 ] as const;
 
 export type KeptPath =
@@ -73,6 +78,11 @@ export const KEPT_PAGES: {
   { path: "/service-areas/romeo", label: "Romeo", group: "areas" },
   { path: "/service-areas/imlay-city", label: "Imlay City", group: "areas" },
   { path: "/service-areas/lapeer", label: "Lapeer", group: "areas" },
+  { path: "/service-areas/chesterfield", label: "Chesterfield", group: "areas" },
+  { path: "/service-areas/new-baltimore", label: "New Baltimore", group: "areas" },
+  { path: "/service-areas/macomb-township", label: "Macomb Township", group: "areas" },
+  { path: "/service-areas/clinton-township", label: "Clinton Township", group: "areas" },
+  { path: "/service-areas/sterling-heights", label: "Sterling Heights", group: "areas" },
   { path: "/about", label: "About", group: "company" },
   { path: "/contact", label: "Contact", group: "company" },
   {
@@ -129,8 +139,6 @@ const CITY_REDIRECTS: RedirectRule[] = [
   { source: "/service-areas/kimball", destination: "/service-areas/kimball-township" },
   { source: "/service-areas/clyde-township", destination: "/service-areas/kimball-township" },
   { source: "/service-areas/algonac", destination: "/service-areas/st-clair" },
-  { source: "/service-areas/new-baltimore", destination: "/service-areas/st-clair" },
-  { source: "/service-areas/chesterfield", destination: "/service-areas/st-clair" },
   { source: "/service-areas/lenox-township", destination: "/service-areas/marysville" },
   { source: "/service-areas/anchorville", destination: "/service-areas/marysville" },
   { source: "/service-areas/memphis", destination: "/service-areas/marysville" },
