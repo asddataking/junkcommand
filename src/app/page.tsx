@@ -28,10 +28,10 @@ import {
 const HOME_TITLE =
   "Junk Removal Port Huron & St. Clair County, MI | Curbside Pickup From $99";
 
+// Absolute title only. Do not set openGraph/twitter here — Next replaces those
+// objects instead of merging, which would drop the root layout share image.
 export const metadata: Metadata = {
   title: { absolute: HOME_TITLE },
-  openGraph: { title: HOME_TITLE },
-  twitter: { title: HOME_TITLE },
 };
 
 export default function Home() {
