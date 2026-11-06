@@ -68,10 +68,10 @@ export function HomepageIndexSections() {
             <p>
               Not sure whether the city cart is enough?{" "}
               <Link
-                href="/port-huron-bulk-junk-removal"
+                href="/port-huron-trash-bulk-pickup"
                 className="font-semibold text-bright hover:text-white"
               >
-                Bulk item junk removal in Port Huron
+                Port Huron trash &amp; bulk pickup
               </Link>{" "}
               explains when curbside bulk covers a single item and when to call
               a junk hauler for large volumes, appliances, construction debris,

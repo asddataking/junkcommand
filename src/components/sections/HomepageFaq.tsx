@@ -40,10 +40,10 @@ export function HomepageFaq() {
           </Link>
           ,{" "}
           <Link
-            href="/port-huron-bulk-junk-removal"
+            href="/port-huron-trash-bulk-pickup"
             className="font-semibold text-bright hover:text-white"
           >
-            Bulk item junk removal in Port Huron
+            Port Huron trash &amp; bulk pickup
           </Link>
           , or{" "}
           <Link href="/contact" className="font-semibold text-bright hover:text-white">
