@@ -153,9 +153,9 @@ export function LocationHeroGallery({ location }: { location: LocationPage }) {
       <LocationHeroEditorial location={location} />
       <section className="border-b border-[rgba(0,135,255,0.15)] bg-[#080B0F] py-10">
         <div className="mx-auto grid max-w-7xl gap-4 px-4 sm:grid-cols-3 sm:px-6 lg:px-8">
-          {galleryImages(location).map((image) => (
+          {galleryImages(location).map((image, index) => (
             <CaptionedFigure
-              key={`${image.src}-${image.role}`}
+              key={`${location.slug}-${image.role}-${index}`}
               src={image.src}
               alt={image.alt}
               caption={image.caption}

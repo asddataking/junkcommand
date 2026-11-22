@@ -76,6 +76,26 @@ export const LOCATION_GEO: Record<string, LocationGeo> = {
     aliases: ["Chesterfield Township"],
     zips: ["48047", "48051"],
   },
+  "macomb-township": {
+    latitude: 42.6731,
+    longitude: -82.9276,
+    searchName: "Macomb Township",
+    aliases: ["Macomb"],
+    zips: ["48042", "48044"],
+  },
+  "clinton-township": {
+    latitude: 42.5868,
+    longitude: -82.9199,
+    searchName: "Clinton Township",
+    aliases: ["Clinton Charter Township"],
+    zips: ["48035", "48036", "48038"],
+  },
+  "sterling-heights": {
+    latitude: 42.5803,
+    longitude: -83.0302,
+    searchName: "Sterling Heights",
+    zips: ["48310", "48312", "48313", "48314"],
+  },
   capac: {
     latitude: 43.0125,
     longitude: -82.9277,

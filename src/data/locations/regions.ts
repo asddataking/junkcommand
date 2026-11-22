@@ -25,8 +25,6 @@ export const LOCATION_REGIONS: LocationRegion[] = [
       "st-clair",
       "marine-city",
       "algonac",
-      "new-baltimore",
-      "chesterfield",
     ],
   },
   {
@@ -44,6 +42,20 @@ export const LOCATION_REGIONS: LocationRegion[] = [
     description:
       "Border-town and village communities connecting the Blue Water Area with northern Macomb County.",
     slugs: ["memphis", "richmond", "armada", "romeo"],
+  },
+  {
+    id: "macomb",
+    name: "Macomb County",
+    heading: "Macomb County",
+    description:
+      "Anchor Bay and south-central Macomb County communities on our regular junk removal routes.",
+    slugs: [
+      "chesterfield",
+      "new-baltimore",
+      "macomb-township",
+      "clinton-township",
+      "sterling-heights",
+    ],
   },
   {
     id: "southern-lapeer",

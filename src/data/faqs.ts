@@ -397,7 +397,7 @@ export const HOMEPAGE_FAQS: Faq[] = [
     id: "home-types-of-junk",
     question: "What types of junk do you remove?",
     answer:
-      "We handle furniture removal, appliance removal, mattresses, garage cleanouts, estate cleanouts, construction debris removal, yard waste, hot tubs, sheds, and general household clutter. Trash hauling and debris removal for residential and light commercial jobs are our everyday work across St. Clair County.",
+      "We handle furniture removal, appliance removal, mattresses, garage cleanouts, estate cleanouts, construction debris removal, yard waste, hot tubs, sheds, and general household clutter. Junk hauling and debris removal for residential and light commercial jobs are our everyday work across St. Clair County.",
     category: "services",
   },
   {

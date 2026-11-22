@@ -9,6 +9,11 @@ export const HOMEPAGE_SERVICE_AREAS = [
   { name: "Romeo", slug: "romeo" },
   { name: "Imlay City", slug: "imlay-city" },
   { name: "Lapeer", slug: "lapeer" },
+  { name: "Chesterfield", slug: "chesterfield" },
+  { name: "New Baltimore", slug: "new-baltimore" },
+  { name: "Macomb Township", slug: "macomb-township" },
+  { name: "Clinton Township", slug: "clinton-township" },
+  { name: "Sterling Heights", slug: "sterling-heights" },
 ] as const;
 
 /** Linked cities for the homepage "Serving the Blue Water Area" section */
@@ -37,6 +42,11 @@ export const SCHEMA_SERVICE_AREAS = [
   "Lapeer",
   "St. Clair County",
   "Lapeer County",
+  "Chesterfield",
+  "New Baltimore",
+  "Macomb Township",
+  "Clinton Township",
+  "Sterling Heights",
   "Macomb County",
   "Blue Water Area",
 ] as const;
