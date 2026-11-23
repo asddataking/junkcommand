@@ -71,6 +71,11 @@ export function JunkRemovalServices() {
             </Link>
           </li>
           <li>
+            <Link href="/swing-set-trampoline-disassembly-removal" className="font-semibold text-bright hover:text-white">
+              Swing set &amp; trampoline disassembly
+            </Link>
+          </li>
+          <li>
             <Link href="/what-we-take" className="font-semibold text-bright hover:text-white">
               What we take
             </Link>

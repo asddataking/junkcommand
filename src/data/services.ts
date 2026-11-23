@@ -799,6 +799,94 @@ export const SERVICES: Service[] = [
     relatedSlugs: ["construction-debris-removal", "estate-cleanout", "garage-cleanout"],
   },
   {
+    slug: "swing-set-trampoline-disassembly-removal",
+    title: "Swing Set & Trampoline Disassembly",
+    shortTitle: "Swing Sets & Trampolines",
+    metaTitle: "Swing Set & Trampoline Disassembly in Port Huron, MI | Junk Command",
+    metaDescription:
+      "We disassemble and haul large swing sets, trampolines, playhouses, and outdoor furniture in Port Huron, MI. Free photo estimate. Call 810-242-0429.",
+    h1: "Swing Set & Trampoline Disassembly in Port Huron & St. Clair County, MI",
+    eyebrow: "We Take It Apart and Haul It Away",
+    intro:
+      "When a large swing set, trampoline, or playhouse has to come out of the yard, Junk Command takes it apart and hauls the pieces away — no leftover pile at the curb.",
+    description:
+      "Junk Command disassembles and removes large swing sets, trampolines, playhouses, outdoor furniture, and selected pergola and gazebo kits in Port Huron, Marysville, Fort Gratiot, and the other towns we already serve.",
+    image: "/images/trailer.webp",
+    imageAlt:
+      "Junk Command crew standing with the company trailer used to haul disassembled yard structures in Port Huron, MI",
+    benefits: [
+      "We disassemble the structure and haul the pieces in one visit",
+      "Large swing sets, trampolines, playhouses, and outdoor furniture",
+      "Selected pergola and gazebo kits quoted from photos",
+      "You approve the price before we start taking anything apart",
+    ],
+    process: [
+      {
+        title: "Send photos of the structure",
+        description:
+          "Show us the swing set, trampoline, or other item, plus the gate, fence, and path to the driveway.",
+      },
+      {
+        title: "Get a confirmed quote",
+        description:
+          "You receive a price based on the photos and access. You approve it before we disassemble or load.",
+      },
+      {
+        title: "We take it apart and haul it",
+        description:
+          "Our crew disassembles the item, loads the pieces, and leaves with the debris so the yard is clear.",
+      },
+    ],
+    whatWeTake: [
+      "Large wooden and metal swing sets",
+      "Trampolines, frames, nets, and pads",
+      "Playhouses",
+      "Outdoor and patio furniture",
+      "Selected pergola kits, quoted from photos",
+      "Selected gazebo kits, quoted from photos",
+      "Slides, climbing walls, and swing-set accessories",
+      "Broken or weathered backyard structures of this type",
+    ],
+    faqs: [
+      {
+        question: "Do you take swing sets and trampolines apart, or do I have to?",
+        answer:
+          "Junk Command disassembles large swing sets, trampolines, and playhouses as part of the job. You do not have to take the structure apart first. Send photos of the item and the way out to the driveway so we can plan the work.",
+      },
+      {
+        question: "Do you haul the pieces away after you take it apart?",
+        answer:
+          "Yes. Disassembly and removal go together. We take the structure apart and load the pieces on our trailer so you are not left with a pile of lumber, metal, or trampoline parts in the yard.",
+      },
+      {
+        question: "What yard structures will Junk Command disassemble?",
+        answer:
+          "We take apart and haul large swing sets, trampolines, playhouses, and outdoor furniture. We also take selected pergola and gazebo kits when photos show a job we can safely disassemble and load. If you are unsure, send pictures to 810-242-0429 and we will tell you before we come.",
+      },
+      {
+        question: "Do you take every pergola or gazebo?",
+        answer:
+          "No. Junk Command takes selected pergola and gazebo kits, not every custom or contractor-built structure. Photos of the kit, how it is anchored, and the path out tell us whether it is a fit. We do not promise to demolish every built-in pergola, and we do not invent a yes from a description alone.",
+      },
+      {
+        question: "How is swing set or trampoline disassembly priced?",
+        answer:
+          "There is no flat menu price for this work. Curbside Command starts at $99 and full-service Command starts at $129 for ordinary junk on this site. A large swing set, trampoline, or similar structure is quoted from photos because size, anchors, and yard access change the number. You approve the price before we start.",
+      },
+      {
+        question: "What towns do you serve for this work?",
+        answer:
+          "Junk Command disassembles and hauls these items in Port Huron, Marysville, Fort Gratiot, Kimball Township, St. Clair, Marine City, and Smiths Creek, plus Romeo, Imlay City, and Lapeer. Those are the same service areas already listed on this site.",
+      },
+      {
+        question: "Do I need a permit to take down a swing set or gazebo kit?",
+        answer:
+          "Taking apart a backyard swing set or trampoline is usually a removal job, not a new construction project. A permit or association notice is more likely when a larger structure is involved, and those rules vary by city, township, and HOA. Junk Command does not pull permits. Check with your local office or association if you are unsure.",
+      },
+    ],
+    relatedSlugs: ["construction-debris-removal", "furniture-removal", "hot-tub-removal"],
+  },
+  {
     slug: "shed-removal",
     title: "Shed Removal",
     shortTitle: "Sheds",

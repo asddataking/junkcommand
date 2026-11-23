@@ -34,6 +34,7 @@ const ICON_MAP: Record<string, LucideIcon> = {
   "hoarder-cleanout": Truck,
   "foreclosure-cleanout": HardHat,
   "hot-tub-removal": Waves,
+  "swing-set-trampoline-disassembly-removal": Trees,
   "shed-removal": Fence,
   "deck-removal": Hammer,
   "construction-debris-removal": Hammer,

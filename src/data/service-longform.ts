@@ -39,7 +39,14 @@ export const SERVICE_LONGFORM: Record<string, string[]> = {
     "We take drywall and plaster, framing scrap, tile and flooring remnants, cabinets, countertops, doors, windows, bagged insulation, fixture tear-outs, and mixed renovation junk that is not hazardous. Limited concrete or brick may be accepted depending on weight — tell us what is in the pile. Shed contents, deck tear-down debris, and yard waste that came down with a remodel can ride on the same load when they are mixed with the demo scrap. We are not a hazardous-waste contractor and we do not take asbestos, fuels, or wet paint.",
     "Pricing is volume-based, with the same published floors as the rest of the site: curbside from $99 and full-service from $129. A kitchen demo is not a minimum pickup. Photos of the pile, the driveway, and whether we can back a trailer to the garage get you a number before we load. Contractors can ask about repeat pickups when a job is phased. You still approve the price for each visit.",
     "Homeowners call when a dumpster quote feels like overkill for a bathroom remodel. Landlords clearing a Port Huron or St. Clair rental after a light rehab want the scrap gone before showings. Rural Kimball jobs may include an old shed that came down with the addition. If the same property also needs furniture or appliances hauled, combine it. One driveway visit is better than three.",
-    "A dead spa left on the deck after the remodel is [hot tub removal](/hot-tub-removal). Include it in the photos if you want the tub and the debris quoted together. Send photos and the address. Call or text 810-242-0429 or open the free estimate form. We will tell you whether the pile is a short stop or a dedicated debris day.",
+    "A dead spa left on the deck after the remodel is [hot tub removal](/hot-tub-removal). A swing set, trampoline, or playhouse coming out of the same yard is [swing set and trampoline disassembly](/swing-set-trampoline-disassembly-removal). Include those items in the photos if you want them quoted together. Send photos and the address. Call or text 810-242-0429 or open the free estimate form. We will tell you whether the pile is a short stop or a dedicated debris day.",
+  ],
+  "swing-set-trampoline-disassembly-removal": [
+    "Large swing sets and trampolines are a common backyard leftover in Port Huron, Fort Gratiot, and Marysville once the kids outgrow them or the frame rusts out. The set is too bulky for a regular trash day, and taking it apart in a fenced yard with soft ground or a tight gate is more than a Saturday project. Junk Command disassembles the structure and hauls the pieces so the yard is actually clear when we leave.",
+    "The work covers large wooden and metal swing sets, trampolines, playhouses, outdoor furniture, and selected pergola and gazebo kits. We take the item apart on site, load the lumber, metal, mats, and hardware, and remove it. You do not have to pre-disassemble the set or find a place to stack the parts. If a patio table, bench, or other yard junk is sitting next to the structure, point it out in the photos and we can quote it on the same visit.",
+    "Pricing follows the same published floors as the rest of this site: curbside Command starts at $99 and full-service Command starts at $129 for ordinary junk. A large swing set or trampoline is quoted from photos because size, anchors, and access change the number. You approve the price before we start taking anything apart. We do not invent a flat per-item price for this work.",
+    "Families call after a playset has sat unused, after a move, or when a house in St. Clair, Marine City, or Kimball Township is being listed and the backyard needs to look open. A trampoline on its side after a windy Lake Huron stretch is the same kind of job. If the property also has [construction debris](/construction-debris-removal), indoor [furniture](/furniture-removal), or a [hot tub](/hot-tub-removal), send those photos too so we can combine the haul.",
+    "Junk Command already runs these routes in Port Huron, Marysville, Fort Gratiot, Kimball Township, St. Clair, Marine City, and Smiths Creek, plus [Romeo](/service-areas/romeo), [Imlay City](/service-areas/imlay-city), and [Lapeer](/service-areas/lapeer). Send photos of the structure, the gate, and the path to the driveway. Call or text 810-242-0429 or use the free estimate form on this page. We will tell you whether it is a job we can take apart and haul.",
   ],
 };
 
@@ -102,6 +109,51 @@ export const SERVICE_DETAIL_SECTIONS: Record<string, ServiceDetailSection[]> = {
       paragraphs: [
         "Same-day or next-day windows may be available when the job fits a route already leaving Port Huron. Marysville and Fort Gratiot are minutes from that base. St. Clair and Marine City sit on the river route south. Smiths Creek and Kimball Township are the west-county run, about 15 to 20 minutes out in ordinary traffic. [Romeo](/service-areas/romeo), [Imlay City](/service-areas/imlay-city), and [Lapeer](/service-areas/lapeer) are stops we already make. A spa there uses the same photo quote.",
         "Winter ice and spring mud change footing on decks. We would rather move a window than load a shell on a slick lakeshore deck after a blow off Lake Huron. If you have a closing, a tenant date, or listing photos, say so when you send the address. Call or text 810-242-0429 or use the free estimate form on this page. Drain it if you can. We will take the rest.",
+      ],
+    },
+  ],
+
+  "swing-set-trampoline-disassembly-removal": [
+    {
+      heading: "LARGE SWING SETS",
+      paragraphs: [
+        "Large wooden and metal swing sets are the usual call. That includes the A-frame or beam, swings, slides, climbing walls, and the other pieces attached to the set. Many Port Huron and Fort Gratiot yards have sets that were anchored or assembled in place and will not roll out of a gate in one piece. Junk Command takes the set apart in the yard and carries the pieces to the trailer.",
+        "Tell us if the posts are set in concrete, boxed in by a fence, or sitting on soft ground. Photos of the set and the path out matter more than a brand name. We plan the takedown from what we can see, and we haul the lumber, metal, and hardware when we leave.",
+      ],
+    },
+    {
+      heading: "TRAMPOLINES",
+      paragraphs: [
+        "Trampolines come apart as a mat, spring or rod system, frame, pads, and often a safety net. The circle looks simple until it is rusted, tipped, or pinned in a fenced backyard in Marysville or Kimball Township. We disassemble the trampoline and load every part so you are not left cutting a frame with household tools.",
+        "If a storm moved the trampoline or it is already on its side, say so in the photos. We will still quote the takedown and the haul from what we can see. The trampoline leaves with us, including the net and pads when they are still on the frame.",
+      ],
+    },
+    {
+      heading: "PLAYHOUSES",
+      paragraphs: [
+        "Plastic and wood playhouses are part of the same backyard job. Some lift out after a few fasteners come off. Others are assembled kits that have to be taken apart to fit a gate or to keep from cracking on the way to the trailer. Junk Command already lists playhouses among the backyard structures we remove, and this page is where that work lives in detail.",
+        "Send photos of the playhouse, any platform or slide attached to it, and the route out of the yard. If it sits next to a swing set, we can often quote both structures on one visit.",
+      ],
+    },
+    {
+      heading: "OUTDOOR FURNITURE",
+      paragraphs: [
+        "Patio tables, benches, broken chairs, and other outdoor furniture often sit next to the playset that is coming out. We haul those pieces with the disassembly load when you point them out up front. Weathered, rusty, or water-damaged outdoor furniture is fine. You do not need to move it to the curb first unless you want the curbside price on a qualifying pile.",
+        "Indoor sofas, mattresses, and bedroom sets belong on our [furniture removal](/furniture-removal) page, and they can still ride on the same appointment when you include them in the photos.",
+      ],
+    },
+    {
+      heading: "SELECTED PERGOLA AND GAZEBO KITS",
+      paragraphs: [
+        "Junk Command takes selected pergola and gazebo kits — the kit-style structures we can safely take apart and load after we see photos. That is a narrower offer than every pergola or gazebo in the county. A simple kit on a patio is a different job than a custom, contractor-built structure with heavy beams or a roof that was framed in place.",
+        "We will not promise to take down every gazebo from a description alone. Send photos of the kit, how it is anchored, and the path to the driveway. If it is not a fit, we will say so before we schedule. Footings, concrete pads, and full custom builds may be outside this service.",
+      ],
+    },
+    {
+      heading: "WE ALSO HAUL EVERYTHING AWAY",
+      paragraphs: [
+        "Disassembly is only half of the job. Junk Command loads the pieces and hauls them away. You should not be left with a stack of lumber, a rolled trampoline mat, or a pile of bolts in the grass. After the structure is down, the debris goes on the trailer, and the work path is cleared.",
+        "If there is other junk in the same yard — a grill, a pile of brush, or items from a garage — include it in the photos. We would rather quote one combined load than leave you with a second pile to deal with later.",
       ],
     },
   ],

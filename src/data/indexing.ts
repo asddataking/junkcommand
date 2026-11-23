@@ -8,6 +8,7 @@ export const KEPT_SERVICE_SLUGS = [
   "furniture-removal",
   "appliance-removal",
   "hot-tub-removal",
+  "swing-set-trampoline-disassembly-removal",
   "estate-cleanout",
   "construction-debris-removal",
   "garage-cleanout",
@@ -45,6 +46,11 @@ export const KEPT_PAGES: {
   { path: "/furniture-removal", label: "Furniture Removal", group: "services" },
   { path: "/appliance-removal", label: "Appliance Removal", group: "services" },
   { path: "/hot-tub-removal", label: "Hot Tub Removal", group: "services" },
+  {
+    path: "/swing-set-trampoline-disassembly-removal",
+    label: "Swing Set & Trampoline Disassembly",
+    group: "services",
+  },
   { path: "/estate-cleanout", label: "Estate Cleanouts", group: "services" },
   { path: "/garage-cleanout", label: "Garage Cleanouts", group: "services" },
   {

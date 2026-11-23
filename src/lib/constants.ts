@@ -152,6 +152,7 @@ export const FOOTER_LINKS = {
     { label: "Furniture Removal", href: "/furniture-removal" },
     { label: "Appliance Removal", href: "/appliance-removal" },
     { label: "Hot Tub Removal", href: "/hot-tub-removal" },
+    { label: "Swing Set & Trampoline Disassembly", href: "/swing-set-trampoline-disassembly-removal" },
     { label: "Estate Cleanouts", href: "/estate-cleanout" },
     { label: "Garage Cleanouts", href: "/garage-cleanout" },
     { label: "Construction Debris", href: "/construction-debris-removal" },

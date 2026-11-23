@@ -41,6 +41,11 @@ const CATEGORIES = [
     items: ["Construction debris", "Yard waste and brush", "Shed and deck tear-down debris", "Hot tubs"],
   },
   {
+    title: "Swing sets, trampolines & yard structures",
+    href: "/swing-set-trampoline-disassembly-removal",
+    items: ["Large swing sets", "Trampolines", "Playhouses", "Outdoor furniture", "Selected pergola and gazebo kits"],
+  },
+  {
     title: "Electronics",
     href: "/what-we-take",
     items: ["TVs and monitors", "Computers and printers", "Exercise equipment", "Misc. household junk"],
@@ -51,7 +56,7 @@ const pageFaqs = [
   {
     question: "What junk does Junk Command take in Port Huron?",
     answer:
-      "We haul household furniture, appliances, mattresses, garage and estate cleanout debris, yard waste, construction leftovers, electronics, and most non-hazardous items two people can carry. Send photos to 810-242-0429 if you are unsure.",
+      "We haul household furniture, appliances, mattresses, garage and estate cleanout debris, yard waste, construction leftovers, electronics, large swing sets, trampolines, playhouses, outdoor furniture, selected pergola and gazebo kits, and most non-hazardous items two people can carry. Send photos to 810-242-0429 if you are unsure.",
   },
   {
     question: "Do I have to move items to the curb?",
@@ -68,7 +73,7 @@ const pageFaqs = [
 export const metadata = buildPageMetadata({
   title: "Items Junk Command Hauls in Port Huron | What We Take",
   description:
-    "What Junk Command hauls in Port Huron and St. Clair County: furniture, appliances, mattresses, garage and estate contents, hot tubs, and mixed construction debris.",
+    "What Junk Command hauls in Port Huron and St. Clair County: furniture, appliances, mattresses, garage and estate contents, hot tubs, swing sets, trampolines, and mixed construction debris.",
   path: "/what-we-take",
 });
 
