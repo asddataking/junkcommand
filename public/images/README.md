@@ -34,6 +34,7 @@ One WebP per service slug, e.g.:
 - `electronics-recycling.webp`
 - `tv-removal.webp`
 - `refrigerator-removal.webp`
+- `swing-set-disassembly-port-huron.webp`, `trampoline-disassembly-port-huron.webp`, `playhouse-disassembly-port-huron.webp`, `outdoor-furniture-removal-port-huron.webp`, `gazebo-kit-disassembly-port-huron.webp`, `yard-debris-haul-away-port-huron.webp` — section photos for `/swing-set-trampoline-disassembly-removal` (source credits are in `src/data/service-longform.ts`)
 
 ## Cities (`/images/cities/`)
 One WebP per city slug (port-huron, marysville, …).

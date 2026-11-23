@@ -72,6 +72,17 @@ export function ServicePageContent({ service }: { service: Service }) {
                 <h2 className="font-display text-3xl tracking-[0.06em] text-white sm:text-4xl">
                   {section.heading}
                 </h2>
+                {section.image ? (
+                  <div className="relative mt-4 aspect-[3/2] overflow-hidden rounded-[2px] border border-[rgba(0,135,255,0.35)]">
+                    <MediaImage
+                      src={section.image}
+                      alt={section.imageAlt ?? ""}
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 760px"
+                      className="object-cover"
+                    />
+                  </div>
+                ) : null}
                 <RichTextBlock
                   paragraphs={section.paragraphs}
                   className="mt-4 space-y-4 text-base leading-relaxed text-muted"
@@ -91,15 +102,17 @@ export function ServicePageContent({ service }: { service: Service }) {
               ))}
             </ul>
 
-            <div className="relative aspect-[16/9] overflow-hidden rounded-[2px] border border-[rgba(0,135,255,0.35)]">
-              <MediaImage
-                src={service.image}
-                alt={service.imageAlt}
-                fill
-                sizes="(max-width: 1024px) 100vw, 760px"
-                className="object-cover"
-              />
-            </div>
+            {detailSections.some((section) => section.image) ? null : (
+              <div className="relative aspect-[16/9] overflow-hidden rounded-[2px] border border-[rgba(0,135,255,0.35)]">
+                <MediaImage
+                  src={service.image}
+                  alt={service.imageAlt}
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 760px"
+                  className="object-cover"
+                />
+              </div>
+            )}
 
             <div>
               <h2 className="font-display text-3xl tracking-[0.06em] text-white sm:text-4xl">

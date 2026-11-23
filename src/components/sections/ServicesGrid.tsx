@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import {
   Armchair,
   Building2,
@@ -53,6 +54,24 @@ export function ServicesGrid() {
             </BlurFade>
           ))}
         </div>
+
+        <ul className="mt-6 flex flex-wrap justify-center gap-4 text-sm">
+          <li>
+            <Link href="/swing-set-trampoline-disassembly-removal" className="font-semibold text-bright hover:text-white">
+              Swing set &amp; trampoline disassembly
+            </Link>
+          </li>
+          <li>
+            <Link href="/commercial-junk-removal" className="font-semibold text-bright hover:text-white">
+              Commercial junk removal
+            </Link>
+          </li>
+          <li>
+            <Link href="/what-we-take" className="font-semibold text-bright hover:text-white">
+              What we take
+            </Link>
+          </li>
+        </ul>
       </div>
     </section>
   );
