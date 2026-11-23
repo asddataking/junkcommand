@@ -105,7 +105,22 @@ export function DeliveryLandingContent({ page }: { page: DeliveryPage }) {
           images={page.gallery}
         />
       ) : null}
-      <LandingHowItWorks steps={page.process} />
+      <LandingHowItWorks
+        steps={page.process}
+        ctas={
+          page.processCtas
+            ? [
+                {
+                  label: "Get a Free Estimate",
+                  href: "#quote",
+                  showArrow: true,
+                },
+                { label: "Text Us", href: BRAND.smsHref, variant: "secondary" },
+                { label: "Call Now", href: BRAND.phoneHref, variant: "ghost" },
+              ]
+            : undefined
+        }
+      />
       <LandingFeatureGrid
         title="WHAT WE HANDLE"
         features={page.features}

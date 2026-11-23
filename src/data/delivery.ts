@@ -44,6 +44,7 @@ export type DeliveryPage = {
   };
   gallery?: DeliveryGalleryImage[];
   process: { title: string; description: string }[];
+  processCtas?: boolean;
   features: DeliveryFeature[];
   removalCta?: {
     title: string;

@@ -1,3 +1,6 @@
+import { Button } from "@/components/ui/Button";
+import type { LandingHeroCta } from "@/components/landing/LandingHero";
+
 type Step = {
   title: string;
   description: string;
@@ -6,9 +9,11 @@ type Step = {
 export function LandingHowItWorks({
   title = "HOW IT WORKS",
   steps,
+  ctas,
 }: {
   title?: string;
   steps: Step[];
+  ctas?: LandingHeroCta[];
 }) {
   return (
     <section className="py-14 sm:py-20">
@@ -32,6 +37,20 @@ export function LandingHowItWorks({
             </li>
           ))}
         </ol>
+        {ctas?.length ? (
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
+            {ctas.map((cta) => (
+              <Button
+                key={cta.label}
+                href={cta.href}
+                variant={cta.variant ?? "primary"}
+                showArrow={cta.showArrow}
+              >
+                {cta.label}
+              </Button>
+            ))}
+          </div>
+        ) : null}
       </div>
     </section>
   );

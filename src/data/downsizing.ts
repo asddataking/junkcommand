@@ -44,26 +44,22 @@ export const DOWNSIZING_MOVING: DeliveryPage = {
   ],
   process: [
     {
-      title: "Describe the transition",
+      title: "Fill out the estimate form",
       description:
-        "Tell us about the old home, the new one, and whether you need removal, donation, delivery, assembly, or a mix.",
+        "Tell us what you need and upload photos in the Free Estimate form on this page.",
     },
     {
-      title: "Share photos and a rough item count",
+      title: "Junk Command sends your estimate",
       description:
-        "Photos and an approximate count help us quote the work as one project when we can.",
+        "We review your request and photos, then send your estimate.",
     },
     {
-      title: "Review a starting estimate",
+      title: "We schedule the work",
       description:
-        "We confirm pricing before work starts. Package figures on this page are starting estimates only.",
-    },
-    {
-      title: "We handle the pieces you choose",
-      description:
-        "Removal, donation runs, delivery, placement, and basic assembly — scheduled around the move.",
+        "Once you approve the estimate, we schedule a time that works for the move.",
     },
   ],
+  processCtas: true,
   features: [
     {
       title: "Unwanted Furniture & Household Removal",
@@ -108,26 +104,6 @@ export const DOWNSIZING_MOVING: DeliveryPage = {
         "Boxes, packing paper, and leftover debris from the move can go with us so the new place is easier to settle into.",
     },
   ],
-  packagesTitle: "Starting estimates",
-  packages: [
-    {
-      name: "Downsizing Assist",
-      price: "$299",
-      blurb: "A focused visit for a smaller set of items — a starting estimate, custom-quoted from photos.",
-    },
-    {
-      name: "Home Transition",
-      price: "$599",
-      blurb: "Several services in one project, such as removal, a donation run, and placement. A starting estimate, not a fixed package price.",
-    },
-    {
-      name: "Full Downsizing Project",
-      price: "$1,200",
-      blurb: "A larger, custom project that may combine removal, donation, delivery, and assembly. Custom from $1,200 as a starting estimate.",
-    },
-  ],
-  packagesDisclaimer:
-    "These figures are starting estimates and preliminary examples, not guaranteed prices. Your final price depends on volume, distance, access, labor, and scope. Junk Command confirms a price before work starts.",
   removalCta: {
     title: "Need a Full Property Cleanout Instead?",
     description:
@@ -159,9 +135,9 @@ export const DOWNSIZING_MOVING: DeliveryPage = {
         "Yes. That is the point of this service. Tell Junk Command which parts you need — unwanted-item removal, donation drop-offs, delivery to family or storage, placement, or basic assembly — and we will quote the project.",
     },
     {
-      question: "Are the package prices guaranteed?",
+      question: "How do I get an estimate?",
       answer:
-        "No. The $299, $599, and $1,200 figures are starting estimates and preliminary examples only. The final price depends on volume, distance, access, labor, and scope. You approve a confirmed price before we start.",
+        "Fill out the Free Estimate form on this page with what you need and photos. Junk Command reviews your request and sends your estimate, then we schedule the work.",
     },
     {
       question: "What should I include in the quote form?",
@@ -181,7 +157,7 @@ export const DOWNSIZING_MOVING: DeliveryPage = {
     "Describe the project and the two addresses if you are moving between homes.",
     "Give an approximate item count.",
     "Tell us if you need removal, donation, delivery, assembly, or a combination.",
-    "Upload photos in the form so we can confirm a starting estimate.",
+    "Upload photos in the form so Junk Command can review the job and send your estimate.",
   ],
   formEmbed: true,
   pageType: "downsizing_moving",
