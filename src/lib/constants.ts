@@ -129,11 +129,44 @@ export const HOURS_SUMMARY = "Mon–Sat 8:00 AM – 6:00 PM · Sunday Closed";
 
 /** Primary header nav — matches homepage mockup anchors */
 export const NAV_LINKS = [
-  { label: "Services", href: "/#services" },
   { label: "How It Works", href: "/#how-it-works" },
   { label: "About", href: "/about" },
   { label: "Service Areas", href: "/#service-areas" },
 ] as const;
+
+/** Services dropdown in the header and mobile menu. */
+export const SERVICES_NAV = {
+  label: "Services",
+  href: "/#services",
+  groups: [
+    {
+      label: "Junk Removal",
+      href: "/#services",
+      links: [
+        { label: "Furniture Removal", href: "/furniture-removal" },
+        { label: "Appliance Removal", href: "/appliance-removal" },
+        { label: "Hot Tub Removal", href: "/hot-tub-removal" },
+        { label: "Swing Set & Trampoline Disassembly", href: "/swing-set-trampoline-disassembly-removal" },
+        { label: "Construction Debris", href: "/construction-debris-removal" },
+        { label: "Commercial Junk Removal", href: "/commercial-junk-removal" },
+      ],
+    },
+    {
+      label: "Property Cleanouts",
+      href: "/estate-cleanout",
+      links: [
+        { label: "Estate Cleanouts", href: "/estate-cleanout" },
+        { label: "Garage Cleanouts", href: "/garage-cleanout" },
+      ],
+    },
+  ],
+  links: [
+    { label: "Furniture Assembly", href: "/furniture-assembly" },
+    { label: "Downsizing & Home Transitions", href: "/downsizing-moving" },
+    { label: "Furniture Pickup & Delivery", href: "/furniture-delivery" },
+    { label: "What We Take", href: "/what-we-take" },
+  ],
+} as const;
 
 /** Labor pool landing — header/mobile CTA + footer, not in the 4-item homepage nav */
 export const LABOR_POOL = {
@@ -157,6 +190,9 @@ export const FOOTER_LINKS = {
     { label: "Garage Cleanouts", href: "/garage-cleanout" },
     { label: "Construction Debris", href: "/construction-debris-removal" },
     { label: "Commercial Junk Removal", href: "/commercial-junk-removal" },
+    { label: "Furniture Assembly", href: "/furniture-assembly" },
+    { label: "Downsizing & Home Transitions", href: "/downsizing-moving" },
+    { label: "Furniture Pickup & Delivery", href: "/furniture-delivery" },
     { label: "What We Take", href: "/what-we-take" },
   ],
   areas: [

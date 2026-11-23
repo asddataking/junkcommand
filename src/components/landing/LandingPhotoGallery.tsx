@@ -4,9 +4,11 @@ import { BlurFade } from "@/components/magicui/blur-fade";
 
 export function LandingPhotoGallery({
   title = "ALONG THE TRAIL",
+  intro = "From Lexington Beach on Lake Huron to the coastal road along M-25 — the Thumb Yard Sale Trail runs through some of the Blue Water Area's best summer scenery.",
   images,
 }: {
   title?: string;
+  intro?: string;
   images: DeliveryGalleryImage[];
 }) {
   if (!images.length) return null;
@@ -17,11 +19,7 @@ export function LandingPhotoGallery({
         <h2 className="font-display text-3xl tracking-[0.06em] text-white sm:text-4xl">
           {title}
         </h2>
-        <p className="mt-3 max-w-2xl text-muted">
-          From Lexington Beach on Lake Huron to the coastal road along M-25 —
-          the Thumb Yard Sale Trail runs through some of the Blue Water Area&apos;s
-          best summer scenery.
-        </p>
+        {intro ? <p className="mt-3 max-w-2xl text-muted">{intro}</p> : null}
         <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {images.map((image, index) => (
             <li key={image.src}>

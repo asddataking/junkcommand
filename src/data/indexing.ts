@@ -34,6 +34,9 @@ export type KeptPath =
   | "/contact"
   | "/what-we-take"
   | "/commercial-junk-removal"
+  | "/furniture-assembly"
+  | "/downsizing-moving"
+  | "/furniture-delivery"
   | `/${(typeof KEPT_SERVICE_SLUGS)[number]}`
   | `/service-areas/${(typeof KEPT_CITY_SLUGS)[number]}`;
 
@@ -61,6 +64,21 @@ export const KEPT_PAGES: {
   {
     path: "/commercial-junk-removal",
     label: "Commercial Junk Removal",
+    group: "services",
+  },
+  {
+    path: "/furniture-assembly",
+    label: "Furniture Assembly",
+    group: "services",
+  },
+  {
+    path: "/downsizing-moving",
+    label: "Downsizing & Home Transitions",
+    group: "services",
+  },
+  {
+    path: "/furniture-delivery",
+    label: "Furniture Pickup & Delivery",
     group: "services",
   },
   { path: "/what-we-take", label: "What We Take", group: "services" },
@@ -179,7 +197,6 @@ const STATIC_REDIRECTS: RedirectRule[] = [
   { source: "/book-online", destination: "/contact" },
   { source: "/blog", destination: "/" },
   { source: "/garage-sale-trail", destination: "/" },
-  { source: "/furniture-delivery", destination: "/furniture-removal" },
   { source: "/partners", destination: "/about" },
   { source: "/responsible-disposal", destination: "/what-we-take" },
 ];

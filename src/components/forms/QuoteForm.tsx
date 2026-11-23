@@ -17,6 +17,8 @@ type QuoteFormProps = {
   title?: string;
   description?: string;
   benefitItems?: readonly string[];
+  /** On-page guidance shown as a list next to the form. */
+  instructions?: readonly string[];
   /** Keep the inline GHL embed on dedicated form pages. */
   embedForm?: boolean;
   pageType?: string;
@@ -25,10 +27,13 @@ type QuoteFormProps = {
 export function QuoteForm({
   title = "CONFIRM YOUR PRICE WITH PHOTOS",
   description = "Request a free estimate below. We will review your details and photos, then confirm pricing before pickup.",
-  benefitItems = benefits,
+  benefitItems,
+  instructions,
   embedForm = false,
   pageType = "homepage",
 }: QuoteFormProps = {}) {
+  const listItems = instructions ?? benefitItems ?? benefits;
+
   const titleLines = title.includes("\n")
     ? title.split("\n")
     : title.includes(" WITH ")
@@ -61,7 +66,7 @@ export function QuoteForm({
           </h2>
           <p className="mt-4 text-muted">{description}</p>
           <ul className="mt-8 space-y-3">
-            {benefitItems.map((item) => (
+            {listItems.map((item) => (
               <li
                 key={item}
                 className="flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.08em] text-white"

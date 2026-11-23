@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { BRAND, LABOR_POOL, NAV_LINKS } from "@/lib/constants";
+import { MobileServicesNav } from "@/components/layout/ServicesNav";
 import { FreeEstimateButton } from "@/components/forms/FreeEstimateButton";
 import { PhoneLink } from "@/components/forms/PhoneLink";
 
@@ -23,6 +24,7 @@ export function MobileMenu({
         className="mx-auto flex max-w-7xl flex-col gap-1 px-4 py-4"
         aria-label="Mobile"
       >
+        <MobileServicesNav onNavigate={onClose} />
         {NAV_LINKS.map((link) => (
           <Link
             key={link.href}

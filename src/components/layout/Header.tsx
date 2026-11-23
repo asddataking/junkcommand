@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { LABOR_POOL, NAV_LINKS } from "@/lib/constants";
+import { DesktopServicesNav } from "@/components/layout/ServicesNav";
 import { Logo } from "@/components/ui/Logo";
 import { MobileMenu } from "@/components/layout/MobileMenu";
 import { FreeEstimateButton } from "@/components/forms/FreeEstimateButton";
@@ -57,6 +58,7 @@ export function Header() {
           className="hidden items-center gap-8 lg:flex"
           aria-label="Primary"
         >
+          <DesktopServicesNav />
           {NAV_LINKS.map((link) => (
             <Link
               key={link.href}
