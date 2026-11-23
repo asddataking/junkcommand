@@ -94,7 +94,7 @@ export const FURNITURE_ASSEMBLY: DeliveryPage = {
     {
       title: "Trampolines & Outdoor Play",
       description:
-        "We can set up trampolines and many outdoor play kits. If you need a trampoline or swing set taken apart and hauled away, request a removal quote — that is a different job.",
+        "We can set up trampolines and many outdoor play kits. If you need a trampoline or swing set taken apart and hauled away, use our swing set and trampoline disassembly page — that is a different job.",
       image: "/images/expansion/furniture-assembly-trampoline.webp",
       imageAlt:
         "Stock photo of a couple sitting on a backyard trampoline. Illustrative only; not a Junk Command job.",
@@ -145,6 +145,11 @@ export const FURNITURE_ASSEMBLY: DeliveryPage = {
         "No. Junk Command does not assemble home gyms or weight machines. If you need a home gym taken apart and hauled away, ask us about removal instead.",
     },
     {
+      question: "Can you take a trampoline or swing set apart instead of setting it up?",
+      answer:
+        "Yes. Setup and takedown are different jobs. For disassembly and haul-away, use the swing set and trampoline disassembly page.",
+    },
+    {
       question: "Can you haul the packaging away?",
       answer:
         "Yes. Tell us in the quote notes if you want the boxes and packing materials removed after assembly.",
@@ -171,6 +176,7 @@ export const FURNITURE_ASSEMBLY: DeliveryPage = {
     "Furniture assembly in Port Huron and St. Clair County, with placement and packaging haul-away when you need it.",
   endCtaLabel: "Get an Assembly Quote",
   relatedLinks: [
+    { label: "Swing Set & Trampoline Disassembly", href: "/swing-set-trampoline-disassembly-removal" },
     { label: "Furniture Pickup & Delivery", href: "/furniture-delivery" },
     { label: "Furniture Removal", href: "/furniture-removal" },
     { label: "Downsizing & Home Transitions", href: "/downsizing-moving" },

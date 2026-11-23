@@ -134,11 +134,7 @@ export const NAV_LINKS = [
   { label: "Service Areas", href: "/#service-areas" },
 ] as const;
 
-/**
- * Services dropdown. Disassembly is omitted until PR #32
- * (seo/swing-set-trampoline-disassembly) merges; add
- * /swing-set-trampoline-disassembly-removal under Junk Removal then.
- */
+/** Services dropdown in the header and mobile menu. */
 export const SERVICES_NAV = {
   label: "Services",
   href: "/#services",
@@ -150,6 +146,7 @@ export const SERVICES_NAV = {
         { label: "Furniture Removal", href: "/furniture-removal" },
         { label: "Appliance Removal", href: "/appliance-removal" },
         { label: "Hot Tub Removal", href: "/hot-tub-removal" },
+        { label: "Swing Set & Trampoline Disassembly", href: "/swing-set-trampoline-disassembly-removal" },
         { label: "Construction Debris", href: "/construction-debris-removal" },
         { label: "Commercial Junk Removal", href: "/commercial-junk-removal" },
       ],
