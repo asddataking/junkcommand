@@ -111,6 +111,22 @@ export default function WhatWeTakePage() {
             get you a free estimate. You approve the price before we load. We do
             not invent a per-item menu beyond those published starting points.
           </p>
+          <p className="mt-4 max-w-2xl text-muted">
+            Junk Command also{" "}
+            <Link href="/furniture-assembly" className="font-semibold text-bright hover:text-white">
+              assembles furniture
+            </Link>
+            ,{" "}
+            <Link href="/furniture-delivery" className="font-semibold text-bright hover:text-white">
+              picks up and delivers large items
+            </Link>
+            , and helps with{" "}
+            <Link href="/downsizing-moving" className="font-semibold text-bright hover:text-white">
+              downsizing and home transitions
+            </Link>
+            . Those pages cover setup, delivery, and move help — not what we haul
+            away.
+          </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <FreeEstimateButton ctaPosition="what_we_take_hero" pageType="what_we_take">
               Send Photos for a Price

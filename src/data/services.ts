@@ -18,6 +18,7 @@ export type Service = {
   faqs: { question: string; answer: string }[];
   relatedSlugs: string[];
   startingPrice?: string;
+  extraRelatedLinks?: { label: string; href: string; description: string }[];
 };
 
 export const SERVICES: Service[] = [
@@ -89,6 +90,20 @@ export const SERVICES: Service[] = [
     ],
     relatedSlugs: ["estate-cleanout", "appliance-removal", "garage-cleanout"],
     startingPrice: "$129",
+    extraRelatedLinks: [
+      {
+        label: "Furniture Pickup & Delivery",
+        href: "/furniture-delivery",
+        description:
+          "Bought a replacement sofa or dresser and need it brought in? Junk Command also picks up and delivers furniture.",
+      },
+      {
+        label: "Furniture Assembly",
+        href: "/furniture-assembly",
+        description:
+          "Need the new piece put together after we haul the old one out? Ask us about assembly.",
+      },
+    ],
   },
   {
     slug: "appliance-removal",
@@ -500,6 +515,20 @@ export const SERVICES: Service[] = [
     ],
     relatedSlugs: ["garage-cleanout", "furniture-removal", "appliance-removal"],
     startingPrice: "Custom quote",
+    extraRelatedLinks: [
+      {
+        label: "Downsizing & Home Transitions",
+        href: "/downsizing-moving",
+        description:
+          "Helping someone move into a smaller home, and still need items delivered, donated, or assembled? Start on our downsizing page.",
+      },
+      {
+        label: "Furniture Pickup & Delivery",
+        href: "/furniture-delivery",
+        description:
+          "Kept pieces can be delivered to a family member or a new home instead of being hauled away.",
+      },
+    ],
   },
   {
     slug: "storage-unit-cleanout",

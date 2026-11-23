@@ -275,7 +275,7 @@ export function ServicePageContent({ service }: { service: Service }) {
         </div>
       </section>
 
-      {related.length > 0 ? (
+      {related.length > 0 || (service.extraRelatedLinks?.length ?? 0) > 0 ? (
         <section className="border-t border-[rgba(0,135,255,0.2)] bg-[#080B0F] py-16 sm:py-20">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <h2 className="font-display text-3xl tracking-[0.06em] text-white sm:text-4xl">
@@ -286,6 +286,25 @@ export function ServicePageContent({ service }: { service: Service }) {
                 <ServiceLinkCard key={item.slug} service={item} />
               ))}
             </div>
+            {service.extraRelatedLinks?.length ? (
+              <ul className="mt-8 grid gap-4 sm:grid-cols-2">
+                {service.extraRelatedLinks.map((link) => (
+                  <li
+                    key={link.href}
+                    className="rounded-[2px] border border-[rgba(0,135,255,0.3)] bg-card p-5"
+                  >
+                    <h3 className="font-heading text-lg text-white">{link.label}</h3>
+                    <p className="mt-2 text-sm text-muted">{link.description}</p>
+                    <Link
+                      href={link.href}
+                      className="mt-3 inline-flex text-sm font-semibold uppercase tracking-[0.08em] text-bright hover:text-white"
+                    >
+                      {link.label} →
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            ) : null}
           </div>
         </section>
       ) : null}

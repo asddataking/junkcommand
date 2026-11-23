@@ -16,7 +16,7 @@ export function LandingHowItWorks({
         <h2 className="font-display text-3xl tracking-[0.06em] text-white sm:text-4xl">
           {title}
         </h2>
-        <ol className="mt-8 grid gap-4 sm:grid-cols-3">
+        <ol className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {steps.map((step, index) => (
             <li
               key={step.title}

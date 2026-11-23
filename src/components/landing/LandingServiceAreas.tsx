@@ -10,10 +10,12 @@ export function LandingServiceAreas({
   title = "AREAS WE SERVE",
   intro,
   areas,
+  allAreasHref = "/#service-areas",
 }: {
   title?: string;
   intro: string;
   areas: Area[];
+  allAreasHref?: string;
 }) {
   return (
     <section className="border-t border-[rgba(0,135,255,0.15)] py-14 sm:py-20">
@@ -43,7 +45,7 @@ export function LandingServiceAreas({
           ))}
         </ul>
         <Link
-          href="/service-areas"
+          href={allAreasHref}
           className="mt-6 inline-block text-sm font-semibold text-bright hover:text-white"
         >
           View all service areas →
