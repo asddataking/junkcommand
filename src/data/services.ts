@@ -811,9 +811,11 @@ export const SERVICES: Service[] = [
       "When a large swing set, trampoline, or playhouse has to come out of the yard, Junk Command takes it apart and hauls the pieces away — no leftover pile at the curb.",
     description:
       "Junk Command disassembles and removes large swing sets, trampolines, playhouses, outdoor furniture, and selected pergola and gazebo kits in Port Huron, Marysville, Fort Gratiot, and the other towns we already serve.",
-    image: "/images/trailer.webp",
+    // Hero: Afeez Adeleke, Pexels License (Free). Stock photo, not a Junk Command job.
+    // https://www.pexels.com/photo/rustic-wooden-playground-in-lush-green-forest-34208415/
+    image: "/images/services/swing-set-disassembly-port-huron.webp",
     imageAlt:
-      "Junk Command crew standing with the company trailer used to haul disassembled yard structures in Port Huron, MI",
+      "Empty wooden swing set with a play fort, yellow slide, and swings in a wooded yard",
     benefits: [
       "We disassemble the structure and haul the pieces in one visit",
       "Large swing sets, trampolines, playhouses, and outdoor furniture",

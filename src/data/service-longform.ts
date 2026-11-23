@@ -53,6 +53,9 @@ export const SERVICE_LONGFORM: Record<string, string[]> = {
 export type ServiceDetailSection = {
   heading: string;
   paragraphs: string[];
+  /** Optional section photo. Stock or generic images only; never captioned as a Junk Command job. */
+  image?: string;
+  imageAlt?: string;
 };
 
 /** Extra H2 sections for service pages that need more than the intro. */
@@ -116,6 +119,11 @@ export const SERVICE_DETAIL_SECTIONS: Record<string, ServiceDetailSection[]> = {
   "swing-set-trampoline-disassembly-removal": [
     {
       heading: "LARGE SWING SETS",
+      // Photo: Afeez Adeleke, Pexels License (Free).
+      // https://www.pexels.com/photo/rustic-wooden-playground-in-lush-green-forest-34208415/
+      image: "/images/services/swing-set-disassembly-port-huron.webp",
+      imageAlt:
+        "Empty wooden swing set with a play fort, yellow slide, and swings in a wooded yard",
       paragraphs: [
         "Large wooden and metal swing sets are the usual call. That includes the A-frame or beam, swings, slides, climbing walls, and the other pieces attached to the set. Many Port Huron and Fort Gratiot yards have sets that were anchored or assembled in place and will not roll out of a gate in one piece. Junk Command takes the set apart in the yard and carries the pieces to the trailer.",
         "Tell us if the posts are set in concrete, boxed in by a fence, or sitting on soft ground. Photos of the set and the path out matter more than a brand name. We plan the takedown from what we can see, and we haul the lumber, metal, and hardware when we leave.",
@@ -123,6 +131,12 @@ export const SERVICE_DETAIL_SECTIONS: Record<string, ServiceDetailSection[]> = {
     },
     {
       heading: "TRAMPOLINES",
+      // Generic AI-generated image of an empty backyard trampoline. Not a
+      // photograph of a Junk Command job. A fitting licensed still could not
+      // be downloaded (the candidate Unsplash photo was blocked).
+      image: "/images/services/trampoline-disassembly-port-huron.webp",
+      imageAlt:
+        "Empty backyard trampoline with a safety net standing in a fenced yard",
       paragraphs: [
         "Trampolines come apart as a mat, spring or rod system, frame, pads, and often a safety net. The circle looks simple until it is rusted, tipped, or pinned in a fenced backyard in Marysville or Kimball Township. We disassemble the trampoline and load every part so you are not left cutting a frame with household tools.",
         "If a storm moved the trampoline or it is already on its side, say so in the photos. We will still quote the takedown and the haul from what we can see. The trampoline leaves with us, including the net and pads when they are still on the frame.",
@@ -130,6 +144,11 @@ export const SERVICE_DETAIL_SECTIONS: Record<string, ServiceDetailSection[]> = {
     },
     {
       heading: "PLAYHOUSES",
+      // Photo: James Owen, Pexels License (Free).
+      // https://www.pexels.com/photo/a-wooden-shed-on-the-field-6246330/
+      image: "/images/services/playhouse-disassembly-port-huron.webp",
+      imageAlt:
+        "Weathered wooden playhouse with a peaked roof and a ladder in a park",
       paragraphs: [
         "Plastic and wood playhouses are part of the same backyard job. Some lift out after a few fasteners come off. Others are assembled kits that have to be taken apart to fit a gate or to keep from cracking on the way to the trailer. Junk Command already lists playhouses among the backyard structures we remove, and this page is where that work lives in detail.",
         "Send photos of the playhouse, any platform or slide attached to it, and the route out of the yard. If it sits next to a swing set, we can often quote both structures on one visit.",
@@ -137,6 +156,10 @@ export const SERVICE_DETAIL_SECTIONS: Record<string, ServiceDetailSection[]> = {
     },
     {
       heading: "OUTDOOR FURNITURE",
+      // Photo: Hoài Nam, Pexels License (Free).
+      // https://www.pexels.com/photo/a-table-on-a-patio-26179852/
+      image: "/images/services/outdoor-furniture-removal-port-huron.webp",
+      imageAlt: "Wooden patio table and folding chairs on an outdoor terrace",
       paragraphs: [
         "Patio tables, benches, broken chairs, and other outdoor furniture often sit next to the playset that is coming out. We haul those pieces with the disassembly load when you point them out up front. Weathered, rusty, or water-damaged outdoor furniture is fine. You do not need to move it to the curb first unless you want the curbside price on a qualifying pile.",
         "Indoor sofas, mattresses, and bedroom sets belong on our [furniture removal](/furniture-removal) page, and they can still ride on the same appointment when you include them in the photos.",
@@ -144,6 +167,11 @@ export const SERVICE_DETAIL_SECTIONS: Record<string, ServiceDetailSection[]> = {
     },
     {
       heading: "SELECTED PERGOLA AND GAZEBO KITS",
+      // Photo: Craig Adderley, Pexels License (Free). Garden gazebo stock,
+      // not a kit and not a Junk Command job.
+      // https://www.pexels.com/photo/scenic-wooden-gazebo-in-cork-garden-setting-29334094/
+      image: "/images/services/gazebo-kit-disassembly-port-huron.webp",
+      imageAlt: "Wooden garden gazebo with a thatched roof and flower boxes",
       paragraphs: [
         "Junk Command takes selected pergola and gazebo kits — the kit-style structures we can safely take apart and load after we see photos. That is a narrower offer than every pergola or gazebo in the county. A simple kit on a patio is a different job than a custom, contractor-built structure with heavy beams or a roof that was framed in place.",
         "We will not promise to take down every gazebo from a description alone. Send photos of the kit, how it is anchored, and the path to the driveway. If it is not a fit, we will say so before we schedule. Footings, concrete pads, and full custom builds may be outside this service.",
@@ -151,6 +179,10 @@ export const SERVICE_DETAIL_SECTIONS: Record<string, ServiceDetailSection[]> = {
     },
     {
       heading: "WE ALSO HAUL EVERYTHING AWAY",
+      // Photo: Mathias Reding, Pexels License (Free).
+      // https://www.pexels.com/photo/industrial-trash-container-9669805/
+      image: "/images/services/yard-debris-haul-away-port-huron.webp",
+      imageAlt: "Orange debris container loaded with lumber and wood scraps",
       paragraphs: [
         "Disassembly is only half of the job. Junk Command loads the pieces and hauls them away. You should not be left with a stack of lumber, a rolled trampoline mat, or a pile of bolts in the grass. After the structure is down, the debris goes on the trailer, and the work path is cleared.",
         "If there is other junk in the same yard — a grill, a pile of brush, or items from a garage — include it in the photos. We would rather quote one combined load than leave you with a second pile to deal with later.",
