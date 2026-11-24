@@ -77,7 +77,7 @@ export const LOAD_TIERS: LoadTier[] = [
     id: "full-command-load",
     fillPercent: 100,
     name: "Full Command Load",
-    price: 449,
+    price: 497,
     cubicYards: TRAILER_CUBIC_YARDS,
     examples: [
       "Full trailer of ordinary household junk",
