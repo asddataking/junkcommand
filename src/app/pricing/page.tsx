@@ -32,7 +32,7 @@ const PRICE_ROWS = [
   { item: "Quick Clear (25% load)", price: "$179" },
   { item: "Small Cleanup (50% load)", price: "$279" },
   { item: "Large Cleanup (75% load)", price: "$369" },
-  { item: "Full Command Load (100%)", price: "$449" },
+  { item: "Full Command Load (100%)", price: "$497" },
   { item: "Hot Tub / Specialty Items", price: "Photo quote" },
 ] as const;
 
